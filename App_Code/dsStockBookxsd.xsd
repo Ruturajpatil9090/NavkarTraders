@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsStockBookxsd" targetNamespace="http://tempuri.org/dsStockBookxsd.xsd" xmlns:mstns="http://tempuri.org/dsStockBookxsd.xsd" xmlns="http://tempuri.org/dsStockBookxsd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryEquityPurchaseSaleTableAdapter" GeneratorDataComponentClassName="qryEquityPurchaseSaleTableAdapter" Name="qryEquityPurchaseSale" UserDataComponentName="qryEquityPurchaseSaleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="Sugartest.dbo.qryEquityPurchaseSale" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Doc_No, Tran_Type, Date, LedgerEntry, Script_Code, Purc_No, Purc_Year_Code, Purc_Company_code, Qty, Bonus, Rate, Value, Profit_Loss, Sale_To, Brokage, Cess_Tax, STT, Service_Tax, Stamp_Charge, TurnOver_Tax, Net_Value, Net_Rate, Narration, Company_Code, Year_Code, Created_By, Modified_By, Created_Date, Modified_Date, Script_Name, FNO_Type, Ac_Name_E FROM dbo.qryEquityPurchaseSale</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Doc_No" DataSetColumn="Doc_No" />
+              <Mapping SourceColumn="Tran_Type" DataSetColumn="Tran_Type" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="LedgerEntry" DataSetColumn="LedgerEntry" />
+              <Mapping SourceColumn="Script_Code" DataSetColumn="Script_Code" />
+              <Mapping SourceColumn="Purc_No" DataSetColumn="Purc_No" />
+              <Mapping SourceColumn="Purc_Year_Code" DataSetColumn="Purc_Year_Code" />
+              <Mapping SourceColumn="Purc_Company_code" DataSetColumn="Purc_Company_code" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Bonus" DataSetColumn="Bonus" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="Profit_Loss" DataSetColumn="Profit_Loss" />
+              <Mapping SourceColumn="Sale_To" DataSetColumn="Sale_To" />
+              <Mapping SourceColumn="Brokage" DataSetColumn="Brokage" />
+              <Mapping SourceColumn="Cess_Tax" DataSetColumn="Cess_Tax" />
+              <Mapping SourceColumn="STT" DataSetColumn="STT" />
+              <Mapping SourceColumn="Service_Tax" DataSetColumn="Service_Tax" />
+              <Mapping SourceColumn="Stamp_Charge" DataSetColumn="Stamp_Charge" />
+              <Mapping SourceColumn="TurnOver_Tax" DataSetColumn="TurnOver_Tax" />
+              <Mapping SourceColumn="Net_Value" DataSetColumn="Net_Value" />
+              <Mapping SourceColumn="Net_Rate" DataSetColumn="Net_Rate" />
+              <Mapping SourceColumn="Narration" DataSetColumn="Narration" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="Created_By" DataSetColumn="Created_By" />
+              <Mapping SourceColumn="Modified_By" DataSetColumn="Modified_By" />
+              <Mapping SourceColumn="Created_Date" DataSetColumn="Created_Date" />
+              <Mapping SourceColumn="Modified_Date" DataSetColumn="Modified_Date" />
+              <Mapping SourceColumn="Script_Name" DataSetColumn="Script_Name" />
+              <Mapping SourceColumn="FNO_Type" DataSetColumn="FNO_Type" />
+              <Mapping SourceColumn="Ac_Name_E" DataSetColumn="Ac_Name_E" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsStockBookxsd" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsStockBookxsd" msprop:Generator_DataSetName="dsStockBookxsd">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryEquityPurchaseSale" msprop:Generator_TableClassName="qryEquityPurchaseSaleDataTable" msprop:Generator_TableVarName="tableqryEquityPurchaseSale" msprop:Generator_TablePropName="qryEquityPurchaseSale" msprop:Generator_RowDeletingName="qryEquityPurchaseSaleRowDeleting" msprop:Generator_RowChangingName="qryEquityPurchaseSaleRowChanging" msprop:Generator_RowEvHandlerName="qryEquityPurchaseSaleRowChangeEventHandler" msprop:Generator_RowDeletedName="qryEquityPurchaseSaleRowDeleted" msprop:Generator_UserTableName="qryEquityPurchaseSale" msprop:Generator_RowChangedName="qryEquityPurchaseSaleRowChanged" msprop:Generator_RowEvArgName="qryEquityPurchaseSaleRowChangeEvent" msprop:Generator_RowClassName="qryEquityPurchaseSaleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Doc_No" msprop:Generator_ColumnVarNameInTable="columnDoc_No" msprop:Generator_ColumnPropNameInRow="Doc_No" msprop:Generator_ColumnPropNameInTable="Doc_NoColumn" msprop:Generator_UserColumnName="Doc_No" type="xs:decimal" />
+              <xs:element name="Tran_Type" msprop:Generator_ColumnVarNameInTable="columnTran_Type" msprop:Generator_ColumnPropNameInRow="Tran_Type" msprop:Generator_ColumnPropNameInTable="Tran_TypeColumn" msprop:Generator_UserColumnName="Tran_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LedgerEntry" msprop:Generator_ColumnVarNameInTable="columnLedgerEntry" msprop:Generator_ColumnPropNameInRow="LedgerEntry" msprop:Generator_ColumnPropNameInTable="LedgerEntryColumn" msprop:Generator_UserColumnName="LedgerEntry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Script_Code" msprop:Generator_ColumnVarNameInTable="columnScript_Code" msprop:Generator_ColumnPropNameInRow="Script_Code" msprop:Generator_ColumnPropNameInTable="Script_CodeColumn" msprop:Generator_UserColumnName="Script_Code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Purc_No" msprop:Generator_ColumnVarNameInTable="columnPurc_No" msprop:Generator_ColumnPropNameInRow="Purc_No" msprop:Generator_ColumnPropNameInTable="Purc_NoColumn" msprop:Generator_UserColumnName="Purc_No" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Purc_Year_Code" msprop:Generator_ColumnVarNameInTable="columnPurc_Year_Code" msprop:Generator_ColumnPropNameInRow="Purc_Year_Code" msprop:Generator_ColumnPropNameInTable="Purc_Year_CodeColumn" msprop:Generator_UserColumnName="Purc_Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Purc_Company_code" msprop:Generator_ColumnVarNameInTable="columnPurc_Company_code" msprop:Generator_ColumnPropNameInRow="Purc_Company_code" msprop:Generator_ColumnPropNameInTable="Purc_Company_codeColumn" msprop:Generator_UserColumnName="Purc_Company_code" type="xs:int" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Bonus" msprop:Generator_ColumnVarNameInTable="columnBonus" msprop:Generator_ColumnPropNameInRow="Bonus" msprop:Generator_ColumnPropNameInTable="BonusColumn" msprop:Generator_UserColumnName="Bonus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Profit_Loss" msprop:Generator_ColumnVarNameInTable="columnProfit_Loss" msprop:Generator_ColumnPropNameInRow="Profit_Loss" msprop:Generator_ColumnPropNameInTable="Profit_LossColumn" msprop:Generator_UserColumnName="Profit_Loss" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Sale_To" msprop:Generator_ColumnVarNameInTable="columnSale_To" msprop:Generator_ColumnPropNameInRow="Sale_To" msprop:Generator_ColumnPropNameInTable="Sale_ToColumn" msprop:Generator_UserColumnName="Sale_To" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Brokage" msprop:Generator_ColumnVarNameInTable="columnBrokage" msprop:Generator_ColumnPropNameInRow="Brokage" msprop:Generator_ColumnPropNameInTable="BrokageColumn" msprop:Generator_UserColumnName="Brokage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cess_Tax" msprop:Generator_ColumnVarNameInTable="columnCess_Tax" msprop:Generator_ColumnPropNameInRow="Cess_Tax" msprop:Generator_ColumnPropNameInTable="Cess_TaxColumn" msprop:Generator_UserColumnName="Cess_Tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STT" msprop:Generator_ColumnVarNameInTable="columnSTT" msprop:Generator_ColumnPropNameInRow="STT" msprop:Generator_ColumnPropNameInTable="STTColumn" msprop:Generator_UserColumnName="STT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Service_Tax" msprop:Generator_ColumnVarNameInTable="columnService_Tax" msprop:Generator_ColumnPropNameInRow="Service_Tax" msprop:Generator_ColumnPropNameInTable="Service_TaxColumn" msprop:Generator_UserColumnName="Service_Tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Stamp_Charge" msprop:Generator_ColumnVarNameInTable="columnStamp_Charge" msprop:Generator_ColumnPropNameInRow="Stamp_Charge" msprop:Generator_ColumnPropNameInTable="Stamp_ChargeColumn" msprop:Generator_UserColumnName="Stamp_Charge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TurnOver_Tax" msprop:Generator_ColumnVarNameInTable="columnTurnOver_Tax" msprop:Generator_ColumnPropNameInRow="TurnOver_Tax" msprop:Generator_ColumnPropNameInTable="TurnOver_TaxColumn" msprop:Generator_UserColumnName="TurnOver_Tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_Value" msprop:Generator_ColumnVarNameInTable="columnNet_Value" msprop:Generator_ColumnPropNameInRow="Net_Value" msprop:Generator_ColumnPropNameInTable="Net_ValueColumn" msprop:Generator_UserColumnName="Net_Value" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_Rate" msprop:Generator_ColumnVarNameInTable="columnNet_Rate" msprop:Generator_ColumnPropNameInRow="Net_Rate" msprop:Generator_ColumnPropNameInTable="Net_RateColumn" msprop:Generator_UserColumnName="Net_Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Narration" msprop:Generator_ColumnVarNameInTable="columnNarration" msprop:Generator_ColumnPropNameInRow="Narration" msprop:Generator_ColumnPropNameInTable="NarrationColumn" msprop:Generator_UserColumnName="Narration" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" />
+              <xs:element name="Created_By" msprop:Generator_ColumnVarNameInTable="columnCreated_By" msprop:Generator_ColumnPropNameInRow="Created_By" msprop:Generator_ColumnPropNameInTable="Created_ByColumn" msprop:Generator_UserColumnName="Created_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modified_By" msprop:Generator_ColumnVarNameInTable="columnModified_By" msprop:Generator_ColumnPropNameInRow="Modified_By" msprop:Generator_ColumnPropNameInTable="Modified_ByColumn" msprop:Generator_UserColumnName="Modified_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Created_Date" msprop:Generator_ColumnVarNameInTable="columnCreated_Date" msprop:Generator_ColumnPropNameInRow="Created_Date" msprop:Generator_ColumnPropNameInTable="Created_DateColumn" msprop:Generator_UserColumnName="Created_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Modified_Date" msprop:Generator_ColumnVarNameInTable="columnModified_Date" msprop:Generator_ColumnPropNameInRow="Modified_Date" msprop:Generator_ColumnPropNameInTable="Modified_DateColumn" msprop:Generator_UserColumnName="Modified_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Script_Name" msprop:Generator_ColumnVarNameInTable="columnScript_Name" msprop:Generator_ColumnPropNameInRow="Script_Name" msprop:Generator_ColumnPropNameInTable="Script_NameColumn" msprop:Generator_UserColumnName="Script_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FNO_Type" msprop:Generator_ColumnVarNameInTable="columnFNO_Type" msprop:Generator_ColumnPropNameInRow="FNO_Type" msprop:Generator_ColumnPropNameInTable="FNO_TypeColumn" msprop:Generator_UserColumnName="FNO_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ac_Name_E" msprop:Generator_ColumnVarNameInTable="columnAc_Name_E" msprop:Generator_ColumnPropNameInRow="Ac_Name_E" msprop:Generator_ColumnPropNameInTable="Ac_Name_EColumn" msprop:Generator_UserColumnName="Ac_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:qryEquityPurchaseSale" />
+      <xs:field xpath="mstns:Doc_No" />
+      <xs:field xpath="mstns:Tran_Type" />
+      <xs:field xpath="mstns:Company_Code" />
+      <xs:field xpath="mstns:Year_Code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

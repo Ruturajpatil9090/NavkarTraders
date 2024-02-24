@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsEquityGlobal" targetNamespace="http://tempuri.org/dsEquityGlobal.xsd" xmlns:mstns="http://tempuri.org/dsEquityGlobal.xsd" xmlns="http://tempuri.org/dsEquityGlobal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryEquityGlobalTableAdapter" GeneratorDataComponentClassName="qryEquityGlobalTableAdapter" Name="qryEquityGlobal" UserDataComponentName="qryEquityGlobalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="Sugartest.dbo.qryEquityGlobal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        FNO_Script_No, Script_Name, opqty, opbonus, opvalue, purqty, purbonus, purvalue, Company_Code, Year_Code, saleqty, salebonus, salevalue, ClosingValue, balbonus, bal, Loss, Profit, ClosingRate
+FROM            qryEquityGlobal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FNO_Script_No" DataSetColumn="FNO_Script_No" />
+              <Mapping SourceColumn="Script_Name" DataSetColumn="Script_Name" />
+              <Mapping SourceColumn="opqty" DataSetColumn="opqty" />
+              <Mapping SourceColumn="opbonus" DataSetColumn="opbonus" />
+              <Mapping SourceColumn="opvalue" DataSetColumn="opvalue" />
+              <Mapping SourceColumn="purqty" DataSetColumn="purqty" />
+              <Mapping SourceColumn="purbonus" DataSetColumn="purbonus" />
+              <Mapping SourceColumn="purvalue" DataSetColumn="purvalue" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="saleqty" DataSetColumn="saleqty" />
+              <Mapping SourceColumn="salebonus" DataSetColumn="salebonus" />
+              <Mapping SourceColumn="salevalue" DataSetColumn="salevalue" />
+              <Mapping SourceColumn="ClosingValue" DataSetColumn="ClosingValue" />
+              <Mapping SourceColumn="balbonus" DataSetColumn="balbonus" />
+              <Mapping SourceColumn="bal" DataSetColumn="bal" />
+              <Mapping SourceColumn="Loss" DataSetColumn="Loss" />
+              <Mapping SourceColumn="Profit" DataSetColumn="Profit" />
+              <Mapping SourceColumn="ClosingRate" DataSetColumn="ClosingRate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsEquityGlobal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsEquityGlobal" msprop:Generator_UserDSName="dsEquityGlobal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryEquityGlobal" msprop:Generator_TableClassName="qryEquityGlobalDataTable" msprop:Generator_TableVarName="tableqryEquityGlobal" msprop:Generator_RowChangedName="qryEquityGlobalRowChanged" msprop:Generator_TablePropName="qryEquityGlobal" msprop:Generator_RowDeletingName="qryEquityGlobalRowDeleting" msprop:Generator_RowChangingName="qryEquityGlobalRowChanging" msprop:Generator_RowEvHandlerName="qryEquityGlobalRowChangeEventHandler" msprop:Generator_RowDeletedName="qryEquityGlobalRowDeleted" msprop:Generator_RowClassName="qryEquityGlobalRow" msprop:Generator_UserTableName="qryEquityGlobal" msprop:Generator_RowEvArgName="qryEquityGlobalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FNO_Script_No" msprop:Generator_ColumnVarNameInTable="columnFNO_Script_No" msprop:Generator_ColumnPropNameInRow="FNO_Script_No" msprop:Generator_ColumnPropNameInTable="FNO_Script_NoColumn" msprop:Generator_UserColumnName="FNO_Script_No" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Script_Name" msprop:Generator_ColumnVarNameInTable="columnScript_Name" msprop:Generator_ColumnPropNameInRow="Script_Name" msprop:Generator_ColumnPropNameInTable="Script_NameColumn" msprop:Generator_UserColumnName="Script_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="opqty" msprop:Generator_ColumnVarNameInTable="columnopqty" msprop:Generator_ColumnPropNameInRow="opqty" msprop:Generator_ColumnPropNameInTable="opqtyColumn" msprop:Generator_UserColumnName="opqty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="opbonus" msprop:Generator_ColumnVarNameInTable="columnopbonus" msprop:Generator_ColumnPropNameInRow="opbonus" msprop:Generator_ColumnPropNameInTable="opbonusColumn" msprop:Generator_UserColumnName="opbonus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="opvalue" msprop:Generator_ColumnVarNameInTable="columnopvalue" msprop:Generator_ColumnPropNameInRow="opvalue" msprop:Generator_ColumnPropNameInTable="opvalueColumn" msprop:Generator_UserColumnName="opvalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="purqty" msprop:Generator_ColumnVarNameInTable="columnpurqty" msprop:Generator_ColumnPropNameInRow="purqty" msprop:Generator_ColumnPropNameInTable="purqtyColumn" msprop:Generator_UserColumnName="purqty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="purbonus" msprop:Generator_ColumnVarNameInTable="columnpurbonus" msprop:Generator_ColumnPropNameInRow="purbonus" msprop:Generator_ColumnPropNameInTable="purbonusColumn" msprop:Generator_UserColumnName="purbonus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="purvalue" msprop:Generator_ColumnVarNameInTable="columnpurvalue" msprop:Generator_ColumnPropNameInRow="purvalue" msprop:Generator_ColumnPropNameInTable="purvalueColumn" msprop:Generator_UserColumnName="purvalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="saleqty" msprop:Generator_ColumnVarNameInTable="columnsaleqty" msprop:Generator_ColumnPropNameInRow="saleqty" msprop:Generator_ColumnPropNameInTable="saleqtyColumn" msprop:Generator_UserColumnName="saleqty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="salebonus" msprop:Generator_ColumnVarNameInTable="columnsalebonus" msprop:Generator_ColumnPropNameInRow="salebonus" msprop:Generator_ColumnPropNameInTable="salebonusColumn" msprop:Generator_UserColumnName="salebonus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="salevalue" msprop:Generator_ColumnVarNameInTable="columnsalevalue" msprop:Generator_ColumnPropNameInRow="salevalue" msprop:Generator_ColumnPropNameInTable="salevalueColumn" msprop:Generator_UserColumnName="salevalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ClosingValue" msprop:Generator_ColumnVarNameInTable="columnClosingValue" msprop:Generator_ColumnPropNameInRow="ClosingValue" msprop:Generator_ColumnPropNameInTable="ClosingValueColumn" msprop:Generator_UserColumnName="ClosingValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="balbonus" msprop:Generator_ColumnVarNameInTable="columnbalbonus" msprop:Generator_ColumnPropNameInRow="balbonus" msprop:Generator_ColumnPropNameInTable="balbonusColumn" msprop:Generator_UserColumnName="balbonus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="bal" msprop:Generator_ColumnVarNameInTable="columnbal" msprop:Generator_ColumnPropNameInRow="bal" msprop:Generator_ColumnPropNameInTable="balColumn" msprop:Generator_UserColumnName="bal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Loss" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLoss" msprop:Generator_ColumnPropNameInRow="Loss" msprop:Generator_ColumnPropNameInTable="LossColumn" msprop:Generator_UserColumnName="Loss" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Profit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnProfit" msprop:Generator_ColumnPropNameInRow="Profit" msprop:Generator_ColumnPropNameInTable="ProfitColumn" msprop:Generator_UserColumnName="Profit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ClosingRate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosingRate" msprop:Generator_ColumnPropNameInRow="ClosingRate" msprop:Generator_ColumnPropNameInTable="ClosingRateColumn" msprop:Generator_UserColumnName="ClosingRate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:qryEquityGlobal" />
+      <xs:field xpath="mstns:FNO_Script_No" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="salebillbalance" targetNamespace="http://tempuri.org/salebillbalance.xsd" xmlns:mstns="http://tempuri.org/salebillbalance.xsd" xmlns="http://tempuri.org/salebillbalance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qrysalebillbalanceTableAdapter" GeneratorDataComponentClassName="qrysalebillbalanceTableAdapter" Name="qrysalebillbalance" UserDataComponentName="qrysalebillbalanceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="sugarsoft.dbo.qrysalebillbalance" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        bill_tran_type, billno, doc_date, doc_dateConverted, Ac_Code, billtoname, Unit_Code, mill_code, shiptoname, millname, NETQNTL, Bill_Amount, received, balance, Year_Code, Company_Code, saleid, millshortname, ac, uc, mc, 
+                         OnAc, adjAmt, BROKER, brokername, Delivery_type, rate, billtoShortname
+FROM            qrysalebillbalance</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="bill_tran_type" DataSetColumn="bill_tran_type" />
+              <Mapping SourceColumn="billno" DataSetColumn="billno" />
+              <Mapping SourceColumn="doc_date" DataSetColumn="doc_date" />
+              <Mapping SourceColumn="doc_dateConverted" DataSetColumn="doc_dateConverted" />
+              <Mapping SourceColumn="Ac_Code" DataSetColumn="Ac_Code" />
+              <Mapping SourceColumn="billtoname" DataSetColumn="billtoname" />
+              <Mapping SourceColumn="Unit_Code" DataSetColumn="Unit_Code" />
+              <Mapping SourceColumn="mill_code" DataSetColumn="mill_code" />
+              <Mapping SourceColumn="shiptoname" DataSetColumn="shiptoname" />
+              <Mapping SourceColumn="millname" DataSetColumn="millname" />
+              <Mapping SourceColumn="NETQNTL" DataSetColumn="NETQNTL" />
+              <Mapping SourceColumn="Bill_Amount" DataSetColumn="Bill_Amount" />
+              <Mapping SourceColumn="received" DataSetColumn="received" />
+              <Mapping SourceColumn="balance" DataSetColumn="balance" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="saleid" DataSetColumn="saleid" />
+              <Mapping SourceColumn="millshortname" DataSetColumn="millshortname" />
+              <Mapping SourceColumn="ac" DataSetColumn="ac" />
+              <Mapping SourceColumn="uc" DataSetColumn="uc" />
+              <Mapping SourceColumn="mc" DataSetColumn="mc" />
+              <Mapping SourceColumn="OnAc" DataSetColumn="OnAc" />
+              <Mapping SourceColumn="adjAmt" DataSetColumn="adjAmt" />
+              <Mapping SourceColumn="BROKER" DataSetColumn="BROKER" />
+              <Mapping SourceColumn="brokername" DataSetColumn="brokername" />
+              <Mapping SourceColumn="Delivery_type" DataSetColumn="Delivery_type" />
+              <Mapping SourceColumn="rate" DataSetColumn="rate" />
+              <Mapping SourceColumn="billtoShortname" DataSetColumn="billtoShortname" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="salebillbalance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="salebillbalance" msprop:Generator_UserDSName="salebillbalance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qrysalebillbalance" msprop:Generator_TableClassName="qrysalebillbalanceDataTable" msprop:Generator_TableVarName="tableqrysalebillbalance" msprop:Generator_RowChangedName="qrysalebillbalanceRowChanged" msprop:Generator_TablePropName="qrysalebillbalance" msprop:Generator_RowDeletingName="qrysalebillbalanceRowDeleting" msprop:Generator_RowChangingName="qrysalebillbalanceRowChanging" msprop:Generator_RowEvHandlerName="qrysalebillbalanceRowChangeEventHandler" msprop:Generator_RowDeletedName="qrysalebillbalanceRowDeleted" msprop:Generator_RowClassName="qrysalebillbalanceRow" msprop:Generator_UserTableName="qrysalebillbalance" msprop:Generator_RowEvArgName="qrysalebillbalanceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bill_tran_type" msprop:Generator_ColumnVarNameInTable="columnbill_tran_type" msprop:Generator_ColumnPropNameInRow="bill_tran_type" msprop:Generator_ColumnPropNameInTable="bill_tran_typeColumn" msprop:Generator_UserColumnName="bill_tran_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="billno" msprop:Generator_ColumnVarNameInTable="columnbillno" msprop:Generator_ColumnPropNameInRow="billno" msprop:Generator_ColumnPropNameInTable="billnoColumn" msprop:Generator_UserColumnName="billno" type="xs:int" minOccurs="0" />
+              <xs:element name="doc_date" msprop:Generator_ColumnVarNameInTable="columndoc_date" msprop:Generator_ColumnPropNameInRow="doc_date" msprop:Generator_ColumnPropNameInTable="doc_dateColumn" msprop:Generator_UserColumnName="doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="doc_dateConverted" msprop:Generator_ColumnVarNameInTable="columndoc_dateConverted" msprop:Generator_ColumnPropNameInRow="doc_dateConverted" msprop:Generator_ColumnPropNameInTable="doc_dateConvertedColumn" msprop:Generator_UserColumnName="doc_dateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ac_Code" msprop:Generator_ColumnVarNameInTable="columnAc_Code" msprop:Generator_ColumnPropNameInRow="Ac_Code" msprop:Generator_ColumnPropNameInTable="Ac_CodeColumn" msprop:Generator_UserColumnName="Ac_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="billtoname" msprop:Generator_ColumnVarNameInTable="columnbilltoname" msprop:Generator_ColumnPropNameInRow="billtoname" msprop:Generator_ColumnPropNameInTable="billtonameColumn" msprop:Generator_UserColumnName="billtoname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Code" msprop:Generator_ColumnVarNameInTable="columnUnit_Code" msprop:Generator_ColumnPropNameInRow="Unit_Code" msprop:Generator_ColumnPropNameInTable="Unit_CodeColumn" msprop:Generator_UserColumnName="Unit_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="mill_code" msprop:Generator_ColumnVarNameInTable="columnmill_code" msprop:Generator_ColumnPropNameInRow="mill_code" msprop:Generator_ColumnPropNameInTable="mill_codeColumn" msprop:Generator_UserColumnName="mill_code" type="xs:int" minOccurs="0" />
+              <xs:element name="shiptoname" msprop:Generator_ColumnVarNameInTable="columnshiptoname" msprop:Generator_ColumnPropNameInRow="shiptoname" msprop:Generator_ColumnPropNameInTable="shiptonameColumn" msprop:Generator_UserColumnName="shiptoname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millname" msprop:Generator_ColumnVarNameInTable="columnmillname" msprop:Generator_ColumnPropNameInRow="millname" msprop:Generator_ColumnPropNameInTable="millnameColumn" msprop:Generator_UserColumnName="millname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NETQNTL" msprop:Generator_ColumnVarNameInTable="columnNETQNTL" msprop:Generator_ColumnPropNameInRow="NETQNTL" msprop:Generator_ColumnPropNameInTable="NETQNTLColumn" msprop:Generator_UserColumnName="NETQNTL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Bill_Amount" msprop:Generator_ColumnVarNameInTable="columnBill_Amount" msprop:Generator_ColumnPropNameInRow="Bill_Amount" msprop:Generator_ColumnPropNameInTable="Bill_AmountColumn" msprop:Generator_UserColumnName="Bill_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="received" msprop:Generator_ColumnVarNameInTable="columnreceived" msprop:Generator_ColumnPropNameInRow="received" msprop:Generator_ColumnPropNameInTable="receivedColumn" msprop:Generator_UserColumnName="received" type="xs:decimal" minOccurs="0" />
+              <xs:element name="balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnbalance" msprop:Generator_ColumnPropNameInRow="balance" msprop:Generator_ColumnPropNameInTable="balanceColumn" msprop:Generator_UserColumnName="balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="saleid" msprop:Generator_ColumnVarNameInTable="columnsaleid" msprop:Generator_ColumnPropNameInRow="saleid" msprop:Generator_ColumnPropNameInTable="saleidColumn" msprop:Generator_UserColumnName="saleid" type="xs:int" />
+              <xs:element name="millshortname" msprop:Generator_ColumnVarNameInTable="columnmillshortname" msprop:Generator_ColumnPropNameInRow="millshortname" msprop:Generator_ColumnPropNameInTable="millshortnameColumn" msprop:Generator_UserColumnName="millshortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac" msprop:Generator_ColumnVarNameInTable="columnac" msprop:Generator_ColumnPropNameInRow="ac" msprop:Generator_ColumnPropNameInTable="acColumn" msprop:Generator_UserColumnName="ac" type="xs:int" minOccurs="0" />
+              <xs:element name="uc" msprop:Generator_ColumnVarNameInTable="columnuc" msprop:Generator_ColumnPropNameInRow="uc" msprop:Generator_ColumnPropNameInTable="ucColumn" msprop:Generator_UserColumnName="uc" type="xs:int" minOccurs="0" />
+              <xs:element name="mc" msprop:Generator_ColumnVarNameInTable="columnmc" msprop:Generator_ColumnPropNameInRow="mc" msprop:Generator_ColumnPropNameInTable="mcColumn" msprop:Generator_UserColumnName="mc" type="xs:int" minOccurs="0" />
+              <xs:element name="OnAc" msprop:Generator_ColumnVarNameInTable="columnOnAc" msprop:Generator_ColumnPropNameInRow="OnAc" msprop:Generator_ColumnPropNameInTable="OnAcColumn" msprop:Generator_UserColumnName="OnAc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="adjAmt" msprop:Generator_ColumnVarNameInTable="columnadjAmt" msprop:Generator_ColumnPropNameInRow="adjAmt" msprop:Generator_ColumnPropNameInTable="adjAmtColumn" msprop:Generator_UserColumnName="adjAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BROKER" msprop:Generator_ColumnVarNameInTable="columnBROKER" msprop:Generator_ColumnPropNameInRow="BROKER" msprop:Generator_ColumnPropNameInTable="BROKERColumn" msprop:Generator_UserColumnName="BROKER" type="xs:int" minOccurs="0" />
+              <xs:element name="brokername" msprop:Generator_ColumnVarNameInTable="columnbrokername" msprop:Generator_ColumnPropNameInRow="brokername" msprop:Generator_ColumnPropNameInTable="brokernameColumn" msprop:Generator_UserColumnName="brokername" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Delivery_type" msprop:Generator_ColumnVarNameInTable="columnDelivery_type" msprop:Generator_ColumnPropNameInRow="Delivery_type" msprop:Generator_ColumnPropNameInTable="Delivery_typeColumn" msprop:Generator_UserColumnName="Delivery_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rate" msprop:Generator_ColumnVarNameInTable="columnrate" msprop:Generator_ColumnPropNameInRow="rate" msprop:Generator_ColumnPropNameInTable="rateColumn" msprop:Generator_UserColumnName="rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="billtoShortname" msprop:Generator_ColumnVarNameInTable="columnbilltoShortname" msprop:Generator_ColumnPropNameInRow="billtoShortname" msprop:Generator_ColumnPropNameInTable="billtoShortnameColumn" msprop:Generator_UserColumnName="billtoShortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:qrysalebillbalance" />
+      <xs:field xpath="mstns:saleid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

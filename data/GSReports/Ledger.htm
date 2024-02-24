@@ -1,0 +1,92 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Ledger
+</title>
+    <script type="text/javascript">
+        function PrintPanel() {
+            var panel = document.getElementById("PrintPanel");
+            var printWindow = window.open('', '', 'height=660,width=1350');
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('</head><body class="container" >');
+            printWindow.document.write('<style type = "text/css">thead {display:table-header-group;} tfoot{display:table-footer-group;}</style>');
+            printWindow.document.write(panel.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 500);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="rptLedger.aspx?accode=18004&amp;fromdt=2015%2f04%2f01&amp;todt=2015%2f10%2f02" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTE2NjEzNjQwOQ9kFgICBA9kFgICBw9kFggCBQ8PFgIeBFRleHQFI1BSSVlBIFBSQVZJTkNIQU5EUkEgU0hBSCBLT0xIQVBVUi4gZGQCCQ8PFgIfAAUKMDEvMDQvMjAxNWRkAg0PDxYCHwAFCjAyLzEwLzIwMTVkZAIRDzwrABEDAA8WBB4LXyFEYXRhQm91bmRnHgtfIUl0ZW1Db3VudAIFZAEQFgAWABYADBQrAAAWAmYPZBYMAgEPZBYQZg8PFgIfAAUCT1BkZAIBDw8WAh8ABQEwZGQCAg8PFgIfAAUKMDEvMDQvMjAxNWRkAgMPDxYCHwAFD09wZW5pbmcgQmFsYW5jZWRkAgQPDxYCHwBlZGQCBQ8PFgIfAGVkZAIGDw8WAh8ABQNOaWxkZAIHDw8WAh8ABQJDcmRkAgIPZBYQZg8PFgIfAAUCRE9kZAIBDw8WAh8ABQMzNDZkZAICDw8WAh8ABQoyNC8wOS8yMDE1ZGQCAw8PFgIfAAUGJm5ic3A7ZGQCBA8PFgIfAAUEMTIwMGRkAgUPDxYCHwBlZGQCBg8PFgIfAAUEMTIwMGRkAgcPDxYCHwAFAkRyZGQCAw9kFhBmDw8WAh8ABQJET2RkAgEPDxYCHwAFAzM1M2RkAgIPDxYCHwAFCjI1LzA5LzIwMTVkZAIDDw8WAh8ABQYmbmJzcDtkZAIEDw8WAh8AZWRkAgUPDxYCHwBlZGQCBg8PFgIfAAUEMTIwMGRkAgcPDxYCHwAFAkRyZGQCBA9kFhBmDw8WAh8ABQJET2RkAgEPDxYCHwAFAzM1N2RkAgIPDxYCHwAFCjAxLzEwLzIwMTVkZAIDDw8WAh8ABR1RbnRsIDEyICAgKE0uUi4xMjAwIFAuUi4xMzAwKWRkAgQPDxYCHwAFBDEyMDBkZAIFDw8WAh8AZWRkAgYPDxYCHwAFBDI0MDBkZAIHDw8WAh8ABQJEcmRkAgUPZBYQZg8PFgIfAAUCQ1BkZAIBDw8WAh8ABQEyZGQCAg8PFgIfAAUKMDEvMTAvMjAxNWRkAgMPDxYCHwAFBiYjMTYwO2RkAgQPDxYCHwAFBjEyMDAwMGRkAgUPDxYCHwBlZGQCBg8PFgIfAAUGMTIyNDAwZGQCBw8PFgIfAAUCRHJkZAIGD2QWCAIDDw8WAh8ABQVUb3RhbGRkAgQPDxYGHwAFBjEyMjQwMB4PSG9yaXpvbnRhbEFsaWduCyopU3lzdGVtLldlYi5VSS5XZWJDb250cm9scy5Ib3Jpem9udGFsQWxpZ24DHgRfIVNCAoCABGRkAgUPDxYGHwAFATAfAwsrBAMfBAKAgARkZAIGDw8WBh8ABQYxMjI0MDAfAwsrBAMfBAKAgARkZBgBBQlncmREZXRhaWwPPCsADAEIAgFk/zsmc765NYjcmb6OUuKnYJlu1zm0ubxoVM34rZixJg0=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAATCyA5n9BVnfHKfw232G0zcezucPl2hH0iWifbRq8fmwVGA0QCmplLsNfU3yRTKv1lDB2YfWbjwUYntrwPx36ESAg9S7bU5VcorZPnoVsXpG1wItVn4gYqSsAHuu5Dlqoo=" />
+    <div align="left">
+        <input type="submit" name="btnPrint" value="Print" onclick="return PrintPanel();" id="btnPrint" class="btnHelp" />
+        <input type="submit" name="btnSendEmail" value="Send To Email" id="btnSendEmail" class="btnHelp" />&nbsp;&nbsp;
+          
+          Email:<input name="txtEmail" type="text" value="ankushptl22@rediffmail.com" id="txtEmail" />
+    </div>
+    <div>
+        <div id="PrintPanel" align="center"><font face="Calibri">
+	
+            <table width="1000px" align="center">
+                <tr>
+                    <td align="center" colspan="2">
+                        <span id="lblCompany"><b><font size="5">Gautam Sugar Trading Company</font></b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <span id="Label1"><b><font size="4">Account Statement of :</font></b></span>
+                        <span id="lblParty"><b><font size="4">PRIYA PRAVINCHANDRA SHAH KOLHAPUR. </font></b></span>
+                    </td>
+                    <td align="right">
+                        <span id="Label2"><b><font size="4">From:</font></b></span>
+                        &nbsp; &nbsp;<span id="lblFromDt"><b><font size="4">01/04/2015</font></b></span>
+                        &nbsp;
+                        <span id="Label3"><b><font size="4">To:</font></b></span>
+                        &nbsp;&nbsp;<span id="lblToDt"><b><font size="4">02/10/2015</font></b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <span id="lblAcCode"><b><font size="4"></font></b></span>
+                    </td>
+                </tr>
+            </table>
+            <center>
+                <div>
+		<table cellspacing="0" cellpadding="0" rules="all" border="1" id="grdDetail" width="1000">
+			<tr bgcolor="#397CBB">
+				<th class="thead" scope="col"><font face="Verdana" color="White">TranType</font></th><th class="thead" scope="col"><font face="Verdana" color="White">DocNo</font></th><th class="thead" scope="col"><font face="Verdana" color="White">Date</font></th><th class="thead" scope="col"><font face="Verdana" color="White">Narration</font></th><th class="thead" align="right" scope="col"><font face="Verdana" color="White">Debit</font></th><th class="thead" align="right" scope="col"><font face="Verdana" color="White">Credit</font></th><th class="thead" align="right" scope="col"><font face="Verdana" color="White">Balance</font></th><th class="thead" scope="col"><font face="Verdana" color="White">DrCr</font></th>
+			</tr><tr>
+				<td align="center"><font face="Verdana" color="Black">OP</font></td><td align="right"><font face="Verdana" color="Black">0</font></td><td align="center"><font face="Verdana" color="Black">01/04/2015</font></td><td align="left"><font face="Verdana" color="Black">Opening Balance</font></td><td align="right"><font face="Verdana" color="Black"></font></td><td align="right"><font face="Verdana" color="Black"></font></td><td align="right"><font face="Verdana" color="Black">Nil</font></td><td align="center"><font face="Verdana" color="Black">Cr</font></td>
+			</tr><tr>
+				<td align="center"><font face="Verdana" color="Black">DO</font></td><td align="right"><font face="Verdana" color="Black">346</font></td><td align="center"><font face="Verdana" color="Black">24/09/2015</font></td><td align="left"><font face="Verdana" color="Black">&nbsp;</font></td><td align="right"><font face="Verdana" color="Black">1200</font></td><td align="right"><font face="Verdana" color="Black"></font></td><td align="right"><font face="Verdana" color="Black">1200</font></td><td align="center"><font face="Verdana" color="Black">Dr</font></td>
+			</tr><tr>
+				<td align="center"><font face="Verdana" color="Black">DO</font></td><td align="right"><font face="Verdana" color="Black">353</font></td><td align="center"><font face="Verdana" color="Black">25/09/2015</font></td><td align="left"><font face="Verdana" color="Black">&nbsp;</font></td><td align="right"><font face="Verdana" color="Black"></font></td><td align="right"><font face="Verdana" color="Black"></font></td><td align="right"><font face="Verdana" color="Black">1200</font></td><td align="center"><font face="Verdana" color="Black">Dr</font></td>
+			</tr><tr>
+				<td align="center"><font face="Verdana" color="Black">DO</font></td><td align="right"><font face="Verdana" color="Black">357</font></td><td align="center"><font face="Verdana" color="Black">01/10/2015</font></td><td align="left"><font face="Verdana" color="Black">Qntl 12   (M.R.1200 P.R.1300)</font></td><td align="right"><font face="Verdana" color="Black">1200</font></td><td align="right"><font face="Verdana" color="Black"></font></td><td align="right"><font face="Verdana" color="Black">2400</font></td><td align="center"><font face="Verdana" color="Black">Dr</font></td>
+			</tr><tr>
+				<td align="center"><font face="Verdana" color="Black">CP</font></td><td align="right"><font face="Verdana" color="Black">2</font></td><td align="center"><font face="Verdana" color="Black">01/10/2015</font></td><td align="left"><font face="Verdana" color="Black">&#160;</font></td><td align="right"><font face="Verdana" color="Black">120000</font></td><td align="right"><font face="Verdana" color="Black"></font></td><td align="right"><font face="Verdana" color="Black">122400</font></td><td align="center"><font face="Verdana" color="Black">Dr</font></td>
+			</tr><tr bgcolor="Yellow">
+				<td><font face="Verdana" color="Black"><b>&nbsp;</b></font></td><td><font face="Verdana" color="Black"><b>&nbsp;</b></font></td><td><font face="Verdana" color="Black"><b>&nbsp;</b></font></td><td><font face="Verdana" color="Black"><b>Total</b></font></td><td align="right"><font face="Verdana" color="Black"><b>122400</b></font></td><td align="right"><font face="Verdana" color="Black"><b>0</b></font></td><td align="right"><font face="Verdana" color="Black"><b>122400</b></font></td><td><font face="Verdana" color="Black"><b>&nbsp;</b></font></td>
+			</tr>
+		</table>
+	</div>
+            </center>
+        
+</font></div>
+    </div>
+    </form>
+</body>
+</html>
+

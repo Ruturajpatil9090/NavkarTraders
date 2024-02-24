@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsOwnDO" targetNamespace="http://tempuri.org/dsOwnDO.xsd" xmlns:mstns="http://tempuri.org/dsOwnDO.xsd" xmlns="http://tempuri.org/dsOwnDO.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="finaldatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="finaldatabaseConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.finaldatabaseConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryowndoTableAdapter" GeneratorDataComponentClassName="qryowndoTableAdapter" Name="qryowndo" UserDataComponentName="qryowndoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="finaldatabaseConnectionString (Web.config)" DbObjectName="finaldatabase.dbo.qryowndo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        doc_no, doc_date, doc_dateConverted, truck_no, millshortname, quantal, PurchaseRate, GETPASSCODE, SaleBillTo, EWayBillChk, purc_no
+FROM            qryowndo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="doc_no" DataSetColumn="doc_no" />
+              <Mapping SourceColumn="doc_date" DataSetColumn="doc_date" />
+              <Mapping SourceColumn="doc_dateConverted" DataSetColumn="doc_dateConverted" />
+              <Mapping SourceColumn="truck_no" DataSetColumn="truck_no" />
+              <Mapping SourceColumn="millshortname" DataSetColumn="millshortname" />
+              <Mapping SourceColumn="quantal" DataSetColumn="quantal" />
+              <Mapping SourceColumn="PurchaseRate" DataSetColumn="PurchaseRate" />
+              <Mapping SourceColumn="GETPASSCODE" DataSetColumn="GETPASSCODE" />
+              <Mapping SourceColumn="SaleBillTo" DataSetColumn="SaleBillTo" />
+              <Mapping SourceColumn="EWayBillChk" DataSetColumn="EWayBillChk" />
+              <Mapping SourceColumn="purc_no" DataSetColumn="purc_no" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsOwnDO" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsOwnDO" msprop:Generator_UserDSName="dsOwnDO">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryowndo" msprop:Generator_TableClassName="qryowndoDataTable" msprop:Generator_TableVarName="tableqryowndo" msprop:Generator_TablePropName="qryowndo" msprop:Generator_RowDeletingName="qryowndoRowDeleting" msprop:Generator_RowChangingName="qryowndoRowChanging" msprop:Generator_RowEvHandlerName="qryowndoRowChangeEventHandler" msprop:Generator_RowDeletedName="qryowndoRowDeleted" msprop:Generator_UserTableName="qryowndo" msprop:Generator_RowChangedName="qryowndoRowChanged" msprop:Generator_RowEvArgName="qryowndoRowChangeEvent" msprop:Generator_RowClassName="qryowndoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="doc_no" msprop:Generator_ColumnVarNameInTable="columndoc_no" msprop:Generator_ColumnPropNameInRow="doc_no" msprop:Generator_ColumnPropNameInTable="doc_noColumn" msprop:Generator_UserColumnName="doc_no" type="xs:int" />
+              <xs:element name="doc_date" msprop:Generator_ColumnVarNameInTable="columndoc_date" msprop:Generator_ColumnPropNameInRow="doc_date" msprop:Generator_ColumnPropNameInTable="doc_dateColumn" msprop:Generator_UserColumnName="doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="doc_dateConverted" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndoc_dateConverted" msprop:Generator_ColumnPropNameInRow="doc_dateConverted" msprop:Generator_ColumnPropNameInTable="doc_dateConvertedColumn" msprop:Generator_UserColumnName="doc_dateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="truck_no" msprop:Generator_ColumnVarNameInTable="columntruck_no" msprop:Generator_ColumnPropNameInRow="truck_no" msprop:Generator_ColumnPropNameInTable="truck_noColumn" msprop:Generator_UserColumnName="truck_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millshortname" msprop:Generator_ColumnVarNameInTable="columnmillshortname" msprop:Generator_ColumnPropNameInRow="millshortname" msprop:Generator_ColumnPropNameInTable="millshortnameColumn" msprop:Generator_UserColumnName="millshortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="quantal" msprop:Generator_ColumnVarNameInTable="columnquantal" msprop:Generator_ColumnPropNameInRow="quantal" msprop:Generator_ColumnPropNameInTable="quantalColumn" msprop:Generator_UserColumnName="quantal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PurchaseRate" msprop:Generator_ColumnVarNameInTable="columnPurchaseRate" msprop:Generator_ColumnPropNameInRow="PurchaseRate" msprop:Generator_ColumnPropNameInTable="PurchaseRateColumn" msprop:Generator_UserColumnName="PurchaseRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GETPASSCODE" msprop:Generator_ColumnVarNameInTable="columnGETPASSCODE" msprop:Generator_ColumnPropNameInRow="GETPASSCODE" msprop:Generator_ColumnPropNameInTable="GETPASSCODEColumn" msprop:Generator_UserColumnName="GETPASSCODE" type="xs:int" minOccurs="0" />
+              <xs:element name="SaleBillTo" msprop:Generator_ColumnVarNameInTable="columnSaleBillTo" msprop:Generator_ColumnPropNameInRow="SaleBillTo" msprop:Generator_ColumnPropNameInTable="SaleBillToColumn" msprop:Generator_UserColumnName="SaleBillTo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EWayBillChk" msprop:Generator_ColumnVarNameInTable="columnEWayBillChk" msprop:Generator_ColumnPropNameInRow="EWayBillChk" msprop:Generator_ColumnPropNameInTable="EWayBillChkColumn" msprop:Generator_UserColumnName="EWayBillChk" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="purc_no" msprop:Generator_ColumnVarNameInTable="columnpurc_no" msprop:Generator_ColumnPropNameInRow="purc_no" msprop:Generator_ColumnPropNameInTable="purc_noColumn" msprop:Generator_UserColumnName="purc_no" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

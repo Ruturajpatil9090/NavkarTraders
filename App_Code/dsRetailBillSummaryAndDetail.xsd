@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRetailBillSummaryAndDetail" targetNamespace="http://tempuri.org/dsRetailBillSummaryAndDetail.xsd" xmlns:mstns="http://tempuri.org/dsRetailBillSummaryAndDetail.xsd" xmlns="http://tempuri.org/dsRetailBillSummaryAndDetail.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryRetailsalebillbalanceTableAdapter" GeneratorDataComponentClassName="qryRetailsalebillbalanceTableAdapter" Name="qryRetailsalebillbalance" UserDataComponentName="qryRetailsalebillbalanceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="sugarsoftmain.dbo.qryRetailsalebillbalance" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Doc_No, Tran_Type, Doc_Date, Amount, received, Balance, Party_Code, cityname, partyname, NetWeight, Retailid, Company_Code, Year_Code, adj, rptdate
+FROM     qryRetailsalebillbalance</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Doc_No" DataSetColumn="Doc_No" />
+              <Mapping SourceColumn="Tran_Type" DataSetColumn="Tran_Type" />
+              <Mapping SourceColumn="Doc_Date" DataSetColumn="Doc_Date" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="received" DataSetColumn="received" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+              <Mapping SourceColumn="Party_Code" DataSetColumn="Party_Code" />
+              <Mapping SourceColumn="cityname" DataSetColumn="cityname" />
+              <Mapping SourceColumn="partyname" DataSetColumn="partyname" />
+              <Mapping SourceColumn="NetWeight" DataSetColumn="NetWeight" />
+              <Mapping SourceColumn="Retailid" DataSetColumn="Retailid" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="adj" DataSetColumn="adj" />
+              <Mapping SourceColumn="rptdate" DataSetColumn="rptdate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRetailBillSummaryAndDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsRetailBillSummaryAndDetail" msprop:Generator_UserDSName="dsRetailBillSummaryAndDetail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryRetailsalebillbalance" msprop:Generator_TableClassName="qryRetailsalebillbalanceDataTable" msprop:Generator_TableVarName="tableqryRetailsalebillbalance" msprop:Generator_RowChangedName="qryRetailsalebillbalanceRowChanged" msprop:Generator_TablePropName="qryRetailsalebillbalance" msprop:Generator_RowDeletingName="qryRetailsalebillbalanceRowDeleting" msprop:Generator_RowChangingName="qryRetailsalebillbalanceRowChanging" msprop:Generator_RowEvHandlerName="qryRetailsalebillbalanceRowChangeEventHandler" msprop:Generator_RowDeletedName="qryRetailsalebillbalanceRowDeleted" msprop:Generator_RowClassName="qryRetailsalebillbalanceRow" msprop:Generator_UserTableName="qryRetailsalebillbalance" msprop:Generator_RowEvArgName="qryRetailsalebillbalanceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Doc_No" msprop:Generator_ColumnVarNameInTable="columnDoc_No" msprop:Generator_ColumnPropNameInRow="Doc_No" msprop:Generator_ColumnPropNameInTable="Doc_NoColumn" msprop:Generator_UserColumnName="Doc_No" type="xs:decimal" />
+              <xs:element name="Tran_Type" msprop:Generator_ColumnVarNameInTable="columnTran_Type" msprop:Generator_ColumnPropNameInRow="Tran_Type" msprop:Generator_ColumnPropNameInTable="Tran_TypeColumn" msprop:Generator_UserColumnName="Tran_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Doc_Date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDoc_Date" msprop:Generator_ColumnPropNameInRow="Doc_Date" msprop:Generator_ColumnPropNameInTable="Doc_DateColumn" msprop:Generator_UserColumnName="Doc_Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="received" msprop:Generator_ColumnVarNameInTable="columnreceived" msprop:Generator_ColumnPropNameInRow="received" msprop:Generator_ColumnPropNameInTable="receivedColumn" msprop:Generator_UserColumnName="received" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Party_Code" msprop:Generator_ColumnVarNameInTable="columnParty_Code" msprop:Generator_ColumnPropNameInRow="Party_Code" msprop:Generator_ColumnPropNameInTable="Party_CodeColumn" msprop:Generator_UserColumnName="Party_Code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cityname" msprop:Generator_ColumnVarNameInTable="columncityname" msprop:Generator_ColumnPropNameInRow="cityname" msprop:Generator_ColumnPropNameInTable="citynameColumn" msprop:Generator_UserColumnName="cityname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="partyname" msprop:Generator_ColumnVarNameInTable="columnpartyname" msprop:Generator_ColumnPropNameInRow="partyname" msprop:Generator_ColumnPropNameInTable="partynameColumn" msprop:Generator_UserColumnName="partyname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetWeight" msprop:Generator_ColumnVarNameInTable="columnNetWeight" msprop:Generator_ColumnPropNameInRow="NetWeight" msprop:Generator_ColumnPropNameInTable="NetWeightColumn" msprop:Generator_UserColumnName="NetWeight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Retailid" msprop:Generator_ColumnVarNameInTable="columnRetailid" msprop:Generator_ColumnPropNameInRow="Retailid" msprop:Generator_ColumnPropNameInTable="RetailidColumn" msprop:Generator_UserColumnName="Retailid" type="xs:decimal" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" />
+              <xs:element name="adj" msprop:Generator_ColumnVarNameInTable="columnadj" msprop:Generator_ColumnPropNameInRow="adj" msprop:Generator_ColumnPropNameInTable="adjColumn" msprop:Generator_UserColumnName="adj" type="xs:decimal" minOccurs="0" />
+              <xs:element name="rptdate" msprop:Generator_ColumnVarNameInTable="columnrptdate" msprop:Generator_ColumnPropNameInRow="rptdate" msprop:Generator_ColumnPropNameInTable="rptdateColumn" msprop:Generator_UserColumnName="rptdate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:qryRetailsalebillbalance" />
+      <xs:field xpath="mstns:Retailid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

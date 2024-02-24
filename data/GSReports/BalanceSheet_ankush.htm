@@ -1,0 +1,677 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Balance Sheet
+</title>
+    <script type="text/javascript">
+        function PrintPanel() {
+            var panel = document.getElementById("PrintPanel");
+            var printWindow = window.open('', '', 'height=660,width=1350');
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('</head><body style="font-family:Calibri;" >');
+            printWindow.document.write('<style type = "text/css">thead {display:table-header-group;} tfoot{display:table-footer-group;}</style>');
+            printWindow.document.write(panel.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 500);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="rptBalanceSheet.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAARrtibGAqXweoc9I7eNKuUxezucPl2hH0iWifbRq8fmwVGA0QCmplLsNfU3yRTKv1lDB2YfWbjwUYntrwPx36ESp/KLHW7KbhuIWh1ioDWFBlmhZSPqL3j5g+lJB/l0Ows=" />
+    <div>
+        <div align="left">
+            <input type="submit" name="btnPrint" value="Print" onclick="return PrintPanel();" id="btnPrint" class="btnHelp" />
+            &nbsp;<input type="submit" name="btnSendEmail" value="Mail" id="btnSendEmail" />
+            Email:<input name="txtEmail" type="text" id="txtEmail" />
+        </div>
+        <div>
+            <div id="PrintPanel" align="center"><font face="Calibri">
+	
+                <span id="lblReportName" class="lblName" style="display:inline-block;text-align: center; width: 100%;"><b><font size="5">Balance Sheet</font></b></span>
+                <table id="tbMain" width="1000px" align="center" style="page-break-after: avoid;">
+		<tr>
+			<td align="center">
+                            <span id="lblCompany"><b><font size="5">Gautam Sugar Trading Company</font></b></span>
+                        </td>
+		</tr>
+		<tr>
+			<td align="center">
+                            <span id="lblCompanyAddr">Kolhapur</span>
+                        </td>
+		</tr>
+		<tr>
+			<td align="center">
+                            <span id="lblCompanyMobile"></span>
+                        </td>
+		</tr>
+	</table>
+	
+                <table width="1000px" align="center">
+                    <tr>
+                        <td style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                        Liabilities
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                        Amount
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td valign="top" style="width: 50%;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                        Asset
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                        Amount
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" style="width: 50%; border-right: solid 1px black;">
+                            
+                            <table id="dtl_Left" cellspacing="0" width="100%">
+		<tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Left_lblGroupNameR_0"><b>Parteners Capital A/c.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Left_lblGroupAmount_0"><b>13577412.88</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_Left_dtLeftInner_0" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_0_lblAcNameL_0">SHAH GAUTAM SUMATILAL   KOLHAPUR </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_0_lblACAmountL_0">-515019</span><span id="dtl_Left_dtLeftInner_0_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_0_lblAcNameL_1">SHAH SUMATILAL SHANTILAL (IND.) KOLHAPUR </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_0_lblACAmountL_1">15111319.88</span><span id="dtl_Left_dtLeftInner_0_lblblank_1" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_0_lblAcNameL_2">SHAH VINIT SUMATILAL  KOLHAPUR</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_0_lblACAmountL_2">-1018888</span><span id="dtl_Left_dtLeftInner_0_lblblank_2" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Left_lblGroupNameR_1"><b>Bank Balances</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Left_lblGroupAmount_1"><b>17289037.51</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_Left_dtLeftInner_1" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_0">AXIS BANK  A/C 00374   </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_0">-381957.27</span><span id="dtl_Left_dtLeftInner_1_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_1">AXIS BANK A/C 74309. (S.S.SHAH) KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_1">27827</span><span id="dtl_Left_dtLeftInner_1_lblblank_1" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_2">AXIS BANK A/C 74756.(S.S.SHAH) KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_2">50235</span><span id="dtl_Left_dtLeftInner_1_lblblank_2" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_3">AXIS BANK LTD OD.003155 KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_3">7770.82</span><span id="dtl_Left_dtLeftInner_1_lblblank_3" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_4">H.D.F.C. LOAN A/C 19. KOLHAPUR</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_4">-65633.85</span><span id="dtl_Left_dtLeftInner_1_lblblank_4" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_5">H.D.F.C.BANK A/C 1908  KOLHAPUR  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_5">10556449.73</span><span id="dtl_Left_dtLeftInner_1_lblblank_5" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_6">HDFC BANK A/C 26596 (S.S.SHAH) KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_6">-216516.64</span><span id="dtl_Left_dtLeftInner_1_lblblank_6" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_7">HDFC CASH.CR.A/C 0047 (OD)  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_7">7990569</span><span id="dtl_Left_dtLeftInner_1_lblblank_7" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_8">ICICI BANK A/C 016605006145 KOLHAPUR</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_8">-671906.28</span><span id="dtl_Left_dtLeftInner_1_lblblank_8" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Left_dtLeftInner_1_lblAcNameL_9">THE COMMERCIAL CO-OP.BANK.LTD.16475 KOLHAPUR</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Left_dtLeftInner_1_lblACAmountL_9">-7800</span><span id="dtl_Left_dtLeftInner_1_lblblank_9" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr>
+	</table>
+                            
+                        </td>
+                        <td valign="top" style="width: 50%;">
+                            
+                            <table id="dtl_Right" cellspacing="0" width="100%">
+		<tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_0"><b>COMMERCIAL CO-OP BANK LTD-KOP.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_0"><b>1210</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_Right_dtRightInner_0" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_0_lblAcNameR_0">COMMERCIAL CO-OP BANK LTD KOLHAPUR </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_0_lblACAmountR_0">1210</span><span id="dtl_Right_dtRightInner_0_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_1"><b>Trade Creiditors</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_1"><b>2946458.35</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_2"><b>Trade Debtors</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_2"><b>27780962.09</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_3"><b>AIR CANDISATIONER PURCHES A/C</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_3"><b>5666</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_Right_dtRightInner_3" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_3_lblAcNameR_0">aaa</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_3_lblACAmountR_0">5666</span><span id="dtl_Right_dtRightInner_3_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_4"><b>FIXED ASSETS</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_4"><b>103762</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_Right_dtRightInner_4" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_4_lblAcNameR_0">OFFICE FURNITURE A/C  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_4_lblACAmountR_0">103762</span><span id="dtl_Right_dtRightInner_4_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_5"><b>CHANDRAKANT TRADING CO.= KOLHAPUR</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_5"><b>5000</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_Right_dtRightInner_5" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_5_lblAcNameR_0">abcd</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_5_lblACAmountR_0">5000</span><span id="dtl_Right_dtRightInner_5_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_6"><b>Depositers</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_6"><b>699969300</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_Right_dtRightInner_6" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_6_lblAcNameR_0">Fadtare Misal</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_6_lblACAmountR_0">6000</span><span id="dtl_Right_dtRightInner_6_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_6_lblAcNameR_1">PRIYA PRAVINCHANDRA SHAH KOLHAPUR. </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_6_lblACAmountR_1">122400</span><span id="dtl_Right_dtRightInner_6_lblblank_1" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_6_lblAcNameR_2">RAJENDRA BABULAL SHAH  KOLHAPUR </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_6_lblACAmountR_2">60900</span><span id="dtl_Right_dtRightInner_6_lblblank_2" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_6_lblAcNameR_3">Steave Jobs</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_6_lblACAmountR_3">700000000</span><span id="dtl_Right_dtRightInner_6_lblblank_3" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_6_lblAcNameR_4">TASHANT SUGAR  KOLHAPUR </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_6_lblACAmountR_4">220000</span><span id="dtl_Right_dtRightInner_6_lblblank_4" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_7"><b>T.d.s. A/c (received)</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_7"><b>205430</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_Right_lblGroupNameR_8"><b>Current Assets</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_Right_lblGroupAmountR_8"><b>1029781</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_Right_dtRightInner_8" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_8_lblAcNameR_0">FIRM ADV.TAX A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_8_lblACAmountR_0">1000000</span><span id="dtl_Right_dtRightInner_8_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_Right_dtRightInner_8_lblAcNameR_1">T.D.S. A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_Right_dtRightInner_8_lblACAmountR_1">29781</span><span id="dtl_Right_dtRightInner_8_lblblank_1" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr>
+	</table>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2" style="width: 100%; border-bottom: solid 1px black;">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%;">
+                                        <span id="Label1"><b>Total:</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%;">
+                                        <span id="lblNetCredit"><b>30866450.39</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%;">
+                                        <span id="Label2"><b>Total:</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%;">
+                                        <span id="lblNetDebit"><b>732047569.44</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black; min-height: 50px;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="lblnetprofithead"><b>Net Profit</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="lblnetProfit"><b>701181119.05</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black; min-height: 50px;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="lblnetlosshead"><b></b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="lblnetLoss"><b></b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="Label4"><b>Total Credit</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="lbltotalCredit"><b>732047569.44</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="Label7"><b>Total Debit</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="lbltotalDebit"><b>732047569.44</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            
+</font></div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+

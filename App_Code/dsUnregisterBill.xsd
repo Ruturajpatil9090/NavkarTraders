@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsUnregisterBill" targetNamespace="http://tempuri.org/dsUnregisterBill.xsd" xmlns:mstns="http://tempuri.org/dsUnregisterBill.xsd" xmlns="http://tempuri.org/dsUnregisterBill.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryOtherInvoiceTableAdapter" GeneratorDataComponentClassName="qryOtherInvoiceTableAdapter" Name="qryOtherInvoice" UserDataComponentName="qryOtherInvoiceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="sugar09042021.dbo.qryOtherInvoice" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT doc_no, doc_date, ac_code, sale_code, narration, amount, other_narration, Company_Code, Year_Code, Created_By, Modified_By, bill_id, ac, sa, Ac_Name, Sale_Name, doc_dateConverted, Address_E, cityname, CompanyPan, 
+                  Pincode
+FROM     qryOtherInvoice</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="doc_no" DataSetColumn="doc_no" />
+              <Mapping SourceColumn="doc_date" DataSetColumn="doc_date" />
+              <Mapping SourceColumn="ac_code" DataSetColumn="ac_code" />
+              <Mapping SourceColumn="sale_code" DataSetColumn="sale_code" />
+              <Mapping SourceColumn="narration" DataSetColumn="narration" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+              <Mapping SourceColumn="other_narration" DataSetColumn="other_narration" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="Created_By" DataSetColumn="Created_By" />
+              <Mapping SourceColumn="Modified_By" DataSetColumn="Modified_By" />
+              <Mapping SourceColumn="bill_id" DataSetColumn="bill_id" />
+              <Mapping SourceColumn="ac" DataSetColumn="ac" />
+              <Mapping SourceColumn="sa" DataSetColumn="sa" />
+              <Mapping SourceColumn="Ac_Name" DataSetColumn="Ac_Name" />
+              <Mapping SourceColumn="Sale_Name" DataSetColumn="Sale_Name" />
+              <Mapping SourceColumn="doc_dateConverted" DataSetColumn="doc_dateConverted" />
+              <Mapping SourceColumn="Address_E" DataSetColumn="Address_E" />
+              <Mapping SourceColumn="cityname" DataSetColumn="cityname" />
+              <Mapping SourceColumn="CompanyPan" DataSetColumn="CompanyPan" />
+              <Mapping SourceColumn="Pincode" DataSetColumn="Pincode" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsUnregisterBill" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsUnregisterBill" msprop:Generator_UserDSName="dsUnregisterBill">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryOtherInvoice" msprop:Generator_TableClassName="qryOtherInvoiceDataTable" msprop:Generator_TableVarName="tableqryOtherInvoice" msprop:Generator_RowChangedName="qryOtherInvoiceRowChanged" msprop:Generator_TablePropName="qryOtherInvoice" msprop:Generator_RowDeletingName="qryOtherInvoiceRowDeleting" msprop:Generator_RowChangingName="qryOtherInvoiceRowChanging" msprop:Generator_RowEvHandlerName="qryOtherInvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="qryOtherInvoiceRowDeleted" msprop:Generator_RowClassName="qryOtherInvoiceRow" msprop:Generator_UserTableName="qryOtherInvoice" msprop:Generator_RowEvArgName="qryOtherInvoiceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="doc_no" msprop:Generator_ColumnVarNameInTable="columndoc_no" msprop:Generator_ColumnPropNameInRow="doc_no" msprop:Generator_ColumnPropNameInTable="doc_noColumn" msprop:Generator_UserColumnName="doc_no" type="xs:int" minOccurs="0" />
+              <xs:element name="doc_date" msprop:Generator_ColumnVarNameInTable="columndoc_date" msprop:Generator_ColumnPropNameInRow="doc_date" msprop:Generator_ColumnPropNameInTable="doc_dateColumn" msprop:Generator_UserColumnName="doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ac_code" msprop:Generator_ColumnVarNameInTable="columnac_code" msprop:Generator_ColumnPropNameInRow="ac_code" msprop:Generator_ColumnPropNameInTable="ac_codeColumn" msprop:Generator_UserColumnName="ac_code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sale_code" msprop:Generator_ColumnVarNameInTable="columnsale_code" msprop:Generator_ColumnPropNameInRow="sale_code" msprop:Generator_ColumnPropNameInTable="sale_codeColumn" msprop:Generator_UserColumnName="sale_code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="narration" msprop:Generator_ColumnVarNameInTable="columnnarration" msprop:Generator_ColumnPropNameInRow="narration" msprop:Generator_ColumnPropNameInTable="narrationColumn" msprop:Generator_UserColumnName="narration" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="other_narration" msprop:Generator_ColumnVarNameInTable="columnother_narration" msprop:Generator_ColumnPropNameInRow="other_narration" msprop:Generator_ColumnPropNameInTable="other_narrationColumn" msprop:Generator_UserColumnName="other_narration" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Created_By" msprop:Generator_ColumnVarNameInTable="columnCreated_By" msprop:Generator_ColumnPropNameInRow="Created_By" msprop:Generator_ColumnPropNameInTable="Created_ByColumn" msprop:Generator_UserColumnName="Created_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modified_By" msprop:Generator_ColumnVarNameInTable="columnModified_By" msprop:Generator_ColumnPropNameInRow="Modified_By" msprop:Generator_ColumnPropNameInTable="Modified_ByColumn" msprop:Generator_UserColumnName="Modified_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bill_id" msprop:Generator_ColumnVarNameInTable="columnbill_id" msprop:Generator_ColumnPropNameInRow="bill_id" msprop:Generator_ColumnPropNameInTable="bill_idColumn" msprop:Generator_UserColumnName="bill_id" type="xs:int" />
+              <xs:element name="ac" msprop:Generator_ColumnVarNameInTable="columnac" msprop:Generator_ColumnPropNameInRow="ac" msprop:Generator_ColumnPropNameInTable="acColumn" msprop:Generator_UserColumnName="ac" type="xs:int" minOccurs="0" />
+              <xs:element name="sa" msprop:Generator_ColumnVarNameInTable="columnsa" msprop:Generator_ColumnPropNameInRow="sa" msprop:Generator_ColumnPropNameInTable="saColumn" msprop:Generator_UserColumnName="sa" type="xs:int" minOccurs="0" />
+              <xs:element name="Ac_Name" msprop:Generator_ColumnVarNameInTable="columnAc_Name" msprop:Generator_ColumnPropNameInRow="Ac_Name" msprop:Generator_ColumnPropNameInTable="Ac_NameColumn" msprop:Generator_UserColumnName="Ac_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sale_Name" msprop:Generator_ColumnVarNameInTable="columnSale_Name" msprop:Generator_ColumnPropNameInRow="Sale_Name" msprop:Generator_ColumnPropNameInTable="Sale_NameColumn" msprop:Generator_UserColumnName="Sale_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="doc_dateConverted" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndoc_dateConverted" msprop:Generator_ColumnPropNameInRow="doc_dateConverted" msprop:Generator_ColumnPropNameInTable="doc_dateConvertedColumn" msprop:Generator_UserColumnName="doc_dateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address_E" msprop:Generator_ColumnVarNameInTable="columnAddress_E" msprop:Generator_ColumnPropNameInRow="Address_E" msprop:Generator_ColumnPropNameInTable="Address_EColumn" msprop:Generator_UserColumnName="Address_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cityname" msprop:Generator_ColumnVarNameInTable="columncityname" msprop:Generator_ColumnPropNameInRow="cityname" msprop:Generator_ColumnPropNameInTable="citynameColumn" msprop:Generator_UserColumnName="cityname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyPan" msprop:Generator_ColumnVarNameInTable="columnCompanyPan" msprop:Generator_ColumnPropNameInRow="CompanyPan" msprop:Generator_ColumnPropNameInTable="CompanyPanColumn" msprop:Generator_UserColumnName="CompanyPan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pincode" msprop:Generator_ColumnVarNameInTable="columnPincode" msprop:Generator_ColumnPropNameInRow="Pincode" msprop:Generator_ColumnPropNameInTable="PincodeColumn" msprop:Generator_UserColumnName="Pincode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:qryOtherInvoice" />
+      <xs:field xpath="mstns:bill_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

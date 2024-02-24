@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsUTRDetailLTNoWise" targetNamespace="http://tempuri.org/DsUTRDetailLTNoWise.xsd" xmlns:mstns="http://tempuri.org/DsUTRDetailLTNoWise.xsd" xmlns="http://tempuri.org/DsUTRDetailLTNoWise.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sugarsoftConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sugarsoftConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sugarsoftConnectionString.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UTRNOTableAdapter" GeneratorDataComponentClassName="UTRNOTableAdapter" Name="UTRNO" UserDataComponentName="UTRNOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sugarsoftConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `qryutrdodetail`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="doc_no" DataSetColumn="doc_no" />
+              <Mapping SourceColumn="doc_date" DataSetColumn="doc_date" />
+              <Mapping SourceColumn="bank_ac" DataSetColumn="bank_ac" />
+              <Mapping SourceColumn="mill_code" DataSetColumn="mill_code" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+              <Mapping SourceColumn="utr_no" DataSetColumn="utr_no" />
+              <Mapping SourceColumn="narration_header" DataSetColumn="narration_header" />
+              <Mapping SourceColumn="narration_footer" DataSetColumn="narration_footer" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="Branch_Code" DataSetColumn="Branch_Code" />
+              <Mapping SourceColumn="Created_By" DataSetColumn="Created_By" />
+              <Mapping SourceColumn="Modified_By" DataSetColumn="Modified_By" />
+              <Mapping SourceColumn="IsSave" DataSetColumn="IsSave" />
+              <Mapping SourceColumn="Lott_No" DataSetColumn="Lott_No" />
+              <Mapping SourceColumn="utrid" DataSetColumn="utrid" />
+              <Mapping SourceColumn="ba" DataSetColumn="ba" />
+              <Mapping SourceColumn="mc" DataSetColumn="mc" />
+              <Mapping SourceColumn="Ac_Name_E" DataSetColumn="Ac_Name_E" />
+              <Mapping SourceColumn="millname" DataSetColumn="millname" />
+              <Mapping SourceColumn="millgstno" DataSetColumn="millgstno" />
+              <Mapping SourceColumn="millemailid" DataSetColumn="millemailid" />
+              <Mapping SourceColumn="millcityname" DataSetColumn="millcityname" />
+              <Mapping SourceColumn="millcitystate" DataSetColumn="millcitystate" />
+              <Mapping SourceColumn="millstatecode" DataSetColumn="millstatecode" />
+              <Mapping SourceColumn="bankname" DataSetColumn="bankname" />
+              <Mapping SourceColumn="Detail_Id" DataSetColumn="Detail_Id" />
+              <Mapping SourceColumn="utrgradename" DataSetColumn="utrgradename" />
+              <Mapping SourceColumn="detailamount" DataSetColumn="detailamount" />
+              <Mapping SourceColumn="tenderid" DataSetColumn="tenderid" />
+              <Mapping SourceColumn="utrdetailid" DataSetColumn="utrdetailid" />
+              <Mapping SourceColumn="Adjusted_Amt" DataSetColumn="Adjusted_Amt" />
+              <Mapping SourceColumn="lot_no" DataSetColumn="lot_no" />
+              <Mapping SourceColumn="lotCompany_Code" DataSetColumn="lotCompany_Code" />
+              <Mapping SourceColumn="lotYear_Code" DataSetColumn="lotYear_Code" />
+              <Mapping SourceColumn="doc_dateConverted" DataSetColumn="doc_dateConverted" />
+              <Mapping SourceColumn="dono" DataSetColumn="dono" />
+              <Mapping SourceColumn="dodate" DataSetColumn="dodate" />
+              <Mapping SourceColumn="dodateconverted" DataSetColumn="dodateconverted" />
+              <Mapping SourceColumn="quantal" DataSetColumn="quantal" />
+              <Mapping SourceColumn="mill_rate" DataSetColumn="mill_rate" />
+              <Mapping SourceColumn="bankamount" DataSetColumn="bankamount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsUTRDetailLTNoWise" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsUTRDetailLTNoWise" msprop:Generator_UserDSName="DsUTRDetailLTNoWise">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UTRNO" msprop:Generator_TableClassName="UTRNODataTable" msprop:Generator_TableVarName="tableUTRNO" msprop:Generator_RowChangedName="UTRNORowChanged" msprop:Generator_TablePropName="UTRNO" msprop:Generator_RowDeletingName="UTRNORowDeleting" msprop:Generator_RowChangingName="UTRNORowChanging" msprop:Generator_RowEvHandlerName="UTRNORowChangeEventHandler" msprop:Generator_RowDeletedName="UTRNORowDeleted" msprop:Generator_RowClassName="UTRNORow" msprop:Generator_UserTableName="UTRNO" msprop:Generator_RowEvArgName="UTRNORowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="doc_no" msprop:Generator_ColumnVarNameInTable="columndoc_no" msprop:Generator_ColumnPropNameInRow="doc_no" msprop:Generator_ColumnPropNameInTable="doc_noColumn" msprop:Generator_UserColumnName="doc_no" type="xs:long" />
+              <xs:element name="doc_date" msprop:Generator_ColumnVarNameInTable="columndoc_date" msprop:Generator_ColumnPropNameInRow="doc_date" msprop:Generator_ColumnPropNameInTable="doc_dateColumn" msprop:Generator_UserColumnName="doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bank_ac" msprop:Generator_ColumnVarNameInTable="columnbank_ac" msprop:Generator_ColumnPropNameInRow="bank_ac" msprop:Generator_ColumnPropNameInTable="bank_acColumn" msprop:Generator_UserColumnName="bank_ac" type="xs:long" minOccurs="0" />
+              <xs:element name="mill_code" msprop:Generator_ColumnVarNameInTable="columnmill_code" msprop:Generator_ColumnPropNameInRow="mill_code" msprop:Generator_ColumnPropNameInTable="mill_codeColumn" msprop:Generator_UserColumnName="mill_code" type="xs:long" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="utr_no" msprop:Generator_ColumnVarNameInTable="columnutr_no" msprop:Generator_ColumnPropNameInRow="utr_no" msprop:Generator_ColumnPropNameInTable="utr_noColumn" msprop:Generator_UserColumnName="utr_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="narration_header" msprop:Generator_ColumnVarNameInTable="columnnarration_header" msprop:Generator_ColumnPropNameInRow="narration_header" msprop:Generator_ColumnPropNameInTable="narration_headerColumn" msprop:Generator_UserColumnName="narration_header" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="narration_footer" msprop:Generator_ColumnVarNameInTable="columnnarration_footer" msprop:Generator_ColumnPropNameInRow="narration_footer" msprop:Generator_ColumnPropNameInTable="narration_footerColumn" msprop:Generator_UserColumnName="narration_footer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:long" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:long" />
+              <xs:element name="Branch_Code" msprop:Generator_ColumnVarNameInTable="columnBranch_Code" msprop:Generator_ColumnPropNameInRow="Branch_Code" msprop:Generator_ColumnPropNameInTable="Branch_CodeColumn" msprop:Generator_UserColumnName="Branch_Code" type="xs:long" minOccurs="0" />
+              <xs:element name="Created_By" msprop:Generator_ColumnVarNameInTable="columnCreated_By" msprop:Generator_ColumnPropNameInRow="Created_By" msprop:Generator_ColumnPropNameInTable="Created_ByColumn" msprop:Generator_UserColumnName="Created_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modified_By" msprop:Generator_ColumnVarNameInTable="columnModified_By" msprop:Generator_ColumnPropNameInRow="Modified_By" msprop:Generator_ColumnPropNameInTable="Modified_ByColumn" msprop:Generator_UserColumnName="Modified_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsSave" msprop:Generator_ColumnVarNameInTable="columnIsSave" msprop:Generator_ColumnPropNameInRow="IsSave" msprop:Generator_ColumnPropNameInTable="IsSaveColumn" msprop:Generator_UserColumnName="IsSave" type="xs:short" minOccurs="0" />
+              <xs:element name="Lott_No" msprop:Generator_ColumnVarNameInTable="columnLott_No" msprop:Generator_ColumnPropNameInRow="Lott_No" msprop:Generator_ColumnPropNameInTable="Lott_NoColumn" msprop:Generator_UserColumnName="Lott_No" type="xs:long" minOccurs="0" />
+              <xs:element name="utrid" msprop:Generator_ColumnVarNameInTable="columnutrid" msprop:Generator_ColumnPropNameInRow="utrid" msprop:Generator_ColumnPropNameInTable="utridColumn" msprop:Generator_UserColumnName="utrid" type="xs:long" />
+              <xs:element name="ba" msprop:Generator_ColumnVarNameInTable="columnba" msprop:Generator_ColumnPropNameInRow="ba" msprop:Generator_ColumnPropNameInTable="baColumn" msprop:Generator_UserColumnName="ba" type="xs:long" minOccurs="0" />
+              <xs:element name="mc" msprop:Generator_ColumnVarNameInTable="columnmc" msprop:Generator_ColumnPropNameInRow="mc" msprop:Generator_ColumnPropNameInTable="mcColumn" msprop:Generator_UserColumnName="mc" type="xs:long" minOccurs="0" />
+              <xs:element name="Ac_Name_E" msprop:Generator_ColumnVarNameInTable="columnAc_Name_E" msprop:Generator_ColumnPropNameInRow="Ac_Name_E" msprop:Generator_ColumnPropNameInTable="Ac_Name_EColumn" msprop:Generator_UserColumnName="Ac_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millname" msprop:Generator_ColumnVarNameInTable="columnmillname" msprop:Generator_ColumnPropNameInRow="millname" msprop:Generator_ColumnPropNameInTable="millnameColumn" msprop:Generator_UserColumnName="millname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millgstno" msprop:Generator_ColumnVarNameInTable="columnmillgstno" msprop:Generator_ColumnPropNameInRow="millgstno" msprop:Generator_ColumnPropNameInTable="millgstnoColumn" msprop:Generator_UserColumnName="millgstno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millemailid" msprop:Generator_ColumnVarNameInTable="columnmillemailid" msprop:Generator_ColumnPropNameInRow="millemailid" msprop:Generator_ColumnPropNameInTable="millemailidColumn" msprop:Generator_UserColumnName="millemailid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millcityname" msprop:Generator_ColumnVarNameInTable="columnmillcityname" msprop:Generator_ColumnPropNameInRow="millcityname" msprop:Generator_ColumnPropNameInTable="millcitynameColumn" msprop:Generator_UserColumnName="millcityname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millcitystate" msprop:Generator_ColumnVarNameInTable="columnmillcitystate" msprop:Generator_ColumnPropNameInRow="millcitystate" msprop:Generator_ColumnPropNameInTable="millcitystateColumn" msprop:Generator_UserColumnName="millcitystate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millstatecode" msprop:Generator_ColumnVarNameInTable="columnmillstatecode" msprop:Generator_ColumnPropNameInRow="millstatecode" msprop:Generator_ColumnPropNameInTable="millstatecodeColumn" msprop:Generator_UserColumnName="millstatecode" type="xs:long" minOccurs="0" />
+              <xs:element name="bankname" msprop:Generator_ColumnVarNameInTable="columnbankname" msprop:Generator_ColumnPropNameInRow="bankname" msprop:Generator_ColumnPropNameInTable="banknameColumn" msprop:Generator_UserColumnName="bankname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Detail_Id" msprop:Generator_ColumnVarNameInTable="columnDetail_Id" msprop:Generator_ColumnPropNameInRow="Detail_Id" msprop:Generator_ColumnPropNameInTable="Detail_IdColumn" msprop:Generator_UserColumnName="Detail_Id" type="xs:long" minOccurs="0" />
+              <xs:element name="utrgradename" msprop:Generator_ColumnVarNameInTable="columnutrgradename" msprop:Generator_ColumnPropNameInRow="utrgradename" msprop:Generator_ColumnPropNameInTable="utrgradenameColumn" msprop:Generator_UserColumnName="utrgradename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="detailamount" msprop:Generator_ColumnVarNameInTable="columndetailamount" msprop:Generator_ColumnPropNameInRow="detailamount" msprop:Generator_ColumnPropNameInTable="detailamountColumn" msprop:Generator_UserColumnName="detailamount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tenderid" msprop:Generator_ColumnVarNameInTable="columntenderid" msprop:Generator_ColumnPropNameInRow="tenderid" msprop:Generator_ColumnPropNameInTable="tenderidColumn" msprop:Generator_UserColumnName="tenderid" type="xs:long" minOccurs="0" />
+              <xs:element name="utrdetailid" msprop:Generator_ColumnVarNameInTable="columnutrdetailid" msprop:Generator_ColumnPropNameInRow="utrdetailid" msprop:Generator_ColumnPropNameInTable="utrdetailidColumn" msprop:Generator_UserColumnName="utrdetailid" type="xs:long" minOccurs="0" />
+              <xs:element name="Adjusted_Amt" msprop:Generator_ColumnVarNameInTable="columnAdjusted_Amt" msprop:Generator_ColumnPropNameInRow="Adjusted_Amt" msprop:Generator_ColumnPropNameInTable="Adjusted_AmtColumn" msprop:Generator_UserColumnName="Adjusted_Amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="lot_no" msprop:Generator_ColumnVarNameInTable="columnlot_no" msprop:Generator_ColumnPropNameInRow="lot_no" msprop:Generator_ColumnPropNameInTable="lot_noColumn" msprop:Generator_UserColumnName="lot_no" type="xs:long" minOccurs="0" />
+              <xs:element name="lotCompany_Code" msprop:Generator_ColumnVarNameInTable="columnlotCompany_Code" msprop:Generator_ColumnPropNameInRow="lotCompany_Code" msprop:Generator_ColumnPropNameInTable="lotCompany_CodeColumn" msprop:Generator_UserColumnName="lotCompany_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="lotYear_Code" msprop:Generator_ColumnVarNameInTable="columnlotYear_Code" msprop:Generator_ColumnPropNameInRow="lotYear_Code" msprop:Generator_ColumnPropNameInTable="lotYear_CodeColumn" msprop:Generator_UserColumnName="lotYear_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="doc_dateConverted" msprop:Generator_ColumnVarNameInTable="columndoc_dateConverted" msprop:Generator_ColumnPropNameInRow="doc_dateConverted" msprop:Generator_ColumnPropNameInTable="doc_dateConvertedColumn" msprop:Generator_UserColumnName="doc_dateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dono" msprop:Generator_ColumnVarNameInTable="columndono" msprop:Generator_ColumnPropNameInRow="dono" msprop:Generator_ColumnPropNameInTable="donoColumn" msprop:Generator_UserColumnName="dono" type="xs:long" minOccurs="0" />
+              <xs:element name="dodate" msprop:Generator_ColumnVarNameInTable="columndodate" msprop:Generator_ColumnPropNameInRow="dodate" msprop:Generator_ColumnPropNameInTable="dodateColumn" msprop:Generator_UserColumnName="dodate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dodateconverted" msprop:Generator_ColumnVarNameInTable="columndodateconverted" msprop:Generator_ColumnPropNameInRow="dodateconverted" msprop:Generator_ColumnPropNameInTable="dodateconvertedColumn" msprop:Generator_UserColumnName="dodateconverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="quantal" msprop:Generator_ColumnVarNameInTable="columnquantal" msprop:Generator_ColumnPropNameInRow="quantal" msprop:Generator_ColumnPropNameInTable="quantalColumn" msprop:Generator_UserColumnName="quantal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mill_rate" msprop:Generator_ColumnVarNameInTable="columnmill_rate" msprop:Generator_ColumnPropNameInRow="mill_rate" msprop:Generator_ColumnPropNameInTable="mill_rateColumn" msprop:Generator_UserColumnName="mill_rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="bankamount" msprop:Generator_ColumnVarNameInTable="columnbankamount" msprop:Generator_ColumnPropNameInRow="bankamount" msprop:Generator_ColumnPropNameInTable="bankamountColumn" msprop:Generator_UserColumnName="bankamount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:UTRNO" />
+      <xs:field xpath="mstns:utrid" />
+      <xs:field xpath="mstns:utrdetailid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

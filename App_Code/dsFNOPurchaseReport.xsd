@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFNOPurchaseReport" targetNamespace="http://tempuri.org/dsFNOPurchaseReport.xsd" xmlns:mstns="http://tempuri.org/dsFNOPurchaseReport.xsd" xmlns="http://tempuri.org/dsFNOPurchaseReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="QryFutureTranstionTableAdapter" GeneratorDataComponentClassName="QryFutureTranstionTableAdapter" Name="QryFutureTranstion" UserDataComponentName="QryFutureTranstionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="Sugar09022021.dbo.QryFutureTranstion" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Doc_No, docdate, Ac_Code, Bill_No, Sattlement_No, Remark, NetBrokrage, Net_cgst, Net_sgst, Net_igst, Net_stt, Net_StampDuty, Net_pnl, Company_Code, 
+                         Year_code, Modified_By, Created_By, Modified_Date, Created_Date, detail_Id, Script_Code, expriydate, Lot_Size, Future_Type, Buy_Sale, Lot_Qty, Rate, Value, 
+                         Strike_Price, AutoCarry, brokername, scriptname, Net_Exchange_Charges, Net_STF, Net_CM_Charge, Net_Postage, Net_Expenses, Net_ProfitLoss, Doc_Date, 
+                         Expiry_Date
+FROM            QryFutureTranstion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Doc_No" DataSetColumn="Doc_No" />
+              <Mapping SourceColumn="docdate" DataSetColumn="docdate" />
+              <Mapping SourceColumn="Ac_Code" DataSetColumn="Ac_Code" />
+              <Mapping SourceColumn="Bill_No" DataSetColumn="Bill_No" />
+              <Mapping SourceColumn="Sattlement_No" DataSetColumn="Sattlement_No" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="NetBrokrage" DataSetColumn="NetBrokrage" />
+              <Mapping SourceColumn="Net_cgst" DataSetColumn="Net_cgst" />
+              <Mapping SourceColumn="Net_sgst" DataSetColumn="Net_sgst" />
+              <Mapping SourceColumn="Net_igst" DataSetColumn="Net_igst" />
+              <Mapping SourceColumn="Net_stt" DataSetColumn="Net_stt" />
+              <Mapping SourceColumn="Net_StampDuty" DataSetColumn="Net_StampDuty" />
+              <Mapping SourceColumn="Net_pnl" DataSetColumn="Net_pnl" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_code" DataSetColumn="Year_code" />
+              <Mapping SourceColumn="Modified_By" DataSetColumn="Modified_By" />
+              <Mapping SourceColumn="Created_By" DataSetColumn="Created_By" />
+              <Mapping SourceColumn="Modified_Date" DataSetColumn="Modified_Date" />
+              <Mapping SourceColumn="Created_Date" DataSetColumn="Created_Date" />
+              <Mapping SourceColumn="detail_Id" DataSetColumn="detail_Id" />
+              <Mapping SourceColumn="Script_Code" DataSetColumn="Script_Code" />
+              <Mapping SourceColumn="expriydate" DataSetColumn="expriydate" />
+              <Mapping SourceColumn="Lot_Size" DataSetColumn="Lot_Size" />
+              <Mapping SourceColumn="Future_Type" DataSetColumn="Future_Type" />
+              <Mapping SourceColumn="Buy_Sale" DataSetColumn="Buy_Sale" />
+              <Mapping SourceColumn="Lot_Qty" DataSetColumn="Lot_Qty" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="Strike_Price" DataSetColumn="Strike_Price" />
+              <Mapping SourceColumn="AutoCarry" DataSetColumn="AutoCarry" />
+              <Mapping SourceColumn="brokername" DataSetColumn="brokername" />
+              <Mapping SourceColumn="scriptname" DataSetColumn="scriptname" />
+              <Mapping SourceColumn="Net_Exchange_Charges" DataSetColumn="Net_Exchange_Charges" />
+              <Mapping SourceColumn="Net_STF" DataSetColumn="Net_STF" />
+              <Mapping SourceColumn="Net_CM_Charge" DataSetColumn="Net_CM_Charge" />
+              <Mapping SourceColumn="Net_Postage" DataSetColumn="Net_Postage" />
+              <Mapping SourceColumn="Net_Expenses" DataSetColumn="Net_Expenses" />
+              <Mapping SourceColumn="Net_ProfitLoss" DataSetColumn="Net_ProfitLoss" />
+              <Mapping SourceColumn="Doc_Date" DataSetColumn="Doc_Date" />
+              <Mapping SourceColumn="Expiry_Date" DataSetColumn="Expiry_Date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFNOPurchaseReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsFNOPurchaseReport" msprop:Generator_UserDSName="dsFNOPurchaseReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="QryFutureTranstion" msprop:Generator_TableClassName="QryFutureTranstionDataTable" msprop:Generator_TableVarName="tableQryFutureTranstion" msprop:Generator_TablePropName="QryFutureTranstion" msprop:Generator_RowDeletingName="QryFutureTranstionRowDeleting" msprop:Generator_RowChangingName="QryFutureTranstionRowChanging" msprop:Generator_RowEvHandlerName="QryFutureTranstionRowChangeEventHandler" msprop:Generator_RowDeletedName="QryFutureTranstionRowDeleted" msprop:Generator_UserTableName="QryFutureTranstion" msprop:Generator_RowChangedName="QryFutureTranstionRowChanged" msprop:Generator_RowEvArgName="QryFutureTranstionRowChangeEvent" msprop:Generator_RowClassName="QryFutureTranstionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Doc_No" msprop:Generator_ColumnVarNameInTable="columnDoc_No" msprop:Generator_ColumnPropNameInRow="Doc_No" msprop:Generator_ColumnPropNameInTable="Doc_NoColumn" msprop:Generator_UserColumnName="Doc_No" type="xs:int" />
+              <xs:element name="docdate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndocdate" msprop:Generator_ColumnPropNameInRow="docdate" msprop:Generator_ColumnPropNameInTable="docdateColumn" msprop:Generator_UserColumnName="docdate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ac_Code" msprop:Generator_ColumnVarNameInTable="columnAc_Code" msprop:Generator_ColumnPropNameInRow="Ac_Code" msprop:Generator_ColumnPropNameInTable="Ac_CodeColumn" msprop:Generator_UserColumnName="Ac_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Bill_No" msprop:Generator_ColumnVarNameInTable="columnBill_No" msprop:Generator_ColumnPropNameInRow="Bill_No" msprop:Generator_ColumnPropNameInTable="Bill_NoColumn" msprop:Generator_UserColumnName="Bill_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sattlement_No" msprop:Generator_ColumnVarNameInTable="columnSattlement_No" msprop:Generator_ColumnPropNameInRow="Sattlement_No" msprop:Generator_ColumnPropNameInTable="Sattlement_NoColumn" msprop:Generator_UserColumnName="Sattlement_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetBrokrage" msprop:Generator_ColumnVarNameInTable="columnNetBrokrage" msprop:Generator_ColumnPropNameInRow="NetBrokrage" msprop:Generator_ColumnPropNameInTable="NetBrokrageColumn" msprop:Generator_UserColumnName="NetBrokrage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_cgst" msprop:Generator_ColumnVarNameInTable="columnNet_cgst" msprop:Generator_ColumnPropNameInRow="Net_cgst" msprop:Generator_ColumnPropNameInTable="Net_cgstColumn" msprop:Generator_UserColumnName="Net_cgst" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_sgst" msprop:Generator_ColumnVarNameInTable="columnNet_sgst" msprop:Generator_ColumnPropNameInRow="Net_sgst" msprop:Generator_ColumnPropNameInTable="Net_sgstColumn" msprop:Generator_UserColumnName="Net_sgst" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_igst" msprop:Generator_ColumnVarNameInTable="columnNet_igst" msprop:Generator_ColumnPropNameInRow="Net_igst" msprop:Generator_ColumnPropNameInTable="Net_igstColumn" msprop:Generator_UserColumnName="Net_igst" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_stt" msprop:Generator_ColumnVarNameInTable="columnNet_stt" msprop:Generator_ColumnPropNameInRow="Net_stt" msprop:Generator_ColumnPropNameInTable="Net_sttColumn" msprop:Generator_UserColumnName="Net_stt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_StampDuty" msprop:Generator_ColumnVarNameInTable="columnNet_StampDuty" msprop:Generator_ColumnPropNameInRow="Net_StampDuty" msprop:Generator_ColumnPropNameInTable="Net_StampDutyColumn" msprop:Generator_UserColumnName="Net_StampDuty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_pnl" msprop:Generator_ColumnVarNameInTable="columnNet_pnl" msprop:Generator_ColumnPropNameInRow="Net_pnl" msprop:Generator_ColumnPropNameInTable="Net_pnlColumn" msprop:Generator_UserColumnName="Net_pnl" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" />
+              <xs:element name="Year_code" msprop:Generator_ColumnVarNameInTable="columnYear_code" msprop:Generator_ColumnPropNameInRow="Year_code" msprop:Generator_ColumnPropNameInTable="Year_codeColumn" msprop:Generator_UserColumnName="Year_code" type="xs:int" />
+              <xs:element name="Modified_By" msprop:Generator_ColumnVarNameInTable="columnModified_By" msprop:Generator_ColumnPropNameInRow="Modified_By" msprop:Generator_ColumnPropNameInTable="Modified_ByColumn" msprop:Generator_UserColumnName="Modified_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Created_By" msprop:Generator_ColumnVarNameInTable="columnCreated_By" msprop:Generator_ColumnPropNameInRow="Created_By" msprop:Generator_ColumnPropNameInTable="Created_ByColumn" msprop:Generator_UserColumnName="Created_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modified_Date" msprop:Generator_ColumnVarNameInTable="columnModified_Date" msprop:Generator_ColumnPropNameInRow="Modified_Date" msprop:Generator_ColumnPropNameInTable="Modified_DateColumn" msprop:Generator_UserColumnName="Modified_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Created_Date" msprop:Generator_ColumnVarNameInTable="columnCreated_Date" msprop:Generator_ColumnPropNameInRow="Created_Date" msprop:Generator_ColumnPropNameInTable="Created_DateColumn" msprop:Generator_UserColumnName="Created_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="detail_Id" msprop:Generator_ColumnVarNameInTable="columndetail_Id" msprop:Generator_ColumnPropNameInRow="detail_Id" msprop:Generator_ColumnPropNameInTable="detail_IdColumn" msprop:Generator_UserColumnName="detail_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Script_Code" msprop:Generator_ColumnVarNameInTable="columnScript_Code" msprop:Generator_ColumnPropNameInRow="Script_Code" msprop:Generator_ColumnPropNameInTable="Script_CodeColumn" msprop:Generator_UserColumnName="Script_Code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="expriydate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnexpriydate" msprop:Generator_ColumnPropNameInRow="expriydate" msprop:Generator_ColumnPropNameInTable="expriydateColumn" msprop:Generator_UserColumnName="expriydate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lot_Size" msprop:Generator_ColumnVarNameInTable="columnLot_Size" msprop:Generator_ColumnPropNameInRow="Lot_Size" msprop:Generator_ColumnPropNameInTable="Lot_SizeColumn" msprop:Generator_UserColumnName="Lot_Size" type="xs:int" minOccurs="0" />
+              <xs:element name="Future_Type" msprop:Generator_ColumnVarNameInTable="columnFuture_Type" msprop:Generator_ColumnPropNameInRow="Future_Type" msprop:Generator_ColumnPropNameInTable="Future_TypeColumn" msprop:Generator_UserColumnName="Future_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buy_Sale" msprop:Generator_ColumnVarNameInTable="columnBuy_Sale" msprop:Generator_ColumnPropNameInRow="Buy_Sale" msprop:Generator_ColumnPropNameInTable="Buy_SaleColumn" msprop:Generator_UserColumnName="Buy_Sale" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lot_Qty" msprop:Generator_ColumnVarNameInTable="columnLot_Qty" msprop:Generator_ColumnPropNameInRow="Lot_Qty" msprop:Generator_ColumnPropNameInTable="Lot_QtyColumn" msprop:Generator_UserColumnName="Lot_Qty" type="xs:int" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Strike_Price" msprop:Generator_ColumnVarNameInTable="columnStrike_Price" msprop:Generator_ColumnPropNameInRow="Strike_Price" msprop:Generator_ColumnPropNameInTable="Strike_PriceColumn" msprop:Generator_UserColumnName="Strike_Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AutoCarry" msprop:Generator_ColumnVarNameInTable="columnAutoCarry" msprop:Generator_ColumnPropNameInRow="AutoCarry" msprop:Generator_ColumnPropNameInTable="AutoCarryColumn" msprop:Generator_UserColumnName="AutoCarry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="brokername" msprop:Generator_ColumnVarNameInTable="columnbrokername" msprop:Generator_ColumnPropNameInRow="brokername" msprop:Generator_ColumnPropNameInTable="brokernameColumn" msprop:Generator_UserColumnName="brokername" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="scriptname" msprop:Generator_ColumnVarNameInTable="columnscriptname" msprop:Generator_ColumnPropNameInRow="scriptname" msprop:Generator_ColumnPropNameInTable="scriptnameColumn" msprop:Generator_UserColumnName="scriptname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Net_Exchange_Charges" msprop:Generator_ColumnVarNameInTable="columnNet_Exchange_Charges" msprop:Generator_ColumnPropNameInRow="Net_Exchange_Charges" msprop:Generator_ColumnPropNameInTable="Net_Exchange_ChargesColumn" msprop:Generator_UserColumnName="Net_Exchange_Charges" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_STF" msprop:Generator_ColumnVarNameInTable="columnNet_STF" msprop:Generator_ColumnPropNameInRow="Net_STF" msprop:Generator_ColumnPropNameInTable="Net_STFColumn" msprop:Generator_UserColumnName="Net_STF" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_CM_Charge" msprop:Generator_ColumnVarNameInTable="columnNet_CM_Charge" msprop:Generator_ColumnPropNameInRow="Net_CM_Charge" msprop:Generator_ColumnPropNameInTable="Net_CM_ChargeColumn" msprop:Generator_UserColumnName="Net_CM_Charge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_Postage" msprop:Generator_ColumnVarNameInTable="columnNet_Postage" msprop:Generator_ColumnPropNameInRow="Net_Postage" msprop:Generator_ColumnPropNameInTable="Net_PostageColumn" msprop:Generator_UserColumnName="Net_Postage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_Expenses" msprop:Generator_ColumnVarNameInTable="columnNet_Expenses" msprop:Generator_ColumnPropNameInRow="Net_Expenses" msprop:Generator_ColumnPropNameInTable="Net_ExpensesColumn" msprop:Generator_UserColumnName="Net_Expenses" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_ProfitLoss" msprop:Generator_ColumnVarNameInTable="columnNet_ProfitLoss" msprop:Generator_ColumnPropNameInRow="Net_ProfitLoss" msprop:Generator_ColumnPropNameInTable="Net_ProfitLossColumn" msprop:Generator_UserColumnName="Net_ProfitLoss" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Doc_Date" msprop:Generator_ColumnVarNameInTable="columnDoc_Date" msprop:Generator_ColumnPropNameInRow="Doc_Date" msprop:Generator_ColumnPropNameInTable="Doc_DateColumn" msprop:Generator_UserColumnName="Doc_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Expiry_Date" msprop:Generator_ColumnVarNameInTable="columnExpiry_Date" msprop:Generator_ColumnPropNameInRow="Expiry_Date" msprop:Generator_ColumnPropNameInTable="Expiry_DateColumn" msprop:Generator_UserColumnName="Expiry_Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSugarBalanceStockSummary" targetNamespace="http://tempuri.org/dsSugarBalanceStockSummary.xsd" xmlns:mstns="http://tempuri.org/dsSugarBalanceStockSummary.xsd" xmlns="http://tempuri.org/dsSugarBalanceStockSummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryDayPatrakReportTableAdapter" GeneratorDataComponentClassName="qryDayPatrakReportTableAdapter" Name="qryDayPatrakReport" UserDataComponentName="qryDayPatrakReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="SugarSoft.dbo.qryDayPatrakReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Tender_No, Tender_Date, Lifting_Date, MillShortName, PaymentTo, LotNo, SaudaQntl, LiftedQntl, UnLiftedQntl, Self, company_code, Year_Code, season, 
+                         Grade
+FROM            qryDayPatrakReport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tender_No" DataSetColumn="Tender_No" />
+              <Mapping SourceColumn="Tender_Date" DataSetColumn="Tender_Date" />
+              <Mapping SourceColumn="Lifting_Date" DataSetColumn="Lifting_Date" />
+              <Mapping SourceColumn="MillShortName" DataSetColumn="MillShortName" />
+              <Mapping SourceColumn="PaymentTo" DataSetColumn="PaymentTo" />
+              <Mapping SourceColumn="LotNo" DataSetColumn="LotNo" />
+              <Mapping SourceColumn="SaudaQntl" DataSetColumn="SaudaQntl" />
+              <Mapping SourceColumn="LiftedQntl" DataSetColumn="LiftedQntl" />
+              <Mapping SourceColumn="UnLiftedQntl" DataSetColumn="UnLiftedQntl" />
+              <Mapping SourceColumn="Self" DataSetColumn="Self" />
+              <Mapping SourceColumn="company_code" DataSetColumn="company_code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="season" DataSetColumn="season" />
+              <Mapping SourceColumn="Grade" DataSetColumn="Grade" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSugarBalanceStockSummary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsSugarBalanceStockSummary" msprop:Generator_UserDSName="dsSugarBalanceStockSummary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryDayPatrakReport" msprop:Generator_TableClassName="qryDayPatrakReportDataTable" msprop:Generator_TableVarName="tableqryDayPatrakReport" msprop:Generator_TablePropName="qryDayPatrakReport" msprop:Generator_RowDeletingName="qryDayPatrakReportRowDeleting" msprop:Generator_RowChangingName="qryDayPatrakReportRowChanging" msprop:Generator_RowEvHandlerName="qryDayPatrakReportRowChangeEventHandler" msprop:Generator_RowDeletedName="qryDayPatrakReportRowDeleted" msprop:Generator_UserTableName="qryDayPatrakReport" msprop:Generator_RowChangedName="qryDayPatrakReportRowChanged" msprop:Generator_RowEvArgName="qryDayPatrakReportRowChangeEvent" msprop:Generator_RowClassName="qryDayPatrakReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tender_No" msprop:Generator_ColumnVarNameInTable="columnTender_No" msprop:Generator_ColumnPropNameInRow="Tender_No" msprop:Generator_ColumnPropNameInTable="Tender_NoColumn" msprop:Generator_UserColumnName="Tender_No" type="xs:int" />
+              <xs:element name="Tender_Date" msprop:Generator_ColumnVarNameInTable="columnTender_Date" msprop:Generator_ColumnPropNameInRow="Tender_Date" msprop:Generator_ColumnPropNameInTable="Tender_DateColumn" msprop:Generator_UserColumnName="Tender_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Lifting_Date" msprop:Generator_ColumnVarNameInTable="columnLifting_Date" msprop:Generator_ColumnPropNameInRow="Lifting_Date" msprop:Generator_ColumnPropNameInTable="Lifting_DateColumn" msprop:Generator_UserColumnName="Lifting_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MillShortName" msprop:Generator_ColumnVarNameInTable="columnMillShortName" msprop:Generator_ColumnPropNameInRow="MillShortName" msprop:Generator_ColumnPropNameInTable="MillShortNameColumn" msprop:Generator_UserColumnName="MillShortName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentTo" msprop:Generator_ColumnVarNameInTable="columnPaymentTo" msprop:Generator_ColumnPropNameInRow="PaymentTo" msprop:Generator_ColumnPropNameInTable="PaymentToColumn" msprop:Generator_UserColumnName="PaymentTo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LotNo" msprop:Generator_ColumnVarNameInTable="columnLotNo" msprop:Generator_ColumnPropNameInRow="LotNo" msprop:Generator_ColumnPropNameInTable="LotNoColumn" msprop:Generator_UserColumnName="LotNo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaudaQntl" msprop:Generator_ColumnVarNameInTable="columnSaudaQntl" msprop:Generator_ColumnPropNameInRow="SaudaQntl" msprop:Generator_ColumnPropNameInTable="SaudaQntlColumn" msprop:Generator_UserColumnName="SaudaQntl" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LiftedQntl" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLiftedQntl" msprop:Generator_ColumnPropNameInRow="LiftedQntl" msprop:Generator_ColumnPropNameInTable="LiftedQntlColumn" msprop:Generator_UserColumnName="LiftedQntl" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UnLiftedQntl" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUnLiftedQntl" msprop:Generator_ColumnPropNameInRow="UnLiftedQntl" msprop:Generator_ColumnPropNameInTable="UnLiftedQntlColumn" msprop:Generator_UserColumnName="UnLiftedQntl" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Self" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSelf" msprop:Generator_ColumnPropNameInRow="Self" msprop:Generator_ColumnPropNameInTable="SelfColumn" msprop:Generator_UserColumnName="Self" type="xs:decimal" minOccurs="0" />
+              <xs:element name="company_code" msprop:Generator_ColumnVarNameInTable="columncompany_code" msprop:Generator_ColumnPropNameInRow="company_code" msprop:Generator_ColumnPropNameInTable="company_codeColumn" msprop:Generator_UserColumnName="company_code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="season" msprop:Generator_ColumnVarNameInTable="columnseason" msprop:Generator_ColumnPropNameInRow="season" msprop:Generator_ColumnPropNameInTable="seasonColumn" msprop:Generator_UserColumnName="season" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grade" msprop:Generator_ColumnVarNameInTable="columnGrade" msprop:Generator_ColumnPropNameInRow="Grade" msprop:Generator_ColumnPropNameInTable="GradeColumn" msprop:Generator_UserColumnName="Grade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

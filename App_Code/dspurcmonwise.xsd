@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dspurcmonwise" targetNamespace="http://tempuri.org/dspurcmonwise.xsd" xmlns:mstns="http://tempuri.org/dspurcmonwise.xsd" xmlns="http://tempuri.org/dspurcmonwise.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryMonthwisepurchaseTableAdapter" GeneratorDataComponentClassName="qryMonthwisepurchaseTableAdapter" Name="qryMonthwisepurchase" UserDataComponentName="qryMonthwisepurchaseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="NavkarSugarSoft.dbo.qryMonthwisepurchase" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Company_Code, Year_Code, yr, mn, qntl, itemamt FROM dbo.qryMonthwisepurchase</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="yr" DataSetColumn="yr" />
+              <Mapping SourceColumn="mn" DataSetColumn="mn" />
+              <Mapping SourceColumn="qntl" DataSetColumn="qntl" />
+              <Mapping SourceColumn="itemamt" DataSetColumn="itemamt" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dspurcmonwise" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dspurcmonwise" msprop:Generator_DataSetName="dspurcmonwise">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryMonthwisepurchase" msprop:Generator_TableClassName="qryMonthwisepurchaseDataTable" msprop:Generator_TableVarName="tableqryMonthwisepurchase" msprop:Generator_TablePropName="qryMonthwisepurchase" msprop:Generator_RowDeletingName="qryMonthwisepurchaseRowDeleting" msprop:Generator_RowChangingName="qryMonthwisepurchaseRowChanging" msprop:Generator_RowEvHandlerName="qryMonthwisepurchaseRowChangeEventHandler" msprop:Generator_RowDeletedName="qryMonthwisepurchaseRowDeleted" msprop:Generator_UserTableName="qryMonthwisepurchase" msprop:Generator_RowChangedName="qryMonthwisepurchaseRowChanged" msprop:Generator_RowEvArgName="qryMonthwisepurchaseRowChangeEvent" msprop:Generator_RowClassName="qryMonthwisepurchaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="yr" msprop:Generator_ColumnVarNameInTable="columnyr" msprop:Generator_ColumnPropNameInRow="yr" msprop:Generator_ColumnPropNameInTable="yrColumn" msprop:Generator_UserColumnName="yr" type="xs:int" minOccurs="0" />
+              <xs:element name="mn" msprop:Generator_ColumnVarNameInTable="columnmn" msprop:Generator_ColumnPropNameInRow="mn" msprop:Generator_ColumnPropNameInTable="mnColumn" msprop:Generator_UserColumnName="mn" type="xs:int" minOccurs="0" />
+              <xs:element name="qntl" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnqntl" msprop:Generator_ColumnPropNameInRow="qntl" msprop:Generator_ColumnPropNameInTable="qntlColumn" msprop:Generator_UserColumnName="qntl" type="xs:decimal" minOccurs="0" />
+              <xs:element name="itemamt" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnitemamt" msprop:Generator_ColumnPropNameInRow="itemamt" msprop:Generator_ColumnPropNameInTable="itemamtColumn" msprop:Generator_UserColumnName="itemamt" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

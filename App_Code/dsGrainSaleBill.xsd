@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGrainSaleBill" targetNamespace="http://tempuri.org/dsGrainSaleBill.xsd" xmlns:mstns="http://tempuri.org/dsGrainSaleBill.xsd" xmlns="http://tempuri.org/dsGrainSaleBill.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryGrainSaleDetailTableAdapter" GeneratorDataComponentClassName="qryGrainSaleDetailTableAdapter" Name="qryGrainSaleDetail" UserDataComponentName="qryGrainSaleDetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="NavkarSugarSoft04012023.dbo.qryGrainSaleDetail" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Cash_Credit, Doc_No, Doc_Date, Doc_DateConverted, Ac_Code, Broker, Truck_No, LR_No, Taxable_Amount, SGST_Amount, CGST_Amount, IGST_Amount, Hamali, postage, Amount, TCS_Par, TCS_Amount, Company_Code, Created_By, 
+                  Year_Code, Branch_Code, Modified_By, EwayBillValidDate, EWayBill_Chk, EWay_Bill_No, Einvoice_No, Ack_No, PartyName, BrokerName, ac, bk, Item_Code, Brand_Code, Qty, Wt_Per, Wt_Qty, Rate, Value, GstRate_Code, SGST, CGST, 
+                  IGST, Hamali_Rate, HamaliAmt, SaleDetail_Id, Detail_Id, ic, Brand_Name, itemname, EwayBillValidDateConverted, GstRate_Name, IsDelete, Sale_Id, TDS_Rate, TDS_Amt, purchaseyearcode, HSN, Gst_No, Address_E, CGSTRate, 
+                  SGSTRate, IGSTRate
+FROM     qryGrainSaleDetail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cash_Credit" DataSetColumn="Cash_Credit" />
+              <Mapping SourceColumn="Doc_No" DataSetColumn="Doc_No" />
+              <Mapping SourceColumn="Doc_Date" DataSetColumn="Doc_Date" />
+              <Mapping SourceColumn="Doc_DateConverted" DataSetColumn="Doc_DateConverted" />
+              <Mapping SourceColumn="Ac_Code" DataSetColumn="Ac_Code" />
+              <Mapping SourceColumn="Broker" DataSetColumn="Broker" />
+              <Mapping SourceColumn="Truck_No" DataSetColumn="Truck_No" />
+              <Mapping SourceColumn="LR_No" DataSetColumn="LR_No" />
+              <Mapping SourceColumn="Taxable_Amount" DataSetColumn="Taxable_Amount" />
+              <Mapping SourceColumn="SGST_Amount" DataSetColumn="SGST_Amount" />
+              <Mapping SourceColumn="CGST_Amount" DataSetColumn="CGST_Amount" />
+              <Mapping SourceColumn="IGST_Amount" DataSetColumn="IGST_Amount" />
+              <Mapping SourceColumn="Hamali" DataSetColumn="Hamali" />
+              <Mapping SourceColumn="postage" DataSetColumn="postage" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="TCS_Par" DataSetColumn="TCS_Par" />
+              <Mapping SourceColumn="TCS_Amount" DataSetColumn="TCS_Amount" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Created_By" DataSetColumn="Created_By" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="Branch_Code" DataSetColumn="Branch_Code" />
+              <Mapping SourceColumn="Modified_By" DataSetColumn="Modified_By" />
+              <Mapping SourceColumn="EwayBillValidDate" DataSetColumn="EwayBillValidDate" />
+              <Mapping SourceColumn="EWayBill_Chk" DataSetColumn="EWayBill_Chk" />
+              <Mapping SourceColumn="EWay_Bill_No" DataSetColumn="EWay_Bill_No" />
+              <Mapping SourceColumn="Einvoice_No" DataSetColumn="Einvoice_No" />
+              <Mapping SourceColumn="Ack_No" DataSetColumn="Ack_No" />
+              <Mapping SourceColumn="PartyName" DataSetColumn="PartyName" />
+              <Mapping SourceColumn="BrokerName" DataSetColumn="BrokerName" />
+              <Mapping SourceColumn="ac" DataSetColumn="ac" />
+              <Mapping SourceColumn="bk" DataSetColumn="bk" />
+              <Mapping SourceColumn="Item_Code" DataSetColumn="Item_Code" />
+              <Mapping SourceColumn="Brand_Code" DataSetColumn="Brand_Code" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Wt_Per" DataSetColumn="Wt_Per" />
+              <Mapping SourceColumn="Wt_Qty" DataSetColumn="Wt_Qty" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="GstRate_Code" DataSetColumn="GstRate_Code" />
+              <Mapping SourceColumn="SGST" DataSetColumn="SGST" />
+              <Mapping SourceColumn="CGST" DataSetColumn="CGST" />
+              <Mapping SourceColumn="IGST" DataSetColumn="IGST" />
+              <Mapping SourceColumn="Hamali_Rate" DataSetColumn="Hamali_Rate" />
+              <Mapping SourceColumn="HamaliAmt" DataSetColumn="HamaliAmt" />
+              <Mapping SourceColumn="SaleDetail_Id" DataSetColumn="SaleDetail_Id" />
+              <Mapping SourceColumn="Detail_Id" DataSetColumn="Detail_Id" />
+              <Mapping SourceColumn="ic" DataSetColumn="ic" />
+              <Mapping SourceColumn="Brand_Name" DataSetColumn="Brand_Name" />
+              <Mapping SourceColumn="itemname" DataSetColumn="itemname" />
+              <Mapping SourceColumn="EwayBillValidDateConverted" DataSetColumn="EwayBillValidDateConverted" />
+              <Mapping SourceColumn="GstRate_Name" DataSetColumn="GstRate_Name" />
+              <Mapping SourceColumn="IsDelete" DataSetColumn="IsDelete" />
+              <Mapping SourceColumn="Sale_Id" DataSetColumn="Sale_Id" />
+              <Mapping SourceColumn="TDS_Rate" DataSetColumn="TDS_Rate" />
+              <Mapping SourceColumn="TDS_Amt" DataSetColumn="TDS_Amt" />
+              <Mapping SourceColumn="purchaseyearcode" DataSetColumn="purchaseyearcode" />
+              <Mapping SourceColumn="HSN" DataSetColumn="HSN" />
+              <Mapping SourceColumn="Gst_No" DataSetColumn="Gst_No" />
+              <Mapping SourceColumn="Address_E" DataSetColumn="Address_E" />
+              <Mapping SourceColumn="CGSTRate" DataSetColumn="CGSTRate" />
+              <Mapping SourceColumn="SGSTRate" DataSetColumn="SGSTRate" />
+              <Mapping SourceColumn="IGSTRate" DataSetColumn="IGSTRate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGrainSaleBill" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsGrainSaleBill" msprop:Generator_UserDSName="dsGrainSaleBill">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryGrainSaleDetail" msprop:Generator_TableClassName="qryGrainSaleDetailDataTable" msprop:Generator_TableVarName="tableqryGrainSaleDetail" msprop:Generator_TablePropName="qryGrainSaleDetail" msprop:Generator_RowDeletingName="qryGrainSaleDetailRowDeleting" msprop:Generator_RowChangingName="qryGrainSaleDetailRowChanging" msprop:Generator_RowEvHandlerName="qryGrainSaleDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="qryGrainSaleDetailRowDeleted" msprop:Generator_UserTableName="qryGrainSaleDetail" msprop:Generator_RowChangedName="qryGrainSaleDetailRowChanged" msprop:Generator_RowEvArgName="qryGrainSaleDetailRowChangeEvent" msprop:Generator_RowClassName="qryGrainSaleDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cash_Credit" msprop:Generator_ColumnVarNameInTable="columnCash_Credit" msprop:Generator_ColumnPropNameInRow="Cash_Credit" msprop:Generator_ColumnPropNameInTable="Cash_CreditColumn" msprop:Generator_UserColumnName="Cash_Credit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Doc_No" msprop:Generator_ColumnVarNameInTable="columnDoc_No" msprop:Generator_ColumnPropNameInRow="Doc_No" msprop:Generator_ColumnPropNameInTable="Doc_NoColumn" msprop:Generator_UserColumnName="Doc_No" type="xs:int" minOccurs="0" />
+              <xs:element name="Doc_Date" msprop:Generator_ColumnVarNameInTable="columnDoc_Date" msprop:Generator_ColumnPropNameInRow="Doc_Date" msprop:Generator_ColumnPropNameInTable="Doc_DateColumn" msprop:Generator_UserColumnName="Doc_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Doc_DateConverted" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDoc_DateConverted" msprop:Generator_ColumnPropNameInRow="Doc_DateConverted" msprop:Generator_ColumnPropNameInTable="Doc_DateConvertedColumn" msprop:Generator_UserColumnName="Doc_DateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ac_Code" msprop:Generator_ColumnVarNameInTable="columnAc_Code" msprop:Generator_ColumnPropNameInRow="Ac_Code" msprop:Generator_ColumnPropNameInTable="Ac_CodeColumn" msprop:Generator_UserColumnName="Ac_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Broker" msprop:Generator_ColumnVarNameInTable="columnBroker" msprop:Generator_ColumnPropNameInRow="Broker" msprop:Generator_ColumnPropNameInTable="BrokerColumn" msprop:Generator_UserColumnName="Broker" type="xs:int" minOccurs="0" />
+              <xs:element name="Truck_No" msprop:Generator_ColumnVarNameInTable="columnTruck_No" msprop:Generator_ColumnPropNameInRow="Truck_No" msprop:Generator_ColumnPropNameInTable="Truck_NoColumn" msprop:Generator_UserColumnName="Truck_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LR_No" msprop:Generator_ColumnVarNameInTable="columnLR_No" msprop:Generator_ColumnPropNameInRow="LR_No" msprop:Generator_ColumnPropNameInTable="LR_NoColumn" msprop:Generator_UserColumnName="LR_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Taxable_Amount" msprop:Generator_ColumnVarNameInTable="columnTaxable_Amount" msprop:Generator_ColumnPropNameInRow="Taxable_Amount" msprop:Generator_ColumnPropNameInTable="Taxable_AmountColumn" msprop:Generator_UserColumnName="Taxable_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SGST_Amount" msprop:Generator_ColumnVarNameInTable="columnSGST_Amount" msprop:Generator_ColumnPropNameInRow="SGST_Amount" msprop:Generator_ColumnPropNameInTable="SGST_AmountColumn" msprop:Generator_UserColumnName="SGST_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CGST_Amount" msprop:Generator_ColumnVarNameInTable="columnCGST_Amount" msprop:Generator_ColumnPropNameInRow="CGST_Amount" msprop:Generator_ColumnPropNameInTable="CGST_AmountColumn" msprop:Generator_UserColumnName="CGST_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IGST_Amount" msprop:Generator_ColumnVarNameInTable="columnIGST_Amount" msprop:Generator_ColumnPropNameInRow="IGST_Amount" msprop:Generator_ColumnPropNameInTable="IGST_AmountColumn" msprop:Generator_UserColumnName="IGST_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Hamali" msprop:Generator_ColumnVarNameInTable="columnHamali" msprop:Generator_ColumnPropNameInRow="Hamali" msprop:Generator_ColumnPropNameInTable="HamaliColumn" msprop:Generator_UserColumnName="Hamali" type="xs:decimal" minOccurs="0" />
+              <xs:element name="postage" msprop:Generator_ColumnVarNameInTable="columnpostage" msprop:Generator_ColumnPropNameInRow="postage" msprop:Generator_ColumnPropNameInTable="postageColumn" msprop:Generator_UserColumnName="postage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TCS_Par" msprop:Generator_ColumnVarNameInTable="columnTCS_Par" msprop:Generator_ColumnPropNameInRow="TCS_Par" msprop:Generator_ColumnPropNameInTable="TCS_ParColumn" msprop:Generator_UserColumnName="TCS_Par" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TCS_Amount" msprop:Generator_ColumnVarNameInTable="columnTCS_Amount" msprop:Generator_ColumnPropNameInRow="TCS_Amount" msprop:Generator_ColumnPropNameInTable="TCS_AmountColumn" msprop:Generator_UserColumnName="TCS_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Created_By" msprop:Generator_ColumnVarNameInTable="columnCreated_By" msprop:Generator_ColumnPropNameInRow="Created_By" msprop:Generator_ColumnPropNameInTable="Created_ByColumn" msprop:Generator_UserColumnName="Created_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Branch_Code" msprop:Generator_ColumnVarNameInTable="columnBranch_Code" msprop:Generator_ColumnPropNameInRow="Branch_Code" msprop:Generator_ColumnPropNameInTable="Branch_CodeColumn" msprop:Generator_UserColumnName="Branch_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Modified_By" msprop:Generator_ColumnVarNameInTable="columnModified_By" msprop:Generator_ColumnPropNameInRow="Modified_By" msprop:Generator_ColumnPropNameInTable="Modified_ByColumn" msprop:Generator_UserColumnName="Modified_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EwayBillValidDate" msprop:Generator_ColumnVarNameInTable="columnEwayBillValidDate" msprop:Generator_ColumnPropNameInRow="EwayBillValidDate" msprop:Generator_ColumnPropNameInTable="EwayBillValidDateColumn" msprop:Generator_UserColumnName="EwayBillValidDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EWayBill_Chk" msprop:Generator_ColumnVarNameInTable="columnEWayBill_Chk" msprop:Generator_ColumnPropNameInRow="EWayBill_Chk" msprop:Generator_ColumnPropNameInTable="EWayBill_ChkColumn" msprop:Generator_UserColumnName="EWayBill_Chk" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EWay_Bill_No" msprop:Generator_ColumnVarNameInTable="columnEWay_Bill_No" msprop:Generator_ColumnPropNameInRow="EWay_Bill_No" msprop:Generator_ColumnPropNameInTable="EWay_Bill_NoColumn" msprop:Generator_UserColumnName="EWay_Bill_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Einvoice_No" msprop:Generator_ColumnVarNameInTable="columnEinvoice_No" msprop:Generator_ColumnPropNameInRow="Einvoice_No" msprop:Generator_ColumnPropNameInTable="Einvoice_NoColumn" msprop:Generator_UserColumnName="Einvoice_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ack_No" msprop:Generator_ColumnVarNameInTable="columnAck_No" msprop:Generator_ColumnPropNameInRow="Ack_No" msprop:Generator_ColumnPropNameInTable="Ack_NoColumn" msprop:Generator_UserColumnName="Ack_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PartyName" msprop:Generator_ColumnVarNameInTable="columnPartyName" msprop:Generator_ColumnPropNameInRow="PartyName" msprop:Generator_ColumnPropNameInTable="PartyNameColumn" msprop:Generator_UserColumnName="PartyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BrokerName" msprop:Generator_ColumnVarNameInTable="columnBrokerName" msprop:Generator_ColumnPropNameInRow="BrokerName" msprop:Generator_ColumnPropNameInTable="BrokerNameColumn" msprop:Generator_UserColumnName="BrokerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ac" msprop:Generator_ColumnVarNameInTable="columnac" msprop:Generator_ColumnPropNameInRow="ac" msprop:Generator_ColumnPropNameInTable="acColumn" msprop:Generator_UserColumnName="ac" type="xs:int" minOccurs="0" />
+              <xs:element name="bk" msprop:Generator_ColumnVarNameInTable="columnbk" msprop:Generator_ColumnPropNameInRow="bk" msprop:Generator_ColumnPropNameInTable="bkColumn" msprop:Generator_UserColumnName="bk" type="xs:int" minOccurs="0" />
+              <xs:element name="Item_Code" msprop:Generator_ColumnVarNameInTable="columnItem_Code" msprop:Generator_ColumnPropNameInRow="Item_Code" msprop:Generator_ColumnPropNameInTable="Item_CodeColumn" msprop:Generator_UserColumnName="Item_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Brand_Code" msprop:Generator_ColumnVarNameInTable="columnBrand_Code" msprop:Generator_ColumnPropNameInRow="Brand_Code" msprop:Generator_ColumnPropNameInTable="Brand_CodeColumn" msprop:Generator_UserColumnName="Brand_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:int" minOccurs="0" />
+              <xs:element name="Wt_Per" msprop:Generator_ColumnVarNameInTable="columnWt_Per" msprop:Generator_ColumnPropNameInRow="Wt_Per" msprop:Generator_ColumnPropNameInTable="Wt_PerColumn" msprop:Generator_UserColumnName="Wt_Per" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Wt_Qty" msprop:Generator_ColumnVarNameInTable="columnWt_Qty" msprop:Generator_ColumnPropNameInRow="Wt_Qty" msprop:Generator_ColumnPropNameInTable="Wt_QtyColumn" msprop:Generator_UserColumnName="Wt_Qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GstRate_Code" msprop:Generator_ColumnVarNameInTable="columnGstRate_Code" msprop:Generator_ColumnPropNameInRow="GstRate_Code" msprop:Generator_ColumnPropNameInTable="GstRate_CodeColumn" msprop:Generator_UserColumnName="GstRate_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="SGST" msprop:Generator_ColumnVarNameInTable="columnSGST" msprop:Generator_ColumnPropNameInRow="SGST" msprop:Generator_ColumnPropNameInTable="SGSTColumn" msprop:Generator_UserColumnName="SGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CGST" msprop:Generator_ColumnVarNameInTable="columnCGST" msprop:Generator_ColumnPropNameInRow="CGST" msprop:Generator_ColumnPropNameInTable="CGSTColumn" msprop:Generator_UserColumnName="CGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IGST" msprop:Generator_ColumnVarNameInTable="columnIGST" msprop:Generator_ColumnPropNameInRow="IGST" msprop:Generator_ColumnPropNameInTable="IGSTColumn" msprop:Generator_UserColumnName="IGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Hamali_Rate" msprop:Generator_ColumnVarNameInTable="columnHamali_Rate" msprop:Generator_ColumnPropNameInRow="Hamali_Rate" msprop:Generator_ColumnPropNameInTable="Hamali_RateColumn" msprop:Generator_UserColumnName="Hamali_Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="HamaliAmt" msprop:Generator_ColumnVarNameInTable="columnHamaliAmt" msprop:Generator_ColumnPropNameInRow="HamaliAmt" msprop:Generator_ColumnPropNameInTable="HamaliAmtColumn" msprop:Generator_UserColumnName="HamaliAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaleDetail_Id" msprop:Generator_ColumnVarNameInTable="columnSaleDetail_Id" msprop:Generator_ColumnPropNameInRow="SaleDetail_Id" msprop:Generator_ColumnPropNameInTable="SaleDetail_IdColumn" msprop:Generator_UserColumnName="SaleDetail_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Detail_Id" msprop:Generator_ColumnVarNameInTable="columnDetail_Id" msprop:Generator_ColumnPropNameInRow="Detail_Id" msprop:Generator_ColumnPropNameInTable="Detail_IdColumn" msprop:Generator_UserColumnName="Detail_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="ic" msprop:Generator_ColumnVarNameInTable="columnic" msprop:Generator_ColumnPropNameInRow="ic" msprop:Generator_ColumnPropNameInTable="icColumn" msprop:Generator_UserColumnName="ic" type="xs:int" minOccurs="0" />
+              <xs:element name="Brand_Name" msprop:Generator_ColumnVarNameInTable="columnBrand_Name" msprop:Generator_ColumnPropNameInRow="Brand_Name" msprop:Generator_ColumnPropNameInTable="Brand_NameColumn" msprop:Generator_UserColumnName="Brand_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="itemname" msprop:Generator_ColumnVarNameInTable="columnitemname" msprop:Generator_ColumnPropNameInRow="itemname" msprop:Generator_ColumnPropNameInTable="itemnameColumn" msprop:Generator_UserColumnName="itemname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EwayBillValidDateConverted" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEwayBillValidDateConverted" msprop:Generator_ColumnPropNameInRow="EwayBillValidDateConverted" msprop:Generator_ColumnPropNameInTable="EwayBillValidDateConvertedColumn" msprop:Generator_UserColumnName="EwayBillValidDateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GstRate_Name" msprop:Generator_ColumnVarNameInTable="columnGstRate_Name" msprop:Generator_ColumnPropNameInRow="GstRate_Name" msprop:Generator_ColumnPropNameInTable="GstRate_NameColumn" msprop:Generator_UserColumnName="GstRate_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsDelete" msprop:Generator_ColumnVarNameInTable="columnIsDelete" msprop:Generator_ColumnPropNameInRow="IsDelete" msprop:Generator_ColumnPropNameInTable="IsDeleteColumn" msprop:Generator_UserColumnName="IsDelete" type="xs:int" minOccurs="0" />
+              <xs:element name="Sale_Id" msprop:Generator_ColumnVarNameInTable="columnSale_Id" msprop:Generator_ColumnPropNameInRow="Sale_Id" msprop:Generator_ColumnPropNameInTable="Sale_IdColumn" msprop:Generator_UserColumnName="Sale_Id" type="xs:int" />
+              <xs:element name="TDS_Rate" msprop:Generator_ColumnVarNameInTable="columnTDS_Rate" msprop:Generator_ColumnPropNameInRow="TDS_Rate" msprop:Generator_ColumnPropNameInTable="TDS_RateColumn" msprop:Generator_UserColumnName="TDS_Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TDS_Amt" msprop:Generator_ColumnVarNameInTable="columnTDS_Amt" msprop:Generator_ColumnPropNameInRow="TDS_Amt" msprop:Generator_ColumnPropNameInTable="TDS_AmtColumn" msprop:Generator_UserColumnName="TDS_Amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="purchaseyearcode" msprop:Generator_ColumnVarNameInTable="columnpurchaseyearcode" msprop:Generator_ColumnPropNameInRow="purchaseyearcode" msprop:Generator_ColumnPropNameInTable="purchaseyearcodeColumn" msprop:Generator_UserColumnName="purchaseyearcode" type="xs:int" minOccurs="0" />
+              <xs:element name="HSN" msprop:Generator_ColumnVarNameInTable="columnHSN" msprop:Generator_ColumnPropNameInRow="HSN" msprop:Generator_ColumnPropNameInTable="HSNColumn" msprop:Generator_UserColumnName="HSN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gst_No" msprop:Generator_ColumnVarNameInTable="columnGst_No" msprop:Generator_ColumnPropNameInRow="Gst_No" msprop:Generator_ColumnPropNameInTable="Gst_NoColumn" msprop:Generator_UserColumnName="Gst_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address_E" msprop:Generator_ColumnVarNameInTable="columnAddress_E" msprop:Generator_ColumnPropNameInRow="Address_E" msprop:Generator_ColumnPropNameInTable="Address_EColumn" msprop:Generator_UserColumnName="Address_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CGSTRate" msprop:Generator_ColumnVarNameInTable="columnCGSTRate" msprop:Generator_ColumnPropNameInRow="CGSTRate" msprop:Generator_ColumnPropNameInTable="CGSTRateColumn" msprop:Generator_UserColumnName="CGSTRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SGSTRate" msprop:Generator_ColumnVarNameInTable="columnSGSTRate" msprop:Generator_ColumnPropNameInRow="SGSTRate" msprop:Generator_ColumnPropNameInTable="SGSTRateColumn" msprop:Generator_UserColumnName="SGSTRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IGSTRate" msprop:Generator_ColumnVarNameInTable="columnIGSTRate" msprop:Generator_ColumnPropNameInRow="IGSTRate" msprop:Generator_ColumnPropNameInTable="IGSTRateColumn" msprop:Generator_UserColumnName="IGSTRate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

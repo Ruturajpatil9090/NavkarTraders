@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsgrainsoftstockbook" targetNamespace="http://tempuri.org/dsgrainsoftstockbook.xsd" xmlns:mstns="http://tempuri.org/dsgrainsoftstockbook.xsd" xmlns="http://tempuri.org/dsgrainsoftstockbook.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qrygrainstockbalanceTableAdapter" GeneratorDataComponentClassName="qrygrainstockbalanceTableAdapter" Name="qrygrainstockbalance" UserDataComponentName="qrygrainstockbalanceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="sugarsoft.dbo.qrygrainstockbalance" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Item_Code, Brand_Code, Wt_Per, Company_Code, qty, sold, balance, ItemName, brandName, Rate
+FROM     qrygrainstockbalance</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Item_Code" DataSetColumn="Item_Code" />
+              <Mapping SourceColumn="Brand_Code" DataSetColumn="Brand_Code" />
+              <Mapping SourceColumn="Wt_Per" DataSetColumn="Wt_Per" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="qty" DataSetColumn="qty" />
+              <Mapping SourceColumn="sold" DataSetColumn="sold" />
+              <Mapping SourceColumn="balance" DataSetColumn="balance" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="brandName" DataSetColumn="brandName" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsgrainsoftstockbook" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsgrainsoftstockbook" msprop:Generator_UserDSName="dsgrainsoftstockbook">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qrygrainstockbalance" msprop:Generator_TableClassName="qrygrainstockbalanceDataTable" msprop:Generator_TableVarName="tableqrygrainstockbalance" msprop:Generator_RowChangedName="qrygrainstockbalanceRowChanged" msprop:Generator_TablePropName="qrygrainstockbalance" msprop:Generator_RowDeletingName="qrygrainstockbalanceRowDeleting" msprop:Generator_RowChangingName="qrygrainstockbalanceRowChanging" msprop:Generator_RowEvHandlerName="qrygrainstockbalanceRowChangeEventHandler" msprop:Generator_RowDeletedName="qrygrainstockbalanceRowDeleted" msprop:Generator_RowClassName="qrygrainstockbalanceRow" msprop:Generator_UserTableName="qrygrainstockbalance" msprop:Generator_RowEvArgName="qrygrainstockbalanceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Item_Code" msprop:Generator_ColumnVarNameInTable="columnItem_Code" msprop:Generator_ColumnPropNameInRow="Item_Code" msprop:Generator_ColumnPropNameInTable="Item_CodeColumn" msprop:Generator_UserColumnName="Item_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Brand_Code" msprop:Generator_ColumnVarNameInTable="columnBrand_Code" msprop:Generator_ColumnPropNameInRow="Brand_Code" msprop:Generator_ColumnPropNameInTable="Brand_CodeColumn" msprop:Generator_UserColumnName="Brand_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Wt_Per" msprop:Generator_ColumnVarNameInTable="columnWt_Per" msprop:Generator_ColumnPropNameInRow="Wt_Per" msprop:Generator_ColumnPropNameInTable="Wt_PerColumn" msprop:Generator_UserColumnName="Wt_Per" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnPropNameInTable="qtyColumn" msprop:Generator_UserColumnName="qty" type="xs:int" minOccurs="0" />
+              <xs:element name="sold" msprop:Generator_ColumnVarNameInTable="columnsold" msprop:Generator_ColumnPropNameInRow="sold" msprop:Generator_ColumnPropNameInTable="soldColumn" msprop:Generator_UserColumnName="sold" type="xs:int" minOccurs="0" />
+              <xs:element name="balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnbalance" msprop:Generator_ColumnPropNameInRow="balance" msprop:Generator_ColumnPropNameInTable="balanceColumn" msprop:Generator_UserColumnName="balance" type="xs:int" minOccurs="0" />
+              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="brandName" msprop:Generator_ColumnVarNameInTable="columnbrandName" msprop:Generator_ColumnPropNameInRow="brandName" msprop:Generator_ColumnPropNameInTable="brandNameColumn" msprop:Generator_UserColumnName="brandName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

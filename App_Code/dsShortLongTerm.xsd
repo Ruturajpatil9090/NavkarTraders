@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsShortLongTerm" targetNamespace="http://tempuri.org/dsShortLongTerm.xsd" xmlns:mstns="http://tempuri.org/dsShortLongTerm.xsd" xmlns="http://tempuri.org/dsShortLongTerm.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryEquityShortlongtermTableAdapter" GeneratorDataComponentClassName="qryEquityShortlongtermTableAdapter" Name="qryEquityShortlongterm" UserDataComponentName="qryEquityShortlongtermTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="Sugartest.dbo.qryEquityShortlongterm" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Doc_No, Date, Script_Code, Script_Name, Qty, Bonus, Rate, Value, saledate, saleqty, salebonus, salerate, salevalue, profit, Days, Company_Code, Year_Code, TradingType, saleNo
+FROM            qryEquityShortlongterm</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Doc_No" DataSetColumn="Doc_No" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Script_Code" DataSetColumn="Script_Code" />
+              <Mapping SourceColumn="Script_Name" DataSetColumn="Script_Name" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Bonus" DataSetColumn="Bonus" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="saledate" DataSetColumn="saledate" />
+              <Mapping SourceColumn="saleqty" DataSetColumn="saleqty" />
+              <Mapping SourceColumn="salebonus" DataSetColumn="salebonus" />
+              <Mapping SourceColumn="salerate" DataSetColumn="salerate" />
+              <Mapping SourceColumn="salevalue" DataSetColumn="salevalue" />
+              <Mapping SourceColumn="profit" DataSetColumn="profit" />
+              <Mapping SourceColumn="Days" DataSetColumn="Days" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="TradingType" DataSetColumn="TradingType" />
+              <Mapping SourceColumn="saleNo" DataSetColumn="saleNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsShortLongTerm" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsShortLongTerm" msprop:Generator_UserDSName="dsShortLongTerm">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryEquityShortlongterm" msprop:Generator_TableClassName="qryEquityShortlongtermDataTable" msprop:Generator_TableVarName="tableqryEquityShortlongterm" msprop:Generator_TablePropName="qryEquityShortlongterm" msprop:Generator_RowDeletingName="qryEquityShortlongtermRowDeleting" msprop:Generator_RowChangingName="qryEquityShortlongtermRowChanging" msprop:Generator_RowEvHandlerName="qryEquityShortlongtermRowChangeEventHandler" msprop:Generator_RowDeletedName="qryEquityShortlongtermRowDeleted" msprop:Generator_UserTableName="qryEquityShortlongterm" msprop:Generator_RowChangedName="qryEquityShortlongtermRowChanged" msprop:Generator_RowEvArgName="qryEquityShortlongtermRowChangeEvent" msprop:Generator_RowClassName="qryEquityShortlongtermRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Doc_No" msprop:Generator_ColumnVarNameInTable="columnDoc_No" msprop:Generator_ColumnPropNameInRow="Doc_No" msprop:Generator_ColumnPropNameInTable="Doc_NoColumn" msprop:Generator_UserColumnName="Doc_No" type="xs:decimal" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Script_Code" msprop:Generator_ColumnVarNameInTable="columnScript_Code" msprop:Generator_ColumnPropNameInRow="Script_Code" msprop:Generator_ColumnPropNameInTable="Script_CodeColumn" msprop:Generator_UserColumnName="Script_Code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Script_Name" msprop:Generator_ColumnVarNameInTable="columnScript_Name" msprop:Generator_ColumnPropNameInRow="Script_Name" msprop:Generator_ColumnPropNameInTable="Script_NameColumn" msprop:Generator_UserColumnName="Script_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Bonus" msprop:Generator_ColumnVarNameInTable="columnBonus" msprop:Generator_ColumnPropNameInRow="Bonus" msprop:Generator_ColumnPropNameInTable="BonusColumn" msprop:Generator_UserColumnName="Bonus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:decimal" minOccurs="0" />
+              <xs:element name="saledate" msprop:Generator_ColumnVarNameInTable="columnsaledate" msprop:Generator_ColumnPropNameInRow="saledate" msprop:Generator_ColumnPropNameInTable="saledateColumn" msprop:Generator_UserColumnName="saledate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="saleqty" msprop:Generator_ColumnVarNameInTable="columnsaleqty" msprop:Generator_ColumnPropNameInRow="saleqty" msprop:Generator_ColumnPropNameInTable="saleqtyColumn" msprop:Generator_UserColumnName="saleqty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="salebonus" msprop:Generator_ColumnVarNameInTable="columnsalebonus" msprop:Generator_ColumnPropNameInRow="salebonus" msprop:Generator_ColumnPropNameInTable="salebonusColumn" msprop:Generator_UserColumnName="salebonus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="salerate" msprop:Generator_ColumnVarNameInTable="columnsalerate" msprop:Generator_ColumnPropNameInRow="salerate" msprop:Generator_ColumnPropNameInTable="salerateColumn" msprop:Generator_UserColumnName="salerate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="salevalue" msprop:Generator_ColumnVarNameInTable="columnsalevalue" msprop:Generator_ColumnPropNameInRow="salevalue" msprop:Generator_ColumnPropNameInTable="salevalueColumn" msprop:Generator_UserColumnName="salevalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="profit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnprofit" msprop:Generator_ColumnPropNameInRow="profit" msprop:Generator_ColumnPropNameInTable="profitColumn" msprop:Generator_UserColumnName="profit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Days" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDays" msprop:Generator_ColumnPropNameInRow="Days" msprop:Generator_ColumnPropNameInTable="DaysColumn" msprop:Generator_UserColumnName="Days" type="xs:int" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" />
+              <xs:element name="TradingType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTradingType" msprop:Generator_ColumnPropNameInRow="TradingType" msprop:Generator_ColumnPropNameInTable="TradingTypeColumn" msprop:Generator_UserColumnName="TradingType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="saleNo" msprop:Generator_ColumnVarNameInTable="columnsaleNo" msprop:Generator_ColumnPropNameInRow="saleNo" msprop:Generator_ColumnPropNameInTable="saleNoColumn" msprop:Generator_UserColumnName="saleNo" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

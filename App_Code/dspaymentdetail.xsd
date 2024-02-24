@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dspaymentdetail" targetNamespace="http://tempuri.org/dspaymentdetail.xsd" xmlns:mstns="http://tempuri.org/dspaymentdetail.xsd" xmlns="http://tempuri.org/dspaymentdetail.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qrymanuallypurchescpaymentdetailTableAdapter" GeneratorDataComponentClassName="qrymanuallypurchescpaymentdetailTableAdapter" Name="qrymanuallypurchescpaymentdetail" UserDataComponentName="qrymanuallypurchescpaymentdetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="finaldatabase.dbo.qrymanuallypurchescpaymentdetail" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT doc_no, doc_date, Ac_Code, suppliername, Bill_Amount, purchaseid, paid, adjamt, adjacamt, Tran_Type, netpaid, billbalance, millshortname, NETQNTL, Company_Code, Year_Code, paidtype, paidno, paiddate FROM dbo.qrymanuallypurchescpaymentdetail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="doc_no" DataSetColumn="doc_no" />
+              <Mapping SourceColumn="doc_date" DataSetColumn="doc_date" />
+              <Mapping SourceColumn="Ac_Code" DataSetColumn="Ac_Code" />
+              <Mapping SourceColumn="suppliername" DataSetColumn="suppliername" />
+              <Mapping SourceColumn="Bill_Amount" DataSetColumn="Bill_Amount" />
+              <Mapping SourceColumn="purchaseid" DataSetColumn="purchaseid" />
+              <Mapping SourceColumn="paid" DataSetColumn="paid" />
+              <Mapping SourceColumn="adjamt" DataSetColumn="adjamt" />
+              <Mapping SourceColumn="adjacamt" DataSetColumn="adjacamt" />
+              <Mapping SourceColumn="Tran_Type" DataSetColumn="Tran_Type" />
+              <Mapping SourceColumn="netpaid" DataSetColumn="netpaid" />
+              <Mapping SourceColumn="billbalance" DataSetColumn="billbalance" />
+              <Mapping SourceColumn="millshortname" DataSetColumn="millshortname" />
+              <Mapping SourceColumn="NETQNTL" DataSetColumn="NETQNTL" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="paidtype" DataSetColumn="paidtype" />
+              <Mapping SourceColumn="paidno" DataSetColumn="paidno" />
+              <Mapping SourceColumn="paiddate" DataSetColumn="paiddate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dspaymentdetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dspaymentdetail" msprop:Generator_DataSetName="dspaymentdetail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qrymanuallypurchescpaymentdetail" msprop:Generator_TableClassName="qrymanuallypurchescpaymentdetailDataTable" msprop:Generator_TableVarName="tableqrymanuallypurchescpaymentdetail" msprop:Generator_TablePropName="qrymanuallypurchescpaymentdetail" msprop:Generator_RowDeletingName="qrymanuallypurchescpaymentdetailRowDeleting" msprop:Generator_RowChangingName="qrymanuallypurchescpaymentdetailRowChanging" msprop:Generator_RowEvHandlerName="qrymanuallypurchescpaymentdetailRowChangeEventHandler" msprop:Generator_RowDeletedName="qrymanuallypurchescpaymentdetailRowDeleted" msprop:Generator_UserTableName="qrymanuallypurchescpaymentdetail" msprop:Generator_RowChangedName="qrymanuallypurchescpaymentdetailRowChanged" msprop:Generator_RowEvArgName="qrymanuallypurchescpaymentdetailRowChangeEvent" msprop:Generator_RowClassName="qrymanuallypurchescpaymentdetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="doc_no" msprop:Generator_ColumnVarNameInTable="columndoc_no" msprop:Generator_ColumnPropNameInRow="doc_no" msprop:Generator_ColumnPropNameInTable="doc_noColumn" msprop:Generator_UserColumnName="doc_no" type="xs:int" minOccurs="0" />
+              <xs:element name="doc_date" msprop:Generator_ColumnVarNameInTable="columndoc_date" msprop:Generator_ColumnPropNameInRow="doc_date" msprop:Generator_ColumnPropNameInTable="doc_dateColumn" msprop:Generator_UserColumnName="doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ac_Code" msprop:Generator_ColumnVarNameInTable="columnAc_Code" msprop:Generator_ColumnPropNameInRow="Ac_Code" msprop:Generator_ColumnPropNameInTable="Ac_CodeColumn" msprop:Generator_UserColumnName="Ac_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="suppliername" msprop:Generator_ColumnVarNameInTable="columnsuppliername" msprop:Generator_ColumnPropNameInRow="suppliername" msprop:Generator_ColumnPropNameInTable="suppliernameColumn" msprop:Generator_UserColumnName="suppliername" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bill_Amount" msprop:Generator_ColumnVarNameInTable="columnBill_Amount" msprop:Generator_ColumnPropNameInRow="Bill_Amount" msprop:Generator_ColumnPropNameInTable="Bill_AmountColumn" msprop:Generator_UserColumnName="Bill_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="purchaseid" msprop:Generator_ColumnVarNameInTable="columnpurchaseid" msprop:Generator_ColumnPropNameInRow="purchaseid" msprop:Generator_ColumnPropNameInTable="purchaseidColumn" msprop:Generator_UserColumnName="purchaseid" type="xs:int" />
+              <xs:element name="paid" msprop:Generator_ColumnVarNameInTable="columnpaid" msprop:Generator_ColumnPropNameInRow="paid" msprop:Generator_ColumnPropNameInTable="paidColumn" msprop:Generator_UserColumnName="paid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="adjamt" msprop:Generator_ColumnVarNameInTable="columnadjamt" msprop:Generator_ColumnPropNameInRow="adjamt" msprop:Generator_ColumnPropNameInTable="adjamtColumn" msprop:Generator_UserColumnName="adjamt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="adjacamt" msprop:Generator_ColumnVarNameInTable="columnadjacamt" msprop:Generator_ColumnPropNameInRow="adjacamt" msprop:Generator_ColumnPropNameInTable="adjacamtColumn" msprop:Generator_UserColumnName="adjacamt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tran_Type" msprop:Generator_ColumnVarNameInTable="columnTran_Type" msprop:Generator_ColumnPropNameInRow="Tran_Type" msprop:Generator_ColumnPropNameInTable="Tran_TypeColumn" msprop:Generator_UserColumnName="Tran_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="netpaid" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnetpaid" msprop:Generator_ColumnPropNameInRow="netpaid" msprop:Generator_ColumnPropNameInTable="netpaidColumn" msprop:Generator_UserColumnName="netpaid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="billbalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnbillbalance" msprop:Generator_ColumnPropNameInRow="billbalance" msprop:Generator_ColumnPropNameInTable="billbalanceColumn" msprop:Generator_UserColumnName="billbalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="millshortname" msprop:Generator_ColumnVarNameInTable="columnmillshortname" msprop:Generator_ColumnPropNameInRow="millshortname" msprop:Generator_ColumnPropNameInTable="millshortnameColumn" msprop:Generator_UserColumnName="millshortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NETQNTL" msprop:Generator_ColumnVarNameInTable="columnNETQNTL" msprop:Generator_ColumnPropNameInRow="NETQNTL" msprop:Generator_ColumnPropNameInTable="NETQNTLColumn" msprop:Generator_UserColumnName="NETQNTL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="paidtype" msprop:Generator_ColumnVarNameInTable="columnpaidtype" msprop:Generator_ColumnPropNameInRow="paidtype" msprop:Generator_ColumnPropNameInTable="paidtypeColumn" msprop:Generator_UserColumnName="paidtype" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="paidno" msprop:Generator_ColumnVarNameInTable="columnpaidno" msprop:Generator_ColumnPropNameInRow="paidno" msprop:Generator_ColumnPropNameInTable="paidnoColumn" msprop:Generator_UserColumnName="paidno" type="xs:int" minOccurs="0" />
+              <xs:element name="paiddate" msprop:Generator_ColumnVarNameInTable="columnpaiddate" msprop:Generator_ColumnPropNameInRow="paiddate" msprop:Generator_ColumnPropNameInTable="paiddateColumn" msprop:Generator_UserColumnName="paiddate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:qrymanuallypurchescpaymentdetail" />
+      <xs:field xpath="mstns:purchaseid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

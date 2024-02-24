@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsDay" targetNamespace="http://tempuri.org/dsDay.xsd" xmlns:mstns="http://tempuri.org/dsDay.xsd" xmlns="http://tempuri.org/dsDay.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryDayTableAdapter" GeneratorDataComponentClassName="qryDayTableAdapter" Name="qryDay" UserDataComponentName="qryDayTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="softmain23032021.dbo.qryDay" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DOC_DATE, COMPANY_CODE, YEAR_CODE, cramt, dramt
+FROM     qryDay</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DOC_DATE" DataSetColumn="DOC_DATE" />
+              <Mapping SourceColumn="COMPANY_CODE" DataSetColumn="COMPANY_CODE" />
+              <Mapping SourceColumn="YEAR_CODE" DataSetColumn="YEAR_CODE" />
+              <Mapping SourceColumn="cramt" DataSetColumn="cramt" />
+              <Mapping SourceColumn="dramt" DataSetColumn="dramt" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryDaycrTableAdapter" GeneratorDataComponentClassName="qryDaycrTableAdapter" Name="qryDaycr" UserDataComponentName="qryDaycrTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="softmain23032021.dbo.qryDaycr" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TRAN_TYPE, CASHCREDIT, DOC_NO, DOC_DATE, AC_CODE, UNIT_Code, NARRATION, AMOUNT, TENDER_ID, TENDER_ID_DETAIL, VOUCHER_ID, COMPANY_CODE, YEAR_CODE, ORDER_CODE, DRCR, DRCR_HEAD, ADJUSTED_AMOUNT, Branch_Code, SORT_TYPE, SORT_NO, ac, vc, progid, tranid, GId, saleid, Ac_Name_E FROM dbo.qryDaycr</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TRAN_TYPE" DataSetColumn="TRAN_TYPE" />
+              <Mapping SourceColumn="CASHCREDIT" DataSetColumn="CASHCREDIT" />
+              <Mapping SourceColumn="DOC_NO" DataSetColumn="DOC_NO" />
+              <Mapping SourceColumn="DOC_DATE" DataSetColumn="DOC_DATE" />
+              <Mapping SourceColumn="AC_CODE" DataSetColumn="AC_CODE" />
+              <Mapping SourceColumn="UNIT_Code" DataSetColumn="UNIT_Code" />
+              <Mapping SourceColumn="NARRATION" DataSetColumn="NARRATION" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+              <Mapping SourceColumn="TENDER_ID" DataSetColumn="TENDER_ID" />
+              <Mapping SourceColumn="TENDER_ID_DETAIL" DataSetColumn="TENDER_ID_DETAIL" />
+              <Mapping SourceColumn="VOUCHER_ID" DataSetColumn="VOUCHER_ID" />
+              <Mapping SourceColumn="COMPANY_CODE" DataSetColumn="COMPANY_CODE" />
+              <Mapping SourceColumn="YEAR_CODE" DataSetColumn="YEAR_CODE" />
+              <Mapping SourceColumn="ORDER_CODE" DataSetColumn="ORDER_CODE" />
+              <Mapping SourceColumn="DRCR" DataSetColumn="DRCR" />
+              <Mapping SourceColumn="DRCR_HEAD" DataSetColumn="DRCR_HEAD" />
+              <Mapping SourceColumn="ADJUSTED_AMOUNT" DataSetColumn="ADJUSTED_AMOUNT" />
+              <Mapping SourceColumn="Branch_Code" DataSetColumn="Branch_Code" />
+              <Mapping SourceColumn="SORT_TYPE" DataSetColumn="SORT_TYPE" />
+              <Mapping SourceColumn="SORT_NO" DataSetColumn="SORT_NO" />
+              <Mapping SourceColumn="ac" DataSetColumn="ac" />
+              <Mapping SourceColumn="vc" DataSetColumn="vc" />
+              <Mapping SourceColumn="progid" DataSetColumn="progid" />
+              <Mapping SourceColumn="tranid" DataSetColumn="tranid" />
+              <Mapping SourceColumn="GId" DataSetColumn="GId" />
+              <Mapping SourceColumn="saleid" DataSetColumn="saleid" />
+              <Mapping SourceColumn="Ac_Name_E" DataSetColumn="Ac_Name_E" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryDaydrTableAdapter" GeneratorDataComponentClassName="qryDaydrTableAdapter" Name="qryDaydr" UserDataComponentName="qryDaydrTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="softmain23032021.dbo.qryDaydr" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TRAN_TYPE, CASHCREDIT, DOC_NO, DOC_DATE, AC_CODE, UNIT_Code, NARRATION, AMOUNT, TENDER_ID, TENDER_ID_DETAIL, VOUCHER_ID, COMPANY_CODE, YEAR_CODE, ORDER_CODE, DRCR, DRCR_HEAD, 
+                  ADJUSTED_AMOUNT, Branch_Code, SORT_TYPE, SORT_NO, ac, vc, progid, tranid, GId, saleid, Ac_Name_E
+FROM     qryDaydr</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TRAN_TYPE" DataSetColumn="TRAN_TYPE" />
+              <Mapping SourceColumn="CASHCREDIT" DataSetColumn="CASHCREDIT" />
+              <Mapping SourceColumn="DOC_NO" DataSetColumn="DOC_NO" />
+              <Mapping SourceColumn="DOC_DATE" DataSetColumn="DOC_DATE" />
+              <Mapping SourceColumn="AC_CODE" DataSetColumn="AC_CODE" />
+              <Mapping SourceColumn="UNIT_Code" DataSetColumn="UNIT_Code" />
+              <Mapping SourceColumn="NARRATION" DataSetColumn="NARRATION" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+              <Mapping SourceColumn="TENDER_ID" DataSetColumn="TENDER_ID" />
+              <Mapping SourceColumn="TENDER_ID_DETAIL" DataSetColumn="TENDER_ID_DETAIL" />
+              <Mapping SourceColumn="VOUCHER_ID" DataSetColumn="VOUCHER_ID" />
+              <Mapping SourceColumn="COMPANY_CODE" DataSetColumn="COMPANY_CODE" />
+              <Mapping SourceColumn="YEAR_CODE" DataSetColumn="YEAR_CODE" />
+              <Mapping SourceColumn="ORDER_CODE" DataSetColumn="ORDER_CODE" />
+              <Mapping SourceColumn="DRCR" DataSetColumn="DRCR" />
+              <Mapping SourceColumn="DRCR_HEAD" DataSetColumn="DRCR_HEAD" />
+              <Mapping SourceColumn="ADJUSTED_AMOUNT" DataSetColumn="ADJUSTED_AMOUNT" />
+              <Mapping SourceColumn="Branch_Code" DataSetColumn="Branch_Code" />
+              <Mapping SourceColumn="SORT_TYPE" DataSetColumn="SORT_TYPE" />
+              <Mapping SourceColumn="SORT_NO" DataSetColumn="SORT_NO" />
+              <Mapping SourceColumn="ac" DataSetColumn="ac" />
+              <Mapping SourceColumn="vc" DataSetColumn="vc" />
+              <Mapping SourceColumn="progid" DataSetColumn="progid" />
+              <Mapping SourceColumn="tranid" DataSetColumn="tranid" />
+              <Mapping SourceColumn="GId" DataSetColumn="GId" />
+              <Mapping SourceColumn="saleid" DataSetColumn="saleid" />
+              <Mapping SourceColumn="Ac_Name_E" DataSetColumn="Ac_Name_E" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsDay" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsDay" msprop:Generator_DataSetName="dsDay">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryDay" msprop:Generator_TableClassName="qryDayDataTable" msprop:Generator_TableVarName="tableqryDay" msprop:Generator_RowChangedName="qryDayRowChanged" msprop:Generator_TablePropName="qryDay" msprop:Generator_RowDeletingName="qryDayRowDeleting" msprop:Generator_RowChangingName="qryDayRowChanging" msprop:Generator_RowEvHandlerName="qryDayRowChangeEventHandler" msprop:Generator_RowDeletedName="qryDayRowDeleted" msprop:Generator_RowClassName="qryDayRow" msprop:Generator_UserTableName="qryDay" msprop:Generator_RowEvArgName="qryDayRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DOC_DATE" msprop:Generator_ColumnVarNameInTable="columnDOC_DATE" msprop:Generator_ColumnPropNameInRow="DOC_DATE" msprop:Generator_ColumnPropNameInTable="DOC_DATEColumn" msprop:Generator_UserColumnName="DOC_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="COMPANY_CODE" msprop:Generator_ColumnVarNameInTable="columnCOMPANY_CODE" msprop:Generator_ColumnPropNameInRow="COMPANY_CODE" msprop:Generator_ColumnPropNameInTable="COMPANY_CODEColumn" msprop:Generator_UserColumnName="COMPANY_CODE" type="xs:int" />
+              <xs:element name="YEAR_CODE" msprop:Generator_ColumnVarNameInTable="columnYEAR_CODE" msprop:Generator_ColumnPropNameInRow="YEAR_CODE" msprop:Generator_ColumnPropNameInTable="YEAR_CODEColumn" msprop:Generator_UserColumnName="YEAR_CODE" type="xs:int" />
+              <xs:element name="cramt" msprop:Generator_ColumnVarNameInTable="columncramt" msprop:Generator_ColumnPropNameInRow="cramt" msprop:Generator_ColumnPropNameInTable="cramtColumn" msprop:Generator_UserColumnName="cramt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="dramt" msprop:Generator_ColumnVarNameInTable="columndramt" msprop:Generator_ColumnPropNameInRow="dramt" msprop:Generator_ColumnPropNameInTable="dramtColumn" msprop:Generator_UserColumnName="dramt" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="qryDaycr" msprop:Generator_TableClassName="qryDaycrDataTable" msprop:Generator_TableVarName="tableqryDaycr" msprop:Generator_TablePropName="qryDaycr" msprop:Generator_RowDeletingName="qryDaycrRowDeleting" msprop:Generator_RowChangingName="qryDaycrRowChanging" msprop:Generator_RowEvHandlerName="qryDaycrRowChangeEventHandler" msprop:Generator_RowDeletedName="qryDaycrRowDeleted" msprop:Generator_UserTableName="qryDaycr" msprop:Generator_RowChangedName="qryDaycrRowChanged" msprop:Generator_RowEvArgName="qryDaycrRowChangeEvent" msprop:Generator_RowClassName="qryDaycrRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRAN_TYPE" msprop:Generator_ColumnVarNameInTable="columnTRAN_TYPE" msprop:Generator_ColumnPropNameInRow="TRAN_TYPE" msprop:Generator_ColumnPropNameInTable="TRAN_TYPEColumn" msprop:Generator_UserColumnName="TRAN_TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CASHCREDIT" msprop:Generator_ColumnVarNameInTable="columnCASHCREDIT" msprop:Generator_ColumnPropNameInRow="CASHCREDIT" msprop:Generator_ColumnPropNameInTable="CASHCREDITColumn" msprop:Generator_UserColumnName="CASHCREDIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC_NO" msprop:Generator_ColumnVarNameInTable="columnDOC_NO" msprop:Generator_ColumnPropNameInRow="DOC_NO" msprop:Generator_ColumnPropNameInTable="DOC_NOColumn" msprop:Generator_UserColumnName="DOC_NO" type="xs:int" />
+              <xs:element name="DOC_DATE" msprop:Generator_ColumnVarNameInTable="columnDOC_DATE" msprop:Generator_ColumnPropNameInRow="DOC_DATE" msprop:Generator_ColumnPropNameInTable="DOC_DATEColumn" msprop:Generator_UserColumnName="DOC_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AC_CODE" msprop:Generator_ColumnVarNameInTable="columnAC_CODE" msprop:Generator_ColumnPropNameInRow="AC_CODE" msprop:Generator_ColumnPropNameInTable="AC_CODEColumn" msprop:Generator_UserColumnName="AC_CODE" type="xs:int" minOccurs="0" />
+              <xs:element name="UNIT_Code" msprop:Generator_ColumnVarNameInTable="columnUNIT_Code" msprop:Generator_ColumnPropNameInRow="UNIT_Code" msprop:Generator_ColumnPropNameInTable="UNIT_CodeColumn" msprop:Generator_UserColumnName="UNIT_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="NARRATION" msprop:Generator_ColumnVarNameInTable="columnNARRATION" msprop:Generator_ColumnPropNameInRow="NARRATION" msprop:Generator_ColumnPropNameInTable="NARRATIONColumn" msprop:Generator_UserColumnName="NARRATION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="555" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMOUNT" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TENDER_ID" msprop:Generator_ColumnVarNameInTable="columnTENDER_ID" msprop:Generator_ColumnPropNameInRow="TENDER_ID" msprop:Generator_ColumnPropNameInTable="TENDER_IDColumn" msprop:Generator_UserColumnName="TENDER_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="TENDER_ID_DETAIL" msprop:Generator_ColumnVarNameInTable="columnTENDER_ID_DETAIL" msprop:Generator_ColumnPropNameInRow="TENDER_ID_DETAIL" msprop:Generator_ColumnPropNameInTable="TENDER_ID_DETAILColumn" msprop:Generator_UserColumnName="TENDER_ID_DETAIL" type="xs:int" minOccurs="0" />
+              <xs:element name="VOUCHER_ID" msprop:Generator_ColumnVarNameInTable="columnVOUCHER_ID" msprop:Generator_ColumnPropNameInRow="VOUCHER_ID" msprop:Generator_ColumnPropNameInTable="VOUCHER_IDColumn" msprop:Generator_UserColumnName="VOUCHER_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="COMPANY_CODE" msprop:Generator_ColumnVarNameInTable="columnCOMPANY_CODE" msprop:Generator_ColumnPropNameInRow="COMPANY_CODE" msprop:Generator_ColumnPropNameInTable="COMPANY_CODEColumn" msprop:Generator_UserColumnName="COMPANY_CODE" type="xs:int" />
+              <xs:element name="YEAR_CODE" msprop:Generator_ColumnVarNameInTable="columnYEAR_CODE" msprop:Generator_ColumnPropNameInRow="YEAR_CODE" msprop:Generator_ColumnPropNameInTable="YEAR_CODEColumn" msprop:Generator_UserColumnName="YEAR_CODE" type="xs:int" />
+              <xs:element name="ORDER_CODE" msprop:Generator_ColumnVarNameInTable="columnORDER_CODE" msprop:Generator_ColumnPropNameInRow="ORDER_CODE" msprop:Generator_ColumnPropNameInTable="ORDER_CODEColumn" msprop:Generator_UserColumnName="ORDER_CODE" type="xs:int" />
+              <xs:element name="DRCR" msprop:Generator_ColumnVarNameInTable="columnDRCR" msprop:Generator_ColumnPropNameInRow="DRCR" msprop:Generator_ColumnPropNameInTable="DRCRColumn" msprop:Generator_UserColumnName="DRCR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DRCR_HEAD" msprop:Generator_ColumnVarNameInTable="columnDRCR_HEAD" msprop:Generator_ColumnPropNameInRow="DRCR_HEAD" msprop:Generator_ColumnPropNameInTable="DRCR_HEADColumn" msprop:Generator_UserColumnName="DRCR_HEAD" type="xs:int" minOccurs="0" />
+              <xs:element name="ADJUSTED_AMOUNT" msprop:Generator_ColumnVarNameInTable="columnADJUSTED_AMOUNT" msprop:Generator_ColumnPropNameInRow="ADJUSTED_AMOUNT" msprop:Generator_ColumnPropNameInTable="ADJUSTED_AMOUNTColumn" msprop:Generator_UserColumnName="ADJUSTED_AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Branch_Code" msprop:Generator_ColumnVarNameInTable="columnBranch_Code" msprop:Generator_ColumnPropNameInRow="Branch_Code" msprop:Generator_ColumnPropNameInTable="Branch_CodeColumn" msprop:Generator_UserColumnName="Branch_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="SORT_TYPE" msprop:Generator_ColumnVarNameInTable="columnSORT_TYPE" msprop:Generator_ColumnPropNameInRow="SORT_TYPE" msprop:Generator_ColumnPropNameInTable="SORT_TYPEColumn" msprop:Generator_UserColumnName="SORT_TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SORT_NO" msprop:Generator_ColumnVarNameInTable="columnSORT_NO" msprop:Generator_ColumnPropNameInRow="SORT_NO" msprop:Generator_ColumnPropNameInTable="SORT_NOColumn" msprop:Generator_UserColumnName="SORT_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="ac" msprop:Generator_ColumnVarNameInTable="columnac" msprop:Generator_ColumnPropNameInRow="ac" msprop:Generator_ColumnPropNameInTable="acColumn" msprop:Generator_UserColumnName="ac" type="xs:int" minOccurs="0" />
+              <xs:element name="vc" msprop:Generator_ColumnVarNameInTable="columnvc" msprop:Generator_ColumnPropNameInRow="vc" msprop:Generator_ColumnPropNameInTable="vcColumn" msprop:Generator_UserColumnName="vc" type="xs:int" minOccurs="0" />
+              <xs:element name="progid" msprop:Generator_ColumnVarNameInTable="columnprogid" msprop:Generator_ColumnPropNameInRow="progid" msprop:Generator_ColumnPropNameInTable="progidColumn" msprop:Generator_UserColumnName="progid" type="xs:int" minOccurs="0" />
+              <xs:element name="tranid" msprop:Generator_ColumnVarNameInTable="columntranid" msprop:Generator_ColumnPropNameInRow="tranid" msprop:Generator_ColumnPropNameInTable="tranidColumn" msprop:Generator_UserColumnName="tranid" type="xs:int" minOccurs="0" />
+              <xs:element name="GId" msprop:Generator_ColumnVarNameInTable="columnGId" msprop:Generator_ColumnPropNameInRow="GId" msprop:Generator_ColumnPropNameInTable="GIdColumn" msprop:Generator_UserColumnName="GId" type="xs:int" />
+              <xs:element name="saleid" msprop:Generator_ColumnVarNameInTable="columnsaleid" msprop:Generator_ColumnPropNameInRow="saleid" msprop:Generator_ColumnPropNameInTable="saleidColumn" msprop:Generator_UserColumnName="saleid" type="xs:int" minOccurs="0" />
+              <xs:element name="Ac_Name_E" msprop:Generator_ColumnVarNameInTable="columnAc_Name_E" msprop:Generator_ColumnPropNameInRow="Ac_Name_E" msprop:Generator_ColumnPropNameInTable="Ac_Name_EColumn" msprop:Generator_UserColumnName="Ac_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="qryDaydr" msprop:Generator_TableClassName="qryDaydrDataTable" msprop:Generator_TableVarName="tableqryDaydr" msprop:Generator_TablePropName="qryDaydr" msprop:Generator_RowDeletingName="qryDaydrRowDeleting" msprop:Generator_RowChangingName="qryDaydrRowChanging" msprop:Generator_RowEvHandlerName="qryDaydrRowChangeEventHandler" msprop:Generator_RowDeletedName="qryDaydrRowDeleted" msprop:Generator_UserTableName="qryDaydr" msprop:Generator_RowChangedName="qryDaydrRowChanged" msprop:Generator_RowEvArgName="qryDaydrRowChangeEvent" msprop:Generator_RowClassName="qryDaydrRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRAN_TYPE" msprop:Generator_ColumnVarNameInTable="columnTRAN_TYPE" msprop:Generator_ColumnPropNameInRow="TRAN_TYPE" msprop:Generator_ColumnPropNameInTable="TRAN_TYPEColumn" msprop:Generator_UserColumnName="TRAN_TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CASHCREDIT" msprop:Generator_ColumnVarNameInTable="columnCASHCREDIT" msprop:Generator_ColumnPropNameInRow="CASHCREDIT" msprop:Generator_ColumnPropNameInTable="CASHCREDITColumn" msprop:Generator_UserColumnName="CASHCREDIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC_NO" msprop:Generator_ColumnVarNameInTable="columnDOC_NO" msprop:Generator_ColumnPropNameInRow="DOC_NO" msprop:Generator_ColumnPropNameInTable="DOC_NOColumn" msprop:Generator_UserColumnName="DOC_NO" type="xs:int" />
+              <xs:element name="DOC_DATE" msprop:Generator_ColumnVarNameInTable="columnDOC_DATE" msprop:Generator_ColumnPropNameInRow="DOC_DATE" msprop:Generator_ColumnPropNameInTable="DOC_DATEColumn" msprop:Generator_UserColumnName="DOC_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AC_CODE" msprop:Generator_ColumnVarNameInTable="columnAC_CODE" msprop:Generator_ColumnPropNameInRow="AC_CODE" msprop:Generator_ColumnPropNameInTable="AC_CODEColumn" msprop:Generator_UserColumnName="AC_CODE" type="xs:int" minOccurs="0" />
+              <xs:element name="UNIT_Code" msprop:Generator_ColumnVarNameInTable="columnUNIT_Code" msprop:Generator_ColumnPropNameInRow="UNIT_Code" msprop:Generator_ColumnPropNameInTable="UNIT_CodeColumn" msprop:Generator_UserColumnName="UNIT_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="NARRATION" msprop:Generator_ColumnVarNameInTable="columnNARRATION" msprop:Generator_ColumnPropNameInRow="NARRATION" msprop:Generator_ColumnPropNameInTable="NARRATIONColumn" msprop:Generator_UserColumnName="NARRATION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="555" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMOUNT" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TENDER_ID" msprop:Generator_ColumnVarNameInTable="columnTENDER_ID" msprop:Generator_ColumnPropNameInRow="TENDER_ID" msprop:Generator_ColumnPropNameInTable="TENDER_IDColumn" msprop:Generator_UserColumnName="TENDER_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="TENDER_ID_DETAIL" msprop:Generator_ColumnVarNameInTable="columnTENDER_ID_DETAIL" msprop:Generator_ColumnPropNameInRow="TENDER_ID_DETAIL" msprop:Generator_ColumnPropNameInTable="TENDER_ID_DETAILColumn" msprop:Generator_UserColumnName="TENDER_ID_DETAIL" type="xs:int" minOccurs="0" />
+              <xs:element name="VOUCHER_ID" msprop:Generator_ColumnVarNameInTable="columnVOUCHER_ID" msprop:Generator_ColumnPropNameInRow="VOUCHER_ID" msprop:Generator_ColumnPropNameInTable="VOUCHER_IDColumn" msprop:Generator_UserColumnName="VOUCHER_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="COMPANY_CODE" msprop:Generator_ColumnVarNameInTable="columnCOMPANY_CODE" msprop:Generator_ColumnPropNameInRow="COMPANY_CODE" msprop:Generator_ColumnPropNameInTable="COMPANY_CODEColumn" msprop:Generator_UserColumnName="COMPANY_CODE" type="xs:int" />
+              <xs:element name="YEAR_CODE" msprop:Generator_ColumnVarNameInTable="columnYEAR_CODE" msprop:Generator_ColumnPropNameInRow="YEAR_CODE" msprop:Generator_ColumnPropNameInTable="YEAR_CODEColumn" msprop:Generator_UserColumnName="YEAR_CODE" type="xs:int" />
+              <xs:element name="ORDER_CODE" msprop:Generator_ColumnVarNameInTable="columnORDER_CODE" msprop:Generator_ColumnPropNameInRow="ORDER_CODE" msprop:Generator_ColumnPropNameInTable="ORDER_CODEColumn" msprop:Generator_UserColumnName="ORDER_CODE" type="xs:int" />
+              <xs:element name="DRCR" msprop:Generator_ColumnVarNameInTable="columnDRCR" msprop:Generator_ColumnPropNameInRow="DRCR" msprop:Generator_ColumnPropNameInTable="DRCRColumn" msprop:Generator_UserColumnName="DRCR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DRCR_HEAD" msprop:Generator_ColumnVarNameInTable="columnDRCR_HEAD" msprop:Generator_ColumnPropNameInRow="DRCR_HEAD" msprop:Generator_ColumnPropNameInTable="DRCR_HEADColumn" msprop:Generator_UserColumnName="DRCR_HEAD" type="xs:int" minOccurs="0" />
+              <xs:element name="ADJUSTED_AMOUNT" msprop:Generator_ColumnVarNameInTable="columnADJUSTED_AMOUNT" msprop:Generator_ColumnPropNameInRow="ADJUSTED_AMOUNT" msprop:Generator_ColumnPropNameInTable="ADJUSTED_AMOUNTColumn" msprop:Generator_UserColumnName="ADJUSTED_AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Branch_Code" msprop:Generator_ColumnVarNameInTable="columnBranch_Code" msprop:Generator_ColumnPropNameInRow="Branch_Code" msprop:Generator_ColumnPropNameInTable="Branch_CodeColumn" msprop:Generator_UserColumnName="Branch_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="SORT_TYPE" msprop:Generator_ColumnVarNameInTable="columnSORT_TYPE" msprop:Generator_ColumnPropNameInRow="SORT_TYPE" msprop:Generator_ColumnPropNameInTable="SORT_TYPEColumn" msprop:Generator_UserColumnName="SORT_TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SORT_NO" msprop:Generator_ColumnVarNameInTable="columnSORT_NO" msprop:Generator_ColumnPropNameInRow="SORT_NO" msprop:Generator_ColumnPropNameInTable="SORT_NOColumn" msprop:Generator_UserColumnName="SORT_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="ac" msprop:Generator_ColumnVarNameInTable="columnac" msprop:Generator_ColumnPropNameInRow="ac" msprop:Generator_ColumnPropNameInTable="acColumn" msprop:Generator_UserColumnName="ac" type="xs:int" minOccurs="0" />
+              <xs:element name="vc" msprop:Generator_ColumnVarNameInTable="columnvc" msprop:Generator_ColumnPropNameInRow="vc" msprop:Generator_ColumnPropNameInTable="vcColumn" msprop:Generator_UserColumnName="vc" type="xs:int" minOccurs="0" />
+              <xs:element name="progid" msprop:Generator_ColumnVarNameInTable="columnprogid" msprop:Generator_ColumnPropNameInRow="progid" msprop:Generator_ColumnPropNameInTable="progidColumn" msprop:Generator_UserColumnName="progid" type="xs:int" minOccurs="0" />
+              <xs:element name="tranid" msprop:Generator_ColumnVarNameInTable="columntranid" msprop:Generator_ColumnPropNameInRow="tranid" msprop:Generator_ColumnPropNameInTable="tranidColumn" msprop:Generator_UserColumnName="tranid" type="xs:int" minOccurs="0" />
+              <xs:element name="GId" msprop:Generator_ColumnVarNameInTable="columnGId" msprop:Generator_ColumnPropNameInRow="GId" msprop:Generator_ColumnPropNameInTable="GIdColumn" msprop:Generator_UserColumnName="GId" type="xs:int" />
+              <xs:element name="saleid" msprop:Generator_ColumnVarNameInTable="columnsaleid" msprop:Generator_ColumnPropNameInRow="saleid" msprop:Generator_ColumnPropNameInTable="saleidColumn" msprop:Generator_UserColumnName="saleid" type="xs:int" minOccurs="0" />
+              <xs:element name="Ac_Name_E" msprop:Generator_ColumnVarNameInTable="columnAc_Name_E" msprop:Generator_ColumnPropNameInRow="Ac_Name_E" msprop:Generator_ColumnPropNameInTable="Ac_Name_EColumn" msprop:Generator_UserColumnName="Ac_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

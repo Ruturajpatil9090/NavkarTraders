@@ -1,0 +1,336 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link href="../CSS/cssCommon.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function PrintPanel() {
+            var panel = document.getElementById("pnlMain");
+            var printWindow = window.open('sugarStock.html', 'st', 'height=400,width=800');
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('</head><body style="font-family:Calibri; width:100%;font-size:12px; text-align:center;" >');
+            printWindow.document.write(panel.innerHTML);
+
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 100);
+            return false;
+        }
+    </script>
+    <title>
+
+</title></head>
+<body>
+    <form method="post" action="rptTrialBalance.aspx?Cwhere=+where+DOC_DATE%3c-2015%2f10%2f06-" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg3MDA2MzUxMw8WAh4GQ3doZXJlBRwgd2hlcmUgRE9DX0RBVEU8LTIwMTUvMTAvMDYtFgICAw9kFgICBw9kFggCDw88KwAJAQAPFgQeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgNkFgZmD2QWEAIBDw8WAh4EVGV4dAUBM2RkAgMPDxYCHwMFDUNhc2ggQW5kIEJhbmtkZAIFDw8WAh8DZWRkAgcPDxYCHwNlZGQCCQ88KwAJAQAPFgQfARYAHwICAmQWBGYPZBYKAgEPDxYCHwMFATFkZAIDDw8WAh8DBQRTZWxmZGQCBQ8PFgIfA2VkZAIHDw8WAh8DZWRkAgkPDxYCHwMFAzE5MGRkAgEPZBYKAgEPDxYCHwMFAzEwM2RkAgMPDxYCHwMFDFBhbmthaiBEaXhpdGRkAgUPDxYCHwMFCEtvbGhhcHVyZGQCBw8PFgIfAwUFMjEzMDBkZAIJDw8WAh8DZWRkAgsPDxYCHwMFCkRpZmY6MjExMTBkZAINDw8WAh8DBQUyMTMwMGRkAg8PDxYCHwMFAzE5MGRkAgEPZBYQAgEPDxYCHwMFATlkZAIDDw8WAh8DBRBTdW5kcnkgQ3JlZGl0b3JzZGQCBQ8PFgIfA2VkZAIHDw8WAh8DZWRkAgkPPCsACQEADxYEHwEWAB8CAgFkFgJmD2QWCgIBDw8WAh8DBQMxMDJkZAIDDw8WAh8DBRNSZXNhbGUgQW5rdXNoIFBhdGlsZGQCBQ8PFgIfAwUIS29saGFwdXJkZAIHDw8WAh8DZWRkAgkPDxYCHwMFBjE1NzQwMGRkAgsPDxYCHwMFDERpZmY6LTE1NzQwMGRkAg0PDxYCHwMFATBkZAIPDw8WAh8DBQYxNTc0MDBkZAICD2QWEAIBDw8WAh8DBQE4ZGQCAw8PFgIfAwUPU3VuZHJ5IERlYml0b3JzZGQCBQ8PFgIfA2VkZAIHDw8WAh8DZWRkAgkPPCsACQEADxYEHwEWAB8CAgFkFgJmD2QWCgIBDw8WAh8DBQMxMDFkZAIDDw8WAh8DBRJKYXdhaGFyIFMuUy5LIGx0ZC5kZAIFDw8WAh8DBQhLb2xoYXB1cmRkAgcPDxYCHwMFBjI1MjM2MGRkAgkPDxYCHwNlZGQCCw8PFgIfAwULRGlmZjoyNTIzNjBkZAINDw8WAh8DBQYyNTIzNjBkZAIPDw8WAh8DBQEwZGQCEQ8PFgIfAwUGMTE2MDcwZGQCEw8PFgIfAwUGMjczNjYwZGQCFQ8PFgIfAwUGMTU3NTkwZGRkRyVNzPNfdibr8BHu3UywAgj9aI6gEc+6J83jYOyaBOQ=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAARG2Hj1vz9VJ4uPY40yttQXezucPl2hH0iWifbRq8fmwYWYcIHkLXZpY0LlWLZFPTlDB2YfWbjwUYntrwPx36ES2L3Jt/dhFMbS9R8nFnsZ5l5XLCseNgFKjcU9rjOvbjQ=" />
+    <div>
+        &nbsp;
+        <input type="submit" name="btnPrint" value="Print" onclick="return PrintPanel();" id="btnPrint" class="btnHelp" />&nbsp;
+        <input type="submit" name="btnMail" value="Mail" id="btnMail" class="btnHelp" />
+        Email:<input name="txtEmail" type="text" id="txtEmail" />
+        <div id="pnlMain" align="center"><font face="Calibri">
+	
+            <span id="lblCompanyName" class="lblName" style="display:inline-block;text-align: center;"><b>Gautam Sugars</b></span>
+            <br />
+            <span id="Label15" class="lblName" style="display:inline-block;text-align: center;"><b>Trial Balance</b></span>
+            <table width="90%" align="center">
+                <tr>
+                    <td align="left" style="width: 10%;">
+                        <span id="Label1"><b>AC Code</b></span>
+                    </td>
+                    <td align="left" style="width: 30%;">
+                        <span id="Label2"><b><font color="Maroon">AC Name</font></b></span>
+                    </td>
+                    <td align="right" style="width: 10%;">
+                        <span id="Label3"><b><font color="Maroon">City</font></b></span>
+                    </td>
+                    <td align="right" style="width: 10%;">
+                        <span id="Label6"><b><font color="Maroon">Debit</font></b></span>
+                    </td>
+                    <td align="right" style="width: 10%;">
+                        <span id="Label8"><b><font color="Maroon">Credit</font></b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="border-bottom: double 2px black;">
+                    </td>
+                </tr>
+            </table>
+            <div align="center">
+                <table id="dtl" cellspacing="0" width="90%">
+		<tr>
+			<td>
+                        <table width="100%" align="center" cellpadding="1" cellspacing="0">
+                            <tr>
+                                <td align="left" style="width: 10%;">
+                                    <span id="dtl_lblGroup_Code_0"><b>3</b></span>
+                                </td>
+                                <td align="left" colspan="2" style="width: 40%;">
+                                    <span id="dtl_lblBSGroupName_0"><b>Cash And Bank</b></span>
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    <span id="dtl_lblDebit_0"><b></b></span>
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    <span id="dtl_lblCredit_0"><b></b></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="left">
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="width: 100%;">
+                                                <table id="dtl_dtlDetails_0" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                                        <table width="100%">
+                                                            <tr>
+                                                                <td align="left" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_0_Label7_0">1</span>
+                                                                </td>
+                                                                <td align="left" style="width: 30%;">
+                                                                    <span id="dtl_dtlDetails_0_Label4_0">Self</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_0_Label5_0"></span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_0_Label9_0"></span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_0_Label10_0">190</span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				</tr><tr>
+					<td>
+                                                        <table width="100%">
+                                                            <tr>
+                                                                <td align="left" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_0_Label7_1">103</span>
+                                                                </td>
+                                                                <td align="left" style="width: 30%;">
+                                                                    <span id="dtl_dtlDetails_0_Label4_1">Pankaj Dixit</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_0_Label5_1">Kolhapur</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_0_Label9_1">21300</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_0_Label10_1"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				</tr>
+			</table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: dashed 1px black;">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table width="100%">
+                            <tr>
+                                <td style="width: 10%;">
+                                </td>
+                                <td style="width: 30%;" align="left">
+                                    <span id="dtl_lblDiff_0"><b>Diff:21110</b></span>
+                                </td>
+                                <td style="width: 10%;">
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+		</tr><tr>
+			<td>
+                        <table width="100%" align="center" cellpadding="1" cellspacing="0">
+                            <tr>
+                                <td align="left" style="width: 10%;">
+                                    <span id="dtl_lblGroup_Code_1"><b>9</b></span>
+                                </td>
+                                <td align="left" colspan="2" style="width: 40%;">
+                                    <span id="dtl_lblBSGroupName_1"><b>Sundry Creditors</b></span>
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    <span id="dtl_lblDebit_1"><b></b></span>
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    <span id="dtl_lblCredit_1"><b></b></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="left">
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="width: 100%;">
+                                                <table id="dtl_dtlDetails_1" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                                        <table width="100%">
+                                                            <tr>
+                                                                <td align="left" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_1_Label7_0">102</span>
+                                                                </td>
+                                                                <td align="left" style="width: 30%;">
+                                                                    <span id="dtl_dtlDetails_1_Label4_0">Resale Ankush Patil</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_1_Label5_0">Kolhapur</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_1_Label9_0"></span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_1_Label10_0">157400</span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				</tr>
+			</table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: dashed 1px black;">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table width="100%">
+                            <tr>
+                                <td style="width: 10%;">
+                                </td>
+                                <td style="width: 30%;" align="left">
+                                    <span id="dtl_lblDiff_1"><b>Diff:-157400</b></span>
+                                </td>
+                                <td style="width: 10%;">
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+		</tr><tr>
+			<td>
+                        <table width="100%" align="center" cellpadding="1" cellspacing="0">
+                            <tr>
+                                <td align="left" style="width: 10%;">
+                                    <span id="dtl_lblGroup_Code_2"><b>8</b></span>
+                                </td>
+                                <td align="left" colspan="2" style="width: 40%;">
+                                    <span id="dtl_lblBSGroupName_2"><b>Sundry Debitors</b></span>
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    <span id="dtl_lblDebit_2"><b></b></span>
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    <span id="dtl_lblCredit_2"><b></b></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" align="left">
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="width: 100%;">
+                                                <table id="dtl_dtlDetails_2" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                                        <table width="100%">
+                                                            <tr>
+                                                                <td align="left" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_2_Label7_0">101</span>
+                                                                </td>
+                                                                <td align="left" style="width: 30%;">
+                                                                    <span id="dtl_dtlDetails_2_Label4_0">Jawahar S.S.K ltd.</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_2_Label5_0">Kolhapur</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_2_Label9_0">252360</span>
+                                                                </td>
+                                                                <td align="right" style="width: 10%;">
+                                                                    <span id="dtl_dtlDetails_2_Label10_0"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				</tr>
+			</table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: dashed 1px black;">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table width="100%">
+                            <tr>
+                                <td style="width: 10%;">
+                                </td>
+                                <td style="width: 30%;" align="left">
+                                    <span id="dtl_lblDiff_2"><b>Diff:252360</b></span>
+                                </td>
+                                <td style="width: 10%;">
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    
+                                </td>
+                                <td align="right" style="width: 10%;">
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+		</tr>
+	</table>
+            </div>
+            <table width="90%" align="center">
+                <tr>
+                    <td style="width: 4%; border-top: solid 2px Navy;">
+                    </td>
+                    <td align="left" style="width: 10%; border-top: solid 2px Navy;">
+                        <span id="lblTotalDifference"><b><font color="Navy">116070</font></b></span>
+                    </td>
+                    <td align="right" style="width: 10%; border-top: solid 2px Navy;">
+                        <span id="lblnetDebit"><b><font color="Navy">273660</font></b></span>
+                    </td>
+                    <td align="right" style="width: 4%; border-top: solid 2px Navy;">
+                        <span id="lblnetCredit"><b><font color="Navy">157590</font></b></span>
+                    </td>
+                </tr>
+            </table>
+        
+</font></div>
+    </div>
+    </form>
+</body>
+</html>
+

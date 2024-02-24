@@ -1,0 +1,731 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title></title>
+    <link href="CSS/cssCommon.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="../../JQuery/jquery-1.4.1.js" type="text/javascript"></script>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <script src="../../JQuery/jquery.keynavigation.js" type="text/javascript"></script>
+    <link href="menu/menu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../menu/jquery.js"></script>
+    <script type="text/javascript" src="../../menu/menu.js"></script>
+    <script src="../../Scripts/selectfirstrow.js" type="text/javascript"></script>
+
+    <script src="../../JQuery/ASPSnippets_Pager.min.js" type="text/javascript"></script>
+    <script src="../CSS/sweetalert.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background: white;
+        }
+
+        div#createdby {
+            width: 100%;
+            height: 1px;
+        }
+
+        div#divOuter {
+            margin: -3px auto;
+            width: 100%;
+            background: #66CC99;
+            overflow: hidden;
+            min-height: 700px;
+        }
+
+        div#menu {
+            top: 5px;
+            left: 0px;
+            width: 100%;
+            background-color: Black;
+            border-bottom: solid 2px rgb(140, 204, 231);
+            height: 40px;
+        }
+
+        div#copyright {
+            display: none;
+        }
+
+        #loading {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            display: block;
+            opacity: 0.6;
+            background-color: Black;
+            z-index: 99;
+            text-align: center;
+        }
+
+        #loading-image {
+            position: fixed;
+            top: 300px;
+            left: 240px;
+            z-index: 9999999999;
+        }
+
+        .btnHelp:focus {
+            background-color: yellow;
+            color: Blue;
+            border: 1px solid rgb(29, 15, 116);
+            font-weight: bold;
+            font-size: small;
+        }
+    </style>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: rgb(100, 91, 91); width: 100%; text-align: center;">
+    <form id="form1" runat="server" method="post">
+        <div>
+            <ajax1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePageMethods="true">
+            </ajax1:ToolkitScriptManager>
+            <div id="divOuter">
+                <div id="menu">
+                    <ul class="menu">
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" Target="_blank" NavigateUrl="~/Sugar/pgeHome.aspx"><span>Home
+                                         </span></asp:HyperLink>
+                        </li>
+                        <li><a href="#" class="parent"><span>Company</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink5" runat="server" Target="_blank" NavigateUrl="~/Sugar/pgeCreateNewCompany.aspx"><span>Create Company
+                                         </span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink6" runat="server" Target="_blank" NavigateUrl="~/Sugar/pgeSelectCompany.aspx"><span>Select Company
+                                         </span></asp:HyperLink>
+
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink7" runat="server" Target="_blank" NavigateUrl="~/Sugar/pgeCreateAccountingYear.aspx"><span>Create Accounting Year
+                                         </span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink8" runat="server" Target="_blank" NavigateUrl="~/Sugar/pgeSelectYear.aspx"><span>Select Accounting Year
+                                         </span></asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" class="parent"><span>Master</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="parent"><span>Account Information</span></a>
+
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink90" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeAccountUtility.aspx"><span>Account Master
+                                         </span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink100" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeBal_Limit.aspx"><span>Customer Limits </span></asp:HyperLink>
+                                                </li>
+                                                <li>
+
+                                                    <asp:HyperLink ID="HyperLink9" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/PgeGroupMasterUtility.aspx"><span>Finincial Groups
+                                         </span></asp:HyperLink>
+                                                </li>
+                                                <li>
+
+                                                    <asp:HyperLink ID="HyperLink11" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/PgeCityMasterUtility.aspx"><span>City Master
+                                         </span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink13" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgePartyunitUtility.aspx"><span>Carporate Customer Unit/Godown Declaration
+                                         </span></asp:HyperLink>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="parent"><span>Other Master</span></a>
+                                        <div>
+                                            <ul>
+                                                <li>
+
+                                                    <asp:HyperLink ID="HyperLink12" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/PgeSystemMasterUtility.aspx"><span>Mobile/Narration/Item/
+                                                Gread Masters </span></asp:HyperLink>
+                                                </li>
+                                                <li>
+
+                                                    <asp:HyperLink ID="HyperLink78" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeBrandMaster_Utility.aspx"><span>Brand Master </span></asp:HyperLink>
+                                                </li>
+                                                <li>
+
+                                                    <asp:HyperLink ID="HyperLink14" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/PgeGSTRateMasterUtility.aspx"><span>GST Rate Master</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+
+                                                    <asp:HyperLink ID="HyperLink19" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/PgeGSTStateMasterUtility.aspx"><span>GST State Master</span></asp:HyperLink>
+                                                </li>
+
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink16" runat="server" Target="_blank" NavigateUrl=""><span>HSN or ACS Code Master</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink17" runat="server" Target="_blank" NavigateUrl=""><span>Company Related Accounting Parameters</span></asp:HyperLink>
+                                                </li>
+                                                 <li>
+
+                                                    <asp:HyperLink ID="HyperLink106" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeJaggarySystemMaster.aspx"><span>Jaggary SystemMaster</span></asp:HyperLink>
+                                                </li>
+                                                  <li>
+
+                                                    <asp:HyperLink ID="HyperLink107" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeJaggaryBrand_Master.aspx"><span>Jaggary Brand Master </span></asp:HyperLink>
+                                                </li>
+                                                <%-- <li>
+                                                    <asp:HyperLink ID="HyperLink18" runat="server" Target="_blank" NavigateUrl=""><span>Sales Invoice Printing Utility</span></asp:HyperLink>
+                                                </li>--%>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink2" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeEway_Bill.aspx"><span>E-Way Bill Setting
+                                         </span></asp:HyperLink>
+
+                                    </li>
+                                    <%--<li>
+                                        <asp:HyperLink ID="HyperLink3" runat="server" Target="_blank" NavigateUrl="~/Sugar/pgeTest.aspx"><span>E-Invoice Setting
+                                         </span></asp:HyperLink>
+
+                                    </li>--%>
+                                    <%-- <li>
+                                        <asp:HyperLink ID="HyperLink4" runat="server" Target="_blank" NavigateUrl="~/Sugar/pgeTest.aspx"><span>GST Basic Information Setting
+                                         </span></asp:HyperLink>
+
+                                    </li>--%>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink69" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeCompanyParameter.aspx"><span>Company Parameter
+                                         </span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink105" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeJaggryCompanyparameter.aspx"><span>Jaggary Company Parameter
+                                         </span></asp:HyperLink>
+                                    </li>
+                                      <li>
+                                        <asp:HyperLink ID="HyperLink60" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeWhatsAppURL.aspx"><span>WhatsApp Url
+                                         </span></asp:HyperLink>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li><a href="#" class="parent"><span>Inword</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink20" runat="server" Target="_blank" NavigateUrl="~/Sugar/Inword/PgePurchaseHeadUtility.aspx"><span>Purchase Bill</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink2111" runat="server" Target="_blank" NavigateUrl="~/Sugar/Inword/pgeOtherGSTInput_Utility.aspx"><span>Other GST Input</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink22" runat="server" Target="_blank" NavigateUrl=""><span>Reverse Charge</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink81" runat="server" Target="_blank" NavigateUrl="~/Sugar/Inword/pgeColdStorageInwordUtility.aspx"><span>Cold Storage Inword</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink43" runat="server" Target="_blank" NavigateUrl="~/Sugar/Inword/PgeShugarPurchHeadUtility.aspx"><span>Sugar Sale Return Purchase</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink76" runat="server" Target="_blank" NavigateUrl="~/Sugar/Inword/PgeRawanagiBook_Utility.aspx"><span>Rawanagi Book</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink80" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/PgeRetailPurchaseUtility.aspx"><span> Retail Purchase</span></asp:HyperLink>
+                                    </li>
+                                     <li>
+                                        <asp:HyperLink ID="HyperLink111" runat="server" Target="_blank" NavigateUrl="~/Sugar/Inword/pgeGrainPurchaseBillUtility.aspx"><span>Grain Purchase Bill</span></asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" class="parent"><span>Transactions</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink24" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/PgeReceiptPaymentUtility.aspx"><span>Receipt/Payment</span></asp:HyperLink>
+                                    </li>
+
+
+                                    <li>
+
+                                        <asp:HyperLink ID="HyperLink25" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/PgeJVUtility.aspx"><span>Journal Voucher</span></asp:HyperLink>
+                                    </li>
+                                    <%--<li>
+
+                                        <asp:HyperLink ID="HyperLink91" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgeTransactionUtility.aspx"><span>Transaction</span></asp:HyperLink>
+                                    </li>--%>
+                                    <li>
+
+                                        <asp:HyperLink ID="HyperLink26" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/PgeUTRHeadUtility.aspx"><span>UTR Entry</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <%--  <asp:HyperLink ID="HyperLink27" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgeDebitCreditData.aspx"><span>Debit/Credit Note </span></asp:HyperLink>--%>
+                                        <asp:HyperLink ID="HyperLink27" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/PgeDebitCreditNoteUtility.aspx"><span>Debit/Credit Note </span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink28" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgeMultipleReceipt_utility.aspx"><span>Multiple Sale Bill Receipts
+                                     Against Single Payment </span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink73" runat="server" Target="_blank" NavigateUrl="~/Sugar/Inword/pgeOtherPurchaseUtility.aspx"><span>Other Purchase
+                                     Against Single Payment </span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink91" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgeGstr3B.aspx"><span>GST3B</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink94" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgeGeneralTransaction_Utility.aspx"><span>General Transaction</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink95" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgePaymentNote_Utility.aspx"><span>Payment Note</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink98" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgeGroupSetting.aspx"><span>Group Setting</span></asp:HyperLink>
+                                    </li>
+                                    <%--  <li>
+                                        <asp:HyperLink ID="HyperLink98" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgeWhatsAppURL.aspx"><span>WhatsApp URL</span></asp:HyperLink>
+                                    </li>--%>
+                                     <li>
+                                        <asp:HyperLink ID="HyperLink109" runat="server" Target="_blank" NavigateUrl="~/Sugar/Transaction/pgeCheckPrintingUtility.aspx"><span>Check Printing</span></asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li><a href="#" class="parent"><span>Business Related</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink29" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/PgeTenderHeadUtility.aspx"><span>Tender Purchase
+                                    (Sauda Booking)</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink4" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/pgeSaudaBookUtility.aspx"><span>Sauda Book Utility</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink30" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/PgeDoHeadUtility.aspx"><span>Delivery Order</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink99" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/pgeDOMultilpleItemUtility.aspx"><span>Delivery Order for Multiple Item</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink97" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/PgeDoInformationUtility.aspx"><span>DO Information</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink31" runat="server" Target="_blank" NavigateUrl=""><span>Motor Memo</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+
+                                        <asp:HyperLink ID="HyperLink32" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/PgeCarporatesaleUtility.aspx"><span>Carporate Sale</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink33" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/pgeCarporateRegister.aspx"><span>Carporate Register</span></asp:HyperLink>
+                                    </li>
+
+                                    <li><a href="#" class="parent"><span>Stok Report</span></a>
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink34" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/rptPartyWiseSugarStock.aspx"><span>Balance Stock (Millwise/Partywise)</span></asp:HyperLink>
+
+
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink35" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/pgeRegisters.aspx"><span> Register</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink36" runat="server" Target="_blank" NavigateUrl=""><span>Balance Reminder</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink37" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/pgeTransportSMS.aspx"><span>Transport SMS</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink38" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/pgeMultipleBillPrinting.aspx"><span>Multiple DO Print</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink77" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeProfitloss.aspx"><span>Profit Loss</span></asp:HyperLink>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink92" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeLetterUtility.aspx"><span>Letter</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink3" runat="server" Target="_blank" NavigateUrl="~/Sugar/BussinessRelated/pgeGoodsTransportUtility.aspx"><span>GoodsTransport
+                                    </span></asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li><a href="#" class="parent"><span>Outword</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink39" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/PgeSaleHeadUtility.aspx"><span> Sale Bill</span></asp:HyperLink>
+                                    </li>
+
+                                    <%-- <li>
+                                        <asp:HyperLink ID="HyperLink40" runat="server" Target="_blank" NavigateUrl=""><span>Sale Return</span></asp:HyperLink>
+                                    </li>--%>
+
+                                    <li>
+
+                                        <asp:HyperLink ID="HyperLink41" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/PgeLocalVoucherUtility.aspx"><span> Commission Bill</span></asp:HyperLink>
+                                    </li>
+                                    <%--<li>
+
+                                        <asp:HyperLink ID="HyperLink91" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/pgeTempCommsionUtility.aspx"><span> Commission Bill Transfer</span></asp:HyperLink>
+                                    </li>--%>
+                                    <%--<li>
+                                        <asp:HyperLink ID="HyperLink" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/PgeRetailSellUtility.aspx"><span> Retail Sale BillOld</span></asp:HyperLink>
+                                    </li>--%>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink42" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/PgeRetailUtility.aspx"><span> Retail Sale Bill</span></asp:HyperLink>
+                                    </li>
+
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink15" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/PgeShugarSalerUtility.aspx"><span>Sugar Sale Return Sale</span></asp:HyperLink>
+
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink44" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/PgeServiceBillUtility.aspx"><span> Service Bill</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink21" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/pgeColdStorage_Utility.aspx"><span>Cold Storage Outword</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink93" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/PgeUnregister_BillUtility.aspx"><span>Unregister Bill</span></asp:HyperLink>
+                                    </li>
+                                     <li>
+                                        <asp:HyperLink ID="HyperLink110" runat="server" Target="_blank" NavigateUrl="~/Sugar/Outword/pgeGrainSaleBillUtility.aspx"><span>Grain Sale Bill</span></asp:HyperLink>
+                                    </li>
+                                     
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" class="parent"><span>Reports</span></a>
+                            <div>
+                                <ul>
+                                    <li><a href="#" class="parent"><span>Ledger</span></a>
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink46" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeGLedgerReport.aspx"><span> Ledger</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink45" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeBankBook.aspx"><span> Bank Book</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink23" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeAccountType.aspx"><span> Account Master Print</span></asp:HyperLink>
+                                                </li>
+
+
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink47" runat="server" Target="_blank" NavigateUrl=""><span> Group Ledger</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink48" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeBrokerReport.aspx"><span> Broker Report</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink49" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeInterestCalculation.aspx"><span> Interest Statement</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink50" runat="server" Target="_blank" NavigateUrl=""><span> Day Book (Kird)</span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink89" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeColdStorageRegister.aspx"><span>Cold Storage Register</span></asp:HyperLink>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink51" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeTrialBalance.aspx"><span> Trial Balance</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink52" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeBalanceSheet.aspx"><span> Profit and Loss/Balance Sheet</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink53" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgestockbook.aspx"><span> Stock Book</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink75" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeTrialBalanceScreen.aspx"><span>Trial Balance Screen</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink54" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeUTR_Report.aspx"><span> Pending Reports</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink79" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeRetailRegister.aspx"><span>Retail Sale Register Report</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink40" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeFreightRegister_Report.aspx"><span> FreightRegister Reports</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink72" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgePartywiseSaleBillDetail.aspx"><span> PartyWise Sale Bill Detail Reports</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink10" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeRetailsellBalnce_Report.aspx"><span> RetailSelfBalance Reports</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink55" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgePurchaseRegister.aspx"><span> Purchase Sale Registers</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink56" runat="server" Target="_blank" NavigateUrl=""><span> Retail Sale Reports</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink57" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeStockBooknew.aspx"><span> Retail sale Stok Book</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink58" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeMultiple_SaleBill.aspx"><span> Multiple Sale Bill Print</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink59" runat="server" Target="_blank" NavigateUrl=""><span> Parywise Sale Bill Print</span></asp:HyperLink>
+                                    </li>
+
+                                   <%-- <li>
+                                        <asp:HyperLink ID="HyperLink60" runat="server" Target="_blank" NavigateUrl=""><span> GST Returns</span></asp:HyperLink>
+                                    </li>--%>
+                                      <li>
+                                        <asp:HyperLink ID="HyperLink113" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/rptgrainsoftstockbook.aspx"><span>Grain StockBook</asp:HyperLink>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li><a href="#" class="parent"><span>Utilities</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink61" runat="server" Target="_blank" NavigateUrl=""><span>Department Wise Form Selection</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink62" runat="server" Target="_blank" NavigateUrl=""><span>General Info Throught SMS</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink63" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeUserCreation_Utility.aspx"><span>User Creation</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink96" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeGroupuser_Utility.aspx"><span>Gropu User Creation</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink64" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeGenerateCustomerLogin.aspx"><span>Generate Customer Login</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink65" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeClubAccount.aspx"><span>Club Account</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink66" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeUploadSignature.aspx"><span>Upload Signature</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink70" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeUploadLogo.aspx"><span>Upload Logo</span></asp:HyperLink>
+                                    </li>
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink67" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeAddressforvoucher.aspx"><span>Our Office Address</span></asp:HyperLink>
+                                    </li>
+                                    <%-- <li>
+                                        <asp:HyperLink ID="HyperLink18" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeMigrationUtility.aspx"><span>Migration</span></asp:HyperLink>
+                                    </li>--%>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink71" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/PgePostDate.aspx"><span> Post Date</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink18" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeOther_Utility.aspx"><span>Other Utility</span></asp:HyperLink>
+                                    </li>
+                                     <li>
+                                        <asp:HyperLink ID="HyperLink108" runat="server" Target="_blank" NavigateUrl="~/Sugar/Utility/pgeUserSecurity.aspx"><span>USer Security</span></asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink74" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeCreateReturnFilesNew.aspx"><span>GSt Utilities</span></asp:HyperLink>
+                        </li>
+                        <li><a href="#" class="parent"><span>Share</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="parent"><span>Master</span></a>
+
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink85" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/PgeScriptMasterUtility.aspx"><span>Script Master
+                                         </span></asp:HyperLink>
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink86" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeExpiryMaster.aspx"><span>Expiry Master
+                                         </span></asp:HyperLink>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink83" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/PgeEquityPurchaseSaleUtility.aspx"><span>Equity Purchase/Sale
+                                         </span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink84" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/PgeShareRegister.aspx"><span>Equity Register
+                                         </span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink82" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/pgeFuturetranstion.aspx"><span>FNO Purchase/Sale</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink88" runat="server" Target="_blank" NavigateUrl="~/Sugar/Report/rptFNO.aspx"><span>FNO Register</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink87" runat="server" Target="_blank" NavigateUrl="~/Sugar/Master/pgeSharesCompanyParameter.aspx"><span>Company Parameter
+                                         </span></asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" class="parent"><span>JAGGARY</span></a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink101" runat="server" Target="_blank" NavigateUrl="~/Sugar/Jaggary/pgeAwak.aspx"><span>Awak</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink102" runat="server" Target="_blank" NavigateUrl="~/Sugar/Jaggary/pgeJawak.aspx"><span>Jawak</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink103" runat="server" Target="_blank" NavigateUrl="~/Sugar/Jaggary/pgeJawakSaleBill.aspx"><span>Sale Bill</span></asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink104" runat="server" Target="_blank" NavigateUrl="~/Sugar/Jaggary/pgeAccountBill.aspx"><span>Jaggary Reports</span></asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink68" runat="server" Target="_self" NavigateUrl="~/Logout.aspx"><span>Log Out</span></asp:HyperLink>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div align="center" style="min-height: 500px;" id="main">
+                    <div id="createdby">
+                        <asp:UpdatePanel runat="server" ID="pnlUpdate">
+                            <ContentTemplate>
+                                <table width="100%" align="center">
+                                    <tr>
+                                        <td colspan="2" style="border-bottom: dashed 3px black;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%" align="left">
+                                            <asp:Label runat="server" ID="MasterlblCreatedBy" Font-Bold="true" Text="" ForeColor="#000033"></asp:Label>
+                                        </td>
+
+                                        <td style="width: 50%; text-align: right;" align="right">
+                                            <asp:Label runat="server" ID="MasterlblModifiedBy" Font-Bold="true" ForeColor="#000033"></asp:Label>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                    <asp:UpdatePanel ID="upContentPlaceHolder" runat="server">
+                        <ContentTemplate>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                        <ProgressTemplate>
+                            <div id="loading">
+                                <img id="Img1" src="../Images/ajax-loader3.gif" alt="Loading..." height="25px" width="45px" />
+
+                            </div>
+                        </ProgressTemplate>
+                    </asp:UpdateProgress>
+
+                </div>
+            </div>
+            <div id="divBottom" style="width: 100%; background-color: Black; height: 24px; color: White; font-weight: normal; letter-spacing: 1px; text-align: right; font-family: Verdana; font-size: 10px; vertical-align: middle; margin: -3px auto; margin-top: auto;">
+                <table width="100%" cellpadding="0px" cellspacing="0px" style="width: 100%; vertical-align: middle; height: 5px; margin-top: 1px;">
+                    <tr>
+                        <td style="width: 70%; text-align: left; height: 7px;" valign="middle">&nbsp;&nbsp;
+                        <asp:Label ID="lblCompanyName" runat="server" Font-Size="Small" Font-Bold="true"
+                            Font-Names="verdana" Style="text-align: left; color: White"> </asp:Label>
+                            &nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblb" runat="server" Font-Size="Small" Font-Names="verdana" Style="color: White;"
+                            Text="Branch-"></asp:Label>&nbsp;
+                        <asp:Label ID="lblBranch" runat="server" Font-Size="Small" Font-Names="verdana" Font-Bold="true"
+                            Style="color: White;"></asp:Label>
+                            &nbsp;&nbsp;<asp:Label ID="Label1" runat="server" ForeColor="White" Font-Size="Small"
+                                Font-Names="verdana" Text="Welcome:" Style="text-align: right;"></asp:Label>
+                            <asp:Label ID="lblUser" runat="server" ForeColor="White" Font-Size="Small" Font-Names="verdana"
+                                Text="User" Style="text-align: right;"></asp:Label>&nbsp; &nbsp;
+                        <asp:Label ID="Label2" runat="server" ForeColor="White" Font-Size="Small" Font-Names="verdana"
+                            Text="Year:" Style="text-align: right;"></asp:Label>
+                            <asp:Label ID="lblYear" runat="server" ForeColor="White" Font-Size="Small" Font-Names="verdana"
+                                Text="User" Style="text-align: right;"></asp:Label>
+                        </td>
+                        <td style="width: 30%; text-align: right; height: 7px;" valign="middle" class="tlt">Copyrights &copy; Reserved &nbsp;<asp:Label ID="lblnm" Text="Lata Software Consultancy"
+                            runat="server" Font-Size="X-Small" ForeColor="White" Font-Bold="true"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+    <%-- <script src="Sugar/Scripts/selectfirstrow.js" type="text/javascript"></script>
+    <script src="Sugar/Scripts/closepopup.js" type="text/javascript"></script>--%>
+</body>
+</html>

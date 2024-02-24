@@ -1,0 +1,400 @@
+﻿.container1
+{
+    margin: 50px auto;
+    width: 350px;
+}
+
+.login
+{
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    width: 310px;
+}
+.login p.submit
+{
+    text-align: right;
+}
+
+.login-help
+{
+    margin: 20px 0;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px #2a85a1;
+    background-color: #00CCFF;
+    height: 30px;
+}
+
+.login-help a
+{
+    color: #cce7fa;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.login-help a:hover
+{
+    text-decoration: underline;
+}
+
+:-moz-placeholder
+{
+    color: #c9c9c9 !important;
+    font-size: 13px;
+}
+
+::-webkit-input-placeholder
+{
+    color: #ccc;
+    font-size: 13px;
+}
+.login:before
+{
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+
+.login h1
+{
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px white;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+    -webkit-box-shadow: 0 1px whitesmoke;
+    box-shadow: 0 1px whitesmoke;
+}
+
+.login p
+{
+    margin: 20px 0 0;
+}
+
+.login p:first-child
+{
+    margin-top: 0;
+}
+
+.login input[type=text], .login input[type=password]
+{
+    width: 278px;
+}
+
+.login p.remember_me
+{
+    float: left;
+    line-height: 31px;
+}
+
+.login p.remember_me label
+{
+    font-size: 12px;
+    color: #777;
+    cursor: pointer;
+}
+
+.login p.remember_me input
+{
+    position: relative;
+    bottom: 1px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+
+.maindiv
+{
+    width: 100%;
+    height: 700px;
+}
+
+.center
+{
+    display: table;
+    margin: 0 auto;
+    width: 900px;
+    height: 500px;
+    margin-top: 50px;
+}
+
+.headerrow
+{
+    width: 100%;
+    height: 30px;
+    background-color: Black;
+    vertical-align: top;
+}
+.footerrow
+{
+    width: 100%;
+    height: 30px;
+    background-color: Black;
+    display: inline-block;
+    bottom: 0px;
+}
+.cmpimage
+{
+    width: 70%;
+    height: 90%;
+    float: left;
+}
+.logindiv
+{
+    height: 100%;
+    width: 30%;
+    float: right;
+    margin: 4px auto 4px 0px;
+    background: none repeat scroll 0 0 #F3F3F3;
+    -moz-box-shadow: inset 0 0 10px #E7E7E7;
+    -webkit-box-shadow: inset 0 0 10px #E7E7E7;
+    box-shadow: inset 0 0 10px #E7E7E7;
+}
+
+.txtcarporat
+{
+    /* WebKit (Safari/Chrome) Only */
+    color: Blue;
+    font-family: @Dotum;
+}
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 14px;
+    color: #000000;
+}
+a
+{
+    color: #0065EA;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Generic Styles */
+.floatL
+{
+    float: left;
+}
+.floatR
+{
+    float: right;
+}
+.clear
+{
+    clear: both;
+}
+.alignC
+{
+    text-align: center;
+}
+.alignL
+{
+    text-align: left;
+}
+.alignR
+{
+    text-align: right;
+}
+.f11
+{
+    font-size: 11px;
+}
+.f12
+{
+    font-size: 12px;
+}
+.f13
+{
+    font-size: 13px;
+}
+.f14
+{
+    font-size: 14px;
+}
+.f15
+{
+    font-size: 15px;
+}
+.f16
+{
+    font-size: 16px;
+}
+.bold
+{
+    font-weight: bold;
+}
+.grey
+{
+    color: #808080;
+}
+.margTop5
+{
+    margin-top: 5px;
+}
+.margTop10
+{
+    margin-top: 10px;
+}
+.margTop20
+{
+    margin-top: 20px;
+}
+/* Generic styles ends.. */
+
+.uncheck-label
+{
+    margin-left: 24px;
+    color: #686868;
+}
+.wrapper
+{
+    width: 948px;
+    margin: 20px auto;
+}
+.content-area
+{
+    height: 495px;
+    width: 100%;
+}
+.ad-area
+{
+    width: 640px;
+    height: 500px;
+}
+.advertisement-area
+{
+    width: 640px;
+    height: 480px;
+    background: #FFFFFF;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.login-area-free
+{
+    background: none repeat scroll 0 0 #E7E7E7;
+    height: 348px;
+    width: 293px;
+}
+.rediffmail-logo
+{
+    background-image: url('//jdelivery.rediff.com/ajaxprism/pix_1_3/rmailng_logo.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 87px;
+    height: 21px;
+    position: absolute;
+    margin: 15px 0 0 20px;
+}
+.rhs-area
+{
+    width: 292px;
+}
+.login-inner-free
+{
+    background: none repeat scroll 0 0 #F3F3F3;
+    height: 340px;
+    margin: 4px auto 4px 4px;
+    width: 285px;
+    -moz-box-shadow: inset 0 0 10px #E7E7E7;
+    -webkit-box-shadow: inset 0 0 10px #E7E7E7;
+    box-shadow: inset 0 0 10px #E7E7E7;
+}
+.login-form
+{
+    padding: 50px 18px 0;
+    height: 79%;
+}
+.login-form input[type="text"]
+{
+    border: solid 1px #B6B6B6;
+}
+.login-form input[type="password"]
+{
+    border: solid 1px #B6B6B6;
+}
+.form-label
+{
+    margin-bottom: 3px;
+}
+.create-new-account
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 45px;
+    margin-top: 27px;
+    padding: 10px;
+    width: 225px;
+    border: solid 1px #DEDEDE;
+}
+.lock
+{
+    background-image: url('//jdelivery.rediff.com/ajaxprism/pix_1_3/new_indiahomesprite7.png');
+    background-position: -350px 0;
+    height: 14px;
+    width: 10px;
+    margin: 0 10px;
+}
+.get-pro-outer
+{
+    background: none repeat scroll 0 0 #E7E7E7;
+    height: 137px;
+    margin: 15px 0 0;
+    width: 293px;
+}
+.get-pro-inner
+{
+    background: none repeat scroll 0 0 #F3F3F3;
+    height: 123px;
+    margin: 4px auto 4px 4px;
+    width: 245px;
+    padding: 6px 20px 0;
+    -moz-box-shadow: inset 0 0 10px #E7E7E7;
+    -webkit-box-shadow: inset 0 0 10px #E7E7E7;
+    box-shadow: inset 0 0 10px #E7E7E7;
+}
+.rmail-pro-logo
+{
+    background-image: url('//jdelivery.rediff.com/ajaxprism/pix_1_3/rmailpro.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 166px;
+    height: 21px;
+}
+.pro-get-yours
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 60px;
+    margin-left: -1px;
+    margin-top: 7px;
+    padding: 10px 14px;
+    border: solid 1px #DEDEDE;
+    width: 215px;
+}
+.footer-area
+{
+    margin-top: 20px;
+    padding-top: 5px;
+    border-top: solid 3px #dbdbdb;
+    height: 30px;
+}
+

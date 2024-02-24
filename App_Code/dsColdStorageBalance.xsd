@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsColdStorageBalance" targetNamespace="http://tempuri.org/dsColdStorageBalance.xsd" xmlns:mstns="http://tempuri.org/dsColdStorageBalance.xsd" xmlns="http://tempuri.org/dsColdStorageBalance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryColdStorageBalanceTableAdapter" GeneratorDataComponentClassName="qryColdStorageBalanceTableAdapter" Name="qryColdStorageBalance" UserDataComponentName="qryColdStorageBalanceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="sugartest.dbo.qryColdStorageBalance" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Doc_No, Doc_Date, Ac_Code, Ac_Id, Ac_Name_E, System_Name_E, brandname, Inword_No, Item_Code, Brand_Code, No_Of_Bags, Wt_Per, Net_Wt, Company_Code, Year_Code, Dispatched, Balance, csdetailid FROM dbo.qryColdStorageBalance</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Doc_No" DataSetColumn="Doc_No" />
+              <Mapping SourceColumn="Doc_Date" DataSetColumn="Doc_Date" />
+              <Mapping SourceColumn="Ac_Code" DataSetColumn="Ac_Code" />
+              <Mapping SourceColumn="Ac_Id" DataSetColumn="Ac_Id" />
+              <Mapping SourceColumn="Ac_Name_E" DataSetColumn="Ac_Name_E" />
+              <Mapping SourceColumn="System_Name_E" DataSetColumn="System_Name_E" />
+              <Mapping SourceColumn="brandname" DataSetColumn="brandname" />
+              <Mapping SourceColumn="Inword_No" DataSetColumn="Inword_No" />
+              <Mapping SourceColumn="Item_Code" DataSetColumn="Item_Code" />
+              <Mapping SourceColumn="Brand_Code" DataSetColumn="Brand_Code" />
+              <Mapping SourceColumn="No_Of_Bags" DataSetColumn="No_Of_Bags" />
+              <Mapping SourceColumn="Wt_Per" DataSetColumn="Wt_Per" />
+              <Mapping SourceColumn="Net_Wt" DataSetColumn="Net_Wt" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="Dispatched" DataSetColumn="Dispatched" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+              <Mapping SourceColumn="csdetailid" DataSetColumn="csdetailid" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsColdStorageBalance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsColdStorageBalance" msprop:Generator_UserDSName="dsColdStorageBalance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryColdStorageBalance" msprop:Generator_TableClassName="qryColdStorageBalanceDataTable" msprop:Generator_TableVarName="tableqryColdStorageBalance" msprop:Generator_TablePropName="qryColdStorageBalance" msprop:Generator_RowDeletingName="qryColdStorageBalanceRowDeleting" msprop:Generator_RowChangingName="qryColdStorageBalanceRowChanging" msprop:Generator_RowEvHandlerName="qryColdStorageBalanceRowChangeEventHandler" msprop:Generator_RowDeletedName="qryColdStorageBalanceRowDeleted" msprop:Generator_UserTableName="qryColdStorageBalance" msprop:Generator_RowChangedName="qryColdStorageBalanceRowChanged" msprop:Generator_RowEvArgName="qryColdStorageBalanceRowChangeEvent" msprop:Generator_RowClassName="qryColdStorageBalanceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Doc_No" msprop:Generator_ColumnVarNameInTable="columnDoc_No" msprop:Generator_ColumnPropNameInRow="Doc_No" msprop:Generator_ColumnPropNameInTable="Doc_NoColumn" msprop:Generator_UserColumnName="Doc_No" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Doc_Date" msprop:Generator_ColumnVarNameInTable="columnDoc_Date" msprop:Generator_ColumnPropNameInRow="Doc_Date" msprop:Generator_ColumnPropNameInTable="Doc_DateColumn" msprop:Generator_UserColumnName="Doc_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ac_Code" msprop:Generator_ColumnVarNameInTable="columnAc_Code" msprop:Generator_ColumnPropNameInRow="Ac_Code" msprop:Generator_ColumnPropNameInTable="Ac_CodeColumn" msprop:Generator_UserColumnName="Ac_Code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ac_Id" msprop:Generator_ColumnVarNameInTable="columnAc_Id" msprop:Generator_ColumnPropNameInRow="Ac_Id" msprop:Generator_ColumnPropNameInTable="Ac_IdColumn" msprop:Generator_UserColumnName="Ac_Id" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ac_Name_E" msprop:Generator_ColumnVarNameInTable="columnAc_Name_E" msprop:Generator_ColumnPropNameInRow="Ac_Name_E" msprop:Generator_ColumnPropNameInTable="Ac_Name_EColumn" msprop:Generator_UserColumnName="Ac_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="System_Name_E" msprop:Generator_ColumnVarNameInTable="columnSystem_Name_E" msprop:Generator_ColumnPropNameInRow="System_Name_E" msprop:Generator_ColumnPropNameInTable="System_Name_EColumn" msprop:Generator_UserColumnName="System_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="brandname" msprop:Generator_ColumnVarNameInTable="columnbrandname" msprop:Generator_ColumnPropNameInRow="brandname" msprop:Generator_ColumnPropNameInTable="brandnameColumn" msprop:Generator_UserColumnName="brandname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Inword_No" msprop:Generator_ColumnVarNameInTable="columnInword_No" msprop:Generator_ColumnPropNameInRow="Inword_No" msprop:Generator_ColumnPropNameInTable="Inword_NoColumn" msprop:Generator_UserColumnName="Inword_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_Code" msprop:Generator_ColumnVarNameInTable="columnItem_Code" msprop:Generator_ColumnPropNameInRow="Item_Code" msprop:Generator_ColumnPropNameInTable="Item_CodeColumn" msprop:Generator_UserColumnName="Item_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Brand_Code" msprop:Generator_ColumnVarNameInTable="columnBrand_Code" msprop:Generator_ColumnPropNameInRow="Brand_Code" msprop:Generator_ColumnPropNameInTable="Brand_CodeColumn" msprop:Generator_UserColumnName="Brand_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="No_Of_Bags" msprop:Generator_ColumnVarNameInTable="columnNo_Of_Bags" msprop:Generator_ColumnPropNameInRow="No_Of_Bags" msprop:Generator_ColumnPropNameInTable="No_Of_BagsColumn" msprop:Generator_UserColumnName="No_Of_Bags" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Wt_Per" msprop:Generator_ColumnVarNameInTable="columnWt_Per" msprop:Generator_ColumnPropNameInRow="Wt_Per" msprop:Generator_ColumnPropNameInTable="Wt_PerColumn" msprop:Generator_UserColumnName="Wt_Per" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net_Wt" msprop:Generator_ColumnVarNameInTable="columnNet_Wt" msprop:Generator_ColumnPropNameInRow="Net_Wt" msprop:Generator_ColumnPropNameInTable="Net_WtColumn" msprop:Generator_UserColumnName="Net_Wt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Dispatched" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDispatched" msprop:Generator_ColumnPropNameInRow="Dispatched" msprop:Generator_ColumnPropNameInTable="DispatchedColumn" msprop:Generator_UserColumnName="Dispatched" type="xs:int" minOccurs="0" />
+              <xs:element name="Balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="csdetailid" msprop:Generator_ColumnVarNameInTable="columncsdetailid" msprop:Generator_ColumnPropNameInRow="csdetailid" msprop:Generator_ColumnPropNameInTable="csdetailidColumn" msprop:Generator_UserColumnName="csdetailid" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:qryColdStorageBalance" />
+      <xs:field xpath="mstns:csdetailid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

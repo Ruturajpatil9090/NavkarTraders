@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsmultiplerecipte" targetNamespace="http://tempuri.org/dsmultiplerecipte.xsd" xmlns:mstns="http://tempuri.org/dsmultiplerecipte.xsd" xmlns="http://tempuri.org/dsmultiplerecipte.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qrymultiplereceiptheaddetailTableAdapter" GeneratorDataComponentClassName="qrymultiplereceiptheaddetailTableAdapter" Name="qrymultiplereceiptheaddetail" UserDataComponentName="qrymultiplereceiptheaddetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="sugar.dbo.qrymultiplereceiptheaddetail" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Bankname, Accountname, Tran_Type, DOC_NO, mr_no, Doc_Date, Doc_DateConverted, Bank_Code, bc, Ac_Code, ac, Amount, Company_Code, Year_Code, Created_By, Modified_By, detail_Id, mrd_no, Bill_No, Bill_Tran_Type, Bill_Tran_Date, Party_Code, pc, Unit_code, uc, Mill_Code, mc, Quntal, Bill_Amount, Bill_Receipt, Bill_Balance, Value, Adj_Value, Narration, Bill_Year_Code, Bill_Auto_Id, partyname, unitname, millname, Expr1, bill_comp_code, OnAc, AcadjAmt, AcAdjAc, LorryNo FROM dbo.qrymultiplereceiptheaddetail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Bankname" DataSetColumn="Bankname" />
+              <Mapping SourceColumn="Accountname" DataSetColumn="Accountname" />
+              <Mapping SourceColumn="Tran_Type" DataSetColumn="Tran_Type" />
+              <Mapping SourceColumn="DOC_NO" DataSetColumn="DOC_NO" />
+              <Mapping SourceColumn="mr_no" DataSetColumn="mr_no" />
+              <Mapping SourceColumn="Doc_Date" DataSetColumn="Doc_Date" />
+              <Mapping SourceColumn="Doc_DateConverted" DataSetColumn="Doc_DateConverted" />
+              <Mapping SourceColumn="Bank_Code" DataSetColumn="Bank_Code" />
+              <Mapping SourceColumn="bc" DataSetColumn="bc" />
+              <Mapping SourceColumn="Ac_Code" DataSetColumn="Ac_Code" />
+              <Mapping SourceColumn="ac" DataSetColumn="ac" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="Created_By" DataSetColumn="Created_By" />
+              <Mapping SourceColumn="Modified_By" DataSetColumn="Modified_By" />
+              <Mapping SourceColumn="detail_Id" DataSetColumn="detail_Id" />
+              <Mapping SourceColumn="mrd_no" DataSetColumn="mrd_no" />
+              <Mapping SourceColumn="Bill_No" DataSetColumn="Bill_No" />
+              <Mapping SourceColumn="Bill_Tran_Type" DataSetColumn="Bill_Tran_Type" />
+              <Mapping SourceColumn="Bill_Tran_Date" DataSetColumn="Bill_Tran_Date" />
+              <Mapping SourceColumn="Party_Code" DataSetColumn="Party_Code" />
+              <Mapping SourceColumn="pc" DataSetColumn="pc" />
+              <Mapping SourceColumn="Unit_code" DataSetColumn="Unit_code" />
+              <Mapping SourceColumn="uc" DataSetColumn="uc" />
+              <Mapping SourceColumn="Mill_Code" DataSetColumn="Mill_Code" />
+              <Mapping SourceColumn="mc" DataSetColumn="mc" />
+              <Mapping SourceColumn="Quntal" DataSetColumn="Quntal" />
+              <Mapping SourceColumn="Bill_Amount" DataSetColumn="Bill_Amount" />
+              <Mapping SourceColumn="Bill_Receipt" DataSetColumn="Bill_Receipt" />
+              <Mapping SourceColumn="Bill_Balance" DataSetColumn="Bill_Balance" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="Adj_Value" DataSetColumn="Adj_Value" />
+              <Mapping SourceColumn="Narration" DataSetColumn="Narration" />
+              <Mapping SourceColumn="Bill_Year_Code" DataSetColumn="Bill_Year_Code" />
+              <Mapping SourceColumn="Bill_Auto_Id" DataSetColumn="Bill_Auto_Id" />
+              <Mapping SourceColumn="partyname" DataSetColumn="partyname" />
+              <Mapping SourceColumn="unitname" DataSetColumn="unitname" />
+              <Mapping SourceColumn="millname" DataSetColumn="millname" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="bill_comp_code" DataSetColumn="bill_comp_code" />
+              <Mapping SourceColumn="OnAc" DataSetColumn="OnAc" />
+              <Mapping SourceColumn="AcadjAmt" DataSetColumn="AcadjAmt" />
+              <Mapping SourceColumn="AcAdjAc" DataSetColumn="AcAdjAc" />
+              <Mapping SourceColumn="LorryNo" DataSetColumn="LorryNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsmultiplerecipte" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsmultiplerecipte" msprop:Generator_UserDSName="dsmultiplerecipte">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qrymultiplereceiptheaddetail" msprop:Generator_TableClassName="qrymultiplereceiptheaddetailDataTable" msprop:Generator_TableVarName="tableqrymultiplereceiptheaddetail" msprop:Generator_TablePropName="qrymultiplereceiptheaddetail" msprop:Generator_RowDeletingName="qrymultiplereceiptheaddetailRowDeleting" msprop:Generator_RowChangingName="qrymultiplereceiptheaddetailRowChanging" msprop:Generator_RowEvHandlerName="qrymultiplereceiptheaddetailRowChangeEventHandler" msprop:Generator_RowDeletedName="qrymultiplereceiptheaddetailRowDeleted" msprop:Generator_UserTableName="qrymultiplereceiptheaddetail" msprop:Generator_RowChangedName="qrymultiplereceiptheaddetailRowChanged" msprop:Generator_RowEvArgName="qrymultiplereceiptheaddetailRowChangeEvent" msprop:Generator_RowClassName="qrymultiplereceiptheaddetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bankname" msprop:Generator_ColumnVarNameInTable="columnBankname" msprop:Generator_ColumnPropNameInRow="Bankname" msprop:Generator_ColumnPropNameInTable="BanknameColumn" msprop:Generator_UserColumnName="Bankname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Accountname" msprop:Generator_ColumnVarNameInTable="columnAccountname" msprop:Generator_ColumnPropNameInRow="Accountname" msprop:Generator_ColumnPropNameInTable="AccountnameColumn" msprop:Generator_UserColumnName="Accountname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tran_Type" msprop:Generator_ColumnVarNameInTable="columnTran_Type" msprop:Generator_ColumnPropNameInRow="Tran_Type" msprop:Generator_ColumnPropNameInTable="Tran_TypeColumn" msprop:Generator_UserColumnName="Tran_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC_NO" msprop:Generator_ColumnVarNameInTable="columnDOC_NO" msprop:Generator_ColumnPropNameInRow="DOC_NO" msprop:Generator_ColumnPropNameInTable="DOC_NOColumn" msprop:Generator_UserColumnName="DOC_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="mr_no" msprop:Generator_ColumnVarNameInTable="columnmr_no" msprop:Generator_ColumnPropNameInRow="mr_no" msprop:Generator_ColumnPropNameInTable="mr_noColumn" msprop:Generator_UserColumnName="mr_no" type="xs:int" />
+              <xs:element name="Doc_Date" msprop:Generator_ColumnVarNameInTable="columnDoc_Date" msprop:Generator_ColumnPropNameInRow="Doc_Date" msprop:Generator_ColumnPropNameInTable="Doc_DateColumn" msprop:Generator_UserColumnName="Doc_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Doc_DateConverted" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDoc_DateConverted" msprop:Generator_ColumnPropNameInRow="Doc_DateConverted" msprop:Generator_ColumnPropNameInTable="Doc_DateConvertedColumn" msprop:Generator_UserColumnName="Doc_DateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bank_Code" msprop:Generator_ColumnVarNameInTable="columnBank_Code" msprop:Generator_ColumnPropNameInRow="Bank_Code" msprop:Generator_ColumnPropNameInTable="Bank_CodeColumn" msprop:Generator_UserColumnName="Bank_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="bc" msprop:Generator_ColumnVarNameInTable="columnbc" msprop:Generator_ColumnPropNameInRow="bc" msprop:Generator_ColumnPropNameInTable="bcColumn" msprop:Generator_UserColumnName="bc" type="xs:int" minOccurs="0" />
+              <xs:element name="Ac_Code" msprop:Generator_ColumnVarNameInTable="columnAc_Code" msprop:Generator_ColumnPropNameInRow="Ac_Code" msprop:Generator_ColumnPropNameInTable="Ac_CodeColumn" msprop:Generator_UserColumnName="Ac_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="ac" msprop:Generator_ColumnVarNameInTable="columnac" msprop:Generator_ColumnPropNameInRow="ac" msprop:Generator_ColumnPropNameInTable="acColumn" msprop:Generator_UserColumnName="ac" type="xs:int" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Created_By" msprop:Generator_ColumnVarNameInTable="columnCreated_By" msprop:Generator_ColumnPropNameInRow="Created_By" msprop:Generator_ColumnPropNameInTable="Created_ByColumn" msprop:Generator_UserColumnName="Created_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modified_By" msprop:Generator_ColumnVarNameInTable="columnModified_By" msprop:Generator_ColumnPropNameInRow="Modified_By" msprop:Generator_ColumnPropNameInTable="Modified_ByColumn" msprop:Generator_UserColumnName="Modified_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="detail_Id" msprop:Generator_ColumnVarNameInTable="columndetail_Id" msprop:Generator_ColumnPropNameInRow="detail_Id" msprop:Generator_ColumnPropNameInTable="detail_IdColumn" msprop:Generator_UserColumnName="detail_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="mrd_no" msprop:Generator_ColumnVarNameInTable="columnmrd_no" msprop:Generator_ColumnPropNameInRow="mrd_no" msprop:Generator_ColumnPropNameInTable="mrd_noColumn" msprop:Generator_UserColumnName="mrd_no" type="xs:int" minOccurs="0" />
+              <xs:element name="Bill_No" msprop:Generator_ColumnVarNameInTable="columnBill_No" msprop:Generator_ColumnPropNameInRow="Bill_No" msprop:Generator_ColumnPropNameInTable="Bill_NoColumn" msprop:Generator_UserColumnName="Bill_No" type="xs:int" minOccurs="0" />
+              <xs:element name="Bill_Tran_Type" msprop:Generator_ColumnVarNameInTable="columnBill_Tran_Type" msprop:Generator_ColumnPropNameInRow="Bill_Tran_Type" msprop:Generator_ColumnPropNameInTable="Bill_Tran_TypeColumn" msprop:Generator_UserColumnName="Bill_Tran_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bill_Tran_Date" msprop:Generator_ColumnVarNameInTable="columnBill_Tran_Date" msprop:Generator_ColumnPropNameInRow="Bill_Tran_Date" msprop:Generator_ColumnPropNameInTable="Bill_Tran_DateColumn" msprop:Generator_UserColumnName="Bill_Tran_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Party_Code" msprop:Generator_ColumnVarNameInTable="columnParty_Code" msprop:Generator_ColumnPropNameInRow="Party_Code" msprop:Generator_ColumnPropNameInTable="Party_CodeColumn" msprop:Generator_UserColumnName="Party_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="pc" msprop:Generator_ColumnVarNameInTable="columnpc" msprop:Generator_ColumnPropNameInRow="pc" msprop:Generator_ColumnPropNameInTable="pcColumn" msprop:Generator_UserColumnName="pc" type="xs:int" minOccurs="0" />
+              <xs:element name="Unit_code" msprop:Generator_ColumnVarNameInTable="columnUnit_code" msprop:Generator_ColumnPropNameInRow="Unit_code" msprop:Generator_ColumnPropNameInTable="Unit_codeColumn" msprop:Generator_UserColumnName="Unit_code" type="xs:int" minOccurs="0" />
+              <xs:element name="uc" msprop:Generator_ColumnVarNameInTable="columnuc" msprop:Generator_ColumnPropNameInRow="uc" msprop:Generator_ColumnPropNameInTable="ucColumn" msprop:Generator_UserColumnName="uc" type="xs:int" minOccurs="0" />
+              <xs:element name="Mill_Code" msprop:Generator_ColumnVarNameInTable="columnMill_Code" msprop:Generator_ColumnPropNameInRow="Mill_Code" msprop:Generator_ColumnPropNameInTable="Mill_CodeColumn" msprop:Generator_UserColumnName="Mill_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="mc" msprop:Generator_ColumnVarNameInTable="columnmc" msprop:Generator_ColumnPropNameInRow="mc" msprop:Generator_ColumnPropNameInTable="mcColumn" msprop:Generator_UserColumnName="mc" type="xs:int" minOccurs="0" />
+              <xs:element name="Quntal" msprop:Generator_ColumnVarNameInTable="columnQuntal" msprop:Generator_ColumnPropNameInRow="Quntal" msprop:Generator_ColumnPropNameInTable="QuntalColumn" msprop:Generator_UserColumnName="Quntal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Bill_Amount" msprop:Generator_ColumnVarNameInTable="columnBill_Amount" msprop:Generator_ColumnPropNameInRow="Bill_Amount" msprop:Generator_ColumnPropNameInTable="Bill_AmountColumn" msprop:Generator_UserColumnName="Bill_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Bill_Receipt" msprop:Generator_ColumnVarNameInTable="columnBill_Receipt" msprop:Generator_ColumnPropNameInRow="Bill_Receipt" msprop:Generator_ColumnPropNameInTable="Bill_ReceiptColumn" msprop:Generator_UserColumnName="Bill_Receipt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Bill_Balance" msprop:Generator_ColumnVarNameInTable="columnBill_Balance" msprop:Generator_ColumnPropNameInRow="Bill_Balance" msprop:Generator_ColumnPropNameInTable="Bill_BalanceColumn" msprop:Generator_UserColumnName="Bill_Balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Adj_Value" msprop:Generator_ColumnVarNameInTable="columnAdj_Value" msprop:Generator_ColumnPropNameInRow="Adj_Value" msprop:Generator_ColumnPropNameInTable="Adj_ValueColumn" msprop:Generator_UserColumnName="Adj_Value" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Narration" msprop:Generator_ColumnVarNameInTable="columnNarration" msprop:Generator_ColumnPropNameInRow="Narration" msprop:Generator_ColumnPropNameInTable="NarrationColumn" msprop:Generator_UserColumnName="Narration" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bill_Year_Code" msprop:Generator_ColumnVarNameInTable="columnBill_Year_Code" msprop:Generator_ColumnPropNameInRow="Bill_Year_Code" msprop:Generator_ColumnPropNameInTable="Bill_Year_CodeColumn" msprop:Generator_UserColumnName="Bill_Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Bill_Auto_Id" msprop:Generator_ColumnVarNameInTable="columnBill_Auto_Id" msprop:Generator_ColumnPropNameInRow="Bill_Auto_Id" msprop:Generator_ColumnPropNameInTable="Bill_Auto_IdColumn" msprop:Generator_UserColumnName="Bill_Auto_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="partyname" msprop:Generator_ColumnVarNameInTable="columnpartyname" msprop:Generator_ColumnPropNameInRow="partyname" msprop:Generator_ColumnPropNameInTable="partynameColumn" msprop:Generator_UserColumnName="partyname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unitname" msprop:Generator_ColumnVarNameInTable="columnunitname" msprop:Generator_ColumnPropNameInRow="unitname" msprop:Generator_ColumnPropNameInTable="unitnameColumn" msprop:Generator_UserColumnName="unitname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="millname" msprop:Generator_ColumnVarNameInTable="columnmillname" msprop:Generator_ColumnPropNameInRow="millname" msprop:Generator_ColumnPropNameInTable="millnameColumn" msprop:Generator_UserColumnName="millname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bill_comp_code" msprop:Generator_ColumnVarNameInTable="columnbill_comp_code" msprop:Generator_ColumnPropNameInRow="bill_comp_code" msprop:Generator_ColumnPropNameInTable="bill_comp_codeColumn" msprop:Generator_UserColumnName="bill_comp_code" type="xs:int" minOccurs="0" />
+              <xs:element name="OnAc" msprop:Generator_ColumnVarNameInTable="columnOnAc" msprop:Generator_ColumnPropNameInRow="OnAc" msprop:Generator_ColumnPropNameInTable="OnAcColumn" msprop:Generator_UserColumnName="OnAc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AcadjAmt" msprop:Generator_ColumnVarNameInTable="columnAcadjAmt" msprop:Generator_ColumnPropNameInRow="AcadjAmt" msprop:Generator_ColumnPropNameInTable="AcadjAmtColumn" msprop:Generator_UserColumnName="AcadjAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AcAdjAc" msprop:Generator_ColumnVarNameInTable="columnAcAdjAc" msprop:Generator_ColumnPropNameInRow="AcAdjAc" msprop:Generator_ColumnPropNameInTable="AcAdjAcColumn" msprop:Generator_UserColumnName="AcAdjAc" type="xs:int" minOccurs="0" />
+              <xs:element name="LorryNo" msprop:Generator_ColumnVarNameInTable="columnLorryNo" msprop:Generator_ColumnPropNameInRow="LorryNo" msprop:Generator_ColumnPropNameInTable="LorryNoColumn" msprop:Generator_UserColumnName="LorryNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

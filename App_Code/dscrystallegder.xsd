@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dscrystallegder" targetNamespace="http://tempuri.org/dscrystallegder.xsd" xmlns:mstns="http://tempuri.org/dscrystallegder.xsd" xmlns="http://tempuri.org/dscrystallegder.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryLedgerCrystalTableAdapter" GeneratorDataComponentClassName="qryLedgerCrystalTableAdapter" Name="qryLedgerCrystal" UserDataComponentName="qryLedgerCrystalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="navkar10082022.dbo.qryLedgerCrystal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TRAN_TYPE, CASHCREDIT, DOC_NO, DOC_DATE, AC_CODE, NARRATION, AMOUNT, DRCR, DRCR_HEAD, ORDER_CODE, COMPANY_CODE, YEAR_CODE, Branch_Code, Ac_Name_E, BSGroupName, group_Type, group_Code, 
+                  group_Summary, group_Order, cityname, Ac_type, DrCrName, Credit, Debit, Balance, DRCRNew, DO_no
+FROM     qryLedgerCrystal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TRAN_TYPE" DataSetColumn="TRAN_TYPE" />
+              <Mapping SourceColumn="CASHCREDIT" DataSetColumn="CASHCREDIT" />
+              <Mapping SourceColumn="DOC_NO" DataSetColumn="DOC_NO" />
+              <Mapping SourceColumn="DOC_DATE" DataSetColumn="DOC_DATE" />
+              <Mapping SourceColumn="AC_CODE" DataSetColumn="AC_CODE" />
+              <Mapping SourceColumn="NARRATION" DataSetColumn="NARRATION" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+              <Mapping SourceColumn="DRCR" DataSetColumn="DRCR" />
+              <Mapping SourceColumn="DRCR_HEAD" DataSetColumn="DRCR_HEAD" />
+              <Mapping SourceColumn="ORDER_CODE" DataSetColumn="ORDER_CODE" />
+              <Mapping SourceColumn="COMPANY_CODE" DataSetColumn="COMPANY_CODE" />
+              <Mapping SourceColumn="YEAR_CODE" DataSetColumn="YEAR_CODE" />
+              <Mapping SourceColumn="Branch_Code" DataSetColumn="Branch_Code" />
+              <Mapping SourceColumn="Ac_Name_E" DataSetColumn="Ac_Name_E" />
+              <Mapping SourceColumn="BSGroupName" DataSetColumn="BSGroupName" />
+              <Mapping SourceColumn="group_Type" DataSetColumn="group_Type" />
+              <Mapping SourceColumn="group_Code" DataSetColumn="group_Code" />
+              <Mapping SourceColumn="group_Summary" DataSetColumn="group_Summary" />
+              <Mapping SourceColumn="group_Order" DataSetColumn="group_Order" />
+              <Mapping SourceColumn="cityname" DataSetColumn="cityname" />
+              <Mapping SourceColumn="Ac_type" DataSetColumn="Ac_type" />
+              <Mapping SourceColumn="DrCrName" DataSetColumn="DrCrName" />
+              <Mapping SourceColumn="DRCRNew" DataSetColumn="DRCRNew" />
+              <Mapping SourceColumn="DO_no" DataSetColumn="DO_no" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Credit1" />
+              <Mapping SourceColumn="Debit" DataSetColumn="Debit1" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dscrystallegder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dscrystallegder" msprop:Generator_UserDSName="dscrystallegder">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryLedgerCrystal" msprop:Generator_TableClassName="qryLedgerCrystalDataTable" msprop:Generator_TableVarName="tableqryLedgerCrystal" msprop:Generator_RowChangedName="qryLedgerCrystalRowChanged" msprop:Generator_TablePropName="qryLedgerCrystal" msprop:Generator_RowDeletingName="qryLedgerCrystalRowDeleting" msprop:Generator_RowChangingName="qryLedgerCrystalRowChanging" msprop:Generator_RowEvHandlerName="qryLedgerCrystalRowChangeEventHandler" msprop:Generator_RowDeletedName="qryLedgerCrystalRowDeleted" msprop:Generator_RowClassName="qryLedgerCrystalRow" msprop:Generator_UserTableName="qryLedgerCrystal" msprop:Generator_RowEvArgName="qryLedgerCrystalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRAN_TYPE" msprop:Generator_ColumnVarNameInTable="columnTRAN_TYPE" msprop:Generator_ColumnPropNameInRow="TRAN_TYPE" msprop:Generator_ColumnPropNameInTable="TRAN_TYPEColumn" msprop:Generator_UserColumnName="TRAN_TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CASHCREDIT" msprop:Generator_ColumnVarNameInTable="columnCASHCREDIT" msprop:Generator_ColumnPropNameInRow="CASHCREDIT" msprop:Generator_ColumnPropNameInTable="CASHCREDITColumn" msprop:Generator_UserColumnName="CASHCREDIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC_NO" msprop:Generator_ColumnVarNameInTable="columnDOC_NO" msprop:Generator_ColumnPropNameInRow="DOC_NO" msprop:Generator_ColumnPropNameInTable="DOC_NOColumn" msprop:Generator_UserColumnName="DOC_NO" type="xs:int" />
+              <xs:element name="DOC_DATE" msprop:Generator_ColumnVarNameInTable="columnDOC_DATE" msprop:Generator_ColumnPropNameInRow="DOC_DATE" msprop:Generator_ColumnPropNameInTable="DOC_DATEColumn" msprop:Generator_UserColumnName="DOC_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AC_CODE" msprop:Generator_ColumnVarNameInTable="columnAC_CODE" msprop:Generator_ColumnPropNameInRow="AC_CODE" msprop:Generator_ColumnPropNameInTable="AC_CODEColumn" msprop:Generator_UserColumnName="AC_CODE" type="xs:int" minOccurs="0" />
+              <xs:element name="NARRATION" msprop:Generator_ColumnVarNameInTable="columnNARRATION" msprop:Generator_ColumnPropNameInRow="NARRATION" msprop:Generator_ColumnPropNameInTable="NARRATIONColumn" msprop:Generator_UserColumnName="NARRATION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="555" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMOUNT" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DRCR" msprop:Generator_ColumnVarNameInTable="columnDRCR" msprop:Generator_ColumnPropNameInRow="DRCR" msprop:Generator_ColumnPropNameInTable="DRCRColumn" msprop:Generator_UserColumnName="DRCR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DRCR_HEAD" msprop:Generator_ColumnVarNameInTable="columnDRCR_HEAD" msprop:Generator_ColumnPropNameInRow="DRCR_HEAD" msprop:Generator_ColumnPropNameInTable="DRCR_HEADColumn" msprop:Generator_UserColumnName="DRCR_HEAD" type="xs:int" minOccurs="0" />
+              <xs:element name="ORDER_CODE" msprop:Generator_ColumnVarNameInTable="columnORDER_CODE" msprop:Generator_ColumnPropNameInRow="ORDER_CODE" msprop:Generator_ColumnPropNameInTable="ORDER_CODEColumn" msprop:Generator_UserColumnName="ORDER_CODE" type="xs:int" />
+              <xs:element name="COMPANY_CODE" msprop:Generator_ColumnVarNameInTable="columnCOMPANY_CODE" msprop:Generator_ColumnPropNameInRow="COMPANY_CODE" msprop:Generator_ColumnPropNameInTable="COMPANY_CODEColumn" msprop:Generator_UserColumnName="COMPANY_CODE" type="xs:int" />
+              <xs:element name="YEAR_CODE" msprop:Generator_ColumnVarNameInTable="columnYEAR_CODE" msprop:Generator_ColumnPropNameInRow="YEAR_CODE" msprop:Generator_ColumnPropNameInTable="YEAR_CODEColumn" msprop:Generator_UserColumnName="YEAR_CODE" type="xs:int" />
+              <xs:element name="Branch_Code" msprop:Generator_ColumnVarNameInTable="columnBranch_Code" msprop:Generator_ColumnPropNameInRow="Branch_Code" msprop:Generator_ColumnPropNameInTable="Branch_CodeColumn" msprop:Generator_UserColumnName="Branch_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Ac_Name_E" msprop:Generator_ColumnVarNameInTable="columnAc_Name_E" msprop:Generator_ColumnPropNameInRow="Ac_Name_E" msprop:Generator_ColumnPropNameInTable="Ac_Name_EColumn" msprop:Generator_UserColumnName="Ac_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BSGroupName" msprop:Generator_ColumnVarNameInTable="columnBSGroupName" msprop:Generator_ColumnPropNameInRow="BSGroupName" msprop:Generator_ColumnPropNameInTable="BSGroupNameColumn" msprop:Generator_UserColumnName="BSGroupName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="group_Type" msprop:Generator_ColumnVarNameInTable="columngroup_Type" msprop:Generator_ColumnPropNameInRow="group_Type" msprop:Generator_ColumnPropNameInTable="group_TypeColumn" msprop:Generator_UserColumnName="group_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="group_Code" msprop:Generator_ColumnVarNameInTable="columngroup_Code" msprop:Generator_ColumnPropNameInRow="group_Code" msprop:Generator_ColumnPropNameInTable="group_CodeColumn" msprop:Generator_UserColumnName="group_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="group_Summary" msprop:Generator_ColumnVarNameInTable="columngroup_Summary" msprop:Generator_ColumnPropNameInRow="group_Summary" msprop:Generator_ColumnPropNameInTable="group_SummaryColumn" msprop:Generator_UserColumnName="group_Summary" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="group_Order" msprop:Generator_ColumnVarNameInTable="columngroup_Order" msprop:Generator_ColumnPropNameInRow="group_Order" msprop:Generator_ColumnPropNameInTable="group_OrderColumn" msprop:Generator_UserColumnName="group_Order" type="xs:int" minOccurs="0" />
+              <xs:element name="cityname" msprop:Generator_ColumnVarNameInTable="columncityname" msprop:Generator_ColumnPropNameInRow="cityname" msprop:Generator_ColumnPropNameInTable="citynameColumn" msprop:Generator_UserColumnName="cityname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ac_type" msprop:Generator_ColumnVarNameInTable="columnAc_type" msprop:Generator_ColumnPropNameInRow="Ac_type" msprop:Generator_ColumnPropNameInTable="Ac_typeColumn" msprop:Generator_UserColumnName="Ac_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DrCrName" msprop:Generator_ColumnVarNameInTable="columnDrCrName" msprop:Generator_ColumnPropNameInRow="DrCrName" msprop:Generator_ColumnPropNameInTable="DrCrNameColumn" msprop:Generator_UserColumnName="DrCrName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Credit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Debit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDebit" msprop:Generator_ColumnPropNameInRow="Debit" msprop:Generator_ColumnPropNameInTable="DebitColumn" msprop:Generator_UserColumnName="Debit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DRCRNew" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDRCRNew" msprop:Generator_ColumnPropNameInRow="DRCRNew" msprop:Generator_ColumnPropNameInTable="DRCRNewColumn" msprop:Generator_UserColumnName="DRCRNew" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_no" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDO_no" msprop:Generator_ColumnPropNameInRow="DO_no" msprop:Generator_ColumnPropNameInTable="DO_noColumn" msprop:Generator_UserColumnName="DO_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Credit1" msdata:ReadOnly="true" msdata:Caption="Credit" msprop:Generator_ColumnVarNameInTable="columnCredit1" msprop:Generator_ColumnPropNameInRow="Credit1" msprop:Generator_ColumnPropNameInTable="Credit1Column" msprop:Generator_UserColumnName="Credit1" type="xs:int" minOccurs="0" />
+              <xs:element name="Debit1" msdata:ReadOnly="true" msdata:Caption="Debit" msprop:Generator_ColumnVarNameInTable="columnDebit1" msprop:Generator_ColumnPropNameInRow="Debit1" msprop:Generator_ColumnPropNameInTable="Debit1Column" msprop:Generator_UserColumnName="Debit1" type="xs:int" minOccurs="0" />
+              <xs:element name="Balance1" msdata:ReadOnly="true" msdata:Caption="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance1" msprop:Generator_ColumnPropNameInRow="Balance1" msprop:Generator_ColumnPropNameInTable="Balance1Column" msprop:Generator_UserColumnName="Balance1" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

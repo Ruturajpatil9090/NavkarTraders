@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPendingBalance" targetNamespace="http://tempuri.org/dsPendingBalance.xsd" xmlns:mstns="http://tempuri.org/dsPendingBalance.xsd" xmlns="http://tempuri.org/dsPendingBalance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NT_1_qrySaudaBalanceTableAdapter" GeneratorDataComponentClassName="NT_1_qrySaudaBalanceTableAdapter" Name="NT_1_qrySaudaBalance" UserDataComponentName="NT_1_qrySaudaBalanceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="accowebnavkar.dbo.NT_1_qrySaudaBalance" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Tender_No, Tender_Date, millname, salerate, Buyer_Quantal, salevalue, received, Company_Code, Year_Code, buyerbrokershortname, salepartyfullname, balance, Buyer_Party, ID, receivedDate, TenderNo_BR, TenderDetail_ID_BR, Lifting_Date, Commission_Rate, Mill_Code, Buyer, buyerbrokerfullname, Sauda_Date, DetailLiftDate FROM dbo.NT_1_qrySaudaBalance</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tender_No" DataSetColumn="Tender_No" />
+              <Mapping SourceColumn="Tender_Date" DataSetColumn="Tender_Date" />
+              <Mapping SourceColumn="millname" DataSetColumn="millname" />
+              <Mapping SourceColumn="salerate" DataSetColumn="salerate" />
+              <Mapping SourceColumn="Buyer_Quantal" DataSetColumn="Buyer_Quantal" />
+              <Mapping SourceColumn="salevalue" DataSetColumn="salevalue" />
+              <Mapping SourceColumn="received" DataSetColumn="received" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="buyerbrokershortname" DataSetColumn="buyerbrokershortname" />
+              <Mapping SourceColumn="salepartyfullname" DataSetColumn="salepartyfullname" />
+              <Mapping SourceColumn="balance" DataSetColumn="balance" />
+              <Mapping SourceColumn="Buyer_Party" DataSetColumn="Buyer_Party" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="receivedDate" DataSetColumn="receivedDate" />
+              <Mapping SourceColumn="TenderNo_BR" DataSetColumn="TenderNo_BR" />
+              <Mapping SourceColumn="TenderDetail_ID_BR" DataSetColumn="TenderDetail_ID_BR" />
+              <Mapping SourceColumn="Lifting_Date" DataSetColumn="Lifting_Date" />
+              <Mapping SourceColumn="Commission_Rate" DataSetColumn="Commission_Rate" />
+              <Mapping SourceColumn="Mill_Code" DataSetColumn="Mill_Code" />
+              <Mapping SourceColumn="Buyer" DataSetColumn="Buyer" />
+              <Mapping SourceColumn="buyerbrokerfullname" DataSetColumn="buyerbrokerfullname" />
+              <Mapping SourceColumn="Sauda_Date" DataSetColumn="Sauda_Date" />
+              <Mapping SourceColumn="DetailLiftDate" DataSetColumn="DetailLiftDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPendingBalance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsPendingBalance" msprop:Generator_DataSetName="dsPendingBalance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NT_1_qrySaudaBalance" msprop:Generator_TableClassName="NT_1_qrySaudaBalanceDataTable" msprop:Generator_TableVarName="tableNT_1_qrySaudaBalance" msprop:Generator_TablePropName="NT_1_qrySaudaBalance" msprop:Generator_RowDeletingName="NT_1_qrySaudaBalanceRowDeleting" msprop:Generator_UserTableName="NT_1_qrySaudaBalance" msprop:Generator_RowChangingName="NT_1_qrySaudaBalanceRowChanging" msprop:Generator_RowEvHandlerName="NT_1_qrySaudaBalanceRowChangeEventHandler" msprop:Generator_RowDeletedName="NT_1_qrySaudaBalanceRowDeleted" msprop:Generator_RowEvArgName="NT_1_qrySaudaBalanceRowChangeEvent" msprop:Generator_RowChangedName="NT_1_qrySaudaBalanceRowChanged" msprop:Generator_RowClassName="NT_1_qrySaudaBalanceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tender_No" msprop:Generator_ColumnVarNameInTable="columnTender_No" msprop:Generator_ColumnPropNameInRow="Tender_No" msprop:Generator_ColumnPropNameInTable="Tender_NoColumn" msprop:Generator_UserColumnName="Tender_No" type="xs:decimal" />
+              <xs:element name="Tender_Date" msprop:Generator_ColumnVarNameInTable="columnTender_Date" msprop:Generator_ColumnPropNameInRow="Tender_Date" msprop:Generator_ColumnPropNameInTable="Tender_DateColumn" msprop:Generator_UserColumnName="Tender_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="millname" msprop:Generator_ColumnVarNameInTable="columnmillname" msprop:Generator_ColumnPropNameInRow="millname" msprop:Generator_ColumnPropNameInTable="millnameColumn" msprop:Generator_UserColumnName="millname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="salerate" msprop:Generator_ColumnVarNameInTable="columnsalerate" msprop:Generator_ColumnPropNameInRow="salerate" msprop:Generator_ColumnPropNameInTable="salerateColumn" msprop:Generator_UserColumnName="salerate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Buyer_Quantal" msprop:Generator_ColumnVarNameInTable="columnBuyer_Quantal" msprop:Generator_ColumnPropNameInRow="Buyer_Quantal" msprop:Generator_ColumnPropNameInTable="Buyer_QuantalColumn" msprop:Generator_UserColumnName="Buyer_Quantal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="salevalue" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsalevalue" msprop:Generator_ColumnPropNameInRow="salevalue" msprop:Generator_ColumnPropNameInTable="salevalueColumn" msprop:Generator_UserColumnName="salevalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="received" msprop:Generator_ColumnVarNameInTable="columnreceived" msprop:Generator_ColumnPropNameInRow="received" msprop:Generator_ColumnPropNameInTable="receivedColumn" msprop:Generator_UserColumnName="received" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:decimal" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:decimal" />
+              <xs:element name="buyerbrokershortname" msprop:Generator_ColumnVarNameInTable="columnbuyerbrokershortname" msprop:Generator_ColumnPropNameInRow="buyerbrokershortname" msprop:Generator_ColumnPropNameInTable="buyerbrokershortnameColumn" msprop:Generator_UserColumnName="buyerbrokershortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="salepartyfullname" msprop:Generator_ColumnVarNameInTable="columnsalepartyfullname" msprop:Generator_ColumnPropNameInRow="salepartyfullname" msprop:Generator_ColumnPropNameInTable="salepartyfullnameColumn" msprop:Generator_UserColumnName="salepartyfullname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnbalance" msprop:Generator_ColumnPropNameInRow="balance" msprop:Generator_ColumnPropNameInTable="balanceColumn" msprop:Generator_UserColumnName="balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Buyer_Party" msprop:Generator_ColumnVarNameInTable="columnBuyer_Party" msprop:Generator_ColumnPropNameInRow="Buyer_Party" msprop:Generator_ColumnPropNameInTable="Buyer_PartyColumn" msprop:Generator_UserColumnName="Buyer_Party" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:long" minOccurs="0" />
+              <xs:element name="receivedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnreceivedDate" msprop:Generator_ColumnPropNameInRow="receivedDate" msprop:Generator_ColumnPropNameInTable="receivedDateColumn" msprop:Generator_UserColumnName="receivedDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenderNo_BR" msprop:Generator_ColumnVarNameInTable="columnTenderNo_BR" msprop:Generator_ColumnPropNameInRow="TenderNo_BR" msprop:Generator_ColumnPropNameInTable="TenderNo_BRColumn" msprop:Generator_UserColumnName="TenderNo_BR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TenderDetail_ID_BR" msprop:Generator_ColumnVarNameInTable="columnTenderDetail_ID_BR" msprop:Generator_ColumnPropNameInRow="TenderDetail_ID_BR" msprop:Generator_ColumnPropNameInTable="TenderDetail_ID_BRColumn" msprop:Generator_UserColumnName="TenderDetail_ID_BR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Lifting_Date" msprop:Generator_ColumnVarNameInTable="columnLifting_Date" msprop:Generator_ColumnPropNameInRow="Lifting_Date" msprop:Generator_ColumnPropNameInTable="Lifting_DateColumn" msprop:Generator_UserColumnName="Lifting_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Commission_Rate" msprop:Generator_ColumnVarNameInTable="columnCommission_Rate" msprop:Generator_ColumnPropNameInRow="Commission_Rate" msprop:Generator_ColumnPropNameInTable="Commission_RateColumn" msprop:Generator_UserColumnName="Commission_Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Mill_Code" msprop:Generator_ColumnVarNameInTable="columnMill_Code" msprop:Generator_ColumnPropNameInRow="Mill_Code" msprop:Generator_ColumnPropNameInTable="Mill_CodeColumn" msprop:Generator_UserColumnName="Mill_Code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" msprop:Generator_UserColumnName="Buyer" type="xs:decimal" minOccurs="0" />
+              <xs:element name="buyerbrokerfullname" msprop:Generator_ColumnVarNameInTable="columnbuyerbrokerfullname" msprop:Generator_ColumnPropNameInRow="buyerbrokerfullname" msprop:Generator_ColumnPropNameInTable="buyerbrokerfullnameColumn" msprop:Generator_UserColumnName="buyerbrokerfullname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sauda_Date" msprop:Generator_ColumnVarNameInTable="columnSauda_Date" msprop:Generator_ColumnPropNameInRow="Sauda_Date" msprop:Generator_ColumnPropNameInTable="Sauda_DateColumn" msprop:Generator_UserColumnName="Sauda_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DetailLiftDate" msprop:Generator_ColumnVarNameInTable="columnDetailLiftDate" msprop:Generator_ColumnPropNameInRow="DetailLiftDate" msprop:Generator_ColumnPropNameInTable="DetailLiftDateColumn" msprop:Generator_UserColumnName="DetailLiftDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NT_1_qrySaudaBalance" />
+      <xs:field xpath="mstns:Tender_No" />
+      <xs:field xpath="mstns:Company_Code" />
+      <xs:field xpath="mstns:Year_Code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

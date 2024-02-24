@@ -1,0 +1,232 @@
+﻿123
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link href="../CSS/cssCommon.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function PrintPanel() {
+            var panel = document.getElementById("pnl");
+            var printWindow = window.open('do.html', 'do', 'height=400,width=800');
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(panel.innerHTML);
+
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 100);
+            return false;
+        }
+    </script>
+    <title>
+	DO Report
+</title></head>
+<body>
+    <form method="post" action="rptDeliveryOrder.aspx?do_no=1&amp;email=ankushptl22%40yahoo.com" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMjY5NjM2OTIPZBYCAgMPZBYCAgcPZBYCAgMPPCsACQEADxYEHghEYXRhS2V5cxYAHgtfIUl0ZW1Db3VudAIBZBYCZg9kFi4CAQ8PFgIeBFRleHQFHEdhdXRhbSBTdWdhciBUcmFkaW5nIENvbXBhbnlkZAIDDw8WAh8CBS8wLTEwLzExLCBSb3lhbCBDb3VydHMsIFBhbmNoIEJhbmdsb3csIFNoYWh1cHVyaWRkAgUPDxYCHwIFCjk4NTYzMjE0NThkZAIHDw8WAh8CBQExZGQCCQ8PFgIfAgUKMDcvMTAvMjAxNWRkAgsPDxYCHwIFEkphd2FoYXIgUy5TLksgbHRkLmRkAg0PDxYCHwIFCDc4Nzc4ODc4ZGQCDw8PFgIfAgUSSmF3YWhhciBTLlMuSyBsdGQuZGQCEQ8PFgIfAgUGOTk5ODk4ZGQCEw8PFgIfAgUHU29sYXB1cmRkAhUPDxYCHwJlZGQCFw8PFgIfAgUEUFVORWRkAhkPDxYCHwJlZGQCGw8PFgIfAgUFNzkuMDBkZAIdDw8WAh8CBQNLOThkZAIfDw8WAh8CZWRkAiEPDxYCHwIFBzE3MDAuMDBkZAIjDw8WAh8CBQkxMzQzMDAuMDBkZAIlDw8WAh8CBQU2NS43MGRkAicPDxYCHwIFBjE2MzQuM2RkAikPDxYCHwIFCTEzNDMwMC4wMGRkAisPDxYCHwIFI1FudGwgNzkgIEphd2FoYXIoTS5SLjE3MDAgUC5SLjE4MDApZGQCLQ8PFgIfAgUhRm9yICBHYXV0YW0gU3VnYXIgVHJhZGluZyBDb21wYW55ZGRkmmZaafDFRFN9iC9x1iErKWzhAK6Bns5hK4TF5CIZdiQ=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAATghVdzm8GVMrpRtM4AW/PTezucPl2hH0iWifbRq8fmwYWYcIHkLXZpY0LlWLZFPTlDB2YfWbjwUYntrwPx36ESYBnncn5W+hRaxPTLGn+RFmE6JW41BaKC9Vl1F1Z8aDQ=" />
+    <div align="left">
+        <input type="submit" name="btnPrint" value="Print" onclick="return PrintPanel();" id="btnPrint" class="btnHelp" />
+        &nbsp;
+        <input type="submit" name="btnMail" value="Mail" id="btnMail" class="btnHelp" />
+
+            &nbsp; Email :<input name="txtEmail" type="text" value="ankushptl22@yahoo.com" id="txtEmail" />
+    </div>
+    <div align="center">
+        <div id="pnl" align="center"><font face="Calibri" color="Black" size="4">
+	
+            <span id="lblReportName" class="lblName" style="text-align: center; width: 100%;"><b><font size="5">Delivery Order</font></b></span>
+            <table id="DataList1" cellspacing="0" width="100%">
+		<tr>
+			<td>
+                    <table width="100%" border="0px" style="page-break-after: always;">
+                        <tr>
+                            <td align="center" colspan="2">
+                                <span id="DataList1_lblCompanyName_0"><b><font size="4">Gautam Sugar Trading Company</font></b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                <span id="DataList1_lblCompanyAddr_0">0-10/11, Royal Courts, Panch Banglow, Shahupuri</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                <span id="DataList1_lblCompanyMobile_0">9856321458</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border-top: solid 1px black; border-bottom: solid 1px black;">
+                                D.O. No.:
+                                <span id="DataList1_lblDocNo_0">1</span>
+                            </td>
+                            <td align="right" style="border-top: solid 1px black; border-bottom: solid 1px black;">
+                                Date:
+                                <span id="DataList1_lblDate_0">07/10/2015</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                Mill Name:
+                                <span id="DataList1_lblMillName_0">Jawahar S.S.K ltd.</span>
+                            </td>
+                            <td align="right">
+                                sale Note No.:
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: solid 1px black;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            GETPASS:
+                                        </td>
+                                        <td align="left">
+                                            LIC No.:
+                                            <span id="DataList1_lblLic_0"><b>78778878</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            <span id="DataList1_lblGetPassName_0"><b>Jawahar S.S.K ltd.</b></span>
+                                        </td>
+                                        <td align="left">
+                                            CST No.:
+                                            <span id="DataList1_Label2_0"><b>999898</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            <span id="DataList1_lblgetpassAddr_0"><b>Solapur</b></span>
+                                        </td>
+                                        <td align="left">
+                                            ECC No.::
+                                            <span id="DataList1_Label3_0"><b></b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            <span id="DataList1_lblGetpassCity_0"><b>PUNE</b></span>
+                                        </td>
+                                        <td align="left">
+                                            TIN No.::
+                                            <span id="DataList1_Label5_0"><b></b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="border-bottom: solid 1px black;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            Quantal :&nbsp;&nbsp;
+                                        </td>
+                                        <td align="left">
+                                            <span id="DataList1_lblQntl_0"><b>79.00</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Grade :&nbsp;&nbsp;
+                                        </td>
+                                        <td align="left">
+                                            <span id="DataList1_lblGrade_0"><b>K98</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Truck No. :&nbsp;&nbsp;
+                                        </td>
+                                        <td align="left">
+                                            <span id="DataList1_lblTruckNo_0"><b></b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="width: 100%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left" style="width: 25%;">
+                                            With Excise rate:
+                                        </td>
+                                        <td align="left" style="width: 25%;">
+                                            <span id="DataList1_lblWithExciseRate_0">1700.00</span>
+                                        </td>
+                                        <td align="left" style="width: 25%;">
+                                            Total Amount
+                                        </td>
+                                        <td align="left" style="width: 25%;">
+                                            <span id="DataList1_Label8_0">134300.00</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Excise:
+                                        </td>
+                                        <td align="left">
+                                            <span id="DataList1_lblExciseRate_0">65.70</span>
+                                        </td>
+                                        <td align="left">
+                                            Less Amount:
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Without Excise:
+                                        </td>
+                                        <td align="left">
+                                            <span id="DataList1_lblWithoutExcise_0">1634.3</span>
+                                        </td>
+                                        <td align="left">
+                                            Final Amount:
+                                        </td>
+                                        <td align="left">
+                                            <span id="DataList1_Label4_0">134300.00</span>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td align="left" style="height: 60px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" colspan="2">
+                                            A/C &nbsp;<span id="DataList1_lblNarration_0"><b>Qntl 79  Jawahar(M.R.1700 P.R.1800)</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" colspan="2">
+                                            ---------------------------------------------------------------------------
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" colspan="2">
+                                            ---------------------------------------------------------------------------
+                                        </td>
+                                        <td align="left" colspan="2">
+                                            <span id="DataList1_lblCompanyBottom_0">For  Gautam Sugar Trading Company</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                </td>
+		</tr>
+	</table>
+        
+</font></div>
+        <br />
+        <br />
+    </div>
+    </form>
+</body>
+</html>
+

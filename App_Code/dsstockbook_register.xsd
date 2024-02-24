@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsstockbook_register" targetNamespace="http://tempuri.org/dsstockbook_register.xsd" xmlns:mstns="http://tempuri.org/dsstockbook_register.xsd" xmlns="http://tempuri.org/dsstockbook_register.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qrystockbookfinalTableAdapter" GeneratorDataComponentClassName="qrystockbookfinalTableAdapter" Name="qrystockbookfinal" UserDataComponentName="qrystockbookfinalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="Sugarsoft.dbo.qryStockBookFinal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT doc_date, Company_Code, Year_Code, inward, outward, inwardvalue, outwardvalue, Item_Name
+FROM     qryStockBookFinal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="doc_date" DataSetColumn="doc_date" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="inward" DataSetColumn="inward" />
+              <Mapping SourceColumn="outward" DataSetColumn="outward" />
+              <Mapping SourceColumn="inwardvalue" DataSetColumn="inwardvalue" />
+              <Mapping SourceColumn="outwardvalue" DataSetColumn="outwardvalue" />
+              <Mapping SourceColumn="Item_Name" DataSetColumn="Item_Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsstockbook_register" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsstockbook_register" msprop:Generator_UserDSName="dsstockbook_register">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qrystockbookfinal" msprop:Generator_TableClassName="qrystockbookfinalDataTable" msprop:Generator_TableVarName="tableqrystockbookfinal" msprop:Generator_TablePropName="qrystockbookfinal" msprop:Generator_RowDeletingName="qrystockbookfinalRowDeleting" msprop:Generator_RowChangingName="qrystockbookfinalRowChanging" msprop:Generator_RowEvHandlerName="qrystockbookfinalRowChangeEventHandler" msprop:Generator_RowDeletedName="qrystockbookfinalRowDeleted" msprop:Generator_UserTableName="qrystockbookfinal" msprop:Generator_RowChangedName="qrystockbookfinalRowChanged" msprop:Generator_RowEvArgName="qrystockbookfinalRowChangeEvent" msprop:Generator_RowClassName="qrystockbookfinalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="doc_date" msprop:Generator_ColumnVarNameInTable="columndoc_date" msprop:Generator_ColumnPropNameInRow="doc_date" msprop:Generator_ColumnPropNameInTable="doc_dateColumn" msprop:Generator_UserColumnName="doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="inward" msprop:Generator_ColumnVarNameInTable="columninward" msprop:Generator_ColumnPropNameInRow="inward" msprop:Generator_ColumnPropNameInTable="inwardColumn" msprop:Generator_UserColumnName="inward" type="xs:decimal" minOccurs="0" />
+              <xs:element name="outward" msprop:Generator_ColumnVarNameInTable="columnoutward" msprop:Generator_ColumnPropNameInRow="outward" msprop:Generator_ColumnPropNameInTable="outwardColumn" msprop:Generator_UserColumnName="outward" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inwardvalue" msprop:Generator_ColumnVarNameInTable="columninwardvalue" msprop:Generator_ColumnPropNameInRow="inwardvalue" msprop:Generator_ColumnPropNameInTable="inwardvalueColumn" msprop:Generator_UserColumnName="inwardvalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="outwardvalue" msprop:Generator_ColumnVarNameInTable="columnoutwardvalue" msprop:Generator_ColumnPropNameInRow="outwardvalue" msprop:Generator_ColumnPropNameInTable="outwardvalueColumn" msprop:Generator_UserColumnName="outwardvalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Item_Name" msprop:Generator_ColumnVarNameInTable="columnItem_Name" msprop:Generator_ColumnPropNameInRow="Item_Name" msprop:Generator_ColumnPropNameInTable="Item_NameColumn" msprop:Generator_UserColumnName="Item_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

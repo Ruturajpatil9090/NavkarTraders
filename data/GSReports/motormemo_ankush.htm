@@ -1,0 +1,228 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Motor Memo
+</title><link href="../CSS/cssCommon.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function PrintPanel() {
+            var panel = document.getElementById("pnl");
+            var printWindow = window.open('do.html', 'do', 'height=400,width=800');
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('</head><body style="font-family:Calibri; font-size:12px;">');
+            printWindow.document.write(panel.innerHTML);
+
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 100);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="rptMotorMemoBlank.aspx?do_no=2&amp;email=ankushptl22%40rediffmail.com" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTkxMDU4ODk3D2QWAgIDD2QWAgIHD2QWAgIDDzwrAAkBAA8WBB4IRGF0YUtleXMWAB4LXyFJdGVtQ291bnQCAWQWAmYPZBYsAgEPDxYCHgRUZXh0BRxHYXV0YW0gU3VnYXIgVHJhZGluZyBDb21wYW55ZGQCAw8PFgIfAgUvMC0xMC8xMSwgUm95YWwgQ291cnRzLCBQYW5jaCBCYW5nbG93LCBTaGFodXB1cmlkZAIFDw8WAh8CBQo5ODU2MzIxNDU4ZGQCBw8PFgIfAgUBMmRkAgsPDxYCHwIFCjI5LzA5LzIwMTVkZAINDw8WAh8CBSNQUklZQSBQUkFWSU5DSEFORFJBIFNIQUggS09MSEFQVVIuIGRkAg8PDxYCHwIFI1BSSVlBIFBSQVZJTkNIQU5EUkEgU0hBSCBLT0xIQVBVUi4gZGQCEw8PFgIfAgUjUFJJWUEgUFJBVklOQ0hBTkRSQSBTSEFIIEtPTEhBUFVSLiBkZAIVDw8WAh8CBQMgICBkZAIXDw8WAh8CZWRkAhkPDxYCHwJlZGQCGw8PFgIfAgUKODgwNjA5MTg1NGRkAh0PDxYCHwIFBTEyLjAwZGQCHw8PFgIfAgUEbS8zMGRkAiEPDxYCHwJlZGQCIw8PFgIfAgUCMjRkZAIlDw8WAh8CBR5UVUxKQUJIQVZBTkkgVFJBTlNQT1JUIFZJSkFQVVJkZAInDw8WAh8CBQUxMi4wMGRkAikPDxYCHwIFBjE0NC4wMGRkAisPDxYCHwIFBTgwLjAwZGQCLQ8PFgIfAgUFNjQuMDBkZAIvDw8WAh8CBR5UVUxKQUJIQVZBTkkgVFJBTlNQT1JUIFZJSkFQVVJkZGS3ir/PQ6/BEQHDw5fzxMWuu163XWqclSVmGUSLLBvSlA==" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAS1NoYIY5HSFfJdak9dkaRYezucPl2hH0iWifbRq8fmwYWYcIHkLXZpY0LlWLZFPTlDB2YfWbjwUYntrwPx36ES6LgOwLz0uarcNbvOpF8trwfIjVk6bdctJZsX2u2a27k=" />
+    <div align="left" style="width: 80%;">
+        <input type="submit" name="btnPrint" value="Print" onclick="return PrintPanel();" id="btnPrint" class="btnHelp" />
+        &nbsp;
+        <input type="submit" name="btnMail" value="Mail" id="btnMail" class="btnHelp" />
+
+            &nbsp;Email:<input name="txtEmail" type="text" value="ankushptl22@rediffmail.com" id="txtEmail" />
+    </div>
+    <div align="center">
+        <div id="pnl" align="center"><font face="Calibri" color="Black" size="4">
+	
+            <span id="lblReportName" class="lblName" style="text-align: center; width: 100%;"><b><font size="5">Motor Memo</font></b></span>
+            <table id="DataList1" cellspacing="0" width="100%">
+		<tr>
+			<td>
+                    <table width="100%" border="0px" style="page-break-after: always;">
+                        <tr>
+                            <td align="center" colspan="2">
+                                <span id="DataList1_lblCompanyName_0"><b><font size="4">Gautam Sugar Trading Company</font></b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                <span id="DataList1_lblCompanyAddr_0">0-10/11, Royal Courts, Panch Banglow, Shahupuri</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                <span id="DataList1_lblCompanyMobile_0">9856321458</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-bottom: solid 1px black; border-top: solid 1px black;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            Our Ref No.:<span id="DataList1_lblDocNo_0">2</span>
+                                        </td>
+                                        <td align="center">
+                                            <span id="DataList1_Label1_0"><b>Freight Confirmation Letter</b></span>
+                                        </td>
+                                        <td align="right">
+                                            Date:
+                                            <span id="DataList1_Label2_0">29/09/2015</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left" style="width: 100%; border-bottom: solid 1px black;
+                                border-top: solid 1px black;">
+                                Mill Name: &nbsp;<span id="DataList1_Label3_0"><b>PRIYA PRAVINCHANDRA SHAH KOLHAPUR. </b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="width: 60%; border-bottom: solid 2px black;">
+                                
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left" colspan="2">
+                                            <span id="DataList1_lblParty_0"><b>PRIYA PRAVINCHANDRA SHAH KOLHAPUR. </b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" colspan="2">
+                                            <span id="DataList1_Label4_0">Get Pass  by</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" colspan="2">
+                                            <span id="DataList1_lblGetPassName_0"><b>PRIYA PRAVINCHANDRA SHAH KOLHAPUR. </b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            <span id="DataList1_lblGetPassAddr_0">   </span>
+                                        </td>
+                                        <td align="left">
+                                            TIN No:<span id="DataList1_lblTINNO_0"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 80%;">
+                                            <span id="DataList1_lblGetPassCity_0"></span>
+                                        </td>
+                                        <td align="left" style="width: 20%;">
+                                            Mobile No:<span id="DataList1_lblGetPassMobile_0">8806091854</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align="left" style="width: 40%; border-bottom: solid 2px black;">
+                                
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            Quantal:
+                                        </td>
+                                        <td align="right">
+                                            <span id="DataList1_lblQuantal_0"><b>12.00</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Grade:
+                                        </td>
+                                        <td align="right">
+                                            <span id="DataList1_lblGrade_0"><b>m/30</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Truck:
+                                        </td>
+                                        <td align="right">
+                                            <span id="DataList1_lblTruck_0"><b></b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Bags:
+                                        </td>
+                                        <td align="right">
+                                            <span id="DataList1_lblBags_0"><b>24</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Transport:
+                                        </td>
+                                        <td align="right">
+                                            <span id="DataList1_lblTransport_0"><b>TULJABHAVANI TRANSPORT VIJAPUR</b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="width: 60%;">
+                                Rate/Quantal:
+                                <span id="DataList1_lblrateperQtl_0">12.00</span>
+                            </td>
+                            <td style="width: 40%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            Total Amount:
+                                        </td>
+                                        <td align="right">
+                                            <span id="DataList1_lblTotalAmt_0">144.00</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Less Amount:
+                                        </td>
+                                        <td align="right">
+                                            <span id="DataList1_lblLessAmt_0">80.00</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            Final Amount:
+                                        </td>
+                                        <td align="right">
+                                            <span id="DataList1_lblFinalAmt_0">64.00</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                           
+                        </tr>
+                        <tr>
+                            <td style="height: 60px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="right">
+                                Name & Signature of Transport
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="right">
+                                <span id="DataList1_Label5_0"><b>TULJABHAVANI TRANSPORT VIJAPUR</b></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+		</tr>
+	</table>
+        
+</font></div>
+    </div>
+    </form>
+</body>
+</html>
+

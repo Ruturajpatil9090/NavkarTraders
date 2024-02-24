@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRCM" targetNamespace="http://tempuri.org/dsRCM.xsd" xmlns:mstns="http://tempuri.org/dsRCM.xsd" xmlns="http://tempuri.org/dsRCM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryRCMTableAdapter" GeneratorDataComponentClassName="qryRCMTableAdapter" Name="qryRCM" UserDataComponentName="qryRCMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="sugarsoft.dbo.qryRCM" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tran_type, doc_no, doc_date, transportname, billtoshortname, Memo_Advance, truck_no, TransportGSTStateCode, Rate, RCMCGSTAmt, RCMSGSTAmt, RCMIGSTAmt
+FROM     qryRCM</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="tran_type" DataSetColumn="tran_type" />
+              <Mapping SourceColumn="doc_no" DataSetColumn="doc_no" />
+              <Mapping SourceColumn="doc_date" DataSetColumn="doc_date" />
+              <Mapping SourceColumn="transportname" DataSetColumn="transportname" />
+              <Mapping SourceColumn="billtoshortname" DataSetColumn="billtoshortname" />
+              <Mapping SourceColumn="Memo_Advance" DataSetColumn="Memo_Advance" />
+              <Mapping SourceColumn="truck_no" DataSetColumn="truck_no" />
+              <Mapping SourceColumn="TransportGSTStateCode" DataSetColumn="TransportGSTStateCode" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="RCMCGSTAmt" DataSetColumn="RCMCGSTAmt" />
+              <Mapping SourceColumn="RCMSGSTAmt" DataSetColumn="RCMSGSTAmt" />
+              <Mapping SourceColumn="RCMIGSTAmt" DataSetColumn="RCMIGSTAmt" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRCM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsRCM" msprop:Generator_UserDSName="dsRCM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryRCM" msprop:Generator_TableClassName="qryRCMDataTable" msprop:Generator_TableVarName="tableqryRCM" msprop:Generator_RowChangedName="qryRCMRowChanged" msprop:Generator_TablePropName="qryRCM" msprop:Generator_RowDeletingName="qryRCMRowDeleting" msprop:Generator_RowChangingName="qryRCMRowChanging" msprop:Generator_RowEvHandlerName="qryRCMRowChangeEventHandler" msprop:Generator_RowDeletedName="qryRCMRowDeleted" msprop:Generator_RowClassName="qryRCMRow" msprop:Generator_UserTableName="qryRCM" msprop:Generator_RowEvArgName="qryRCMRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tran_type" msprop:Generator_ColumnVarNameInTable="columntran_type" msprop:Generator_ColumnPropNameInRow="tran_type" msprop:Generator_ColumnPropNameInTable="tran_typeColumn" msprop:Generator_UserColumnName="tran_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="doc_no" msprop:Generator_ColumnVarNameInTable="columndoc_no" msprop:Generator_ColumnPropNameInRow="doc_no" msprop:Generator_ColumnPropNameInTable="doc_noColumn" msprop:Generator_UserColumnName="doc_no" type="xs:int" />
+              <xs:element name="doc_date" msprop:Generator_ColumnVarNameInTable="columndoc_date" msprop:Generator_ColumnPropNameInRow="doc_date" msprop:Generator_ColumnPropNameInTable="doc_dateColumn" msprop:Generator_UserColumnName="doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="transportname" msprop:Generator_ColumnVarNameInTable="columntransportname" msprop:Generator_ColumnPropNameInRow="transportname" msprop:Generator_ColumnPropNameInTable="transportnameColumn" msprop:Generator_UserColumnName="transportname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="billtoshortname" msprop:Generator_ColumnVarNameInTable="columnbilltoshortname" msprop:Generator_ColumnPropNameInRow="billtoshortname" msprop:Generator_ColumnPropNameInTable="billtoshortnameColumn" msprop:Generator_UserColumnName="billtoshortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Memo_Advance" msprop:Generator_ColumnVarNameInTable="columnMemo_Advance" msprop:Generator_ColumnPropNameInRow="Memo_Advance" msprop:Generator_ColumnPropNameInTable="Memo_AdvanceColumn" msprop:Generator_UserColumnName="Memo_Advance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="truck_no" msprop:Generator_ColumnVarNameInTable="columntruck_no" msprop:Generator_ColumnPropNameInRow="truck_no" msprop:Generator_ColumnPropNameInTable="truck_noColumn" msprop:Generator_UserColumnName="truck_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransportGSTStateCode" msprop:Generator_ColumnVarNameInTable="columnTransportGSTStateCode" msprop:Generator_ColumnPropNameInRow="TransportGSTStateCode" msprop:Generator_ColumnPropNameInTable="TransportGSTStateCodeColumn" msprop:Generator_UserColumnName="TransportGSTStateCode" type="xs:int" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RCMCGSTAmt" msprop:Generator_ColumnVarNameInTable="columnRCMCGSTAmt" msprop:Generator_ColumnPropNameInRow="RCMCGSTAmt" msprop:Generator_ColumnPropNameInTable="RCMCGSTAmtColumn" msprop:Generator_UserColumnName="RCMCGSTAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RCMSGSTAmt" msprop:Generator_ColumnVarNameInTable="columnRCMSGSTAmt" msprop:Generator_ColumnPropNameInRow="RCMSGSTAmt" msprop:Generator_ColumnPropNameInTable="RCMSGSTAmtColumn" msprop:Generator_UserColumnName="RCMSGSTAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RCMIGSTAmt" msprop:Generator_ColumnVarNameInTable="columnRCMIGSTAmt" msprop:Generator_ColumnPropNameInRow="RCMIGSTAmt" msprop:Generator_ColumnPropNameInTable="RCMIGSTAmtColumn" msprop:Generator_UserColumnName="RCMIGSTAmt" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,602 @@
+﻿
+using System;
+using System.Data;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.SqlClient;
+using System.Collections;
+using System.Data;
+
+/// <summary>
+/// Summary description for clsDAL
+/// </summary>
+public class clsDAL
+{
+    #region --------------------------------- Declaration ---------------------------------
+
+    public static string strConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+    public static SqlConnection _connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+    private static DataSet _ds = null;
+    private static DataTable _dt = null;
+    private static SqlDataReader _reader = null;
+    private static SqlDataAdapter _adapter = null;
+    private static SqlCommand _sqlCmd = null;
+    private static SqlTransaction _transaction = null;
+    private static string _getQuery = string.Empty;
+    public static bool _transCheck = false;
+
+    #endregion
+
+    #region --------------------------------- Constructor ------------------------------------------
+
+    public clsDAL()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
+
+    ~clsDAL()
+    {
+        //
+        // TODO: Add destructor logic here
+        //
+        Dispose();
+    }
+    public void Dispose()
+    {
+        System.GC.SuppressFinalize(this);
+    }
+
+    #endregion
+
+    #region ------------------------------- Private Connection -------------------------------------
+
+    /// <summary>
+    /// OPEN THE SPECIFIED CONNECTION
+    /// </summary>
+    /// <returns></returns>
+    /// 
+
+    public static bool OpenConnection()
+    {
+        try
+        {
+            if (_connection.State != ConnectionState.Open)                
+            {
+             //   String strConnectionString = String.Empty;
+                //strConnectionString = ConfigurationManager.AppSettings["AccountingManagementConnection"].ToString();
+             //   strConnectionString="Data Source=WIN-GPRFEELTEST\SQLEXPRESSFT;Initial Catalog=BankNewDB;User ID=gpr_services";
+             //   strConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                _connection.ConnectionString = strConnectionString;
+                _connection.Open();
+            }
+            return true;
+        }
+        catch (Exception ex)
+        {
+            //clsException.Publish(ex);
+            String strException = ex.Message;
+            return false;
+        }
+    }
+
+    /// <summary>
+    /// CLOSE THE CONNECTION IF OPENED
+    /// </summary>
+    public static void CloseConnection()
+    {
+        try
+        {
+            if (_connection.State == ConnectionState.Open)
+            {
+                _connection.Close();
+                _connection.Dispose();
+            }
+        }
+        catch (Exception e)
+        {
+            String str;
+            str = e.Message;
+            //clsException.Publish(e);
+        }
+    }
+
+    #endregion
+
+    #region --------------------------------- Private Methods ---------------------------------
+
+    /// <summary>
+    /// Fill Data Set
+    /// </summary>
+    /// <param name="strProcedureName">Procudure Name</param>
+    /// <returns>Data Set</returns>
+    public static DataSet FillDataSet(string strProcedureName)
+    {
+        try
+        {
+           
+                _sqlCmd = new SqlCommand(strProcedureName, _connection);
+               
+                _sqlCmd.CommandType = CommandType.StoredProcedure;
+                _adapter = new SqlDataAdapter(_sqlCmd);
+                _ds = new DataSet();
+                _adapter.Fill(_ds);
+              
+           
+        }
+        catch (Exception ex)
+        {
+           
+            throw;
+        }
+        finally
+        {
+            _sqlCmd.Dispose();
+            _adapter.Dispose();
+         
+        }
+        return _ds;
+    }
+
+
+    #region[Database's simple Query]
+    public static DataSet SimpleQuery(string str)
+    {       
+            if (OpenConnection())
+            {
+                _adapter = new SqlDataAdapter(str, _connection);
+                _ds = new DataSet();
+                _adapter.Fill(_ds);
+                
+            }
+
+            _connection.Close();
+            return _ds;
+    }
+    #endregion
+
+   
+
+
+
+    /// <summary>
+    /// Fill Data Set
+    /// </summary>
+    /// <param name="strProcedureName"></param>
+    /// <param name="hshtblCollection"></param>
+    /// <returns>Data Set</returns>
+    /// 
+  
+
+
+    public static DataSet FillDataSet(string strProcedureName, Hashtable hshtblCollection)
+    {
+        try
+        {
+
+                _sqlCmd = new SqlCommand(strProcedureName, _connection);
+               
+                _sqlCmd.CommandType = CommandType.StoredProcedure;
+                IDictionaryEnumerator _enumerator = hshtblCollection.GetEnumerator();
+                while (_enumerator.MoveNext())
+                {
+                    _sqlCmd.Parameters.AddWithValue(_enumerator.Key.ToString(), _enumerator.Value);
+                }
+                //SqlParameter outParameter = new SqlParameter("@vchrMsg", SqlDbType.VarChar, 255); //New Update
+               // outParameter.Direction = ParameterDirection.Output;
+               // outParameter.Value = "";
+               // _sqlCmd.Parameters.Add(outParameter);
+                _adapter = new SqlDataAdapter(_sqlCmd);
+                _ds = new DataSet();
+                if (_adapter != null)
+                {
+                    _adapter.Fill(_ds);
+                }
+               
+           
+        }
+        catch (Exception ex)
+        {        
+            throw;
+        }
+        finally
+        {
+            _sqlCmd.Dispose();
+            _adapter.Dispose();
+         
+        }
+        return _ds;
+    }
+
+    /// <summary>
+    /// Fill Data Table 
+    /// </summary> 
+    /// <param name="strProcedureName">Procedure Name</param>
+    /// <returns>Data Table</returns>
+    /// 
+    public static DataTable FillDataTable(string strProcedureName)
+    {
+        try
+        {                          
+                _sqlCmd = new SqlCommand(strProcedureName, _connection);                
+                _sqlCmd.CommandType = CommandType.StoredProcedure;
+                _adapter = new SqlDataAdapter(_sqlCmd);
+                _dt = new DataTable();
+                _adapter.Fill(_dt);                           
+        }
+        catch (Exception ex)
+        {
+           
+            throw;
+        }
+        finally
+        {
+            _sqlCmd.Dispose();
+            _adapter.Dispose();            
+        }
+        return _dt;
+    }
+
+    /// <summary>
+    /// Fill Data Table 
+    /// </summary> 
+    /// <param name="strProcedureName">Procedure Name</param>
+    /// <param name="hshtblCollection">Hash Table</param>
+    /// <returns>Data Table</returns>
+
+    public static DataTable FillDataTable(string strProcedureName, Hashtable hshtblCollection)
+    {
+        try
+        {
+           
+               
+                _sqlCmd = new SqlCommand(strProcedureName, _connection);
+              
+                _sqlCmd.CommandType = CommandType.StoredProcedure;
+                IDictionaryEnumerator _enumerator = hshtblCollection.GetEnumerator();
+                while (_enumerator.MoveNext())
+                {
+                    _sqlCmd.Parameters.AddWithValue(_enumerator.Key.ToString(), _enumerator.Value);
+                }
+                //SqlParameter outParameter = new SqlParameter("@vchrMsg", SqlDbType.VarChar, 200); //New Update
+                //outParameter.Direction = ParameterDirection.Output;
+                //outParameter.Value = "";
+                //_sqlCmd.Parameters.Add(outParameter);
+                //_sqlCmd.ExecuteNonQuery();
+                _adapter = new SqlDataAdapter(_sqlCmd);
+                _dt = new DataTable();
+                _adapter.Fill(_dt);
+               
+                       
+        }
+        catch (Exception ex)
+        {
+          
+            throw;
+        }
+        finally
+        {
+            _sqlCmd.Dispose();
+            _adapter.Dispose();
+           
+        }
+        return _dt;
+    }
+
+    /// <summary>
+    /// It Executes The Insert/Update/Delete Query.
+    /// </summary>
+    /// <param name="strProcedureName">Procedure Name</param>
+    /// <returns>It Returns Flase for The Exception Else true </returns>
+
+    public static bool ExecuteDMLQuery(string strProcedureName)
+    {
+        try
+        {
+           
+               
+                _sqlCmd = new SqlCommand(strProcedureName, _connection);
+                _sqlCmd.Transaction = _transaction;
+                _sqlCmd.CommandType = CommandType.StoredProcedure;
+                _adapter = new SqlDataAdapter(_sqlCmd);
+              //  _sqlCmd.ExecuteNonQuery();
+               
+           
+        }
+        catch (Exception ex)
+        {
+           
+            throw;
+            return false;
+        }
+        finally
+        {
+            _sqlCmd.Dispose();
+          
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// It Executes The Insert/Update/Delete Query.
+    /// </summary>
+    /// <param name="strProcedureName"> Procedure Name</param>
+    /// <param name="hshtblCollection">Hashtable</param>
+    /// <returns>It Returns Flase for The Exception Else true </returns>
+
+    public static bool ExecuteDMLQuery(string strProcedureName, Hashtable hshtblCollection)
+    {
+        try
+        {
+           
+               
+                _sqlCmd = new SqlCommand(strProcedureName, _connection);
+               
+                _sqlCmd.CommandType = CommandType.StoredProcedure;
+                IDictionaryEnumerator _enumerator = hshtblCollection.GetEnumerator();
+                while (_enumerator.MoveNext())
+                {
+                    _sqlCmd.Parameters.AddWithValue(_enumerator.Key.ToString(), _enumerator.Value);
+                }
+                _adapter = new SqlDataAdapter(_sqlCmd);
+              //  _sqlCmd.ExecuteNonQuery();
+              
+           
+        }
+        catch (Exception ex)
+        {
+           
+            throw;
+            return false;
+        }
+        finally
+        {
+            _sqlCmd.Dispose();
+           
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// It Executes The Insert/Update/Delete Query.
+    /// </summary>
+    /// <param name="strProcedureName"> Procedure Name</param>
+    /// <param name="hshtblCollection">Hashtable</param>
+    /// <returns>It Returns Object</returns>
+
+    public static object ExecuteDMLQuery(Hashtable hshtblCollection, string strProcedureName)
+    {
+        try
+        {
+            
+               
+                _sqlCmd = new SqlCommand(strProcedureName, _connection);
+              
+                _sqlCmd.CommandType = CommandType.StoredProcedure;
+                IDictionaryEnumerator _enumerator = hshtblCollection.GetEnumerator();
+                while (_enumerator.MoveNext())
+                {
+                    _sqlCmd.Parameters.AddWithValue(_enumerator.Key.ToString(), _enumerator.Value);
+                }
+                SqlParameter outParameter = new SqlParameter("@vchrMsg", SqlDbType.VarChar, 255); //New Update
+                outParameter.Direction = ParameterDirection.InputOutput;
+                outParameter.Value = "";
+                _sqlCmd.Parameters.Add(outParameter);
+                _adapter = new SqlDataAdapter(_sqlCmd);
+              //  _sqlCmd.ExecuteScalar();
+               
+         
+        }
+        catch (Exception ex)
+        {
+            
+            throw;
+            return _sqlCmd.Parameters["@vchrMsg"].Value;
+        }
+        finally
+        {
+            _sqlCmd.Dispose();
+           
+        }
+        return _sqlCmd.Parameters["@vchrMsg"].Value;
+    }
+
+    /// <summary>
+    /// It Executes The Insert/Update/Delete Query.
+    /// </summary>
+    /// <param name="strProcedureName"> Procedure Name</param>
+    /// <param name="hshtblCollection">Hashtable</param>
+    /// <returns>It Returns Object</returns>
+
+
+    //output return
+
+    public static DataSet ExecuteDMLQuery(Hashtable hshtblCollection, string strProcedureName, ref string output)
+    {
+        try
+        {           
+                _sqlCmd = new SqlCommand(strProcedureName, _connection);
+               
+                _sqlCmd.CommandType = CommandType.StoredProcedure;
+                IDictionaryEnumerator _enumerator = hshtblCollection.GetEnumerator();
+                while (_enumerator.MoveNext())
+                {
+                    _sqlCmd.Parameters.AddWithValue(_enumerator.Key.ToString(), _enumerator.Value);
+                }
+                SqlParameter outParameter = new SqlParameter("@Msg", SqlDbType.VarChar, 255); //New Update
+                outParameter.Direction = ParameterDirection.InputOutput;
+                outParameter.Value = "";
+                _sqlCmd.Parameters.Add(outParameter);
+                _adapter = new SqlDataAdapter(_sqlCmd);
+                _ds = new DataSet();
+                _adapter.Fill(_ds);
+                output = _sqlCmd.Parameters["@Msg"].Value.ToString();              
+        }
+        catch (Exception ex)
+        {
+            output = _sqlCmd.Parameters["@Msg"].Value.ToString();
+            throw;
+         
+            return null;
+        }
+        finally
+        {
+            _sqlCmd.Dispose();
+           
+        }
+        return _ds;
+    }
+
+
+    /// <summary>
+    /// Transaction with sql command and bulk copy of datatable
+    /// </summary>
+    /// <param name="TableList">Array Of DataTable </param>
+    /// <param name="strProcedureName">Array Of Procedure Name</param>
+    /// /// <param name="hshtblCollection">Array Of Hash Table</param>
+    /// <returns>boolean </returns>
+
+    public static object _objTransCheck = null;
+
+    public static object ExecuteTransact(DataTable[] TableList, string[] strProcedureName, Hashtable[] hshtblCollection)
+    {
+        SqlCommand[] sqlCommand = new SqlCommand[strProcedureName.Length];
+        try
+        {
+            if (OpenConnection())
+            {
+                // Start a local transaction.
+                _transaction = _connection.BeginTransaction();
+                // Must assign both transaction object and connection
+                // to Command object for a pending local transaction
+                SqlBulkCopy blkCpy = new SqlBulkCopy(_connection, SqlBulkCopyOptions.Default, _transaction);
+
+                for (int i = 0; i < strProcedureName.Length; i++)
+                {
+                    if (strProcedureName[i] != null && strProcedureName[i] != "")
+                    {
+                        sqlCommand[i] = new SqlCommand(strProcedureName[i], _connection);
+                        sqlCommand[i].Transaction = _transaction;
+                        sqlCommand[i].CommandType = CommandType.StoredProcedure;
+                        if (hshtblCollection[i] != null)
+                        {
+                            IDictionaryEnumerator _enumerator = hshtblCollection[i].GetEnumerator();
+                            while (_enumerator.MoveNext())
+                            {
+                                sqlCommand[i].Parameters.AddWithValue(_enumerator.Key.ToString(), _enumerator.Value);
+                            }
+                        }
+                        SqlParameter outParameter = new SqlParameter("@vchrMsg", SqlDbType.VarChar, 200); //New Update
+                        outParameter.Direction = ParameterDirection.Output;
+                        outParameter.Value = "";
+                        sqlCommand[i].Parameters.Add(outParameter);
+                        sqlCommand[i].ExecuteNonQuery();
+                        _objTransCheck = sqlCommand[i].Parameters["@vchrMsg"].Value;
+                        //sqlCommand[i].ExecuteNonQuery();
+                    }
+                }
+                if (TableList != null && _objTransCheck.ToString().Equals("SUCCESS"))//string.IsNullOrEmpty(_objTransCheck.ToString())
+                    for (int t = 0; t < TableList.Length; t++)
+                    {
+                        if (TableList[t] != null && TableList[t].Rows.Count >= 1)
+                        {
+                            blkCpy.DestinationTableName = TableList[t].TableName;
+                            blkCpy.WriteToServer(TableList[t]);
+                        }
+                    }
+                //if (string.IsNullOrEmpty(_objTransCheck.ToString())) _transaction.Commit();
+                if (_objTransCheck.ToString().Equals("SUCCESS")) _transaction.Commit();
+            }
+        }
+        catch (Exception ex)
+        {
+            _transaction.Rollback();
+            throw;
+            return _objTransCheck;
+        }
+        finally
+        {
+            CloseConnection();
+        }
+        return _objTransCheck;
+    }
+
+    /// <summary>
+    /// Transaction with sql command and bulk copy of datatable
+    /// </summary>
+    /// <param name="TableList">Array Of DataTable </param>
+    /// <param name="strProcedureName">Array Of Procedure Name</param>
+    /// /// <param name="hshtblCollection">Array Of Hash Table</param>
+    /// <returns>boolean </returns>
+
+    public static bool ExecuteTransact(string[] strProcedureName, Hashtable[] hshtblCollection, DataTable[] TableList)
+    {
+        SqlCommand[] sqlCommand = new SqlCommand[strProcedureName.Length];
+        try
+        {
+            if (OpenConnection())
+            {
+                // Start a local transaction.
+                _transaction = _connection.BeginTransaction();
+                // Must assign both transaction object and connection
+                // to Command object for a pending local transaction
+                SqlBulkCopy blkCpy = new SqlBulkCopy(_connection, SqlBulkCopyOptions.Default, _transaction);
+
+                for (int i = 0; i < strProcedureName.Length; i++)
+                {
+                    if (strProcedureName[i] != null && strProcedureName[i] != "")
+                    {
+                        sqlCommand[i] = new SqlCommand(strProcedureName[i], _connection);
+                        sqlCommand[i].Transaction = _transaction;
+                        sqlCommand[i].CommandType = CommandType.StoredProcedure;
+                        if (hshtblCollection[i] != null)
+                        {
+                            IDictionaryEnumerator _enumerator = hshtblCollection[i].GetEnumerator();
+                            while (_enumerator.MoveNext())
+                            {
+                                sqlCommand[i].Parameters.AddWithValue(_enumerator.Key.ToString(), _enumerator.Value);
+                            }
+                        }
+                        sqlCommand[i].ExecuteNonQuery();
+                    }
+                }
+                if (TableList != null)
+                    for (int t = 0; t < TableList.Length; t++)
+                    {
+                        if (TableList[t] != null && TableList[t].Rows.Count >= 1)
+                        {
+                            blkCpy.DestinationTableName = TableList[t].TableName;
+                            blkCpy.WriteToServer(TableList[t]);
+                        }
+                    }
+                _transaction.Commit();
+                _transCheck = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            _transaction.Rollback();
+            throw;
+            _transCheck = false;
+        }
+        finally
+        {
+            CloseConnection();
+        }
+        return _transCheck;
+    }
+ 
+
+  
+
+    #endregion
+}

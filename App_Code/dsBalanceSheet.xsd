@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsBalanceSheet" targetNamespace="http://tempuri.org/dsBalanceSheet.xsd" xmlns:mstns="http://tempuri.org/dsBalanceSheet.xsd" xmlns="http://tempuri.org/dsBalanceSheet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qrygroupwisedetailTableAdapter" GeneratorDataComponentClassName="qrygroupwisedetailTableAdapter" Name="qrygroupwisedetail" UserDataComponentName="qrygroupwisedetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="Aju.dbo.qrygroupwisedetail" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        group_Code, group_Name_E, group_Type, BALANCE, Company_Code, group_Order
+FROM            qrygroupwisedetail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="group_Code" DataSetColumn="group_Code" />
+              <Mapping SourceColumn="group_Name_E" DataSetColumn="group_Name_E" />
+              <Mapping SourceColumn="group_Type" DataSetColumn="group_Type" />
+              <Mapping SourceColumn="BALANCE" DataSetColumn="BALANCE" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="group_Order" DataSetColumn="group_Order" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsBalanceSheet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsBalanceSheet" msprop:Generator_UserDSName="dsBalanceSheet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qrygroupwisedetail" msprop:Generator_TableClassName="qrygroupwisedetailDataTable" msprop:Generator_TableVarName="tableqrygroupwisedetail" msprop:Generator_RowChangedName="qrygroupwisedetailRowChanged" msprop:Generator_TablePropName="qrygroupwisedetail" msprop:Generator_RowDeletingName="qrygroupwisedetailRowDeleting" msprop:Generator_RowChangingName="qrygroupwisedetailRowChanging" msprop:Generator_RowEvHandlerName="qrygroupwisedetailRowChangeEventHandler" msprop:Generator_RowDeletedName="qrygroupwisedetailRowDeleted" msprop:Generator_RowClassName="qrygroupwisedetailRow" msprop:Generator_UserTableName="qrygroupwisedetail" msprop:Generator_RowEvArgName="qrygroupwisedetailRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="group_Code" msprop:Generator_ColumnVarNameInTable="columngroup_Code" msprop:Generator_ColumnPropNameInRow="group_Code" msprop:Generator_ColumnPropNameInTable="group_CodeColumn" msprop:Generator_UserColumnName="group_Code" type="xs:int" />
+              <xs:element name="group_Name_E" msprop:Generator_ColumnVarNameInTable="columngroup_Name_E" msprop:Generator_ColumnPropNameInRow="group_Name_E" msprop:Generator_ColumnPropNameInTable="group_Name_EColumn" msprop:Generator_UserColumnName="group_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="group_Type" msprop:Generator_ColumnVarNameInTable="columngroup_Type" msprop:Generator_ColumnPropNameInRow="group_Type" msprop:Generator_ColumnPropNameInTable="group_TypeColumn" msprop:Generator_UserColumnName="group_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BALANCE" msprop:Generator_ColumnVarNameInTable="columnBALANCE" msprop:Generator_ColumnPropNameInRow="BALANCE" msprop:Generator_ColumnPropNameInTable="BALANCEColumn" msprop:Generator_UserColumnName="BALANCE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" />
+              <xs:element name="group_Order" msprop:Generator_ColumnVarNameInTable="columngroup_Order" msprop:Generator_ColumnPropNameInRow="group_Order" msprop:Generator_ColumnPropNameInTable="group_OrderColumn" msprop:Generator_UserColumnName="group_Order" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

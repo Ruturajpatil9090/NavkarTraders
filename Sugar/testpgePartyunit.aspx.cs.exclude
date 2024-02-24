@@ -1,0 +1,1047 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+public partial class testpgePartyunit : System.Web.UI.Page
+{
+    #region data section
+    string tblPrefix = string.Empty;
+    string tblHead = string.Empty;
+    string tblDetails = string.Empty;
+    string AccountMasterTable = string.Empty;
+    string qryCommon = string.Empty;
+    string cityMasterTable = string.Empty;
+    string searchString  = string.Empty;
+    string strTextBox = string.Empty;
+    string qryDisplay = string.Empty;
+    int defaultAccountCode = 0;
+   static WebControl objAsp=null;
+    #endregion
+   #region [Page Load]
+    protected void Page_Load(object sender, EventArgs e)
+    {
+            try
+            {
+tblPrefix = Session["tblPrefix"].ToString();
+tblHead = tblPrefix + "";
+tblDetails = tblPrefix + "";
+AccountMasterTable = tblPrefix + "AccountMaster";
+qryCommon = tblPrefix + "qryTenderList";
+pnlPopup.Style["display"] = "none";
+if (!Page.IsPostBack)
+ {
+pnlPopup.Style["display"] = "none";
+                    ViewState["currentTable"] = null;
+                    clsButtonNavigation.enableDisable("N");
+                    this.makeEmptyForm("N");
+                    ViewState["mode"] = "I";
+                    this.showLastRecord();
+                }
+                if (objAsp != null)
+                    System.Web.UI.ScriptManager.GetCurrent(this).SetFocus(objAsp);
+if (hdnfClosePopup.Value == "Close" || hdnfClosePopup.Value ==  "")
+                {
+                    pnlPopup.Style["display"] = "none";
+                }
+                else
+                {
+                    pnlPopup.Style["display"] = "block";
+                    objAsp = btnSearch;
+                }
+          }
+            catch
+            {
+            }
+    }
+    #endregion
+
+#region [getMaxCode]
+    private void getMaxCode()
+    {
+        try
+        {
+                DataSet ds = null;
+                               using (clsGetMaxCode obj = new clsGetMaxCode())
+                               {                                   obj.tableName = tblHead + " where ";
+                                   obj.code = "Doc_no"; 
+                                   ds = new DataSet();
+                                   ds = obj.getMaxCode();
+                                   if (ds != null)
+                                   {
+                                       if (ds.Tables.Count > 0)
+                                       {
+                                          if (ds.Tables[0].Rows.Count > 0)
+                                           {
+                                               if (ViewState["mode"] != null) 
+                                              {                                                   if (ViewState["mode"].ToString() == "I")
+                                                   {                                                      txtDoc_no.Text = ds.Tables[0].Rows[0][0].ToString();
+                                                   }
+                                              }
+                                           }
+                                      }
+                                 }
+                              }
+        }
+        catch
+        {
+        }
+    }
+    #endregion
+   #region [makeEmptyForm]
+       private void makeEmptyForm(string dAction)
+      {
+          try
+          {
+            if (dAction == "N")
+           {
+               foreach (System.Web.UI.Control c in pnlMain.Controls)
+                {
+                    if (c is System.Web.UI.WebControls.TextBox  )
+                    {
+                       ((System.Web.UI.WebControls.TextBox)c).Text = "";
+                       ((System.Web.UI.WebControls.TextBox)c).Enabled = false;
+                  }
+                  if (c is System.Web.UI.WebControls.Label )
+                  {
+                     ((System.Web.UI.WebControls.Label)c).Text = "";
+                 }
+               }
+               pnlPopup.Style["display"] = "none";
+                btnOpenDetailsPopup.Enabled = false;
+                btnSave.Text = "Save";
+               btntxtdoc_no.Text = "Choose No";
+               btntxtdoc_no.Enabled = false;
+               lblMsg.Text = string.Empty;
+           }
+          if (dAction == "A")
+           {
+               foreach (System.Web.UI.Control c in pnlMain.Controls)
+               {
+                  if (c is System.Web.UI.WebControls.TextBox)
+                  {
+                        ((System.Web.UI.WebControls.TextBox)c).Text = "";
+                        ((System.Web.UI.WebControls.TextBox)c).Enabled = true;
+                    }
+                }
+                btnSave.Text = "Save";
+                btntxtdoc_no.Text = "Change No";
+                btntxtdoc_no.Enabled = true;
+                #region set Business logic for save
+               #endregion
+           }
+             if (dAction == "S")
+            {
+                foreach (System.Web.UI.Control c in pnlMain.Controls)
+                {
+                    if (c is System.Web.UI.WebControls.TextBox)
+                     {
+                        ((System.Web.UI.WebControls.TextBox)c).Enabled = false;
+                    }
+                }
+               btntxtdoc_no.Text = "Choose No";
+                btntxtdoc_no.Enabled = false;
+          }
+          if (dAction == "E")
+         {
+             foreach (System.Web.UI.Control c in pnlMain.Controls)
+             {
+                  if (c is System.Web.UI.WebControls.TextBox)
+                 {
+                     ((System.Web.UI.WebControls.TextBox)c).Enabled = true;
+                 }
+            }
+           btntxtdoc_no.Text = "Choose No";
+          btntxtdoc_no.Enabled = true;
+           lblMsg.Text = string.Empty;
+           }
+       #region Always check this
+        #endregion
+    }
+    catch
+   {
+    }
+  }
+   #endregion
+     #region [showLastRecord]
+      private void showLastRecord()
+     {
+        try
+       {
+          string qry = string.Empty;
+          qry = "select max(doc_no) as doc_no from " + tblHead;
+           DataSet ds = new DataSet();
+           DataTable dt = new DataTable();
+           ds = clsDAL.SimpleQuery(qry);
+          if (ds != null)
+          {
+             if (ds.Tables.Count > 0)
+             {
+                dt = ds.Tables[0];
+                  if (dt.Rows.Count > 0)
+                   {
+                       hdnf.Value = dt.Rows[0]["doc_no"].ToString();
+                     qry = getDisplayQuery();
+                    bool recordExist = this.fetchRecord(qry);
+                     if (recordExist == true)
+                       {
+                          btnEdit.Focus();
+                      }
+                     else                     //new code
+                       {
+                          btnEdit.Enabled = false;
+                           btnDelete.Enabled = false;
+                      }
+                  }
+             }
+         }
+        this.enableDisableNavigateButtons();
+      }
+     catch
+     {
+    }
+    }
+   #endregion
+#region [enableDisableNavigateButtons]
+   private void enableDisableNavigateButtons()
+    {
+        #region enable disable previous next buttons
+        int RecordCount = 0;
+        string query = "";
+        query = "select count(*) from " + tblHead + " where Company_Code='" + Convert.ToInt32(Session["Company_Code"].ToString()) + "'";
+        DataSet ds = new DataSet();
+        DataTable dt = new DataTable();
+        ds = clsDAL.SimpleQuery(query);
+        if (ds != null)
+        {
+            if (ds.Tables.Count > 0)
+            {
+                dt = ds.Tables[0];
+                if (dt.Rows.Count > 0)
+                {
+                    RecordCount = Convert.ToInt32(dt.Rows[0][0].ToString());
+                }
+            }
+        }
+        if (RecordCount != 0 && RecordCount == 1)
+        {
+            btnFirst.Enabled = true;
+            btnPrevious.Enabled = false;
+            btnNext.Enabled = false;
+            btnLast.Enabled = false;
+        }
+        else if (RecordCount != 0 && RecordCount > 1)
+        {
+            btnFirst.Enabled = true;
+            btnPrevious.Enabled = false;
+            btnNext.Enabled = false;
+            btnLast.Enabled = true;
+        }
+        if (txtdoc_no.Text != string.Empty)
+        {
+            #region check for next or previous record exist or not
+            ds = new DataSet();
+            dt = new DataTable();
+            query = "SELECT top 1 [doc_no] from " + tblHead + " where doc_no>" + Convert.ToInt32(hdnf.Value) + " ORDER BY doc_no asc  ";
+            ds = clsDAL.SimpleQuery(query);
+            if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    dt = ds.Tables[0];
+                    if (dt.Rows.Count > 0)
+                    {
+                        //next record exist
+                        btnNext.Enabled = true;
+                        btnLast.Enabled = true;
+                    }
+                    else
+                    {
+                        //next record does not exist
+                        btnNext.Enabled = false;
+                        btnLast.Enabled = false;
+                    }
+                }
+            }
+            ds = new DataSet();
+            dt = new DataTable();
+            query = "SELECT top 1 [doc_no] from " + tblHead + " where doc_no<" + Convert.ToInt32(hdnf.Value) + " ORDER BY doc_no asc  ";
+            ds = clsDAL.SimpleQuery(query);
+           if (ds != null)
+            {
+                if (ds.Tables.Count > 0)
+                {
+                    dt = ds.Tables[0];
+                    if (dt.Rows.Count > 0)
+                    {
+                        //previous record exist
+                        btnPrevious.Enabled = true;
+                        btnFirst.Enabled = true;
+                    }
+                    else
+                    {
+                        btnPrevious.Enabled = false;
+                        btnFirst.Enabled = false;
+                    }
+                }
+            }
+        }
+            #endregion
+        #endregion
+    }
+    #endregion
+
+#region [First]
+    protected void btnFirst_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string query = "";
+            query = "select doc_no from " + tblHead + " where doc_no=(select MIN(doc_no) from " + tblHead + ") ";
+            hdnf.Value = clsCommon.getString(query);
+                        navigateRecord();
+        }
+        catch
+        {
+        }
+    }
+    #endregion
+    #region [Previous]
+    protected void btnPrevious_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (txtdoc_no.Text != string.Empty)
+            {
+                string query = "";
+            hdnf.Value = clsCommon.getString(query);
+                        navigateRecord();
+        }
+        }
+        catch
+        {
+        }
+    }
+    #endregion
+    #region [Next]
+    protected void btnNext_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (txtdoc_no.Text != string.Empty)
+            {
+                string query = "";
+            hdnf.Value = clsCommon.getString(query);
+                        navigateRecord();
+        }
+        }
+        catch
+        {
+        }
+    }
+    #endregion
+    #region [Last]
+    protected void btnLast_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string query = "";
+            query = "select doc_no from " + tblHead + " where doc_no=(select MAX(doc_no) from " + tblHead + ") ";
+            hdnf.Value = clsCommon.getString(query);
+                        navigateRecord();
+        }
+        catch
+        {
+        }
+    }
+    #endregion
+
+ #region [btnAddNew Click]
+     protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        clsButtonNavigation.enableDisable("A");
+         ViewState["mode"] = null;
+         ViewState["mode"] = "I";
+         this.makeEmptyForm("A");
+         this.getMaxCode();
+         pnlPopupDetails.Style["display"] = "none";
+     }
+     #endregion
+
+#region [btnEdit_Click]
+    protected void btnEdit_Click(object sender, EventArgs e)
+    {
+        ViewState["mode"] = null;
+        ViewState["mode"] = "U";
+        clsButtonNavigation.enableDisable("E");
+        pnlgrdDetail.Enabled = true;
+        this.makeEmptyForm("E");
+        txtDoc_no.Enabled = false;
+    }
+    #endregion
+
+#region [btnDelete_Click]
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        try
+        {
+        }
+        catch
+        {
+        }
+    }
+    #endregion
+
+#region [btnCancel_Click]
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+       clsButtonNavigation.enableDisable("N");
+       this.makeEmptyForm("N");
+        this.showLastRecord();
+    }
+    #endregion
+#region [fetchrecord]
+    private bool fetchRecord(string qry)
+ {
+         try
+         {
+             bool recordExist = false;
+             DataSet ds = new DataSet();
+             DataTable dt = new DataTable();
+            ds = clsDAL.SimpleQuery(qry);
+            if (ds != null)
+             {
+                 if (ds.Tables.Count > 0)
+                {
+                    dt = ds.Tables[0];
+                    if (dt.Rows.Count > 0)
+                   {
+txtdoc_no.Text=dt.Rows[0]["DOC_NO"].ToString();
+txtac_code.Text=dt.Rows[0]["AC_CODE"].ToString();
+lblParty_name.Text=dt.Rows[0][""].ToString();
+txtunit_name.Text=dt.Rows[0]["UNIT_NAME"].ToString();
+txtunit_address.Text=dt.Rows[0]["UNIT_ADDRESS"].ToString();
+txtcity_code.Text=dt.Rows[0]["CITY_CODE"].ToString();
+txtvat_no.Text=dt.Rows[0]["VAT_NO"].ToString();
+txtecc_no.Text=dt.Rows[0]["ECC_NO"].ToString();
+txtperson1.Text=dt.Rows[0]["PERSON1"].ToString();
+txtperson1_mobile.Text=dt.Rows[0]["PERSON1_MOBILE"].ToString();
+txtperson2.Text=dt.Rows[0]["PERSON2"].ToString();
+txtperson2_mobile.Text=dt.Rows[0]["PERSON1_MOBILE"].ToString();
+txtremarks.Text=dt.Rows[0]["REMARKS"].ToString();
+
+ recordExist = true;
+  lblMsg.Text = "";
+pnlgrdDetail.Enabled = false;
+                    }
+                }
+            }
+            return recordExist;
+        }
+        catch
+        {
+             return false;
+        }    }
+  #endregion
+ #region csCalculations
+    private void csCalculations()
+    {
+    try
+       {
+           if (strTextBox == "txtdoc_no")
+             {
+                 setFocusControl(txtdoc_no);
+             }
+           if (strTextBox == "txtac_code")
+             {
+                 setFocusControl(txtac_code);
+             }
+           if (strTextBox == "txtunit_name")
+             {
+                 setFocusControl(txtunit_name);
+             }
+           if (strTextBox == "txtunit_address")
+             {
+                 setFocusControl(txtunit_address);
+             }
+           if (strTextBox == "txtcity_code")
+             {
+                 setFocusControl(txtcity_code);
+             }
+           if (strTextBox == "txtvat_no")
+             {
+                 setFocusControl(txtvat_no);
+             }
+           if (strTextBox == "txtecc_no")
+             {
+                 setFocusControl(txtecc_no);
+             }
+           if (strTextBox == "txtperson1")
+             {
+                 setFocusControl(txtperson1);
+             }
+           if (strTextBox == "txtperson1_mobile")
+             {
+                 setFocusControl(txtperson1_mobile);
+             }
+           if (strTextBox == "txtperson2")
+             {
+                 setFocusControl(txtperson2);
+             }
+           if (strTextBox == "txtperson2_mobile")
+             {
+                 setFocusControl(txtperson2_mobile);
+             }
+           if (strTextBox == "txtremarks")
+             {
+                 setFocusControl(txtremarks);
+             }
+
+       }
+       catch
+       {
+       }
+    }
+    #endregion
+ #region gerDisplayQuery
+    private string gerDisplayQuery()
+    {
+    try
+       {
+       string qryDisplay="";
+      return qryDisplay;
+      }
+    catch
+       {
+           return "";
+      }
+    }
+    #endregion
+ #region getDisplayQuery
+    private string getDisplayQuery()
+    {
+    try
+       {
+       string qryDisplay="";
+      return qryDisplay;
+      }
+    catch
+       {
+           return "";
+      }
+    }
+    #endregion
+ #region navigateRecord
+    private void navigateRecord()
+    {
+    try
+       {
+       if (hdnf.Value != string.Empty)
+       {
+ ViewState["mode"] = "U";
+             txtDoc_no.Text = hdnf.Value;
+            hdnfSuffix.Value = "";
+             string query = getDisplayQuery(); 
+             clsButtonNavigation.enableDisable("N");
+             bool recordExist = this.fetchRecord(query);
+             if (recordExist == true)
+             {
+                 btnEdit.Enabled = true;
+                 btnEdit.Focus();
+             }
+            this.enableDisableNavigateButtons();
+            this.makeEmptyForm("S");
+ }
+        else
+        {
+            showLastRecord();
+       }
+       }
+    catch
+       {
+
+      }
+    }
+    #endregion
+
+#region [grdDetail_RowDataBound]
+    protected void grdDetail_RowDataBound(object sender, GridViewRowEventArgs e)
+   {
+           try
+           {
+           }
+        catch
+           {
+        }
+    }
+   #endregion
+    #region [grdPopup_RowDataBound]
+    protected void grdPopup_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        string v=hdnfClosePopup.Value ;
+    }
+    #endregion
+#region [grdPopup_RowCreated]
+    protected void grdPopup_RowCreated(object sender, GridViewRowEventArgs e)
+    {
+        try
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow &&
+            (e.Row.RowState == DataControlRowState.Normal ||
+           e.Row.RowState == DataControlRowState.Alternate))
+           {
+               e.Row.TabIndex = -1;
+               e.Row.Attributes["onclick"] = string.Format("javascript:SelectRow(this, {0});", e.Row.RowIndex);
+              e.Row.Attributes["onkeydown"] = "javascript:return SelectSibling(event);";
+                e.Row.Attributes["onselectstart"] = "javascript:return false;";
+               // e.Row.Attributes["onkeyup"] = "javascript:return selectRow(event);";
+            }
+        }
+        catch
+        {
+            throw;
+        }
+    }
+    #endregion
+ #region [RowCommand]
+     protected void grdDetail_RowCommand(object sender, GridViewCommandEventArgs e)
+     {
+         try
+        {
+           GridViewRow row = (GridViewRow)((LinkButton)e.CommandSource).NamingContainer;
+            int rowindex = row.RowIndex;
+             if (e.CommandArgument == "lnk")
+            {
+                switch (e.CommandName)
+                {
+                    case "EditRecord":
+                         if (grdDetail.Rows[rowindex].Cells[11].Text != "D" && grdDetail.Rows[rowindex].Cells[11].Text != "R")                         {
+                             pnlPopupDetails.Style["display"] = "block";
+                             this.showDetailsRow(grdDetail.Rows[rowindex]);
+                             btnAdddetails.Text = "Update";
+                         }
+                          break;
+                     case "DeleteRecord":
+                         string action = "";
+                         LinkButton lnkDelete = (LinkButton)e.CommandSource;
+                         if (lnkDelete.Text == "Delete")
+                         {
+                             action = "Delete";
+                             lnkDelete.Text = "Open";
+                         }
+                         else
+                         {
+                             action = "Open";
+                             lnkDelete.Text = "Delete";
+                         }
+                         this.DeleteDetailsRow(grdDetail.Rows[rowindex],action);
+                         break;
+                 }
+             }
+         }
+         catch
+         {
+         }
+     }
+     #endregion
+    #region [txtdoc_no_TextChanged]
+    protected void txtdoc_no_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtdoc_no.Text;
+           strTextBox=  "txtdoc_no";
+            csCalculations();
+}
+#endregion
+    #region [btntxtdoc_no_Click]
+    protected void btntxtdoc_no_Click(object sender, EventArgs e)
+{
+        try
+        {
+             pnlPopup.Style["display"] = "block";
+            hdnfClosePopup.Value = "txtdoc_no";
+             btnSearch_Click(sender,e);
+        }
+        catch
+        {
+        }
+}
+#endregion
+    #region [txtac_code_TextChanged]
+    protected void txtac_code_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtac_code.Text;
+           strTextBox=  "txtac_code";
+            csCalculations();
+}
+#endregion
+    #region [btntxtac_code_Click]
+    protected void btntxtac_code_Click(object sender, EventArgs e)
+{
+        try
+        {
+             pnlPopup.Style["display"] = "block";
+            hdnfClosePopup.Value = "txtac_code";
+             btnSearch_Click(sender,e);
+        }
+        catch
+        {
+        }
+}
+#endregion
+    #region [txtunit_name_TextChanged]
+    protected void txtunit_name_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtunit_name.Text;
+           strTextBox=  "txtunit_name";
+            csCalculations();
+}
+#endregion
+    #region [txtunit_address_TextChanged]
+    protected void txtunit_address_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtunit_address.Text;
+           strTextBox=  "txtunit_address";
+            csCalculations();
+}
+#endregion
+    #region [txtcity_code_TextChanged]
+    protected void txtcity_code_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtcity_code.Text;
+           strTextBox=  "txtcity_code";
+            csCalculations();
+}
+#endregion
+    #region [txtvat_no_TextChanged]
+    protected void txtvat_no_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtvat_no.Text;
+           strTextBox=  "txtvat_no";
+            csCalculations();
+}
+#endregion
+    #region [txtecc_no_TextChanged]
+    protected void txtecc_no_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtecc_no.Text;
+           strTextBox=  "txtecc_no";
+            csCalculations();
+}
+#endregion
+    #region [txtperson1_TextChanged]
+    protected void txtperson1_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtperson1.Text;
+           strTextBox=  "txtperson1";
+            csCalculations();
+}
+#endregion
+    #region [txtperson1_mobile_TextChanged]
+    protected void txtperson1_mobile_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtperson1_mobile.Text;
+           strTextBox=  "txtperson1_mobile";
+            csCalculations();
+}
+#endregion
+    #region [txtperson2_TextChanged]
+    protected void txtperson2_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtperson2.Text;
+           strTextBox=  "txtperson2";
+            csCalculations();
+}
+#endregion
+    #region [txtperson2_mobile_TextChanged]
+    protected void txtperson2_mobile_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtperson2_mobile.Text;
+           strTextBox=  "txtperson2_mobile";
+            csCalculations();
+}
+#endregion
+    #region [txtremarks_TextChanged]
+    protected void txtremarks_TextChanged(object sender, EventArgs e)
+{
+            searchString = txtremarks.Text;
+           strTextBox=  "txtremarks";
+            csCalculations();
+}
+#endregion
+#region [btnSearch_Click]
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+try
+{
+    if( searchString!=string.Empty)  
+    {
+       txtSearchText.Text=searchString;
+    }
+  
+            if (hdnfClosePopup.Value ==    "txtdoc_no")
+            {
+                lblPopupHead.Text = "--Select--";
+                string qry = "";
+                this.showPopup(qry);
+            }
+            if (hdnfClosePopup.Value ==    "txtac_code")
+            {
+                lblPopupHead.Text = "--Select--";
+                string qry = "";
+                this.showPopup(qry);
+            }
+}
+catch
+{
+}
+}
+    #endregion
+
+ #region [Popup Button Code]
+     protected void showPopup(string qry)
+     {
+         try
+         {
+             setFocusControl(txtSearchText);
+             DataSet ds = new DataSet();
+             DataTable dt = new DataTable();
+             ds = clsDAL.SimpleQuery(qry);
+             if (ds != null)
+             {
+                 if (ds.Tables.Count > 0)
+                {
+                     dt = ds.Tables[0];
+                     if (dt.Rows.Count > 0)
+                     {
+                         grdPopup.DataSource = dt;
+                         grdPopup.DataBind();
+                     }
+                     else
+                     {
+                         grdPopup.DataSource = null;
+                         grdPopup.DataBind();
+                     }
+                     for (int i = 0; i < grdPopup.Rows.Count; i++)
+                     {
+                         grdPopup.Rows[i].Cells[0].Width = Unit.Percentage(20);
+                         grdPopup.Rows[i].Cells[1].Width = Unit.Percentage(80);
+                     }
+                 }
+             }
+         }
+         catch
+         {
+         }
+     }
+     #endregion
+
+#region [imgBtnClose_Click]
+    protected void imgBtnClose_Click(object sender, EventArgs e)    {
+        try
+        {
+              if(hdnfClosePopup.Value== "txtac_code")
+  {
+       setFocusControl(txtac_code);
+  }
+
+            hdnfClosePopup.Value = "Close";
+            pnlPopup.Style["display"] = "none";
+            txtSearchText.Text = string.Empty;
+           grdPopup.DataSource = null;
+           grdPopup.DataBind();
+        }
+       catch
+        {
+        }
+    }
+    #endregion
+
+#region [setFocusControl]
+    private void setFocusControl(WebControl wc)
+   {
+        objAsp = wc;
+       System.Web.UI.ScriptManager.GetCurrent(this).SetFocus(wc);
+   }
+   #endregion
+#region [txtSearchText_TextChanged]
+    protected void txtSearchText_TextChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (hdnfClosePopup.Value == "Close")
+           {
+                txtSearchText.Text = string.Empty;
+               pnlPopup.Style["display"] = "none";
+                grdPopup.DataSource = null;
+               grdPopup.DataBind();
+               if (objAsp != null)
+                    System.Web.UI.ScriptManager.GetCurrent(this).SetFocus(objAsp);
+            }
+           else
+          {
+              pnlPopup.Style["display"] = "block";
+              setFocusControl(btnSearch);
+            }
+        }
+        catch
+        {
+       }
+    }
+    #endregion
+ #region [btnSave_Click]
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+    #region [Validation Part]
+            bool isValidated = true;
+              if(txtdoc_no.Text!=string.Empty)
+ {
+      string str = clsCommon.getString("");
+       if (str != string.Empty)
+        {
+            isValidated = true;
+         }
+        else
+         {
+             isValidated = false;
+              setFocusControl(txtdoc_no);
+              return;
+           }
+       }
+      else
+       {
+           isValidated = false;
+           setFocusControl(txtdoc_no);
+            return;
+        }
+  if(txtac_code.Text!=string.Empty)
+ {
+      string str = clsCommon.getString("");
+       if (str != string.Empty)
+        {
+            isValidated = true;
+         }
+        else
+         {
+             isValidated = false;
+              setFocusControl(txtac_code);
+              return;
+           }
+       }
+      else
+       {
+           isValidated = false;
+           setFocusControl(txtac_code);
+            return;
+        }
+  if(txtunit_name.Text!=string.Empty)
+ {
+             isValidated = true;
+   }
+   else
+   {
+           isValidated = false;
+           setFocusControl(txtunit_name);
+            return;
+   }   
+  if(txtunit_address.Text!=string.Empty)
+ {
+             isValidated = true;
+   }
+   else
+   {
+           isValidated = false;
+           setFocusControl(txtunit_address);
+            return;
+   }   
+  if(txtcity_code.Text!=string.Empty)
+ {
+             isValidated = true;
+   }
+   else
+   {
+           isValidated = false;
+           setFocusControl(txtcity_code);
+            return;
+   }   
+            #endregion
+            
+                          #region -Head part declearation
+         Int32 DOC_NO=txtdoc_no.Text !=string.Empty ?  Convert.ToInt32(txtdoc_no.Text) : 0; 
+Int32 AC_CODE=txtac_code.Text !=string.Empty ?  Convert.ToInt32(txtac_code.Text) : 0; 
+string UNIT_NAME=txtunit_name.Text;
+string UNIT_ADDRESS=txtunit_address.Text;
+Int32 CITY_CODE=txtcity_code.Text !=string.Empty ?  Convert.ToInt32(txtcity_code.Text) : 0; 
+string VAT_NO=txtvat_no.Text;
+string ECC_NO=txtecc_no.Text;
+string PERSON1=txtperson1.Text;
+string PERSON1_MOBILE=txtperson1_mobile.Text;
+string PERSON2=txtperson2.Text;
+string PERSON1_MOBILE=txtperson2_mobile.Text;
+string REMARKS=txtremarks.Text;
+
+            string retValue=string.Empty;
+            string strRev=string.Empty; 
+            int Company_Code = Convert.ToInt32(Session["Company_Code"].ToString());
+            int Year_Code = Convert.ToInt32(Session["year"].ToString());
+            int year_Code = Convert.ToInt32(Session["year"].ToString());
+            int Branch_Code = Convert.ToInt32(Session["Branch_Code"].ToString());
+        #endregion-End of Head part declearation
+        
+       #region save Head Master
+            using (clsUniversalInsertUpdateDelete obj = new clsUniversalInsertUpdateDelete())
+           {
+               if (ViewState["mode"] != null)
+               {
+                  DataSet ds = new DataSet();
+                   if (ViewState["mode"].ToString() == "I")
+                  {
+                             obj.flag = 1;
+                             obj.tableName = tblHead;
+                             obj.columnNm = "DOC_NO,AC_CODE,UNIT_NAME,UNIT_ADDRESS,CITY_CODE,VAT_NO,ECC_NO,PERSON1,PERSON1_MOBILE,PERSON2,PERSON1_MOBILE,REMARKS,"  ;
+                            obj.values =  "'"+DOC_NO+"','"+AC_CODE+"','"+UNIT_NAME+"','"+UNIT_ADDRESS+"','"+CITY_CODE+"','"+VAT_NO+"','"+ECC_NO+"','"+PERSON1+"','"+PERSON1_MOBILE+"','"+PERSON2+"','"+PERSON1_MOBILE+"','"+REMARKS+"',";
+                             ds = obj.insertAccountMaster(ref strRev);
+                            retValue = strRev;
+                 }
+                  else
+                 {
+                            //Update Mode
+                           obj.flag = 2;
+                            obj.tableName = tblHead;
+                             obj.columnNm = "DOC_NO='"+DOC_NO+"',AC_CODE='"+AC_CODE+"',UNIT_NAME='"+UNIT_NAME+"',UNIT_ADDRESS='"+UNIT_ADDRESS+"',CITY_CODE='"+CITY_CODE+"',VAT_NO='"+VAT_NO+"',ECC_NO='"+ECC_NO+"',PERSON1='"+PERSON1+"',PERSON1_MOBILE='"+PERSON1_MOBILE+"',PERSON2='"+PERSON2+"',PERSON1_MOBILE='"+PERSON1_MOBILE+"',REMARKS='"+REMARKS+"',";
+                            obj.values = "none";
+                            ds = new DataSet();
+                            ds = obj.insertAccountMaster(ref strRev);
+                            retValue = strRev;
+                }
+                                                                  #region --------------------  Details --------------------
+                                                    #endregion 
+
+                             if (retValue == "-1")
+                           {
+                                                      clsButtonNavigation.enableDisable("S");
+                                                      this.enableDisableNavigateButtons();
+                                                       this.makeEmptyForm("S");
+                                                        qry = getDisplayQuery();
+                                                        this.fetchRecord(qry);
+                                                        lblMsg.Text = "Successfully Added !";
+                                                       lblMsg.ForeColor = System.Drawing.Color.Green;
+                           }
+                            if (retValue == "-2" || retValue == "-3")
+                            {
+                                                       clsButtonNavigation.enableDisable("S");
+                                                       this.enableDisableNavigateButtons();
+                                                      this.makeEmptyForm("S");
+                                                       qry = getDisplayQuery();
+                                                      this.fetchRecord(qry);
+                                                      lblMsg.Text = "Successfully Updated !";
+                                                     lblMsg.ForeColor = System.Drawing.Color.Green;
+                             }
+               }
+       }
+        #endregion
+ }
+        #endregion
+}
+

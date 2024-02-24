@@ -1,0 +1,32 @@
+﻿body
+{
+    width: 1500px;
+    border: Solid 1px Black;
+}
+#container
+{
+    width: 100%;
+    border: solid 1px green;
+}
+
+#header
+{
+    width: 100%;
+    height: 50px;
+    background-color: Aqua;
+}
+.headerspan
+{
+    margin: 2px 0px 2px opx;
+    text-align: left;
+}
+.headerspanlogut
+{    margin: 2px 0px 2px opx;
+    text-align: right;
+    }
+#main
+{
+    height: 800px;
+    width: 100%;
+    background-color: #FFFF99;
+}

@@ -1,0 +1,62 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Pending Delivery
+</title>
+    <script type="text/javascript">
+        function PrintPanel() {
+            var panel = document.getElementById("PrintPanel");
+            var printWindow = window.open('', '', 'height=660,width=1350');
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('</head><body class="container" >');
+            printWindow.document.write('<style type = "text/css">thead {display:table-header-group; } tfoot{display:table-footer-group;}</style>');
+            printWindow.document.write(panel.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 500);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="rptpendingDelivery.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ1NTI1MDY1Mw9kFgICAw9kFgICBw9kFgICBQ88KwARAgEQFgAWABYADBQrAABkGAEFCWdyZERldGFpbA9nZGV1QMuIsRCi158qYe/flE3iiz3yaNKkGGIRvb/ncVN0" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAS7E2y5JpNt9SS/dZJJwGdUezucPl2hH0iWifbRq8fmwVGA0QCmplLsNfU3yRTKv1lDB2YfWbjwUYntrwPx36ESqLxWM8LHCDUeGt43v3v61z+P/mesNWb8MtO2krInePU=" />
+    <div align="left">
+        <input type="submit" name="btnPrint" value="Print" onclick="return PrintPanel();" id="btnPrint" class="btnHelp" />
+        &nbsp;
+        <input type="submit" name="btnSendEmail" value="Mail" id="btnSendEmail" />
+        Email:<input name="txtEmail" type="text" id="txtEmail" />
+    </div>
+    <div>
+        <div id="PrintPanel" align="center"><font face="Calibri">
+	
+            <table width="1000px" align="center">
+                <tr>
+                    <td align="center">
+                        <span id="lblCompany"><b><font size="5">Gautam Sugar Trading Company</font></b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <span id="Label1"><b><font size="4">Pending Delivery List</font></b></span>
+                    </td>
+                </tr>
+            </table>
+            <center>
+                <div>
+
+	</div>
+            </center>
+        
+</font></div>
+    </div>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMillPaymentSummary" targetNamespace="http://tempuri.org/dsMillPaymentSummary.xsd" xmlns:mstns="http://tempuri.org/dsMillPaymentSummary.xsd" xmlns="http://tempuri.org/dsMillPaymentSummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sugarsoftConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="sugarsoftConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sugarsoftConnectionString.ConnectionString" Provider="System.Data.Odbc" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableTableAdapter" GeneratorDataComponentClassName="DataTableTableAdapter" Name="DataTable" UserDataComponentName="DataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="NavkarSugarSoft.dbo.qrymillpaymentbalance" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tenderid, Tender_No, Tender_Date, Company_Code, Year_Code, Lifting_Date, Mill_Code, millname, Grade, Quantal, Payment_To, paymenttoname, Mill_Rate, Excise_Rate, millrategst, TDS_Amt, millamount, paidamount, adjusted, 
+                  payableamount, Tender_DateConverted, Lifting_DateConverted, millshortname, qtyperrate, PartyDispQty, milladjamt, Party_Bill_Rate
+FROM     qrymillpaymentbalance</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tender_Date" DataSetColumn="Tender_Date" />
+              <Mapping SourceColumn="Lifting_Date" DataSetColumn="Lifting_Date" />
+              <Mapping SourceColumn="millname" DataSetColumn="millname" />
+              <Mapping SourceColumn="Grade" DataSetColumn="Grade" />
+              <Mapping SourceColumn="Quantal" DataSetColumn="Quantal" />
+              <Mapping SourceColumn="paymenttoname" DataSetColumn="paymenttoname" />
+              <Mapping SourceColumn="Mill_Rate" DataSetColumn="Mill_Rate" />
+              <Mapping SourceColumn="Excise_Rate" DataSetColumn="Excise_Rate" />
+              <Mapping SourceColumn="millrategst" DataSetColumn="millrategst" />
+              <Mapping SourceColumn="millamount" DataSetColumn="millamount" />
+              <Mapping SourceColumn="paidamount" DataSetColumn="paidamount" />
+              <Mapping SourceColumn="adjusted" DataSetColumn="adjusted" />
+              <Mapping SourceColumn="payableamount" DataSetColumn="payableamount" />
+              <Mapping SourceColumn="Tender_DateConverted" DataSetColumn="Tender_DateConverted" />
+              <Mapping SourceColumn="Lifting_DateConverted" DataSetColumn="Lifting_DateConverted" />
+              <Mapping SourceColumn="tenderid" DataSetColumn="tenderid" />
+              <Mapping SourceColumn="Tender_No" DataSetColumn="Tender_No" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="Mill_Code" DataSetColumn="Mill_Code" />
+              <Mapping SourceColumn="Payment_To" DataSetColumn="Payment_To" />
+              <Mapping SourceColumn="TDS_Amt" DataSetColumn="TDS_Amt" />
+              <Mapping SourceColumn="millshortname" DataSetColumn="millshortname" />
+              <Mapping SourceColumn="qtyperrate" DataSetColumn="qtyperrate" />
+              <Mapping SourceColumn="PartyDispQty" DataSetColumn="PartyDispQty" />
+              <Mapping SourceColumn="milladjamt" DataSetColumn="milladjamt" />
+              <Mapping SourceColumn="Party_Bill_Rate" DataSetColumn="Party_Bill_Rate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsMillPaymentSummary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsMillPaymentSummary" msprop:Generator_UserDSName="dsMillPaymentSummary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable" msprop:Generator_TableClassName="DataTableDataTable" msprop:Generator_TableVarName="tableDataTable" msprop:Generator_TablePropName="DataTable" msprop:Generator_RowDeletingName="DataTableRowDeleting" msprop:Generator_RowChangingName="DataTableRowChanging" msprop:Generator_RowEvHandlerName="DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableRowDeleted" msprop:Generator_UserTableName="DataTable" msprop:Generator_RowChangedName="DataTableRowChanged" msprop:Generator_RowEvArgName="DataTableRowChangeEvent" msprop:Generator_RowClassName="DataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tender_Date" msprop:Generator_ColumnVarNameInTable="columnTender_Date" msprop:Generator_ColumnPropNameInRow="Tender_Date" msprop:Generator_ColumnPropNameInTable="Tender_DateColumn" msprop:Generator_UserColumnName="Tender_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Lifting_Date" msprop:Generator_ColumnVarNameInTable="columnLifting_Date" msprop:Generator_ColumnPropNameInRow="Lifting_Date" msprop:Generator_ColumnPropNameInTable="Lifting_DateColumn" msprop:Generator_UserColumnName="Lifting_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="millname" msprop:Generator_ColumnVarNameInTable="columnmillname" msprop:Generator_ColumnPropNameInRow="millname" msprop:Generator_ColumnPropNameInTable="millnameColumn" msprop:Generator_UserColumnName="millname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grade" msprop:Generator_ColumnVarNameInTable="columnGrade" msprop:Generator_ColumnPropNameInRow="Grade" msprop:Generator_ColumnPropNameInTable="GradeColumn" msprop:Generator_UserColumnName="Grade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantal" msprop:Generator_ColumnVarNameInTable="columnQuantal" msprop:Generator_ColumnPropNameInRow="Quantal" msprop:Generator_ColumnPropNameInTable="QuantalColumn" msprop:Generator_UserColumnName="Quantal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="paymenttoname" msprop:Generator_ColumnVarNameInTable="columnpaymenttoname" msprop:Generator_ColumnPropNameInRow="paymenttoname" msprop:Generator_ColumnPropNameInTable="paymenttonameColumn" msprop:Generator_UserColumnName="paymenttoname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mill_Rate" msprop:Generator_ColumnVarNameInTable="columnMill_Rate" msprop:Generator_ColumnPropNameInRow="Mill_Rate" msprop:Generator_ColumnPropNameInTable="Mill_RateColumn" msprop:Generator_UserColumnName="Mill_Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Excise_Rate" msprop:Generator_ColumnVarNameInTable="columnExcise_Rate" msprop:Generator_ColumnPropNameInRow="Excise_Rate" msprop:Generator_ColumnPropNameInTable="Excise_RateColumn" msprop:Generator_UserColumnName="Excise_Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="millrategst" msprop:Generator_ColumnVarNameInTable="columnmillrategst" msprop:Generator_ColumnPropNameInRow="millrategst" msprop:Generator_ColumnPropNameInTable="millrategstColumn" msprop:Generator_UserColumnName="millrategst" type="xs:decimal" minOccurs="0" />
+              <xs:element name="millamount" msprop:Generator_ColumnVarNameInTable="columnmillamount" msprop:Generator_ColumnPropNameInRow="millamount" msprop:Generator_ColumnPropNameInTable="millamountColumn" msprop:Generator_UserColumnName="millamount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="paidamount" msprop:Generator_ColumnVarNameInTable="columnpaidamount" msprop:Generator_ColumnPropNameInRow="paidamount" msprop:Generator_ColumnPropNameInTable="paidamountColumn" msprop:Generator_UserColumnName="paidamount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="adjusted" msprop:Generator_ColumnVarNameInTable="columnadjusted" msprop:Generator_ColumnPropNameInRow="adjusted" msprop:Generator_ColumnPropNameInTable="adjustedColumn" msprop:Generator_UserColumnName="adjusted" type="xs:decimal" minOccurs="0" />
+              <xs:element name="payableamount" msprop:Generator_ColumnVarNameInTable="columnpayableamount" msprop:Generator_ColumnPropNameInRow="payableamount" msprop:Generator_ColumnPropNameInTable="payableamountColumn" msprop:Generator_UserColumnName="payableamount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tender_DateConverted" msprop:Generator_ColumnVarNameInTable="columnTender_DateConverted" msprop:Generator_ColumnPropNameInRow="Tender_DateConverted" msprop:Generator_ColumnPropNameInTable="Tender_DateConvertedColumn" msprop:Generator_UserColumnName="Tender_DateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lifting_DateConverted" msprop:Generator_ColumnVarNameInTable="columnLifting_DateConverted" msprop:Generator_ColumnPropNameInRow="Lifting_DateConverted" msprop:Generator_ColumnPropNameInTable="Lifting_DateConvertedColumn" msprop:Generator_UserColumnName="Lifting_DateConverted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tenderid" msprop:Generator_ColumnVarNameInTable="columntenderid" msprop:Generator_ColumnPropNameInRow="tenderid" msprop:Generator_ColumnPropNameInTable="tenderidColumn" msprop:Generator_UserColumnName="tenderid" type="xs:int" />
+              <xs:element name="Tender_No" msprop:Generator_ColumnVarNameInTable="columnTender_No" msprop:Generator_ColumnPropNameInRow="Tender_No" msprop:Generator_ColumnPropNameInTable="Tender_NoColumn" msprop:Generator_UserColumnName="Tender_No" type="xs:int" />
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" />
+              <xs:element name="Mill_Code" msprop:Generator_ColumnVarNameInTable="columnMill_Code" msprop:Generator_ColumnPropNameInRow="Mill_Code" msprop:Generator_ColumnPropNameInTable="Mill_CodeColumn" msprop:Generator_UserColumnName="Mill_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Payment_To" msprop:Generator_ColumnVarNameInTable="columnPayment_To" msprop:Generator_ColumnPropNameInRow="Payment_To" msprop:Generator_ColumnPropNameInTable="Payment_ToColumn" msprop:Generator_UserColumnName="Payment_To" type="xs:int" minOccurs="0" />
+              <xs:element name="TDS_Amt" msprop:Generator_ColumnVarNameInTable="columnTDS_Amt" msprop:Generator_ColumnPropNameInRow="TDS_Amt" msprop:Generator_ColumnPropNameInTable="TDS_AmtColumn" msprop:Generator_UserColumnName="TDS_Amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="millshortname" msprop:Generator_ColumnVarNameInTable="columnmillshortname" msprop:Generator_ColumnPropNameInRow="millshortname" msprop:Generator_ColumnPropNameInTable="millshortnameColumn" msprop:Generator_UserColumnName="millshortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="qtyperrate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnqtyperrate" msprop:Generator_ColumnPropNameInRow="qtyperrate" msprop:Generator_ColumnPropNameInTable="qtyperrateColumn" msprop:Generator_UserColumnName="qtyperrate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PartyDispQty" msprop:Generator_ColumnVarNameInTable="columnPartyDispQty" msprop:Generator_ColumnPropNameInRow="PartyDispQty" msprop:Generator_ColumnPropNameInTable="PartyDispQtyColumn" msprop:Generator_UserColumnName="PartyDispQty" type="xs:decimal" />
+              <xs:element name="milladjamt" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmilladjamt" msprop:Generator_ColumnPropNameInRow="milladjamt" msprop:Generator_ColumnPropNameInTable="milladjamtColumn" msprop:Generator_UserColumnName="milladjamt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Party_Bill_Rate" msprop:Generator_ColumnVarNameInTable="columnParty_Bill_Rate" msprop:Generator_ColumnPropNameInRow="Party_Bill_Rate" msprop:Generator_ColumnPropNameInTable="Party_Bill_RateColumn" msprop:Generator_UserColumnName="Party_Bill_Rate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable" />
+      <xs:field xpath="mstns:tenderid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

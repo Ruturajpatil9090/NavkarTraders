@@ -1,0 +1,1288 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Profit Loss
+</title>
+    <script type="text/javascript">
+        function PrintPanel() {
+            var panel = document.getElementById("PrintPanel");
+            var printWindow = window.open('', '', 'height=660,width=1350');
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('</head><body style="font-family:Calibri; " >');
+            printWindow.document.write('<style type = "text/css">thead {display:table-header-group;} tfoot{display:table-footer-group;}</style>');
+            printWindow.document.write(panel.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 500);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="rptProfitLoss.aspx?dt=02%2f10%2f2015" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAR8IdZQqDdpaxDi/c9zbYDAezucPl2hH0iWifbRq8fmwVGA0QCmplLsNfU3yRTKv1lDB2YfWbjwUYntrwPx36ESikgSv+ZLXcTupIAoKA0bkV1SpNUCFG0ZVLLGseFbb98=" />
+    <div>
+        <div align="left">
+            <input type="submit" name="btnPrint" value="Print" onclick="return PrintPanel();" id="btnPrint" class="btnHelp" />
+            &nbsp;
+            <input type="submit" name="btnSendEmail" value="Email" id="btnSendEmail" />
+            Email:<input name="txtEmail" type="text" id="txtEmail" />
+        </div>
+        <div>
+            <div id="PrintPanel" align="center"><font face="Calibri">
+	
+                <span id="lblReportName" class="lblName" style="display:inline-block;text-align: center; width: 100%;"><b><font size="5">Profit & Loss</font></b></span>
+                <table id="tbMain" width="1000px" align="center" style="page-break-after: avoid;">
+		<tr>
+			<td align="center">
+                            <span id="lblCompany"><b><font size="5">Gautam Sugar Trading Company</font></b></span>
+                        </td>
+		</tr>
+		<tr>
+			<td align="center">
+                            <span id="lblCompanyAddr">Kolhapur</span>
+                        </td>
+		</tr>
+		<tr>
+			<td align="center">
+                            <span id="lblCompanyMobile"></span>
+                        </td>
+		</tr>
+	</table>
+	
+                <table width="1000px" align="center">
+                    <tr>
+                        <td valign="top" style="width: 50%;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                        Asset
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                        Amount
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                        Liabilities
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                        Amount
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td valign="top" style="width: 50%; border-right: solid 1px black;">
+                            
+                            <table id="dtl_TradingCredit" cellspacing="0" width="100%">
+		<tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_TradingCredit_lblGroupNameR_0"><b>Sugar Purchase A/c.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_TradingCredit_lblGroupAmountR_0"><b>134901375</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_TradingCredit_dtl_TradingCreditInner_0" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_TradingCredit_dtl_TradingCreditInner_0_lblAcNameR_0">SUGAR PURCHASE A/C  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_TradingCredit_dtl_TradingCreditInner_0_lblACAmountR_0">134901375</span><span id="dtl_TradingCredit_dtl_TradingCreditInner_0_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_TradingCredit_lblGroupNameR_1"><b>TRANSPORT & HAMALI CHARGES</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_TradingCredit_lblGroupAmountR_1"><b>295280</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_TradingCredit_dtl_TradingCreditInner_1" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_TradingCredit_dtl_TradingCreditInner_1_lblAcNameR_0">TRANSPORT & HAMALI  KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_TradingCredit_dtl_TradingCreditInner_1_lblACAmountR_0">295280</span><span id="dtl_TradingCredit_dtl_TradingCreditInner_1_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr>
+	</table>
+                            
+                        </td>
+                        <td valign="top" style="width: 50%;">
+                            
+                            <table id="dtl_TradingDebit" cellspacing="0" width="100%">
+		<tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_TradingDebit_lblGroupNameL_0"><b>Sugar Purches & Sales A/c</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_TradingDebit_lblGroupAmountL_0"><b>139482654</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_TradingDebit_dtl_TradingDebitInner_0" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_TradingDebit_dtl_TradingDebitInner_0_lblAcNameL_0">SUGAR SALES A/C kop</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_TradingDebit_dtl_TradingDebitInner_0_lblACAmountL_0">139482654</span><span id="dtl_TradingDebit_dtl_TradingDebitInner_0_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_TradingDebit_lblGroupNameL_1"><b>Sugar Commission</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_TradingDebit_lblGroupAmountL_1"><b>14036619.52</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_TradingDebit_dtl_TradingDebitInner_1" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_TradingDebit_dtl_TradingDebitInner_1_lblAcNameL_0">RATE DIFF A/C  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_TradingDebit_dtl_TradingDebitInner_1_lblACAmountL_0">14036619.52</span><span id="dtl_TradingDebit_dtl_TradingDebitInner_1_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr>
+	</table>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2" style="width: 100%; border-bottom: solid 1px black;">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%;">
+                                        <span id="Label1"><b>Net Purchase:</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%;">
+                                        <span id="lblNetDebit"><b>135196655</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%;">
+                                        <span id="Label2"><b>Net Sale:</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%;">
+                                        <span id="lblNetCredit"><b>153519273.52</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black; min-height: 50px;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="lblnetprofithead"><b>Gross Profit</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="lblnetProfit"><b>18322618.52</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black; min-height: 50px;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="lblnetlosshead"><b></b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="lblnetLoss"><b></b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="Label4"><b>Total</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="lblTotal_L"><b>153519273.52</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="Label7"><b>Total Debit</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="lblTotal_R"><b>153519273.52</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td valign="top" style="width: 50%; border-right: solid 1px black;">
+                            
+                            <table id="dtl_ProfitCredit" cellspacing="0" width="100%">
+		<tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_0"><b>Telephone Expenses</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_0"><b>115566</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_1"><b>LIGHT BILL</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_1"><b>54380</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_1" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_1_lblAcNameR_0">ELECTRIC EXPS.  A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_1_lblACAmountR_0">54380</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_1_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_2"><b>MOTOR CAR EXPENSES</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_2"><b>99120</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_2" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_2_lblAcNameR_0">MOTOR CAR EXPS. A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_2_lblACAmountR_0">99120</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_2_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_3"><b>STATIONERY</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_3"><b>24990</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_3" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_3_lblAcNameR_0">STATIONARY EXPS. A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_3_lblACAmountR_0">24990</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_3_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_4"><b>OFFICE REPAIR & MAINTENS</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_4"><b>47331</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_4" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_4_lblAcNameR_0">OFFICE REPAIR & MAINTENS.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_4_lblACAmountR_0">47331</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_4_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_5"><b>LICENSE FEES</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_5"><b>5508</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_5" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_5_lblAcNameR_0">LICENSE FEES A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_5_lblACAmountR_0">5508</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_5_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_6"><b>Bank Commission A/c.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_6"><b>68089.14</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_7"><b>MOTOR CYCLE EXPENSES</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_7"><b>1500</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_7" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_7_lblAcNameR_0">MOTOR CYCLE EXPS. A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_7_lblACAmountR_0">1500</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_7_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_8"><b>POST AND TELEGRAM</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_8"><b>12196</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_8" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_8_lblAcNameR_0">POST AND TELEGRAM A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_8_lblACAmountR_0">12196</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_8_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_9"><b>Travelling & Services</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_9"><b>81577</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_10"><b>ADVERTISEMENT EXPS. A/C.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_10"><b>2172458</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_10" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_0">a</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_0">8000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_1">abhi</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_1">14000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_1" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_2">Abhijit Sandagule</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_2">5000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_2" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_3">adasd</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_3">8768</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_3" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_4">Aditya bhoite</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_4">700</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_4" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_5">ADVERTISEMENT EXPS. A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_5">917</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_5" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_6">ananana</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_6">90000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_6" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_7">ankiuytt</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_7">97898</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_7" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_8">Ankush</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_8">8999</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_8" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_9">Ankush Patil</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_9">20000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_9" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_10">Ankush Patil</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_10">1400</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_10" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_11">asdf</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_11">7888</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_11" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_12">Lionel Messi</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_12">120000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_12" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_13">Prathmesh</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_13">788888</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_13" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblAcNameR_14">Shailesh Patil</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblACAmountR_14">1000000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_10_lblblank_14" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_11"><b>ASSOCIATION FEES A/C.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_11"><b>403752</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_11" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_11_lblAcNameR_0">Apple Corporation</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_11_lblACAmountR_0">400000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_11_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_11_lblAcNameR_1">ASSOCIATION FEES A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_11_lblACAmountR_1">3752</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_11_lblblank_1" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_12"><b>INTEREST A/C</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_12"><b>168761.39</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_12" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_12_lblAcNameR_0">INTEREST A/C  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_12_lblACAmountR_0">168761.39</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_12_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_13"><b>LEGAL EXPENSES</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_13"><b>80000</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_13" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_13_lblAcNameR_0">LEGAL EXPE. A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_13_lblACAmountR_0">80000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_13_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_14"><b>SALARY EXPENSES</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_14"><b>694600</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_14" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_14_lblAcNameR_0">SALARY EXPS. A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_14_lblACAmountR_0">694600</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_14_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_15"><b>MUNICIPLE TAX A/C.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_15"><b>54150</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_15" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_15_lblAcNameR_0">MUNICIPLE TAX A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_15_lblACAmountR_0">54150</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_15_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_16"><b>Bad Debts</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_16"><b>22188.48</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_17"><b>Bonus</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_17"><b>178800</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_18"><b>PROFESSIONAL TAX A/C</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_18"><b>2500</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_18" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_18_lblAcNameR_0">PROFESSIONAL TAX A/C  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_18_lblACAmountR_0">2500</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_18_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_19"><b>FIRM TAX A/C.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_19"><b>943000</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_19" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_19_lblAcNameR_0">SELF ASSESMENT.TAX A/C KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_19_lblACAmountR_0">943000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_19_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_20"><b>OFFICE EXPENSES</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_20"><b>74920</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_20" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_20_lblAcNameR_0">OFFICE EXPS. A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_20_lblACAmountR_0">74920</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_20_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_21"><b>Software Maintance Charges</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_21"><b>27300</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_21" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_21_lblAcNameR_0">Abhijit</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_21_lblACAmountR_0">2300</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_21_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr><tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_21_lblAcNameR_1">SOFTWARE MAINTANCE CHARGES KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_21_lblACAmountR_1">25000</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_21_lblblank_1" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitCredit_lblGroupNameR_22"><b>Ncdx Transaction Charges</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitCredit_lblGroupAmountR_22"><b>355677</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitCredit_dtl_ProfitCreditInner_22" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitCredit_dtl_ProfitCreditInner_22_lblAcNameR_0">NCDEX TRANSACTION CHARGES  KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitCredit_dtl_ProfitCreditInner_22_lblACAmountR_0">355677</span><span id="dtl_ProfitCredit_dtl_ProfitCreditInner_22_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr>
+	</table>
+                            
+                        </td>
+                        <td valign="top" style="width: 50%; border-right: solid 1px black;">
+                            
+                            <table id="dtl_ProfitDebit" cellspacing="0" width="100%">
+		<tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitDebit_lblGroupNameL_0"><b>Gross Profit</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitDebit_lblGroupAmountL_0"><b>18322618.52</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitDebit_lblGroupNameL_1"><b>OFFICE RENT A/C.</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitDebit_lblGroupAmountL_1"><b>276500</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitDebit_dtl_ProfitDebitInner_1" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitDebit_dtl_ProfitDebitInner_1_lblAcNameL_0">OFFICE RENT A/C.  </span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitDebit_dtl_ProfitDebitInner_1_lblACAmountL_0">276500</span><span id="dtl_ProfitDebit_dtl_ProfitDebitInner_1_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr><tr>
+			<td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="left" style="width: 70%;">
+                                                <span id="dtl_ProfitDebit_lblGroupNameL_2"><b>Hdfc Cmf Saving Fund Intrest</b></span>&nbsp;
+                                            </td>
+                                            <td align="right" style="width: 30%;">
+                                                <span id="dtl_ProfitDebit_lblGroupAmountL_2"><b>431943.73</b></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="dtl_ProfitDebit_dtl_ProfitDebitInner_2" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="left" style="width: 70%;">
+                                                        &nbsp;&nbsp;&nbsp;<span id="dtl_ProfitDebit_dtl_ProfitDebitInner_2_lblAcNameL_0">HDFC CMF SAVING  FUND  INTREST KOP</span>
+                                                    </td>
+                                                    <td align="right" style="width: 30%;">
+                                                        <span id="dtl_ProfitDebit_dtl_ProfitDebitInner_2_lblACAmountL_0">431943.73</span><span id="dtl_ProfitDebit_dtl_ProfitDebitInner_2_lblblank_0" style="display:inline-block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+				</tr>
+			</table>
+                                </td>
+		</tr>
+	</table>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2" style="width: 100%; border-bottom: solid 1px black;">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%;">
+                                        <span id="Label3"><b>Total:</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%;">
+                                        <span id="Label5"><b>Net Credit</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%;">
+                                        <span id="Label6"><b>Total:</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%;">
+                                        <span id="Label8"><b>Net debit</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black; min-height: 50px;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="Label9"><b>Net Profit</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="Label10"><b>Net Profit</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black; min-height: 50px;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="Label11"><b>Net Loss</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="Label12"><b>Net Loss</b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="Label13"><b>Total Credit</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="Label14"><b></b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="width: 50%; border-right: solid 1px black;">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left" style="width: 70%; border-bottom: solid 1px black;">
+                                        <span id="Label15"><b>Total Debit</b></span>
+                                    </td>
+                                    <td align="right" style="width: 30%; border-bottom: solid 1px black;">
+                                        <span id="Label16"><b></b></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            
+</font></div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+

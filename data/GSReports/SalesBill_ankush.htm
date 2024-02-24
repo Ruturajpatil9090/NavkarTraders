@@ -1,0 +1,510 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Sale Bill 
+</title><link href="../CSS/cssCommon.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function PrintPanel() {
+            var panel = document.getElementById("pnlReport");
+            var printWindow = window.open('do.html', 'do', 'height=400,width=800');
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(panel.innerHTML);
+
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 100);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="rptsalebill.aspx?billno=6" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTU2MTI5NTk1Mg8WAh4GYmlsbG5vBQE2FgICAw9kFgICBw9kFgICAQ88KwAJAQAPFgQeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgJkFgRmD2QWKgIBDw8WAh4EVGV4dAUcR2F1dGFtIFN1Z2FyIFRyYWRpbmcgQ29tcGFueWRkAgMPDxYCHwMFLzAtMTAvMTEsIFJveWFsIENvdXJ0cywgUGFuY2ggQmFuZ2xvdywgU2hhaHVwdXJpZGQCBQ8PFgIfAwUKOTg1NjMyMTQ1OGRkAgkPDxYCHwMFATZkZAINDw8WAh8DBQowMi8xMC8yMDE1ZGQCEQ8PFgIfAwUTU1VHQVIgU0FMRVMgQS9DIGtvcGRkAhMPDxYCHwNlZGQCFQ8PFgIfA2VkZAIYDw8WAh8DBQhLb2xoYXB1cmRkAhsPDxYCHwMFBFB1bmVkZAIeDw8WAh8DBRNTVUdBUiBTQUxFUyBBL0Mga29wZGQCIQ8PFgIfA2VkZAIrDw8WAh8DBSBSQUpFTkRSQSBCQUJVTEFMIFNIQUggIEtPTEhBUFVSIGRkAi0PPCsACQEADxYEHwEWAB8CAgJkFgRmD2QWCAIBDw8WAh8DBQVTdWdhcmRkAgMPDxYCHwMFAzI0NmRkAgUPDxYCHwMFBzEzMDAuMDBkZAIHDw8WAh8DBQkxNTk5MDAuMDBkZAIBD2QWCAIBDw8WAh8DBQVTdWdhcmRkAgMPDxYCHwMFAjQwZGQCBQ8PFgIfAwUHMTIwMC4wMGRkAgcPDxYCHwMFCDI0MDAwLjAwZGQCMQ8PFgIfAwUEMC4wMGRkAjUPDxYCHwMFBDAuMDBkZAI9Dw8WAh8DBQQwLjAwZGQCPw8PFgIfAwUEMC4wMGRkAkEPDxYCHwMFBzEzMDAuMDBkZAJFDw8WAh8DBQkxODM5MDAuMDBkZAJLDw8WAh8DBRxHYXV0YW0gU3VnYXIgVHJhZGluZyBDb21wYW55ZGQCAQ9kFioCAQ8PFgIfAwUcR2F1dGFtIFN1Z2FyIFRyYWRpbmcgQ29tcGFueWRkAgMPDxYCHwMFLzAtMTAvMTEsIFJveWFsIENvdXJ0cywgUGFuY2ggQmFuZ2xvdywgU2hhaHVwdXJpZGQCBQ8PFgIfAwUKOTg1NjMyMTQ1OGRkAgkPDxYCHwMFATZkZAINDw8WAh8DBQowMi8xMC8yMDE1ZGQCEQ8PFgIfAwUTU1VHQVIgU0FMRVMgQS9DIGtvcGRkAhMPDxYCHwNlZGQCFQ8PFgIfA2VkZAIYDw8WAh8DBQhLb2xoYXB1cmRkAhsPDxYCHwMFBFB1bmVkZAIeDw8WAh8DBRNTVUdBUiBTQUxFUyBBL0Mga29wZGQCIQ8PFgIfA2VkZAIrDw8WAh8DBSBSQUpFTkRSQSBCQUJVTEFMIFNIQUggIEtPTEhBUFVSIGRkAi0PPCsACQEADxYEHwEWAB8CAgJkFgRmD2QWCAIBDw8WAh8DBQVTdWdhcmRkAgMPDxYCHwMFAzI0NmRkAgUPDxYCHwMFBzEzMDAuMDBkZAIHDw8WAh8DBQkxNTk5MDAuMDBkZAIBD2QWCAIBDw8WAh8DBQVTdWdhcmRkAgMPDxYCHwMFAjQwZGQCBQ8PFgIfAwUHMTIwMC4wMGRkAgcPDxYCHwMFCDI0MDAwLjAwZGQCMQ8PFgIfAwUEMC4wMGRkAjUPDxYCHwMFBDAuMDBkZAI9Dw8WAh8DBQQwLjAwZGQCPw8PFgIfAwUEMC4wMGRkAkEPDxYCHwMFBzEyMDAuMDBkZAJFDw8WAh8DBQkxODM5MDAuMDBkZAJLDw8WAh8DBRxHYXV0YW0gU3VnYXIgVHJhZGluZyBDb21wYW55ZGRkM+wuSnLFsmlxPGJEFuDfUJlyTqecUBndhm9DYQ85OOE=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAARjEwRWPQ05eNEmO350FMhVezucPl2hH0iWifbRq8fmwVGA0QCmplLsNfU3yRTKv1lDB2YfWbjwUYntrwPx36ESjFoKkJC+2zDhfgl/iDTrMRQwXXF0HHgfZMtzKkMsL4M=" />
+    <div align="center">
+        <div style="width: 90%;" align="left">
+            <input type="submit" name="btnPrint" value="Print" onclick="return PrintPanel();" id="btnPrint" class="btnHelp" />
+            &nbsp;<input type="submit" name="btnSendEmail" value="Mail" id="btnSendEmail" /> Email:<input name="txtEmail" type="text" id="txtEmail" />
+        </div>
+        <div id="pnlReport" align="center"><font face="Verdana">
+	
+            <table id="dtl" cellspacing="0" width="100%" style="text-align: center;">
+		<tr>
+			<td>
+                    <table width="100%" align="center" style="page-break-after: always;">
+                        <tr>
+                            <td colspan="2" align="center" style="width: 100%;">
+                                <span id="dtl_lblCompanyName_0"><b>Gautam Sugar Trading Company</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center" style="width: 100%;">
+                                <span id="dtl_lblCompanyAddress_0"><b>0-10/11, Royal Courts, Panch Banglow, Shahupuri</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center" style="width: 100%;">
+                                <span id="dtl_lblPhone_0"><b>9856321458</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-top: solid 3px black; border-bottom: solid 2px black;
+                                width: 100%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            <span id="dtl_Label11_0">Bill No.:</span>
+                                            <span id="dtl_lblbillNo_0"><b>6</b></span>
+                                        </td>
+                                        <td align="right">
+                                            <span id="dtl_Label12_0">Date:</span>
+                                            <span id="dtl_lblDt_0"><b>02/10/2015</b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 60%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            <span id="dtl_Label13_0">To,</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 60%;">
+                                            <span id="dtl_lblpartyname_0"><b>SUGAR SALES A/C kop</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 60%;">
+                                            <span id="dtl_lblpartyAddress_0"><b></b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 60%;">
+                                            <span id="dtl_lblpartycity_0"><b></b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 100%;">
+                                            <span id="dtl_Label14_0">From:</span><span id="dtl_lblFrom_0"><b>Kolhapur</b></span>
+                                            <span id="dtl_Label15_0">To:</span><span id="dtl_lblTo_0"><b>Pune</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span id="dtl_Label16_0">Broker:</span><span id="dtl_lblBroker_0"><b>SUGAR SALES A/C kop</b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align="right" rowspan="6" valign="top" style="width: 40%;">
+                                <span id="dtl_Label17_0">TIN NO.:</span><span id="dtl_lblTin_0"><b></b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="2" style="width: 100%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td colspan="4" style="width: 100%; border-bottom: solid 1px black;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 30%;">
+                                            <span id="dtl_Label18_0">Mill Name/Item Description</span>
+                                        </td>
+                                        <td align="left" style="width: 30%;">
+                                            <span id="dtl_Label19_0">Bags</span>
+                                        </td>
+                                        <td align="left" style="width: 30%;">
+                                            <span id="dtl_Label20_0">Rate</span>
+                                        </td>
+                                        <td align="left" style="width: 10%;">
+                                            <span id="dtl_Label21_0">Value</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="width: 100%; border-bottom: solid 1px black;">
+                                        </td>
+                                    </tr>
+                                    <tr style="border-top: 1px solid black; border-bottom: 1px solid black;">
+                                        <td align="left" style="width: 30%;">
+                                            <span id="dtl_Label1_0"><b>RAJENDRA BABULAL SHAH  KOLHAPUR </b></span>
+                                        </td>
+                                        <td align="left" style="width: 30%;">
+                                        </td>
+                                        <td align="left" style="width: 30%;">
+                                        </td>
+                                        <td align="left" style="width: 10%;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="width: 100%;">
+                                            <table id="dtl_dtlItems_0" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                                    <table width="100%" align="left">
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_0_Label1_0"><b>Sugar</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_0_Label2_0"><b>246</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_0_Label3_0"><b>1300.00</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 10%;">
+                                                            <span id="dtl_dtlItems_0_Label4_0"><b>159900.00</b></span>
+                                                        </td>
+                                                    </table>
+                                                </td>
+				</tr><tr>
+					<td>
+                                                    <table width="100%" align="left">
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_0_Label1_1"><b>Sugar</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_0_Label2_1"><b>40</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_0_Label3_1"><b>1200.00</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 10%;">
+                                                            <span id="dtl_dtlItems_0_Label4_1"><b>24000.00</b></span>
+                                                        </td>
+                                                    </table>
+                                                </td>
+				</tr>
+			</table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td align="left">
+                                            <span id="dtl_Label29_0">Bank Commission:</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label5_0"><b>0.00</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td align="left">
+                                            <span id="dtl_Label22_0">Bank Commission:</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label6_0"><b>0.00</b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="width: 100%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td colspan="4" style="width: 100%; border-bottom: solid 1px black;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span id="dtl_Label23_0">Sale Rate</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label24_0">Less Freight</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label25_0">Rate</span>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span id="dtl_Label7_0"><b>0.00</b></span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label8_0"><b>0.00</b></span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label9_0"><b>1300.00</b></span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label26_0">Bill Amount:</span>
+                                            <span id="dtl_Label10_0"><b>183900.00</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="width: 100%; border-bottom: solid 1px black;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <span id="dtl_Label27_0">Rs. In Words:</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label28_0">For</span>
+                                            <span id="dtl_companynamebottom_0">Gautam Sugar Trading Company</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+		</tr><tr>
+			<td>
+                    <table width="100%" align="center" style="page-break-after: always;">
+                        <tr>
+                            <td colspan="2" align="center" style="width: 100%;">
+                                <span id="dtl_lblCompanyName_1"><b>Gautam Sugar Trading Company</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center" style="width: 100%;">
+                                <span id="dtl_lblCompanyAddress_1"><b>0-10/11, Royal Courts, Panch Banglow, Shahupuri</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center" style="width: 100%;">
+                                <span id="dtl_lblPhone_1"><b>9856321458</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-top: solid 3px black; border-bottom: solid 2px black;
+                                width: 100%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            <span id="dtl_Label11_1">Bill No.:</span>
+                                            <span id="dtl_lblbillNo_1"><b>6</b></span>
+                                        </td>
+                                        <td align="right">
+                                            <span id="dtl_Label12_1">Date:</span>
+                                            <span id="dtl_lblDt_1"><b>02/10/2015</b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 60%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            <span id="dtl_Label13_1">To,</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 60%;">
+                                            <span id="dtl_lblpartyname_1"><b>SUGAR SALES A/C kop</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 60%;">
+                                            <span id="dtl_lblpartyAddress_1"><b></b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 60%;">
+                                            <span id="dtl_lblpartycity_1"><b></b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 100%;">
+                                            <span id="dtl_Label14_1">From:</span><span id="dtl_lblFrom_1"><b>Kolhapur</b></span>
+                                            <span id="dtl_Label15_1">To:</span><span id="dtl_lblTo_1"><b>Pune</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span id="dtl_Label16_1">Broker:</span><span id="dtl_lblBroker_1"><b>SUGAR SALES A/C kop</b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align="right" rowspan="6" valign="top" style="width: 40%;">
+                                <span id="dtl_Label17_1">TIN NO.:</span><span id="dtl_lblTin_1"><b></b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="2" style="width: 100%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td colspan="4" style="width: 100%; border-bottom: solid 1px black;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="width: 30%;">
+                                            <span id="dtl_Label18_1">Mill Name/Item Description</span>
+                                        </td>
+                                        <td align="left" style="width: 30%;">
+                                            <span id="dtl_Label19_1">Bags</span>
+                                        </td>
+                                        <td align="left" style="width: 30%;">
+                                            <span id="dtl_Label20_1">Rate</span>
+                                        </td>
+                                        <td align="left" style="width: 10%;">
+                                            <span id="dtl_Label21_1">Value</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="width: 100%; border-bottom: solid 1px black;">
+                                        </td>
+                                    </tr>
+                                    <tr style="border-top: 1px solid black; border-bottom: 1px solid black;">
+                                        <td align="left" style="width: 30%;">
+                                            <span id="dtl_Label1_1"><b>RAJENDRA BABULAL SHAH  KOLHAPUR </b></span>
+                                        </td>
+                                        <td align="left" style="width: 30%;">
+                                        </td>
+                                        <td align="left" style="width: 30%;">
+                                        </td>
+                                        <td align="left" style="width: 10%;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="width: 100%;">
+                                            <table id="dtl_dtlItems_1" cellspacing="0" width="100%">
+				<tr>
+					<td>
+                                                    <table width="100%" align="left">
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_1_Label1_0"><b>Sugar</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_1_Label2_0"><b>246</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_1_Label3_0"><b>1300.00</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 10%;">
+                                                            <span id="dtl_dtlItems_1_Label4_0"><b>159900.00</b></span>
+                                                        </td>
+                                                    </table>
+                                                </td>
+				</tr><tr>
+					<td>
+                                                    <table width="100%" align="left">
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_1_Label1_1"><b>Sugar</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_1_Label2_1"><b>40</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 30%;">
+                                                            <span id="dtl_dtlItems_1_Label3_1"><b>1200.00</b></span>
+                                                        </td>
+                                                        <td align="left" style="width: 10%;">
+                                                            <span id="dtl_dtlItems_1_Label4_1"><b>24000.00</b></span>
+                                                        </td>
+                                                    </table>
+                                                </td>
+				</tr>
+			</table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td align="left">
+                                            <span id="dtl_Label29_1">Bank Commission:</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label5_1"><b>0.00</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td align="left">
+                                            <span id="dtl_Label22_1">Bank Commission:</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label6_1"><b>0.00</b></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="width: 100%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td colspan="4" style="width: 100%; border-bottom: solid 1px black;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span id="dtl_Label23_1">Sale Rate</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label24_1">Less Freight</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label25_1">Rate</span>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span id="dtl_Label7_1"><b>0.00</b></span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label8_1"><b>0.00</b></span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label9_1"><b>1200.00</b></span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label26_1">Bill Amount:</span>
+                                            <span id="dtl_Label10_1"><b>183900.00</b></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="width: 100%; border-bottom: solid 1px black;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <span id="dtl_Label27_1">Rs. In Words:</span>
+                                        </td>
+                                        <td>
+                                            <span id="dtl_Label28_1">For</span>
+                                            <span id="dtl_companynamebottom_1">Gautam Sugar Trading Company</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+		</tr>
+	</table>
+        
+</font></div>
+    </div>
+    </form>
+</body>
+</html>
+

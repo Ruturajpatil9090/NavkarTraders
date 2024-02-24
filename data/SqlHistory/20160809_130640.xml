@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <History>
+    <Query>select * from tblUser</Query>
+    <DB>SQL Server</DB>
+  </History>
+  <History>
+    <Query>select * from NT_1_AccountMaster</Query>
+    <DB>SQL Server</DB>
+  </History>
+  <History>
+    <Query>update tblUser set User_Name='ankush' where User_Id=54</Query>
+    <DB>SQL Server</DB>
+  </History>
+  <History>
+    <Query>update tblUser set User_Name='ankey' where User_Id=54</Query>
+    <DB>SQL Server</DB>
+  </History>
+</NewDataSet>

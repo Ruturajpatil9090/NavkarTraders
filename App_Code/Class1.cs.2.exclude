@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+
+//A customized class for displaying the Template Column
+public class GridViewTemplate : ITemplate
+{
+    //A variable to hold the type of ListItemType.
+    ListItemType _templateType;
+
+
+    //A variable to hold the column name.
+    string _columnName;
+
+
+    public GridViewTemplate(ListItemType type, string colname)
+    {
+        //Stores the template type.
+        _templateType = type;
+
+
+        //Stores the column name.
+        _columnName = colname;
+    }
+
+    //Constructor where we define the template type and column name.
+    public GridViewTemplate(ListItemType type, ItemType itemtype, string colname)
+    {
+        //Stores the template type.
+        _templateType = type;
+
+        //Stores the column name.
+        _columnName = colname;
+    }
+
+    void ITemplate.InstantiateIn(System.Web.UI.Control container)
+    {
+        switch (_templateType)
+        {
+            case ListItemType.Header:
+                //Creates a new label control and add it to the container.
+                Label lbl = new Label();            //Allocates the new label object.
+                lbl.Text = _columnName;             //Assigns the name of the column in the lable.
+                container.Controls.Add(lbl);        //Adds the newly created label control to the container.
+                break;
+
+            case ListItemType.Item:
+                //Creates a new text box control and add it to the container.
+                TextBox txt = new TextBox();                            //Allocates the new text box object.
+                txt.DataBinding += new EventHandler(txt_DataBinding);   //Attaches the data binding event.
+                txt.Width = 90;
+                txt.CssClass = "textbox";
+                container.Controls.Add(txt);                            //Adds the newly created textbox to the container.
+                break;
+            case ListItemType.EditItem:
+                //As, I am not using any EditItem, I didnot added any code here.
+                break;
+
+            case ListItemType.Footer:
+                CheckBox chkColumn = new CheckBox();
+                chkColumn.ID = "Chk" + _columnName;
+                container.Controls.Add(chkColumn);
+                break;
+        }
+    }
+
+    public EventHandler txt_DataBinding { get; set; }
+}

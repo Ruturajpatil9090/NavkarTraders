@@ -1,0 +1,507 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs"
+    Inherits="MasterPage2" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title></title>
+    <link href="CSS/cssCommon.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="../JQuery/jquery-1.4.1.js" type="text/javascript"></script>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <script src="../JQuery/jquery.keynavigation.js" type="text/javascript"></script>
+    <link type="text/css" href="menu/menu.css" rel="stylesheet" />
+    <script type="text/javascript" src="../menu/jquery.js"></script>
+    <script type="text/javascript" src="../menu/menu.js"></script>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        html
+        {
+            background: white;
+        }
+        div#createdby
+        {
+            width: 100%;
+            height: 1px;
+        }
+        div#divOuter
+        {
+            margin: -3px auto;
+            width: 100%;
+            background: #white;
+            overflow: hidden;
+            min-height: 700px;
+        }
+        div#menu
+        {
+            top: 5px;
+            left: 0px;
+            width: 100%;
+            background-color: Black;
+            border-bottom: solid 2px rgb(140, 204, 231);
+            height: 40px;
+        }
+        div#copyright
+        {
+            display: none;
+        }
+        
+        #loading
+        {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            display: block;
+            opacity: 0.6;
+            background-color: Black;
+            z-index: 99;
+            text-align: center;
+        }
+        
+        #loading-image
+        {
+            position: fixed;
+            top: 300px;
+            left: 240px;
+            z-index: 9999999999;
+        }
+        
+        .btnHelp:focus
+        {
+            background-color: yellow;
+            color: Blue;
+            border: 1px solid rgb(29, 15, 116);
+            font-weight: bold;
+            font-size: small;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:Orange; width: 100%; text-align: center;">
+    <form id="form1" runat="server">
+    <div>
+        <ajax1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePageMethods="true">
+        </ajax1:ToolkitScriptManager>
+        <div id="divOuter">
+            <div id="menu">
+                <ul class="menu">
+                    <li><a href="../Sugar/pgeHome.aspx" class="parent"><span>Home</span></a> </li>
+                    <li><a href="#" class="parent"><span>Company</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="../Sugar/pgeCreateNewCompany.aspx"><span>Create Company</span></a>
+                                </li>
+                                <li><a href="#"><span>Select Company</span></a> </li>
+                                <li><a href="../Sugar/pgeCreateAccountingYear.aspx"><span>Create Accounting Year</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeSelectYear.aspx"><span>Select Accounting Year</span></a>
+                                </li>
+                                <li><a href="../Sugar/frmTesttage.aspx"><span>text Page</span></a> </li>
+                                <li><a href="../Report/rptstoreprocedureTrianlBalance.aspx"><span>Trial Balance</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>Master</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="../Sugar/pgeAccountsmaster.aspx"><span>Account Master</span></a> </li>
+                                <%-- <li><a href="../Sugar/pgeFillOpeningBalance.aspx"><span>Fill Opening Balance</span></a>
+                                </li>--%>
+                                <li><a href="#"><span>Group Wise Mobile Entry</span></a> </li>
+                                <li><a href="../Sugar/pgeBSgroupMaster.aspx"><span>Balance Sheet Group Master</span></a>
+                                </li>
+                                <li><a href="../Report/pgeAccountType.aspx"><span>Account List</span></a> </li>
+                                <li><a href="../Sugar/pgecityMaster.aspx"><span>City Master</span></a> </li>
+                                <li><a href="../Sugar/pgeSystemMaster.aspx"><span>System Master</span></a> </li>
+                                <li><a href="../Sugar/pgeCompanyparameter.aspx"><span>Company Parameters</span></a>
+                                </li>
+                                <%-- <li><a href="../Report/pgeGroupMasterPrint.aspx"><span>Group Master Print</span></a>
+                                </li>--%>
+                                <li><a href="../Sugar/pgeInvoiceUtility.aspx"><span>Invoice Utility</span></a> </li>
+                                <li><a href="#" class="parent"><span>GST</span></a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="../Sugar/pgeGSTCodeMaster.aspx"><span>GST Code Master</span></a></li>
+                                            <li><a href="../Sugar/pgeGSTRateMaster.aspx"><span>GST Rate Master</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="../Sugar/pgePartyunit.aspx"><span>Party Unit</span></a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>Retail Sale</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="../Sugar/pgeAccountsmaster.aspx"><span>Account Master</span></a> </li>
+                                <li><a href="../Sugar/pgeReceiptPayment.aspx"><span>Receipt/Payment</span></a> </li>
+                                <li><a href="../Report/pgeGLedgerReport.aspx"><span>Ledger</span></a> </li>
+                                <li><a href="../Sugar/pgeSugarPurchaseForGST.aspx"><span>Purchase Bill For GST</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeSugarPurchaseReturnForGST.aspx"><span>Sale Return Purchase
+                                    For GST</span></a> </li>
+                                <li><a href="../Sugar/pgeSugarRetailForGSTnew.aspx"><span>Retail Sell For GST new</span></a>
+                                </li>
+                                <li><a href="../Report/pgeBillSummary.aspx"><span>Bill Summary</span></a> </li>
+                                <li><a href="../Report/pgeStockBook.aspx"><span>Stock Book</span></a> </li>
+                                <li><a href="../Report/pgeTrialBalance.aspx"><span>Trial Balance</span></a> </li>
+                                <li><a href="../Report/pgeRetailSellBillPrint.aspx"><span>Retail Sale Bill Printing</span></a>
+                                </li>
+                                <li><a href="../Report/pgeSaleBillPrint.aspx"><span>Sale Bill Printing</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeSugarsaleReturnForGST.aspx"><span>Return Sale For GST</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>Voucher</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="../Sugar/pgeLoadingvoucher.aspx"><span>Voucher</span></a> </li>
+                                <li><a href="../Report/pgeVoucherPrint.aspx"><span>Voucher Print</span></a> </li>
+                                <li><a href="../Report/pgeVasuliRegister.aspx"><span>Vasuli Register</span></a>
+                                </li>
+                                <li><a href="#" class="parent"><span>PS & SB FOR GST</span></a>
+                                    <div>
+                                        <ul>
+                                            <%--  <li><a href="../Sugar/pgeSugarPurchaseForGST.aspx"><span>Purchase Bill For GST</span></a>
+                                            </li>
+                                            <li><a href="../Sugar/pgrSugarsaleForGST.aspx"><span>Sale Bill For GST</span></a>
+                                            </li>--%>
+                                            <li><a href="../Sugar/pgeSugarPurchaseForGSTxml.aspx"><span>Purchase Bill For GST</span></a>
+                                            </li>
+                                            <li><a href="../Sugar/pgeOther_Purchase.aspx"><span>Other Purchase Bill For GST</span></a>
+                                            </li>
+                                            <li><a href="../Sugar/pgrSugarsaleForGSTxml.aspx"><span>Sale Bill For GST</span></a>
+                                            </li>
+                                            <%--<li><a href="../Sugar/pgeSugarPurchaseReturnForGST.aspx"><span>Sale Return Purchase
+                                                For GST</span></a> </li>--%>
+                                            <%--<li><a href="../Sugar/pgeSugarsaleReturnForGST.aspx"><span>Return Sale For GST</span></a>
+                                            </li>--%>
+                                            <li><a href="../Report/pgeDoubleSaleBill.aspx"><span>Double SB & PS</span></a> </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="../Report/rptDuePayment.aspx" target="_blank"><span>Due Payment</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeSugarPurchase.aspx"><span>Purchase Bill</span></a> </li>
+                                <li><a href="../Sugar/pgeSugarPurchaseReturn.aspx"><span>Sale Return Purchase</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeSugarsale.aspx"><span>Sale Bill</span></a> </li>
+                                <%-- <li><a href="../Sugar/pgeSugarRetailForGSTnew.aspx"><span>Retail Sell For GST new</span></a>
+                                </li>--%>
+                                <%--// <li><a href="../Sugar/pgeSugarRetailSellForGST.aspx"><span>Retail Sell For GST</span></a> </li>--%>
+                                <li><a href="../Sugar/pgeSugarRetailSell.aspx"><span>Retail Sell</span></a> </li>
+                                <li><a href="../Sugar/pgeSugarsaleReturn.aspx"><span>Return Sale</span></a> </li>
+                                <%--<li><a href="../Report/pgeSaleBillPrint.aspx"><span>Sale Bill Printing</span></a>
+                                </li>--%>
+                                <%--<li><a href="../Report/pgeBillSummary.aspx"><span>Bill Summary</span></a> </li>--%>
+                                <li><a href="../Sugar/pgeLocalVoucherForGST.aspx"><span>Debit / Credit Note For GST</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeLocalvoucher.aspx"><span>Debit Note</span></a> </li>
+                                <li><a href="../Sugar/pgeLetter.aspx"><span>Letter</span></a> </li>
+                                <%--<li><a href="../Report/pgeVouchers.aspx"><span>Vouchers Reports</span></a> </li>--%>
+                                <li><a href="../Sugar/pgePendingVouchers.aspx"><span>Pending Credit Note</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeServiceBill.aspx"><span>Service Bill</span></a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>STOCK</span></a>
+                        <div>
+                            <ul>
+                                <%-- <li><a href="../Sugar/pgeTenderPurchase.aspx"><span>Tender Purchase</span></a> </li>
+                                <li><a href="../Sugar/pgeDeliveryOrderForGST.aspx"><span>DI/DO For GST</span></a></li>--%>
+                                <li><a href="../Sugar/pgeTenderPurchasexml.aspx"><span>Tender Purchase</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeDeliveryOrderForGSTxml.aspx"><span>DI/DO For GST</span></a></li>
+                                <li><a href="../Sugar/pgeMotorMemoxml.aspx"><span>Motor Memo</span></a> </li>
+                                <%-- <li><a href="../Sugar/pgeMotorMemo.aspx"><span>Motor Memo</span></a> </li>--%>
+                                <li><a href="../Sugar/pgeCarporatesell.aspx"><span>Carporate Sale</span></a> </li>
+                                <li><a href="../Sugar/pgeCarporateRegister.aspx"><span>Carporate Register</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeCarporateReciept.aspx"><span>Multiple Reciept</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgePendingDelivery.aspx"><span>Pending DO Entries</span></a>
+                                </li>
+                                <li><a href="#" class="parent"><span>Stock Report</span></a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="../Report/rptPartyWiseSugarStock.aspx" target="_blank"><span>Sugar Stock</span></a>
+                                            </li>
+                                            <%--<li><a href="../Report/rptBalanceStockSummary.aspx" target="_blank"><span>Balance Stock
+                                                Summary</span></a></li>--%>
+                                            <li><a href="../Report/pgeRegisters.aspx"><span>Register</span></a> </li>
+                                            <li><a href="../Report/pgeBalanceReminder.aspx"><span>Balance Reminder</span></a></li>
+                                            <li><a href="../Sugar/pgeTransportSMS.aspx"><span>Transport SMS</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="../Sugar/pgeDeliveryOrder2.aspx"><span>Dispatch-Delivery Order</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>Transaction</span></a>
+                        <div>
+                            <ul>
+                                <%-- <li><a href="../Sugar/pgeReceiptPayment.aspx"><span>Receipt/Payment</span></a> </li>--%>
+                                <li><a href="../Sugar/pgeReceiptPaymentxml.aspx"><span>Receipt/Payment</span></a>
+                                </li>
+                                <li><a href="#"><span>Cash/Bank Transfer</span></a> </li>
+                                <li><a href="../Sugar/pgeJournalvoucher.aspx"><span>Journal Entries</span></a> </li>
+                                <li><a href="#"><span>Reconsilation Entries</span></a> </li>
+                                <li><a href="#"><span>Bank Reconsilation</span></a> </li>
+                                <li><a href="#"><span>Ap/Ar</span></a> </li>
+                                <li><a href="#"><span>Advance/Access Payment</span></a> </li>
+                                <li><a href="#"><span>Other Debit/Credit Notes</span></a> </li>
+                                <li><a href="../Sugar/pgeUtrentry.aspx"><span>UTR Entry</span></a> </li>
+                                <li><a href="../Sugar/pgeReverserChargeDetails.aspx"><span>Reverse Charge</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>Reports</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="../Report/pgeBankBook.aspx"><span>Bank Book</span></a> </li>
+                                <li><a href="../Report/pgeDOPrint.aspx"><span>DO Print</span></a> </li>
+                                <li><a href="../Report/pgeGLedgerReport.aspx"><span>Ledger</span></a> </li>
+                                <li><a href="../Report/pgeGroupLedger.aspx"><span>Group Ledger</span></a> </li>
+                                <li><a href="../Report/pgePendingSaudaAmount.aspx"><span>Pending Sauda</span></a>
+                                </li>
+                                <li><a href="../Report/pgeBrokerReport.aspx"><span>Broker Report</span></a> </li>
+                                <li><a href="../Report/pgeTrialBalance.aspx"><span>Trial Balance</span></a> </li>
+                                <li><a href="../Report/pgeStockBook.aspx"><span>Stock Book</span></a> </li>
+                                <li><a href="../Report/pgeTrialBalanceScreen.aspx"><span>Trial Balance Screen</span></a>
+                                </li>
+                                <li><a href="../Report/pgeUTR_Report.aspx"><span>UTR Report</span></a> </li>
+                                <li><a href="../Report/pgePurchaseRegister.aspx"><span>Purchase & Sale Register</span></a>
+                                </li>
+                                <%-- <li><a href="../Report/rptBalanceSheet.aspx" target="_blank"><span>Balance Sheet</span></a>
+                                </li>--%>
+                                <li><a href="../Report/pgeBalanceSheet.aspx"><span>Profit & Loss/Balance Sheet</span></a>
+                                </li>
+                                <li><a href="../Report/pgeInterestCalculation.aspx"><span>Interest Statement</span></a>
+                                </li>
+                                <li><a href="../Report/rptpendingDelivery.aspx" target="_blank"><span>Pending Delivery</span></a>
+                                </li>
+                                <li><a href="../Report/rptdaybook.aspx" target="_blank"><span>Day Book</span></a>
+                                </li>
+                                <li><a href="../Report/pgeTransportAdvance.aspx"><span>Transport Advance</span></a>
+                                </li>
+                                <li><a href="../Report/pgeMergedAccounts.aspx"><span>Merged Accounts</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>Utilities</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="../Sugar/pgeCreateAuthorization.aspx"><span>Create Authorization Group</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeOfficeInfo.aspx"><span>QUICK OFFICE INFO</span></a> </li>
+                                <li><a href="../Sugar/pgeNewUser.aspx"><span>User's</span></a> </li>
+                                <li><a href="../Sugar/pgeNewBranch.aspx"><span>New Branch</span></a> </li>
+                                <li><a href="../Sugar/pgeGenerateCustomerLogin.aspx"><span>Generate Customer Login</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeCertificates.aspx"><span>Certificates</span></a> </li>
+                                <li><a href="../Sugar/pgeClubAccount.aspx"><span>Club Account</span></a> </li>
+                                <li><a href="../Sugar/pgeUploadSignature.aspx"><span>Upload Signature</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeAddressforvoucher.aspx"><span>Address For Voucher</span></a>
+                                </li>
+                                <li><a href="../Sugar/pgeCalculateSelfStock.aspx"><span>Other Utilities</span></a>
+                                </li>
+                                <%--<li><a href="../Sugar/pgeLockedUsers.aspx"><span>Locked User Account's</span></a> </li>--%>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>GST Utilities</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="../Sugar/pgeCreateReturnFilesNew.aspx" target="_blank"><span>Create Return
+                                    Files</span></a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="parent"><span>New Update</span></a>
+                        <div>
+                            <ul>
+                                <li><a href="../Sugar/pgeTenderPurchasexml.aspx" target="_blank"><span>Tender Purchase
+                                    xml</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeDeliveryOrderForGSTxml.aspx" target="_blank"><span>Delivery
+                                    Order Xml</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeSugarPurchaseForGSTxml.aspx" target="_blank"><span>Purchase
+                                    Bill Xml</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgrSugarsaleForGSTxml.aspx" target="_blank"><span>Sale Bill Xml</span></a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeLocalVoucherForGSTxml.aspx" target="_blank"><span>Voucher xml
+                                    One</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeLocalVoucherForGSTxmlNew.aspx" target="_blank"><span>Voucher
+                                    xml Zero</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeMotorMemoxml.aspx" target="_blank"><span>Motor Memo xml</span></a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeReceiptPaymentxml.aspx" target="_blank"><span>Reciept Payment
+                                    xml</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeSugarRetailForGSTnewxml.aspx" target="_blank"><span>Sugar Retail
+                                    xml</span></a> </li>
+                            </ul>
+                            <%--<ul>
+                                <li><a href="../Sugar/pgeSugarRetailForGSTnewxml.aspx" target="_blank"><span>Retail
+                                    Bill xml</span></a> </li>
+                            </ul>
+                             <ul>
+                                <li><a href="../Sugar/pgeReseedTables.aspx" target="_blank"><span>
+                                    Reseed vales</span></a> </li>
+                            </ul>--%>
+                        </div>
+                    </li>
+                    <%-- <li><a href="../Logout.aspx" class="parent" target="_parent"><span>New Update</span></a>
+                    </li>--%>
+                    <%--<li><a href="#" class="parent"><span>New Update</span></a>--%>
+                    <%--<div>
+                            <ul>
+                                <li><a href="../Sugar/pgeTenderPurchasexml.aspx" target="_blank"><span>Tender Purchase
+                                    xml</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeDeliveryOrderForGSTxml.aspx" target="_blank"><span>Delivery
+                                    Order Xml</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeSugarPurchaseForGSTxml.aspx" target="_blank"><span>Purchase
+                                    Bill Xml</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgrSugarsaleForGSTxml.aspx" target="_blank"><span>Sale Bill Xml</span></a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeLocalVoucherForGSTxml.aspx" target="_blank"><span>Voucher xml</span></a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeMotorMemoxml.aspx" target="_blank"><span>Motor Memo xml</span></a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeReceiptPaymentxml.aspx" target="_blank"><span>Reciept Payment
+                                    xml</span></a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Sugar/pgeSugarRetailForGSTnewxml.aspx" target="_blank"><span>Retail
+                                    Bill xml</span></a> </li>
+                            </ul>
+                        </div>--%>
+                    <%-- </li>--%>
+                    <li><a href="../Logout.aspx" class="parent" target="_parent"><span>Log Out</span></a>
+                    </li>
+                </ul>
+            </div>
+            <%--<asp:LinkButton ID="lnkAllCompanies" runat="server" Text="View List"  Font-Bold="true" Font-Size="Medium"
+            onclick="lnkAllCompanies_Click" style="text-align:right; margin-left:700px;"></asp:LinkButton>--%>
+            <div align="center" style="min-height: 500px;" id="main">
+                <div id="createdby">
+                    <asp:UpdatePanel runat="server" ID="pnlUpdate">
+                        <ContentTemplate>
+                            <table width="100%" align="center">
+                                <tr>
+                                    <td colspan="2" style="border-bottom: dashed 3px black;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%" align="left">
+                                        <asp:Label runat="server" ID="MasterlblCreatedBy" Font-Bold="true" Text="" ForeColor="#000033"></asp:Label>
+                                    </td>
+                                    <td style="width: 50%; text-align: right;" align="right">
+                                        <asp:Label runat="server" ID="MasterlblModifiedBy" Font-Bold="true" ForeColor="#000033"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+                <asp:UpdatePanel ID="upContentPlaceHolder" runat="server">
+                    <ContentTemplate>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                    <ProgressTemplate>
+                        <div id="loading">
+                            <img id="Img1" src="../Images/ajax-loader3.gif" alt="Loading..." height="25px" width="45px" />
+                            <%--  <img id="loading-image" src="../Images/framely.gif" alt="Loading..." />--%>
+                        </div>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+                <%--<asp:UpdateProgress ID="UpdateProgress2" runat="server" DynamicLayout="true"  AssociatedUpdatePanelID="upContentPlaceHolder"  >
+    <ProgressTemplate >               
+    <img id="Img1" width="100" height="100" src="Images/framely.gif" runat="server" alt="Loading..."  align="middle" style="z-index:8000000000000; text-align:center; margin-left:500px; margin-top:-500px;"  /><br />               
+  </ProgressTemplate>
+  </asp:UpdateProgress>--%>
+            </div>
+        </div>
+        <div id="divBottom" style="width: 100%; background-color: Black; height: 24px; color: White;
+            font-weight: normal; letter-spacing: 1px; text-align: right; font-family: Verdana;
+            font-size: 10px; vertical-align: middle; margin: -3px auto; margin-top: auto;">
+            <table width="100%" cellpadding="0px" cellspacing="0px" style="width: 100%; vertical-align: middle;
+                height: 5px; margin-top: 1px;">
+                <tr>
+                    <td style="width: 70%; text-align: left; height: 7px;" valign="middle">
+                        &nbsp;&nbsp;
+                        <asp:Label ID="lblCompanyName" runat="server" Font-Size="Small" Font-Bold="true"
+                            Font-Names="verdana" Style="text-align: left; color: White"> </asp:Label>
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblb" runat="server" Font-Size="Small" Font-Names="verdana" Style="color: White;"
+                            Text="Branch-"></asp:Label>&nbsp;
+                        <asp:Label ID="lblBranch" runat="server" Font-Size="Small" Font-Names="verdana" Font-Bold="true"
+                            Style="color: White;"></asp:Label>
+                        &nbsp;&nbsp;<asp:Label ID="Label1" runat="server" ForeColor="White" Font-Size="Small"
+                            Font-Names="verdana" Text="Welcome:" Style="text-align: right;"></asp:Label>
+                        <asp:Label ID="lblUser" runat="server" ForeColor="White" Font-Size="Small" Font-Names="verdana"
+                            Text="User" Style="text-align: right;"></asp:Label>&nbsp; &nbsp;
+                        <asp:Label ID="Label2" runat="server" ForeColor="White" Font-Size="Small" Font-Names="verdana"
+                            Text="Year:" Style="text-align: right;"></asp:Label>
+                        <asp:Label ID="lblYear" runat="server" ForeColor="White" Font-Size="Small" Font-Names="verdana"
+                            Text="User" Style="text-align: right;"></asp:Label>
+                    </td>
+                    <td style="width: 30%; text-align: right; height: 7px;" valign="middle" class="tlt">
+                        Copyrights &copy; Reserved &nbsp;<asp:Label ID="lblnm" Text="Lata Software Consultancy"
+                            runat="server" Font-Size="X-Small" ForeColor="White" Font-Bold="true"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+    <script src="../Scripts/selectfirstrow.js" type="text/javascript"></script>
+    <script src="../Scripts/closepopup.js" type="text/javascript"></script>
+</body>
+</html>

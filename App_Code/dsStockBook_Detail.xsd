@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsStockBook_Detail" targetNamespace="http://tempuri.org/dsStockBook_Detail.xsd" xmlns:mstns="http://tempuri.org/dsStockBook_Detail.xsd" xmlns="http://tempuri.org/dsStockBook_Detail.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="sqlconnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconnection (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.sqlconnection.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qrystockbookDetailTableAdapter" GeneratorDataComponentClassName="qrystockbookDetailTableAdapter" Name="qrystockbookDetail" UserDataComponentName="qrystockbookDetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconnection (Web.config)" DbObjectName="Sugarsoft.dbo.qrystockbookDetail" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Tran_Type, doc_date, Ac_Code, item_code, Quantal, drcr, Company_Code, Year_Code, itemvalue, Ac_Name_E, System_Name_E, Brand_Code, Marka, doc_no, DoNO, partyShortname, MillShortName
+FROM     qrystockbookDetail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tran_Type" DataSetColumn="Tran_Type" />
+              <Mapping SourceColumn="doc_date" DataSetColumn="doc_date" />
+              <Mapping SourceColumn="Ac_Code" DataSetColumn="Ac_Code" />
+              <Mapping SourceColumn="item_code" DataSetColumn="item_code" />
+              <Mapping SourceColumn="Quantal" DataSetColumn="Quantal" />
+              <Mapping SourceColumn="drcr" DataSetColumn="drcr" />
+              <Mapping SourceColumn="Company_Code" DataSetColumn="Company_Code" />
+              <Mapping SourceColumn="Year_Code" DataSetColumn="Year_Code" />
+              <Mapping SourceColumn="itemvalue" DataSetColumn="itemvalue" />
+              <Mapping SourceColumn="Ac_Name_E" DataSetColumn="Ac_Name_E" />
+              <Mapping SourceColumn="System_Name_E" DataSetColumn="System_Name_E" />
+              <Mapping SourceColumn="Brand_Code" DataSetColumn="Brand_Code" />
+              <Mapping SourceColumn="Marka" DataSetColumn="Marka" />
+              <Mapping SourceColumn="doc_no" DataSetColumn="doc_no" />
+              <Mapping SourceColumn="DoNO" DataSetColumn="DoNO" />
+              <Mapping SourceColumn="partyShortname" DataSetColumn="partyShortname" />
+              <Mapping SourceColumn="MillShortName" DataSetColumn="MillShortName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsStockBook_Detail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsStockBook_Detail" msprop:Generator_UserDSName="dsStockBook_Detail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qrystockbookDetail" msprop:Generator_TableClassName="qrystockbookDetailDataTable" msprop:Generator_TableVarName="tableqrystockbookDetail" msprop:Generator_RowChangedName="qrystockbookDetailRowChanged" msprop:Generator_TablePropName="qrystockbookDetail" msprop:Generator_RowDeletingName="qrystockbookDetailRowDeleting" msprop:Generator_RowChangingName="qrystockbookDetailRowChanging" msprop:Generator_RowEvHandlerName="qrystockbookDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="qrystockbookDetailRowDeleted" msprop:Generator_RowClassName="qrystockbookDetailRow" msprop:Generator_UserTableName="qrystockbookDetail" msprop:Generator_RowEvArgName="qrystockbookDetailRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tran_Type" msprop:Generator_ColumnVarNameInTable="columnTran_Type" msprop:Generator_ColumnPropNameInRow="Tran_Type" msprop:Generator_ColumnPropNameInTable="Tran_TypeColumn" msprop:Generator_UserColumnName="Tran_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="doc_date" msprop:Generator_ColumnVarNameInTable="columndoc_date" msprop:Generator_ColumnPropNameInRow="doc_date" msprop:Generator_ColumnPropNameInTable="doc_dateColumn" msprop:Generator_UserColumnName="doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ac_Code" msprop:Generator_ColumnVarNameInTable="columnAc_Code" msprop:Generator_ColumnPropNameInRow="Ac_Code" msprop:Generator_ColumnPropNameInTable="Ac_CodeColumn" msprop:Generator_UserColumnName="Ac_Code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="item_code" msprop:Generator_ColumnVarNameInTable="columnitem_code" msprop:Generator_ColumnPropNameInRow="item_code" msprop:Generator_ColumnPropNameInTable="item_codeColumn" msprop:Generator_UserColumnName="item_code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Quantal" msprop:Generator_ColumnVarNameInTable="columnQuantal" msprop:Generator_ColumnPropNameInRow="Quantal" msprop:Generator_ColumnPropNameInTable="QuantalColumn" msprop:Generator_UserColumnName="Quantal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="drcr" msprop:Generator_ColumnVarNameInTable="columndrcr" msprop:Generator_ColumnPropNameInRow="drcr" msprop:Generator_ColumnPropNameInTable="drcrColumn" msprop:Generator_UserColumnName="drcr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company_Code" msprop:Generator_ColumnVarNameInTable="columnCompany_Code" msprop:Generator_ColumnPropNameInRow="Company_Code" msprop:Generator_ColumnPropNameInTable="Company_CodeColumn" msprop:Generator_UserColumnName="Company_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Year_Code" msprop:Generator_ColumnVarNameInTable="columnYear_Code" msprop:Generator_ColumnPropNameInRow="Year_Code" msprop:Generator_ColumnPropNameInTable="Year_CodeColumn" msprop:Generator_UserColumnName="Year_Code" type="xs:int" minOccurs="0" />
+              <xs:element name="itemvalue" msprop:Generator_ColumnVarNameInTable="columnitemvalue" msprop:Generator_ColumnPropNameInRow="itemvalue" msprop:Generator_ColumnPropNameInTable="itemvalueColumn" msprop:Generator_UserColumnName="itemvalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ac_Name_E" msprop:Generator_ColumnVarNameInTable="columnAc_Name_E" msprop:Generator_ColumnPropNameInRow="Ac_Name_E" msprop:Generator_ColumnPropNameInTable="Ac_Name_EColumn" msprop:Generator_UserColumnName="Ac_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="System_Name_E" msprop:Generator_ColumnVarNameInTable="columnSystem_Name_E" msprop:Generator_ColumnPropNameInRow="System_Name_E" msprop:Generator_ColumnPropNameInTable="System_Name_EColumn" msprop:Generator_UserColumnName="System_Name_E" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Brand_Code" msprop:Generator_ColumnVarNameInTable="columnBrand_Code" msprop:Generator_ColumnPropNameInRow="Brand_Code" msprop:Generator_ColumnPropNameInTable="Brand_CodeColumn" msprop:Generator_UserColumnName="Brand_Code" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Marka" msprop:Generator_ColumnVarNameInTable="columnMarka" msprop:Generator_ColumnPropNameInRow="Marka" msprop:Generator_ColumnPropNameInTable="MarkaColumn" msprop:Generator_UserColumnName="Marka" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="doc_no" msprop:Generator_ColumnVarNameInTable="columndoc_no" msprop:Generator_ColumnPropNameInRow="doc_no" msprop:Generator_ColumnPropNameInTable="doc_noColumn" msprop:Generator_UserColumnName="doc_no" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DoNO" msprop:Generator_ColumnVarNameInTable="columnDoNO" msprop:Generator_ColumnPropNameInRow="DoNO" msprop:Generator_ColumnPropNameInTable="DoNOColumn" msprop:Generator_UserColumnName="DoNO" type="xs:int" minOccurs="0" />
+              <xs:element name="partyShortname" msprop:Generator_ColumnVarNameInTable="columnpartyShortname" msprop:Generator_ColumnPropNameInRow="partyShortname" msprop:Generator_ColumnPropNameInTable="partyShortnameColumn" msprop:Generator_UserColumnName="partyShortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MillShortName" msprop:Generator_ColumnVarNameInTable="columnMillShortName" msprop:Generator_ColumnPropNameInRow="MillShortName" msprop:Generator_ColumnPropNameInTable="MillShortNameColumn" msprop:Generator_UserColumnName="MillShortName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

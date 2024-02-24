@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <History>
+    <Query>select * from NT_1_AccountMaster</Query>
+    <DB>SQL Server</DB>
+  </History>
+  <History>
+    <Query>select * from tblUser</Query>
+    <DB>SQL Server</DB>
+  </History>
+</NewDataSet>

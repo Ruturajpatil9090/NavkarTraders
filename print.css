@@ -1,0 +1,234 @@
+﻿body
+{
+    visibility: hidden;
+}
+.print
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 11pt;
+}
+.print9pt
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 9pt;
+    padding:0px 0px 0px 0px;
+}
+.print10pt
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 10pt;
+}
+.noprint10pt
+{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 10pt;
+}
+.noprint9pt
+{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 9pt;
+}
+.print7pt
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 7pt;
+}
+.print2
+{
+    visibility: visible;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    font-size: 9pt;
+    display: table;
+    float: none;
+    overflow: scroll;
+    position: static;
+}
+.print8pt
+{
+    visibility: visible;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    font-size: 8pt;
+    display: table;
+    float: none;
+    overflow: scroll;
+    position: static;
+}
+.print3
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-size: 9pt;
+}
+.noprint
+{
+    visibility: hidden;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 11pt;
+}
+.noprint2
+{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 11pt;
+}
+.printsmall
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 9pt;
+}
+.small
+{
+    font-size: 10pt;
+}
+.noprint7pt
+{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 7pt;
+    padding:0px 0px 0px 0px;
+}
+.toosmall
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 7pt;
+    empty-cells: show;
+    padding:0px 0px 0px 0px;
+}
+.noprinttoosmall
+{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 7pt;
+    empty-cells: show;
+    padding:0px 0px 0px 0px;
+}
+.medium
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 9pt;
+}
+.largsize
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: none;
+    float: none;
+    font-size: 8pt;
+    display: table;
+}
+thead
+{
+    display: table-header-group;
+}
+.printwithmargin
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0 0 0 13px;
+    float: none;
+    font-size: 11pt;
+    overflow-y: visible;
+}
+.printhalfno
+{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 9pt;
+}
+.printhalf
+{
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 8pt;
+}
+.noprinthalf
+{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 8pt;
+}
+
+.divprint
+{
+    display: inline;
+}
+.lbl
+{
+    visibility: hidden;
+    height: 1px;
+}
+.toosmallforimg
+{
+    visibility: visible;
+    height: auto;
+    margin: 0;
+    float: none;
+    font-size: 7pt;
+    empty-cells: show;
+}
+
+
